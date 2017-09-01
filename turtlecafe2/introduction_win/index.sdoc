@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>Windows標準環境でJavaプログラムを動かしてみよう</title>
+</head>
+<body>
+<p>
+			論プロエディタは教育用に設計されたエディタです．
+			Windows環境＋テキストエディタでのJavaタートルグラフィックスのプログラム実行環境を整備しましょう。
+		</p>
+<section title="目標">
+<ul>
+<li>自分の環境でタートルプログラムを動かすこと</li>
+</ul>
+</section>
+<section title="プログラム作成・実行の準備">
+<subsection title="Java開発環境(JDK)のインストール">
+<p>Javaの開発元であるSunが配布しているJavaキット。普通のコンピュータには入っていない。</p>
+<p>インストールは、「JDK インストール」とgoogleで検索し、出てきた手順に従うこと</p>
+</subsection>
+<subsection title="作業用フォルダの作成">
+<p>任意のフォルダを作業用フォルダとできる。</p>
+<p>このテキストでは、「マイドキュメント」に「myjava」というフォルダを作成することを想定する。</p>
+</subsection>
+<subsection title="タートルプログラムのダウンロード">
+<p>
+					タートルを動かすために必要なプログラムをダウンロードする。
+					以下のリンクを右クリックして、今作ったフォルダに保存する。
+				</p>
+<p>
+					(「対象をファイルに保存」を選択して、ダイアログから今作ったフォルダを選ぶ)
+				</p>
+<ul>
+<li>
+<a href="introduction_win/src/Turtle.java">Turtle.java</a>
+</li>
+</ul>
+</subsection>
+<subsection title="サンプルプログラムのダウンロード">
+<p>
+					同様の方法で、家を書くサンプルプログラムをダウンロードし、同じ場所に保存する。
+				</p>
+<ul>
+<li>
+<a href="introduction_win/src/House.java">House.java</a>
+</li>
+</ul>
+</subsection>
+<subsection title="テキストエディタの整備">
+<p>
+					必要なものはテキストエディタだけである。有料のソフトは使う必要ない。
+					テキストエディタなら、なんでもよい（メモ帳でもプログラムは書ける）。
+				</p>
+<p>
+					心に決めたものがない人は「xyzzy」を使おう。
+				</p>
+</subsection>
+</section>
+<section title="プログラムの作成と実行">
+<p>
+				Javaプログラムを作成して実行するには、次のようなプロセスをたどることになる。
+			</p>
+<figure id="fig:process" title="Javaプログラム作成のプロセス" src="image/process" style="scale:1.0"/>
+<dl>
+<dt>ソースコード</dt>
+<dd>プログラムが書かれたテキストファイルのこと</dd>
+<dt>バイトコード</dt>
+<dd>プログラムをコンピュータが実行できる形式に変換したもの</dd>
+<dt>コンパイル</dt>
+<dd>ソースコードをバイトコードに変換すること</dd>
+</dl>
+<subsection title="プログラム(ソースコード)の作成">
+<p>
+					テキストエディタの準備ができたら、ダウンロードしたHouse.javaをテキストエディタで開いてみよう。
+				</p>
+<p>
+					次のようなプログラムが出てくるはずである。
+				</p>
+<program title="House.java" id="src:house" src="src/House.java" normalizer="line, javasrc" javasrcSyntaxHilight="true" encoding="Shift_JIS"/>
+<p>
+					導入編では、実行してみるのが目標だから、まだ意味が分からなくてよいし、いじらなくてよい（書き換えてはいけない）。
+				</p>
+</subsection>
+<subsection title="コマンドプロンプトを利用したプログラムの実行">
+<p>
+					プログラムをコンパイルして実行するには、コマンドプロンプトから命令する必要がある。
+					「スタート」「プログラム」から「コマンドプロンプト」を起動する。
+				</p>
+<p>
+					今回使うコマンドは次のとおり。
+				</p>
+<ul>
+<li>
+<p>今いるフォルダにあるファイル一覧を見る。</p>
+</li>
+<console title="ファイル一覧を見る">
+dir
+					</console>
+<li>
+<p>フォルダを移動する。
+							<note>フォルダ階層を一つ上がる(戻る)には、「cd ..」を使う。</note>
+</p>
+</li>
+<console title="フォルダを移動する">
+cd [移動するフォルダ名]
+					</console>
+<li>
+<p>ドライブを移動する。</p>
+</li>
+<console title="フォルダを移動する">
+[ドライブ名]:
+					</console>
+<li>
+<p>javaソースプログラムをコンパイルする。</p>
+</li>
+<console title="コンパイルする">
+javac *.java
+					</console>
+<li>
+<p>タートルプログラムを実行する。</p>
+</li>
+<console title="実行する">
+java -cp . Turtle [クラス名]
+					</console>
+</ul>
+</subsection>
+<subsection title="コンパイル">
+<p>
+					先ほど作ったフォルダに移動してみよう。
+				</p>
+<p>
+					プログラムを始める時は、必ずこのフォルダに移動しなければならないので注意。
+					（dirと打ってみよう。Turtle.java と House.java が出てくれば成功）。
+				</p>
+<p>
+					コンパイルしてみよう。
+				</p>
+<console title="コンパイル">
+javac *.java
+				</console>
+<p>
+					次のプロンプトが帰ってくるまでは、コンパイル中である。
+					エラーが出なければ、コンパイル成功。
+				</p>
+<p>
+					コンパイルに成功したら、もう一度 dir と打ってみよう。
+					Turtle.class と House.class が出来れば成功している。
+				</p>
+</subsection>
+<subsection title="実行">
+<p>
+					javaコマンドを使って実行してみよう（こんどは .java がいらないので注意）。
+				</p>
+<console title="実行">
+java -cp . Turtle House
+				</console>
+<p>
+					次のような画面が出れば成功である。おめでとう。
+				</p>
+<figure id="fig:turtle" title="実行画面" src="image/turtle" style="scale:1.0"/>
+<p>
+					終了する場合は、FileからQuitを選ぶ。
+				</p>
+</subsection>
+</section>
+</body>
+</doc>

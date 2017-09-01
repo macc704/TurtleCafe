@@ -1,0 +1,1305 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2011/11/09" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p3_c15.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p3.html#doc1_part:three" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">データ構造とアルゴリズム</a>/集合データ構造とアルゴリズム（１）：並び替え</td>
+<td><a href="index_p3_c17.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_57">16  集合データ構造とアルゴリズム（１）：並び替え</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc17_6089" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.1  学習目標</a>
+<li> <a href="#doc17_6104" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.2  カードプログラムの要素技術</a>
+<ul>
+<li> <a href="#doc17_6109" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.2.1  CardTurtle</a>
+<ul>
+<li> <a href="#doc17_6143" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.2.1.1  CardTurtleの仕様</a>
+</ul>
+<li> <a href="#doc17_6189" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.2.2  ButtonTurtle</a>
+<ul>
+<li> <a href="#doc17_6237" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.2.2.1  ButtonTurtleの仕様</a>
+</ul>
+</ul>
+<li> <a href="#doc17_6275" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.3  並替えアルゴリズム</a>
+<ul>
+<li> <a href="#doc17_6277" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.3.1  並替えアルゴリズムの設計</a>
+<li> <a href="#doc17_6332" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.3.2  最小値検索プログラム</a>
+<li> <a href="#doc17_6367" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.3.3  最小値選択法による並替えプログラム</a>
+</ul>
+<li> <a href="#doc17_6388" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.4  練習問題</a>
+<ul>
+<li> <a href="#doc17_6390" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.4.1  問題1：ミニ問題集</a>
+<ul>
+<li> <a href="#doc17_6392" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.4.1.1  問題1.1</a>
+<li> <a href="#doc17_6398" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.4.1.2  問題1.2</a>
+<li> <a href="#doc17_6404" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.4.1.3  問題1.3</a>
+<li> <a href="#doc17_6410" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.4.1.4  問題1.4</a>
+</ul>
+<li> <a href="#doc17_6417" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.4.2  問題2：挿入法の並替えプログラムを作ろう</a>
+<li> <a href="#doc17_6439" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">16.4.3  問題3：アルゴリズムを改良しよう</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc17_6089">16.1  学習目標</h2>
+
+
+<ul>
+<li> リニア検索プログラムのアルゴリズムを理解する
+<li> 最小値検索法の並び替えアルゴリズムを理解する
+<li> 簡単なアルゴリズム（挿入法）を作れるようになる</ul>
+
+
+<h2 id="doc17_6104">16.2  カードプログラムの要素技術</h2>
+
+<p class="first_ja">カードプログラムを記述するための，CardTurtleとButtonTurtleについて説明します．</p>
+
+<h3 id="doc17_6109">16.2.1  CardTurtle</h3>
+
+<p class="first_ja">このプログラムは、１０枚のカードを入れ物１に入れ、１枚ずつ取り出して入れ物２に移すプログラムです。</p>
+
+<div id="doc17_src:MoveCards" class="caption">リスト 16.2.1.1 MoveCards.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * プログラム名：カードをリスト１からリスト２に移動するプログラム
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> MoveCards <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> MoveCards());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		hide();
+ 17: 		Turtle.window.size(550, 300);
+ 18: 
+ 19: 		<span class="comment">// リストを２つ作る</span>
+ 20: 		ListTurtle&lt;CardTurtle&gt; list1 = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>, <span class="quote">&quot;リスト1&quot;</span>);
+ 21: 		list1.warp(50, 40);
+ 22: 		ListTurtle&lt;CardTurtle&gt; list2 = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>, <span class="quote">&quot;リスト2&quot;</span>);
+ 23: 		list2.warp(50, 110);
+ 24: 
+ 25: 		<span class="comment">// リスト１に１０枚のカードを入れる</span>
+ 26: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 10; i++) {
+ 27: 			list1.addLast(<span class="keyword">new</span> CardTurtle(i * 10));
+ 28: 		}
+ 29: 
+ 30: 		<span class="comment">// アニメションループ</span>
+ 31: 		<span class="keyword">do</span> {
+ 32: 			sleep(0.5);
+ 33: 
+ 34: 			<span class="keyword">if</span> (list1.getSize() != 0) {
+ 35: 				list2.addLast(list1.getObjectAtCursor());<span class="comment">// 入れ物１から入れ物２にカードを移動する</span>
+ 36: 			} <span class="keyword">else</span> <span class="keyword">if</span> (list1.getSize() == 0) {
+ 37: 				break;<span class="comment">// アニメーションループを抜ける</span>
+ 38: 			}
+ 39: 
+ 40: 			update();
+ 41: 		} <span class="keyword">while</span> (<span class="keyword">true</span>);
+ 42: 
+ 43: 		print(<span class="quote">&quot;アニメーションループが終了しました．&quot;</span>);
+ 44: 	}
+ 45: 
+ 46: }
+</pre>
+
+<p><a href="chapter15/src/MoveCards.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、MoveCardsプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter15_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="MoveCards"/>
+</applet></p>
+<div class="fyi">
+<div class=title>do-while文</div>
+
+<p class="first_ja">while文とdo-while文は、両方とも繰り返しを表す文ですが、
+						条件判断の位置が違います。
+						while文は、最初に繰り返しを続けるかどうか調べて、続けるならば処理を行い、
+						続けないならば処理を抜ける、という構造をしています。
+						do-while文は、はじめに処理を行い、処理を行ったあとで、
+						繰り返しを続けるかどうか調べて、続けるならば２回目の処理を行い、続けないならば処理を抜ける、
+						という構造をしています。</p>
+</div>
+
+<div class="fyi">
+<div class=title>break文</div>
+
+<p class="first_ja">このプログラムでは、アニメーションループを抜け出すためにbreak文を使用しています。
+						break文が繰り返し文（while文、for文、do/while文）の中で実行されると、
+						プログラムの処理の流れはただちに繰り返し構造から抜け出し、
+						制御が繰り返し構造の直後にある命令に移ります。</p>
+<p>break文は、構造化プログラミング（入り口ひとつ、出口ひとつの処理構造）を破壊するものとして、
+						プログラミングの作法としてはあまりよくないものだと言われています。
+						break文を使わなくても、同じ処理の流れを定義することは可能なので、
+						プログラミングの作法を重んじるプログラマは、break文の代わりに変数を用いて繰り返し構造を制御し、
+						break文を使わないプログラムを記述します。</p>
+</div>
+
+
+<h4 id="doc17_6143">16.2.1.1  CardTurtleの仕様</h4>
+
+<p class="first_ja">カードの内容には、文字列、小数、整数を入れることができます。</p>
+
+<dl>
+<dt>
+int getNumber()
+<dd>
+カードの数字をint型で取得します（カードが数字でない場合は-1が返ります）
+<dt>
+String getText()
+<dd>
+カードの内容を文字列型で取得します
+<dt>
+String text()
+<dd>
+カードの内容を文字列型で取得します(getText()を使ってください)
+<dt>
+void text([カードの内容])
+<dd>
+カードの内容を、指定したカードの内容に変えます
+<dt>
+int fontsize()
+<dd>
+カードの内容のフォントサイズを取得します
+<dt>
+void fontsize(int size)
+<dd>
+カードの内容のフォントサイズを指定します</dl>
+
+
+<h3 id="doc17_6189">16.2.2  ButtonTurtle</h3>
+
+<p class="first_ja">ButtonTurtleはボタンが押されたことを検知することが出来るオブジェクトです．サンプルプログラムを下記します．</p>
+
+<div id="doc17_src:ButtonSample" class="caption">リスト 16.2.2.1 ButtonSample.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * プログラム名：ボタンのサンプルプログラム
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> ButtonSample <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> ButtonSample());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		hide();
+ 17: 
+ 18: 		<span class="comment">// ボタンを作る</span>
+ 19: 		ButtonTurtle helloButton = <span class="keyword">new</span> ButtonTurtle(<span class="quote">&quot;押してください！&quot;</span>);
+ 20: 
+ 21: 		<span class="comment">// アニメションループ</span>
+ 22: 		<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 23: 			sleep(0.025);
+ 24: 
+ 25: 			<span class="keyword">if</span> (helloButton.isClicked()) {<span class="comment">// helloButtonがクリックされたら</span>
+ 26: 				print(<span class="quote">&quot;押されました&quot;</span>);
+ 27: 			} <span class="keyword">else</span> {<span class="comment">// 何もクリックされていなかったら</span>
+ 28: 				<span class="comment">// 何もしない</span>
+ 29: 			}
+ 30: 
+ 31: 			update();
+ 32: 		}
+ 33: 	}
+ 34: 
+ 35: }
+</pre>
+
+<p><a href="chapter15/src/ButtonSample.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、ButtonSampleプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter15_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ButtonSample"/>
+</applet></p>
+<div class="fyi">
+<div class=title>ButtonTurtleを使うプログラム実行の注意</div>
+
+<p class="first_ja">ボタンを使ったプログラムをアプレットで実行する際には、必ず、ボタンが表示されている画面を一度クリックしてください。
+					ボタンが表示されている画面をクリックしないと、ボタンへの入力が受け付けられません。</p>
+</div>
+
+<p>ボタンを見張ることで，以下のように１ステップずつコマ送りできるプログラムを作ることができます．</p>
+
+<div id="doc17_src:MoveCards2" class="caption">リスト 16.2.2.2 MoveCards2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * プログラム名：カードをリスト１からリスト２に移動するプログラム（改：ボタンで１ステップずつ進む）
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> MoveCards2 <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> MoveCards2());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		hide();
+ 17: 		Turtle.window.size(550, 300);
+ 18: 
+ 19: 		<span class="comment">// リストを２つ作る</span>
+ 20: 		ListTurtle&lt;CardTurtle&gt; list1 = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>, <span class="quote">&quot;リスト1&quot;</span>);
+ 21: 		list1.warp(50, 60);
+ 22: 		ListTurtle&lt;CardTurtle&gt; list2 = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>, <span class="quote">&quot;リスト2&quot;</span>);
+ 23: 		list2.warp(50, 130);
+ 24: 
+ 25: 		<span class="comment">// リスト１に１０枚のカードを入れる</span>
+ 26: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 10; i++) {
+ 27: 			list1.addLast(<span class="keyword">new</span> CardTurtle(i * 10));
+ 28: 		}
+ 29: 
+ 30: 		<span class="comment">// ボタンを作る</span>
+ 31: 		ButtonTurtle stepButton = <span class="keyword">new</span> ButtonTurtle(<span class="quote">&quot;Step&quot;</span>);
+ 32: 		stepButton.warp(200, 20);
+ 33: 
+ 34: 		<span class="comment">// アニメションループ</span>
+ 35: 		<span class="keyword">do</span> {
+ 36: 			sleep(0.025);
+ 37: 
+ 38: 			<span class="keyword">if</span> (list1.getSize() != 0) {
+ 39: 				list2.addLast(list1.getObjectAtCursor());<span class="comment">// 入れ物１から入れ物２にカードを移動する</span>
+ 40: 				waitForPushButton(stepButton);
+ 41: 			} <span class="keyword">else</span> <span class="keyword">if</span> (list1.getSize() == 0) {
+ 42: 				break;<span class="comment">// アニメーションループを抜ける</span>
+ 43: 			}
+ 44: 
+ 45: 			update();
+ 46: 		} <span class="keyword">while</span> (<span class="keyword">true</span>);
+ 47: 
+ 48: 		print(<span class="quote">&quot;アニメーションループが終了しました．&quot;</span>);
+ 49: 	}
+ 50: 
+ 51: 	<span class="comment">// ステップボタンが押されるまで待つ</span>
+ 52: 	<span class="keyword">void</span> waitForPushButton(ButtonTurtle button) {
+ 53: 		<span class="keyword">do</span> {
+ 54: 			update();
+ 55: 			sleep(0.025);
+ 56: 		} <span class="keyword">while</span> (!(button.isClicked()));
+ 57: 	}
+ 58: 
+ 59: }
+</pre>
+
+<p><a href="chapter15/src/MoveCards2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、MoveCards2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter15_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="MoveCards2"/>
+</applet></p>
+<div class="fyi">
+<div class=title>「!」（論理否定演算子）</div>
+
+<p class="first_ja">「!」を論理否定演算子といい、真偽値を逆にする演算子です。!(true)=false、!(false)=trueとなります。
+						このプログラムに使われている!(StepButton.isClicked())は、ステップボタンが押されていたら、falseを返し、押されていなかったら、trueを返します。</p>
+</div>
+
+
+<h4 id="doc17_6237">16.2.2.1  ButtonTurtleの仕様</h4>
+
+
+<dl>
+<dt>
+boolean isClicked()
+<dd>
+ボタンがクリックされたか調べます
+<dt>
+String text()
+<dd>
+ボタンのラベルを文字列型で取得します
+<dt>
+void text([ボタンのラベル])
+<dd>
+ボタンのラベルを、指定したボタンのラベルに変えます
+<dt>
+int fontsize()
+<dd>
+ボタンのラベルのフォントサイズを取得します
+<dt>
+int fontsize(int size)
+<dd>
+ボタンのラベルのフォントサイズを指定します</dl>
+
+
+<h2 id="doc17_6275">16.3  並替えアルゴリズム</h2>
+
+
+<h3 id="doc17_6277">16.3.1  並替えアルゴリズムの設計</h3>
+
+<p class="first_ja">アルゴリズムとは，何らかを実現する手順のことで，特に，小さい命令を組み合わせて，順序立てて実行することで，より大きな目的を達成する手順のことを指します．</p>
+<p>アルゴリズムの初歩としてよく出てくる例として，並替えアルゴリズム（ソートアルゴリズム，ソーティングアルゴリズム）があります．
+				並び替えとは、ばらばらに並んでいるものを決まったならび（昇順や降順）に並び替えることを指します．このプログラムは，皆さんが習った技術を組み合わせて達成することが出来ます．</p>
+<p></p>
+<p>並替えアルゴリズムはこれまでにたくさんの種類が提案されていますが，
+				ここでは手作業で考えやすい「最小値選択法」（データ構造とアルゴリズムではセレクションソートと呼ばれている技法です）について学んでみましょう．</p>
+<p>以下に，手作業と，Squeakで実装されたプログラムのビデオがあります．</p>
+
+<ul>
+<li> <a href="http://www.youtube.com/watch?v=_V6uxVFXL8k" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">最小値選択法(手作業)</a>
+<li> <a href="http://www.youtube.com/watch?v=X-YIWDIHAX4" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">最小値選択法(Squeak)</a></ul>
+
+<p>古典的ですが，基本的なアルゴリズムを設計するには有効な方法として，フローチャートを使った設計があります．ここでは，フローチャートで設計していきます．</p>
+<p>まず，全体としては，最小値を探して，並替え済みの場所に置いていくという，次のようなフローチャートになります．</p>
+
+<div class="figure">
+<img class="figure" style="scale:0.8" src="chapter15/image/SortLevel1.gif" alt="図 16.3.1.1 SortLevel1">
+</div>
+
+<p>「最小値を探す」という命令はありませんので，これもアルゴリズムで記述する必要があります．すでに知っている命令を組み合わせると，次のようになります．</p>
+
+<div class="figure">
+<img class="figure" style="scale:0.8" src="chapter15/image/Search.gif" alt="図 16.3.1.2 Search">
+</div>
+
+<p>二つのフローチャートの関係は次のようになります．</p>
+
+<div class="figure">
+<img class="figure" style="scale:0.8" src="chapter15/image/SortAndSearch.gif" alt="図 16.3.1.3 SortAndSearch">
+</div>
+
+<p>これを一つに記述すると，全体としては次のようなアルゴリズムになります．</p>
+
+<div class="figure">
+<img class="figure" style="scale:0.8" src="chapter15/image/SortAll.gif" alt="図 16.3.1.4 SortAll">
+</div>
+
+
+<h3 id="doc17_6332">16.3.2  最小値検索プログラム</h3>
+
+<p class="first_ja">最小値検索を実装したプログラムです．</p>
+
+<div id="doc17_src:LinearSearch" class="caption">リスト 16.3.2.1 LinearSearch.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="keyword">import</span> java.awt.Color;
+  2: 
+  3: <span class="comment">/*
+  4:  * プログラム名：最小値の検索 
+  5:  * Created on 2012/01/07
+  6:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  7:  */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> LinearSearch <span class="keyword">extends</span> Turtle {
+  9: 
+ 10: 	<span class="comment">// 起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		Turtle.startTurtle(<span class="keyword">new</span> LinearSearch());
+ 13: 	}
+ 14: 
+ 15: 	<span class="comment">// タートルを動かす処理</span>
+ 16: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 17: 		hide();
+ 18: 		Turtle.window.size(550, 400);
+ 19: 
+ 20: 		<span class="comment">// カードの束を作る</span>
+ 21: 		ListTurtle&lt;CardTurtle&gt; 最小値候補 = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>, <span class="quote">&quot;最小値候補&quot;</span>);
+ 22: 		ListTurtle&lt;CardTurtle&gt; 未処理束 = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>, <span class="quote">&quot;未処理束&quot;</span>);
+ 23: 		ListTurtle&lt;CardTurtle&gt; 検索済束 = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>, <span class="quote">&quot;検索済束&quot;</span>);
+ 24: 		最小値候補.warpByTopLeft(50, 20);
+ 25: 		最小値候補.setBgColor(<span class="keyword">new</span> Color(255, 153, 204));
+ 26: 		未処理束.warpByTopLeft(50, 90);
+ 27: 		未処理束.setBgColor(<span class="keyword">new</span> Color(51, 102, 255));
+ 28: 		検索済束.warpByTopLeft(50, 160);
+ 29: 		検索済束.setBgColor(<span class="keyword">new</span> Color(0, 204, 153));
+ 30: 
+ 31: 		<span class="comment">// ボタンを作る</span>
+ 32: 		ButtonTurtle stepButton = <span class="keyword">new</span> ButtonTurtle(<span class="quote">&quot;ステップ&quot;</span>);
+ 33: 		stepButton.warpByTopLeft(400, 20);
+ 34: 
+ 35: 		<span class="comment">// カードを8枚作り、未処理束に入れる</span>
+ 36: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 8; i++) {
+ 37: 			未処理束.addLast(<span class="keyword">new</span> CardTurtle(random(100)));
+ 38: 		}
+ 39: 		waitForPushButton(stepButton);
+ 40: 
+ 41: 		<span class="comment">// 一番小さいのを見つける</span>
+ 42: 		最小値候補.addLast(未処理束.getObjectAtCursor());
+ 43: 		waitForPushButton(stepButton);
+ 44: 		<span class="keyword">while</span> (未処理束.getSize() &gt; 0) {
+ 45: 			<span class="keyword">if</span> (未処理束.getObjectAtCursor().getNumber() &lt; 最小値候補
+ 46: 					.getObjectAtCursor().getNumber()) {<span class="comment">// (小さくなければ）</span>
+ 47: 				検索済束.addLast(最小値候補.getObjectAtCursor());
+ 48: 				最小値候補.addLast(未処理束.getObjectAtCursor());
+ 49: 			} <span class="keyword">else</span> {
+ 50: 				検索済束.addLast(未処理束.getObjectAtCursor());
+ 51: 			}
+ 52: 			waitForPushButton(stepButton);
+ 53: 		}
+ 54: 		検索済束.moveAllTo(未処理束);
+ 55: 		waitForPushButton(stepButton);
+ 56: 
+ 57: 	}
+ 58: 
+ 59: 	<span class="comment">// ステップボタンが押されるまで待つ</span>
+ 60: 	<span class="keyword">void</span> waitForPushButton(ButtonTurtle button) {
+ 61: 		<span class="keyword">do</span> {
+ 62: 			update();
+ 63: 			sleep(0.025);
+ 64: 		} <span class="keyword">while</span> (!(button.isClicked()));
+ 65: 	}
+ 66: 
+ 67: }
+</pre>
+
+<p><a href="chapter15/src/LinearSearch.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、LinearSearchプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter15_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="LinearSearch"/>
+</applet></p>
+<div class="fyi">
+<div class=title>実装</div>
+
+<p class="first_ja">設計に対して，それを実現するものを作ることを「実装」と呼び，ソフトウェア業界ではよく使われる言葉です．</p>
+</div>
+
+<div class="fyi">
+<div class=title>日本語の変数名</div>
+
+<p class="first_ja">Javaでは，変数名，メソッド名，クラス名に日本語が使えます．</p>
+<p>（ただし，ファイル名の文字コードで問題が生じるため，クラス名に日本語をつけるのはお控えください）</p>
+</div>
+
+
+<h3 id="doc17_6367">16.3.3  最小値選択法による並替えプログラム</h3>
+
+<p class="first_ja">最小値選択法を実装したプログラムです．</p>
+
+<div id="doc17_src:SelectionSort" class="caption">リスト 16.3.3.1 SelectionSort.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="keyword">import</span> java.awt.Color;
+  2: 
+  3: <span class="comment">/*
+  4:  * プログラム名：最小値選択法による並び替え 
+  5:  * Created on 2012/01/07
+  6:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  7:  */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> SelectionSort <span class="keyword">extends</span> Turtle {
+  9: 
+ 10: 	<span class="comment">// 起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		Turtle.startTurtle(<span class="keyword">new</span> SelectionSort());
+ 13: 	}
+ 14: 
+ 15: 	<span class="comment">// タートルを動かす処理</span>
+ 16: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 17: 		hide();
+ 18: 		window.size(550, 400);
+ 19: 
+ 20: 		<span class="comment">// カードの束を作る</span>
+ 21: 		ListTurtle&lt;CardTurtle&gt; 最小値候補 = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>, <span class="quote">&quot;最小値候補&quot;</span>);
+ 22: 		ListTurtle&lt;CardTurtle&gt; 未処理束 = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>, <span class="quote">&quot;未処理束&quot;</span>);
+ 23: 		ListTurtle&lt;CardTurtle&gt; 検索済束 = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>, <span class="quote">&quot;検索済束&quot;</span>);
+ 24: 		ListTurtle&lt;CardTurtle&gt; 並替済束 = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>, <span class="quote">&quot;並替済束&quot;</span>);
+ 25: 		最小値候補.warpByTopLeft(50, 20);
+ 26: 		最小値候補.setBgColor(<span class="keyword">new</span> Color(255, 153, 204));
+ 27: 		未処理束.warpByTopLeft(50, 90);
+ 28: 		未処理束.setBgColor(<span class="keyword">new</span> Color(51, 102, 255));
+ 29: 		検索済束.warpByTopLeft(50, 160);
+ 30: 		検索済束.setBgColor(<span class="keyword">new</span> Color(0, 204, 153));
+ 31: 		並替済束.warpByTopLeft(50, 230);
+ 32: 		並替済束.setBgColor(<span class="keyword">new</span> Color(255, 255, 0));
+ 33: 
+ 34: 		<span class="comment">// ボタンを作る</span>
+ 35: 		ButtonTurtle stepButton = <span class="keyword">new</span> ButtonTurtle(<span class="quote">&quot;ステップ&quot;</span>);
+ 36: 		stepButton.warpByTopLeft(400, 20);
+ 37: 
+ 38: 		<span class="comment">// カードを8枚作り、未処理束に入れる</span>
+ 39: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 8; i++) {
+ 40: 			未処理束.addLast(<span class="keyword">new</span> CardTurtle(random(100)));
+ 41: 		}
+ 42: 		waitForPushButton(stepButton);
+ 43: 
+ 44: 		<span class="comment">// 並び替えを行う</span>
+ 45: 		<span class="keyword">while</span> (未処理束.getSize() &gt; 0) {
+ 46: 
+ 47: 			<span class="comment">// 一番小さいのを見つける</span>
+ 48: 			最小値候補.addLast(未処理束.getObjectAtCursor());
+ 49: 			waitForPushButton(stepButton);
+ 50: 			<span class="keyword">while</span> (未処理束.getSize() &gt; 0) {
+ 51: 				<span class="keyword">if</span> (未処理束.getObjectAtCursor().getNumber() &lt; 最小値候補
+ 52: 						.getObjectAtCursor().getNumber()) {<span class="comment">// (小さくなければ）</span>
+ 53: 					検索済束.addLast(最小値候補.getObjectAtCursor());
+ 54: 					最小値候補.addLast(未処理束.getObjectAtCursor());
+ 55: 				} <span class="keyword">else</span> {
+ 56: 					検索済束.addLast(未処理束.getObjectAtCursor());
+ 57: 				}
+ 58: 				waitForPushButton(stepButton);
+ 59: 			}
+ 60: 			検索済束.moveAllTo(未処理束);
+ 61: 			waitForPushButton(stepButton);
+ 62: 
+ 63: 			<span class="comment">// 見つけたものをソート済の束へ追加する</span>
+ 64: 			並替済束.addLast(最小値候補.getObjectAtCursor());
+ 65: 			waitForPushButton(stepButton);
+ 66: 		}
+ 67: 	}
+ 68: 
+ 69: 	<span class="comment">// ステップボタンが押されるまで待つ</span>
+ 70: 	<span class="keyword">void</span> waitForPushButton(ButtonTurtle button) {
+ 71: 		<span class="keyword">do</span> {
+ 72: 			update();
+ 73: 			sleep(0.025);
+ 74: 		} <span class="keyword">while</span> (!(button.isClicked()));
+ 75: 	}
+ 76: 
+ 77: }
+</pre>
+
+<p><a href="chapter15/src/SelectionSort.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、SelectionSortプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter15_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="SelectionSort"/>
+</applet></p>
+
+<h2 id="doc17_6388">16.4  練習問題</h2>
+
+
+<h3 id="doc17_6390">16.4.1  問題1：ミニ問題集</h3>
+
+
+<h4 id="doc17_6392">16.4.1.1  問題1.1</h4>
+
+<p class="first_ja">ランダムな数が書かれたカードが１０枚入った入れ物を作ろう。</p>
+
+<h4 id="doc17_6398">16.4.1.2  問題1.2</h4>
+
+<p class="first_ja">１０枚のカードが入った入れ物と、「カーソルを１進める」というボタンを用意し、
+						ボタンを押すとカーソルを１進めるプログラムを作ってみよう。</p>
+
+<h4 id="doc17_6404">16.4.1.3  問題1.3</h4>
+
+<p class="first_ja">0から9までの数が書かれたカードが１０枚入った入れ物を作り、１秒に１回かきまぜて、
+						かきまぜるたびに「先頭にある数は○○です」と表示するプログラムを作ろう。</p>
+
+<h4 id="doc17_6410">16.4.1.4  問題1.4</h4>
+
+<p class="first_ja">ユーザに「何番目のカードを選びますか？」と表示し、ユーザからカーソル位置の入力を受けつけ、
+						１０枚のカードが入った入れ物から、ユーザが入力した位置にあるカードの数字を取得し、
+						「あなたの選んだカードに書かれている数は○○ですね」と表示するプログラムを作ろう。</p>
+
+<h3 id="doc17_6417">16.4.2  問題2：挿入法の並替えプログラムを作ろう</h3>
+
+<p class="first_ja">下の実行例を参考に，挿入法の並べ替えアルゴリズムのフローチャートを書き，プログラムを作りましょう．</p>
+
+<ul>
+<li> <a href="http://www.youtube.com/watch?v=bDODQXHOhVM" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">挿入法(手作業)</a>
+<li> <a href="http://www.youtube.com/watch?v=3US3rD-Ptvg" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">挿入法(Squeak)</a></ul>
+
+
+<h3 id="doc17_6439">16.4.3  問題3：アルゴリズムを改良しよう</h3>
+
+<p class="first_ja">検索済束を使わずに最小値選択法をプログラムしてみよう．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p3_c15.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p3.html#doc1_part:three" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">データ構造とアルゴリズム</a>/集合データ構造とアルゴリズム（１）：並び替え</td>
+<td><a href="index_p3_c17.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

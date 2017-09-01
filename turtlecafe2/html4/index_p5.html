@@ -1,0 +1,783 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p4_c19.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/付録</td>
+<td><a href="index_p5_c20.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="part" id="doc1_part:extra">5  付録</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="index_p5_c20.html#doc1_72" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">20  やり残したJava文法</a>
+<ul>
+<li> <a href="index_p5_c20.html#doc21_7977" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">20.1  学習目標</a>
+<li> <a href="index_p5_c20.html#doc21_7986" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">20.2  繰り返しの制御</a>
+<li> <a href="index_p5_c20.html#doc21_8024" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">20.3  論理否定演算子</a>
+</ul>
+<li> <a href="index_p5_c21.html#doc1_76" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21  タートルの仕様</a>
+<ul>
+<li> <a href="index_p5_c21.html#doc22_8060" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1  タートルの命令リスト</a>
+<ul>
+<li> <a href="index_p5_c21.html#doc22_8062" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.1  基本的な命令</a>
+<li> <a href="index_p5_c21.html#doc22_8170" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.2  オブジェクトの生成に関する命令</a>
+<li> <a href="index_p5_c21.html#doc22_8200" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.3  画面の描画処理に関する命令</a>
+<li> <a href="index_p5_c21.html#doc22_8218" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.4  座標に関する命令</a>
+<li> <a href="index_p5_c21.html#doc22_8242" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.5  大きさに関する命令</a>
+<li> <a href="index_p5_c21.html#doc22_8310" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.6  オブジェクトを出現/隠す命令</a>
+<li> <a href="index_p5_c21.html#doc22_8346" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.7  オブジェクトの見た目を変える命令</a>
+<li> <a href="index_p5_c21.html#doc22_8358" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.8  テキストの中身を変える命令</a>
+<li> <a href="index_p5_c21.html#doc22_8370" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.9  キー・マウス入力に関する命令</a>
+<li> <a href="index_p5_c21.html#doc22_8442" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.10  オブジェクトの接触に関する命令</a>
+</ul>
+<li> <a href="index_p5_c21.html#doc22_8461" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.2  タートルで作ってはいけないメソッド名</a>
+</ul>
+<li> <a href="index_p5_c22.html#doc1_78" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22  音を鳴らしてみよう</a>
+<ul>
+<li> <a href="index_p5_c22.html#doc23_8772" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.1  音を鳴らす方法</a>
+<li> <a href="index_p5_c22.html#doc23_8784" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.2  SoundTurtleの使い方</a>
+<li> <a href="index_p5_c22.html#doc23_8799" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.3  あらかじめ音を読み込んでおく</a>
+<li> <a href="index_p5_c22.html#doc23_8811" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.4  SoundTurtleで利用できる命令</a>
+<ul>
+<li> <a href="index_p5_c22.html#doc23_8813" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.4.1  再生と停止</a>
+<li> <a href="index_p5_c22.html#doc23_8843" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.4.2  音量の取得・変更</a>
+<li> <a href="index_p5_c22.html#doc23_8861" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.4.3  音の読み込み</a>
+</ul>
+<li> <a href="index_p5_c22.html#doc23_8874" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.5  練習問題</a>
+<ul>
+<li> <a href="index_p5_c22.html#doc23_8876" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.5.1  シューティングゲームに効果音をつけよう</a>
+<li> <a href="index_p5_c22.html#doc23_8897" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.5.2  シューティングゲームにBGMをつけよう</a>
+</ul>
+<li> <a href="index_p5_c22.html#doc23_8907" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.6  練習問題解答例</a>
+</ul>
+<li> <a href="index_p5_c23.html#doc1_80" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23  セル・オートマトン</a>
+<ul>
+<li> <a href="index_p5_c23.html#doc24_8933" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.1  セルオートマトンとは</a>
+<li> <a href="index_p5_c23.html#doc24_8942" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.2  １次元セルオートマトン</a>
+<ul>
+<li> <a href="index_p5_c23.html#doc24_8944" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.2.1  CellTurtleの基本的な使い方</a>
+<li> <a href="index_p5_c23.html#doc24_8981" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.2.2  ルール</a>
+<li> <a href="index_p5_c23.html#doc24_9011" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.2.3  アサリの貝殻の模様と１次元オートマトン</a>
+</ul>
+<li> <a href="index_p5_c23.html#doc24_9022" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.3  ２次元セルオートマトン</a>
+<li> <a href="index_p5_c23.html#doc24_9056" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.4  CellTurtleで利用できる命令</a>
+<ul>
+<li> <a href="index_p5_c23.html#doc24_9058" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.4.1  「位置」について</a>
+<li> <a href="index_p5_c23.html#doc24_9069" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.4.2  移動の命令</a>
+<li> <a href="index_p5_c23.html#doc24_9123" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.4.3  CellTurtleのマーク処理命令</a>
+<li> <a href="index_p5_c23.html#doc24_9189" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.4.4  ２次元オートマトンのターン処理命令</a>
+</ul>
+<li> <a href="index_p5_c23.html#doc24_9208" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5  練習問題</a>
+<ul>
+<li> <a href="index_p5_c23.html#doc24_9210" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.1  １次元セルオートマトンのいろいろなルールを試してみよう</a>
+<li> <a href="index_p5_c23.html#doc24_9230" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.2  ルールをメソッドにしてみよう</a>
+<li> <a href="index_p5_c23.html#doc24_9251" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.3  ルールをメソッドにしてみよう改</a>
+<li> <a href="index_p5_c23.html#doc24_9269" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.4  2次元セルオートマトンを試してみよう</a>
+<li> <a href="index_p5_c23.html#doc24_9297" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.5  2次元セルオートマトンのいろいろなルールを試してみよう</a>
+<li> <a href="index_p5_c23.html#doc24_9309" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.6  ライフゲームを作ってみよう</a>
+</ul>
+<li> <a href="index_p5_c23.html#doc24_9343" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.6  参考文献</a>
+</ul>
+</ul>
+</div>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p4_c19.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/付録</td>
+<td><a href="index_p5_c20.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

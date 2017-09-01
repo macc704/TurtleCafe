@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>ブロックの入れ子構造</title>
+</head>
+<body>
+<section title="学習目標">
+<ul>
+<li>繰り返しや分岐を入れ子にして、目的のプログラムが書けるようになる</li>
+<li>剰余演算子を使って、一定の周期をもつプログラムが書けるようになる</li>
+</ul>
+</section>
+<section title="繰り返しの入れ子">
+<p>今回は繰り返しの入れ子（繰り返しの中に繰り返しがあること）に挑戦してみましょう。</p>
+<subsection title="たくさんの円を書くプログラム">
+<p>次のプログラムを見てみましょう。</p>
+<program title="MultiCircle.java" id="src:MultiCircle" src="src/MultiCircle.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter05/src/MultiCircle.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、MultiCircleプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter05_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="MultiCircle"/>
+</applet>]]></native>
+<figure title="たくさんの円を書くプログラム" src="image/multicircle" style="scale:1.0"/>
+<p>
+					前回、円を書くには繰り返しを使うことを習いました。今回は、さらにその円を何個も書くために、
+					もう一つ外側に繰り返しを作って、"繰り返しを繰り返す"ということをやっています。
+				</p>
+</subsection>
+<subsection title="ブロックの入れ子">
+<p>
+					ブロックは中括弧({})で囲まれた部分のことを言います。
+				</p>
+<p>下図のように、プログラムのifブロックやwhileブロックはいくつでも入れ子にすることができます。</p>
+<figure title="ブロックの入れ子" src="image/block" style="scale:1.0"/>
+<fyi title="コンパイルエラーに注意">
+<p>
+						ブロックを示す中括弧は必ず対応していなくてはなりません。
+						開き括弧が余ったり、閉じ括弧が余ったりすると、コンパイルエラーとなります。
+					</p>
+<p>
+						括弧違いの場合、コンピュータはブロックを勘違いしてしまうので、
+						よけいなコンパイルエラーが（たくさん）でます。
+						たくさんのコンパイルエラーが一気にでたら、まず括弧の対応関係を確かめましょう。
+					</p>
+</fyi>
+</subsection>
+<subsection title="インデント">
+<p>
+					第3回の時にも指摘しましたが、インデントをつけると括弧の対応関係やブロックの範囲が分かりやすくなります。
+					<em>インデントがついていないソースは受理しません。</em>
+</p>
+<p>
+					見やすいだけでなく、これができていないためにコンパイルエラーで動かない場合が非常に多いので、
+					注意してください。					
+				</p>
+<figure title="インデント" src="image/indent" style="scale:1.0"/>
+<p>論プロエディタでは、フォーマットをするとよいです。</p>
+</subsection>
+</section>
+<section title="奇数と偶数を判定する">
+<p>
+				剰余演算子(%)を使うと、割り算のあまりを求めることができます。
+				これを使うと、例えば奇数と偶数を判定することができます。
+			</p>
+<program title="SquareAndTriangle.java" id="src:SquareAndTriangle" src="src/SquareAndTriangle.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter05/src/SquareAndTriangle.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、SquareAndTriangleプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter05_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="SquareAndTriangle"/>
+</applet>]]></native>
+<figure title="三角形と四角形を交互に書くプログラム" src="image/square_and_triangle" style="scale:1.0"/>
+</section>
+<section title="応用：花を描くプログラム">
+<p>応用として、花を描くプログラムを考えてみましょう。</p>
+<figure title="花を書くプログラム" src="image/flower" style="scale:1.0"/>
+<subsection title="花びらを描く">
+<p>花を描くには、まず花びらをかいて、それを繰り返す必要があります。</p>
+<figure title="花びらを書くプログラム" src="image/petal" style="scale:1.0"/>
+<program title="Petal.java" id="src:Petal" src="src/Petal.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter05/src/Petal.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Petalプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter05_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Petal"/>
+</applet>]]></native>
+</subsection>
+<subsection title="花を描く">
+<p>花びらを描くには繰り返しが必要で、花を描くにはさらにそれを繰り返す必要があります。
+				以下のように、繰り返しの入れ子を使います。
+				</p>
+<program title="Flower.java" id="src:Flower" src="src/Flower.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter05/src/Flower.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Flowerプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter05_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Flower"/>
+</applet>]]></native>
+<p>
+					ポイントは、花びらを書くループの外側にそれを6回繰り返すループをつくる
+					（つまりループを入れ子にする）ことです。
+					「繰り返しを繰り返す」ためには、繰り返す繰り返しの外側に繰り返しループ
+					を書く必要がありました。構造は以下のようになります。
+				</p>
+<figure title="花を書くプログラムの構造" src="image/flowerblock" style="scale:1.0"/>
+<p>
+					以下に、よくある間違いの例を示します。
+				</p>
+<program title="InvalidFlower.java" id="src:InvalidFlower" src="src/InvalidFlower.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter05/src/InvalidFlower.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、InvalidFlowerプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter05_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="InvalidFlower"/>
+</applet>]]></native>
+<p>
+					これがうまくいかない理由が説明できるでしょうか？
+					以下に、このプログラムの構造を示しますので、
+					うまくいく方と比較してみましょう。
+				</p>
+<figure title="うまくいかない花を書くプログラムの構造" src="image/flowerblockinvalid" style="scale:1.0"/>
+<p>
+					このように、入れ子を作る時には、｛｝の位置に注意する必要があります。
+				</p>
+</subsection>
+</section>
+<section title="練習問題">
+<!-- <section title="問題1：四角形と三角形を交互に100個描くプログラムを作ろう">
+				<figure 
+					title="四角形と三角形を交互に100個描くプログラム"
+					src="image/handredblock2" style="scale:1.0"  />
+				<p>
+					ヒント: 下の四角形を100個描くプログラムを参考にせよ
+				</p>		
+				<text.turtle.applet class="HandredBlock" chapter="&CHAPTER;"/>										
+				<figure 
+					title="四角形を10×10描くプログラム"
+					src="image/handredblock" style="scale:1.0"  />					
+			</section> -->
+<subsection title="問題1.1：四角形を10個描くプログラムを作ろう">
+<figure title="四角形と三角形を交互に100個描くプログラム" src="image/tenblocks" style="scale:1.0"/>
+</subsection>
+<subsection title="問題1.2：四角形を100個描くプログラムを作ろう">
+<figure title="四角形を100個描くプログラム" src="image/handredblocks" style="scale:1.0"/>
+</subsection>
+<subsection title="問題1.3：四角形と三角形を交互に100個描くプログラムを作ろう">
+<figure title="四角形と三角形を交互に100個描くプログラム" src="image/handredblocks2" style="scale:1.0"/>
+</subsection>
+<subsection title="問題2：貝殻を描くプログラムを作ろう">
+<figure title="貝殻を描くプログラム" src="image/shell" style="scale:1.0"/>
+<p>
+					ヒント１：まず以下のプログラムを作ってみよう。
+				</p>
+<figure title="貝殻を描くプログラムのヒント" src="image/shellhint" style="scale:1.0"/>
+<p>
+					ヒント２：ヒント１が出来たら、四角の大きさを指定するとき、上位ループの繰返しの変数を利用する。
+				</p>
+</subsection>
+<subsection title="問題3：タイヤを描くプログラムを作ろう">
+<figure title="タイヤを描くプログラム" src="image/tire" style="scale:1.0"/>
+<p>
+					ヒント：ずらす角度は8度, 四角の１辺は10歩にするとうまくいく。
+					真ん中の円は多少ずれていても構わない。
+				</p>
+</subsection>
+<subsection title="問題4：ドラえもんを描くプログラムを作ろう">
+<figure title="ドラえもんを描くプログラム" src="image/doraemon" style="scale:1.0"/>
+<p>ノーヒント</p>
+</subsection>
+<subsection title="問題5：キーボードを描くプログラムを作ろう">
+<figure title="キーボードを描くプログラム" src="image/keyboard" style="scale:1.0"/>
+<p>ノーヒント</p>
+</subsection>
+</section>
+</body>
+</doc>

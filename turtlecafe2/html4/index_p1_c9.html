@@ -1,0 +1,1486 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c8.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/ぱらぱら漫画アニメーション</td>
+<td><a href="index_p1_c10.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_38">9  ぱらぱら漫画アニメーション</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc10_3013" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.1  学習目標</a>
+<li> <a href="#doc10_sec:imageturtle" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.2  画像を使ったプログラム</a>
+<li> <a href="#doc10_3065" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.3  オブジェクトを隠す/出現させる</a>
+<li> <a href="#doc10_3150" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.4  ぱらぱら漫画アニメーション</a>
+<ul>
+<li> <a href="#doc10_3152" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.4.1  見た目を別のオブジェクトのものに</a>
+<li> <a href="#doc10_3206" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.4.2  人を動作させる</a>
+<li> <a href="#doc10_3250" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.4.3  背景を動かす（画面のスクロール）</a>
+</ul>
+<li> <a href="#doc10_sec:textturtle" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.5  文字をオブジェクトして扱う</a>
+<ul>
+<li> <a href="#doc10_3284" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.5.1  文字を回す</a>
+<li> <a href="#doc10_3309" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.5.2  文字を変化させる</a>
+</ul>
+<li> <a href="#doc10_3366" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.6  練習問題</a>
+<ul>
+<li> <a href="#doc10_3368" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.6.1  アニメーションを作ろう</a>
+<ul>
+<li> <a href="#doc10_3373" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.6.1.1  作品例</a>
+</ul>
+<li> <a href="#doc10_3396" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.6.2  0655アニメーションを作ろう（１）</a>
+<li> <a href="#doc10_3420" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.6.3  0655アニメーションを作ろう（２）</a>
+<li> <a href="#doc10_3429" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">9.6.4  0655アニメーションを作ろう（３）</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc10_3013">9.1  学習目標</h2>
+
+
+<ul>
+<li> 画像を表示させることができる
+<li> 画像をぱらぱら漫画の要領でアニメーションさせるプログラムを作れるようになる
+<li> 文字列を表示させ、変更させるプログラムを作れるようになる</ul>
+
+
+<h2 id="doc10_sec:imageturtle">9.2  画像を使ったプログラム</h2>
+
+<p class="first_ja">今回は、画像や文字を使ったアニメーションをやってみたいと思います。
+				プログラムは、前回までに習ったこととほとんど同じです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter09/image/block/RotateCar.jpg" alt="図 9.2.1 RotateCar">
+</div>
+
+
+<div id="doc10_src:RotateCar" class="caption">リスト 9.2.1 RotateCar.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 車が回るプログラム
+  3:  * 
+  4:  * 2003/06/23　Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> RotateCar <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> RotateCar());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>);
+ 17: 		{ <span class="comment">// アニメーションループ</span>
+ 18: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 19: 				sleep(0.1);
+ 20: 				{ <span class="comment">// 処理</span>
+ 21: 					car.rt(5);
+ 22: 				}
+ 23: 				update();
+ 24: 			}
+ 25: 		}
+ 26: 	}
+ 27: 
+ 28: }
+</pre>
+
+<p><a href="chapter09/src/RotateCar.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、RotateCarプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="RotateCar"/>
+</applet></p>
+<p>ImageTurtleクラスを使うと、画像をオブジェクトとして、
+				タートルのように扱うことができます。</p>
+<div class="fyi">
+<div class=title>画像を使うときの注意</div>
+
+<p class="first_ja">例えば、上記のRotateCar.javaアニメーションで、car.gifを使う場合は、
+						その2つ（RotateCar.javaとcar.gif）を同じフォルダに置く必要があります。</p>
+<p>同じフォルダに置いていないと画像が表示されません。</p>
+<p>使える画像の種類は「.gif」「.jpg」「.jpeg」のどれかです。
+						「.bmp」の画像は使えないので注意してください。</p>
+</div>
+
+
+<h2 id="doc10_3065">9.3  オブジェクトを隠す/出現させる</h2>
+
+<p class="first_ja">show(), hide() 命令を使うと、オブジェクトを隠したり、
+				出現させたりすることができます。</p>
+<p>下のプログラムは、車が点滅するプログラムです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter09/image/block/OnAndOffCar.jpg" alt="図 9.3.1 OnAndOffCar">
+</div>
+
+
+<div id="doc10_src:OnAndOffCar" class="caption">リスト 9.3.1 OnAndOffCar.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 車を点滅させるプログラム
+  3:  * 
+  4:  * 2003/06/23 Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> OnAndOffCar <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> OnAndOffCar());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>);
+ 17: 		{ <span class="comment">// アニメーションループ</span>
+ 18: 			<span class="keyword">int</span> i = 0;
+ 19: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 20: 				sleep(0.2);
+ 21: 				{ <span class="comment">// 1コマの処理</span>
+ 22: 					<span class="keyword">if</span> ((i % 2) == 0) {
+ 23: 						car.show();
+ 24: 					} <span class="keyword">else</span> {
+ 25: 						car.hide();
+ 26: 					}
+ 27: 				}
+ 28: 				i++;
+ 29: 				update();
+ 30: 			}
+ 31: 		}
+ 32: 	}
+ 33: 
+ 34: }
+</pre>
+
+<p><a href="chapter09/src/OnAndOffCar.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、OnAndOffCarプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="OnAndOffCar"/>
+</applet></p>
+<div class="fyi">
+<div class=title>出現/隠すに関する新しい命令</div>
+
+
+<dl>
+<dt>
+show()
+<dd>
+オブジェクトを出現させます。
+<dt>
+hide()
+<dd>
+オブジェクトを隠します。
+<dt>
+isShow()
+<dd>
+現在、隠されているか、出現しているかをしらべます。
+<dt>
+show([真偽])
+<dd>
+真偽にtrueと書けば、出現させ、falseと書けば、隠します。
+<dt>
+show(!isShow())
+<dd>
+上記の命令の組み合わせ命令で、隠れていれば、出現させ、出現していれば、隠します。</dl>
+
+</div>
+
+<div class="fyi">
+<div class=title>やってみよう！</div>
+
+<p class="first_ja">画像タートルを使って、青信号は点滅させ、車は前に進め、かざぐるまは回転させるプログラムを作ってください。
+						画像は以下のものをダウンロードして使ってください。</p>
+<p><img src="chapter09/src/sign.gif">
+<img src="chapter09/src/kazaguruma.gif">
+<img src="chapter09/src/bluecar.gif"></p>
+<p>ブラウザからデスクトップに画像をドラッグドロップすると、デスクトップに画像をダウンロードすることができます。</p>
+<p>（プログラムと同じフォルダに置いていないと画像が表示されません。）</p>
+<p>（使える画像の種類は「.gif」「.jpg」「.jpeg」のどれかです。
+						「.bmp」の画像は使えないので注意してください。）</p>
+</div>
+
+
+<h2 id="doc10_3150">9.4  ぱらぱら漫画アニメーション</h2>
+
+
+<h3 id="doc10_3152">9.4.1  見た目を別のオブジェクトのものに</h3>
+
+<p class="first_ja">looks命令を使うと、
+					オブジェクトの見た目を別のオブジェクトのものにすることができます。</p>
+<p>例えば、次のプログラムは、
+					ただじゃんけんのグーチョキパーを表示するだけですが、、、</p>
+
+<div id="doc10_src:JankenCharacters" class="caption">リスト 9.4.1.1 JankenCharacters.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * じゃんけんの絵を登場させるプログラム
+  3:  * 
+  4:  * 2003/05/08 Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> JankenCharacters <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> JankenCharacters());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		Goo g = <span class="keyword">new</span> Goo();
+ 17: 		Choki c = <span class="keyword">new</span> Choki();
+ 18: 		Paa p = <span class="keyword">new</span> Paa();
+ 19: 
+ 20: 		g.warp(100, 100);
+ 21: 		c.warp(200, 100);
+ 22: 		p.warp(300, 100);
+ 23: 	}
+ 24: 
+ 25: }
+</pre>
+
+<p><a href="chapter09/src/JankenCharacters.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、JankenCharactersプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="JankenCharacters"/>
+</applet></p>
+<p>次のように、looks命令を使うと、
+					グーの見た目をチョキやパーに変えることができます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter09/image/block/JankenAnimation.jpg" alt="図 9.4.1.1 JankenAnimation">
+</div>
+
+
+<div id="doc10_src:JankenAnimation" class="caption">リスト 9.4.1.2 JankenAnimation.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * じゃんけんアニメーションプログラム
+  3:  * 
+  4:  * 2003/05/08 Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> JankenAnimation <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> JankenAnimation());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		Goo g = <span class="keyword">new</span> Goo();
+ 17: 		Choki c = <span class="keyword">new</span> Choki();
+ 18: 		Paa p = <span class="keyword">new</span> Paa();
+ 19: 		{ <span class="comment">// c//初期位置にワープ</span>
+ 20: 			g.warp(100, 100);
+ 21: 			c.warp(200, 100);
+ 22: 			p.warp(300, 100);
+ 23: 		}
+ 24: 		{ <span class="comment">// アニメーションループ</span>
+ 25: 			<span class="keyword">int</span> i = 0;
+ 26: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 27: 				sleep(0.5);
+ 28: 				{ <span class="comment">// 一コマの処理</span>
+ 29: 					<span class="keyword">if</span> ((i % 3) == 0) {
+ 30: 						g.looks(g);
+ 31: 					} <span class="keyword">else</span> <span class="keyword">if</span> ((i % 3) == 1) {
+ 32: 						g.looks(c);
+ 33: 					} <span class="keyword">else</span> {
+ 34: 						g.looks(p);
+ 35: 					}
+ 36: 				}
+ 37: 				i++;
+ 38: 				update();
+ 39: 			}
+ 40: 		}
+ 41: 	}
+ 42: }
+</pre>
+
+<p><a href="chapter09/src/JankenAnimation.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、JankenAnimationプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="JankenAnimation"/>
+</applet></p>
+<div class="fyi">
+<div class=title>見た目に関する新しい命令</div>
+
+
+<dl>
+<dt>
+looks(オブジェクト)
+<dd>
+現在のオブジェクトを、指定されたオブジェクトとおなじ見た目に変身（!?）させます。</dl>
+
+</div>
+
+
+<h3 id="doc10_3206">9.4.2  人を動作させる</h3>
+
+<p class="first_ja">じゃんけんを応用すると、ぱらぱら漫画の要領で、
+					人が動作しているようなアニメーションを作ることができます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter09/image/block/WalkingMan.jpg" alt="図 9.4.2.1 WalkingMan">
+</div>
+
+
+<div id="doc10_src:WalkingMan" class="caption">リスト 9.4.2.1 WalkingMan.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 人が歩くアニメーションプログラム
+  3:  * 
+  4:  * 2003/06/17　Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> WalkingMan <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> WalkingMan());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		hide();
+ 17: 		ImageTurtle man1 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man1.gif&quot;</span>);
+ 18: 		ImageTurtle man2 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man2.gif&quot;</span>);
+ 19: 		ImageTurtle man3 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man3.gif&quot;</span>);
+ 20: 		ImageTurtle man4 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man4.gif&quot;</span>);
+ 21: 		ImageTurtle man5 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man5.gif&quot;</span>);
+ 22: 		ImageTurtle man6 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man6.gif&quot;</span>);
+ 23: 		ImageTurtle man7 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man7.gif&quot;</span>);
+ 24: 		ImageTurtle man8 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man8.gif&quot;</span>);
+ 25: 		{ <span class="comment">// c//1番以外のアニメーション用画像を消す</span>
+ 26: 			man2.hide();
+ 27: 			man3.hide();
+ 28: 			man4.hide();
+ 29: 			man5.hide();
+ 30: 			man6.hide();
+ 31: 			man7.hide();
+ 32: 			man8.hide();
+ 33: 		}
+ 34: 		{ <span class="comment">// アニメーションループ</span>
+ 35: 			<span class="keyword">int</span> i = 0;
+ 36: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 37: 				sleep(0.1);
+ 38: 				{ <span class="comment">// 一コマの処理を行う</span>
+ 39: 					<span class="keyword">if</span> ((i % 8) == 0) {
+ 40: 						man1.looks(man1);
+ 41: 					} <span class="keyword">else</span> <span class="keyword">if</span> ((i % 8) == 1) {
+ 42: 						man1.looks(man2);
+ 43: 					} <span class="keyword">else</span> <span class="keyword">if</span> ((i % 8) == 2) {
+ 44: 						man1.looks(man3);
+ 45: 					} <span class="keyword">else</span> <span class="keyword">if</span> ((i % 8) == 3) {
+ 46: 						man1.looks(man4);
+ 47: 					} <span class="keyword">else</span> <span class="keyword">if</span> ((i % 8) == 4) {
+ 48: 						man1.looks(man5);
+ 49: 					} <span class="keyword">else</span> <span class="keyword">if</span> ((i % 8) == 5) {
+ 50: 						man1.looks(man6);
+ 51: 					} <span class="keyword">else</span> <span class="keyword">if</span> ((i % 8) == 6) {
+ 52: 						man1.looks(man7);
+ 53: 					} <span class="keyword">else</span> <span class="keyword">if</span> ((i % 8) == 7) {
+ 54: 						man1.looks(man8);
+ 55: 					}
+ 56: 				}
+ 57: 				i++;
+ 58: 				update();
+ 59: 			}
+ 60: 		}
+ 61: 
+ 62: 	}
+ 63: }
+</pre>
+
+<p><a href="chapter09/src/WalkingMan.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、WalkingManプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="WalkingMan"/>
+</applet></p>
+<p>このアニメーションでは、次の8枚の画像が使われています。</p>
+<p><img src="chapter09/src/man1.gif">
+<img src="chapter09/src/man2.gif">
+<img src="chapter09/src/man3.gif">
+<img src="chapter09/src/man4.gif">
+<img src="chapter09/src/man5.gif">
+<img src="chapter09/src/man6.gif">
+<img src="chapter09/src/man7.gif">
+<img src="chapter09/src/man8.gif"></p>
+
+<h3 id="doc10_3250">9.4.3  背景を動かす（画面のスクロール）</h3>
+
+<p class="first_ja">さらに、背景を付け加えると、動いているように見えます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter09/image/block/WalkingManWithBg.jpg" alt="図 9.4.3.1 WalkingMan">
+</div>
+
+
+<div id="doc10_src:WalkingManWithBg" class="caption">リスト 9.4.3.1 WalkingManWithBg.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 人が歩くアニメーションプログラム(背景付き)
+  3:  * 
+  4:  * 2003/06/17 Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> WalkingManWithBg <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> WalkingManWithBg());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		{<span class="comment">// ウインドウを移動, 大きさ調整</span>
+ 18: 			window.warp(100, 100);
+ 19: 			window.size(480, 420);
+ 20: 			hide();<span class="comment">// 亀を消去</span>
+ 21: 		}
+ 22: 
+ 23: 		<span class="comment">// バックグラウンド画像を用意する</span>
+ 24: 		ImageTurtle bg = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;bg.jpg&quot;</span>);
+ 25: 
+ 26: 		<span class="comment">// アニメーション用画像を用意する</span>
+ 27: 		ImageTurtle man1 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man1.gif&quot;</span>);
+ 28: 		ImageTurtle man2 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man2.gif&quot;</span>);
+ 29: 		ImageTurtle man3 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man3.gif&quot;</span>);
+ 30: 		ImageTurtle man4 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man4.gif&quot;</span>);
+ 31: 		ImageTurtle man5 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man5.gif&quot;</span>);
+ 32: 		ImageTurtle man6 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man6.gif&quot;</span>);
+ 33: 		ImageTurtle man7 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man7.gif&quot;</span>);
+ 34: 		ImageTurtle man8 = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man8.gif&quot;</span>);
+ 35: 
+ 36: 		{ <span class="comment">// 準備</span>
+ 37: 			man1.warp(240, 240);
+ 38: 			man2.hide();
+ 39: 			man3.hide();
+ 40: 			man4.hide();
+ 41: 			man5.hide();
+ 42: 			man6.hide();
+ 43: 			man7.hide();
+ 44: 			man8.hide();
+ 45: 		}
+ 46: 
+ 47: 		{<span class="comment">// アニメーションループ</span>
+ 48: 			<span class="keyword">int</span> i = 0;
+ 49: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 50: 
+ 51: 				<span class="comment">// --- 待つ ---</span>
+ 52: 				sleep(0.1); <span class="comment">// 0.1秒</span>
+ 53: 
+ 54: 				{ <span class="comment">// 一コマの処理</span>
+ 55: 					<span class="comment">// 背景を動かす</span>
+ 56: 					<span class="keyword">int</span> x = bg.getX();
+ 57: 					<span class="keyword">int</span> y = bg.getY();
+ 58: 					bg.warp(x - 2, y);
+ 59: 					<span class="keyword">if</span> (i % 8 == 0) {
+ 60: 						man1.looks(man1);
+ 61: 					} <span class="keyword">else</span> <span class="keyword">if</span> (i % 8 == 1) {
+ 62: 						man1.looks(man2);
+ 63: 					} <span class="keyword">else</span> <span class="keyword">if</span> (i % 8 == 2) {
+ 64: 						man1.looks(man3);
+ 65: 					} <span class="keyword">else</span> <span class="keyword">if</span> (i % 8 == 3) {
+ 66: 						man1.looks(man4);
+ 67: 					} <span class="keyword">else</span> <span class="keyword">if</span> (i % 8 == 4) {
+ 68: 						man1.looks(man5);
+ 69: 					} <span class="keyword">else</span> <span class="keyword">if</span> (i % 8 == 5) {
+ 70: 						man1.looks(man6);
+ 71: 					} <span class="keyword">else</span> <span class="keyword">if</span> (i % 8 == 6) {
+ 72: 						man1.looks(man7);
+ 73: 					} <span class="keyword">else</span> <span class="keyword">if</span> (i % 8 == 7) {
+ 74: 						man1.looks(man8);
+ 75: 					}
+ 76: 				}
+ 77: 
+ 78: 				<span class="comment">// --- 再描画する ---</span>
+ 79: 				i++;
+ 80: 				update();
+ 81: 
+ 82: 			}
+ 83: 		}
+ 84: 
+ 85: 	}
+ 86: 
+ 87: }
+</pre>
+
+<p><a href="chapter09/src/WalkingManWithBg.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、WalkingManWithBgプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="WalkingManWithBg"/>
+</applet></p>
+<div class="fyi">
+<div class=title>オブジェクトの重なりの順番</div>
+
+<p class="first_ja">オブジェクトは、new命令で作られた順番に、
+						後ろから重なっていきます。</p>
+<p>背景を使うときは、人などの画像よりも先にnewして生成してください。</p>
+</div>
+
+
+<h2 id="doc10_sec:textturtle">9.5  文字をオブジェクトして扱う</h2>
+
+
+<h3 id="doc10_3284">9.5.1  文字を回す</h3>
+
+<p class="first_ja">文字をつくるには、TextTurtleを使います。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter09/image/block/RotateText.jpg" alt="図 9.5.1.1 RotateText">
+</div>
+
+
+<div id="doc10_src:RotateText" class="caption">リスト 9.5.1.1 RotateText.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 「こんにちは」が回るプログラム
+  3:  * 
+  4:  * 2003/06/23　Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> RotateText <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> RotateText());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		TextTurtle hello = <span class="keyword">new</span> TextTurtle(<span class="quote">&quot;こんにちは&quot;</span>);
+ 17: 		<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 18: 			sleep(0.1);
+ 19: 			hello.rt(5);
+ 20: 			update();
+ 21: 		}
+ 22: 	}
+ 23: 
+ 24: }
+</pre>
+
+<p><a href="chapter09/src/RotateText.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、RotateTextプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="RotateText"/>
+</applet></p>
+<p>文字も、「オブジェクト」ですから、タートルや、
+					画像と同じように扱うことができます。</p>
+
+<h3 id="doc10_3309">9.5.2  文字を変化させる</h3>
+
+<p class="first_ja">文字オブジェクトは、
+					その文字を変化させるための特別な命令、text()を持っています。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter09/image/block/Counter.jpg" alt="図 9.5.2.1 Counter">
+</div>
+
+
+<div id="doc10_src:Counter" class="caption">リスト 9.5.2.1 Counter.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 繰り返しを数えるカウンター
+  3:  * 
+  4:  * 2003/06/23 Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> Counter <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> Counter());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		TextTurtle counter = <span class="keyword">new</span> TextTurtle(<span class="quote">&quot;繰り返し数&quot;</span>);
+ 17: 		{ <span class="comment">// アニメーションループ</span>
+ 18: 			<span class="keyword">int</span> i = 0;
+ 19: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 20: 				sleep(0.1);
+ 21: 				{ <span class="comment">// 処理</span>
+ 22: 					counter.text(i);
+ 23: 				}
+ 24: 				i++;
+ 25: 				update();
+ 26: 			}
+ 27: 		}
+ 28: 	}
+ 29: 
+ 30: }
+</pre>
+
+<p><a href="chapter09/src/Counter.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Counterプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Counter"/>
+</applet></p>
+<p>ちなみに、下のプログラムのように、
+					文字と数字をつなげて、一つの文字にするには、+ 記号でつなげます。</p>
+<p>文字列は、「&quot;」で囲みますが、数字（変数）にはつけません。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter09/image/block/Counter2.jpg" alt="図 9.5.2.2 Counter2">
+</div>
+
+
+<div id="doc10_src:Counter2" class="caption">リスト 9.5.2.2 Counter2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 繰り返しを数えるカウンター (文字とつなげる版)
+  3:  * 
+  4:  * 2003/06/23 Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> Counter2 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> Counter2());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		TextTurtle counter = <span class="keyword">new</span> TextTurtle(<span class="quote">&quot;繰り返し数&quot;</span>);
+ 17: 		{ <span class="comment">//</span>
+ 18: 			<span class="keyword">int</span> i = 0;
+ 19: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 20: 				sleep(0.1);
+ 21: 				{ <span class="comment">// 処理</span>
+ 22: 					counter.text(<span class="quote">&quot;現在の繰り返し数は&quot;</span> + i);
+ 23: 				}
+ 24: 				i++;
+ 25: 				update();
+ 26: 			}
+ 27: 		}
+ 28: 	}
+ 29: 
+ 30: }
+</pre>
+
+<p><a href="chapter09/src/Counter2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Counter2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Counter2"/>
+</applet></p>
+<div class="fyi">
+<div class=title>テキスト専用の新しい命令</div>
+
+
+<dl>
+<dt>
+text([文字列])
+<dd>
+テキストオブジェクトの文字を、指定された文字列に変更します。文字列は、文字、数字、それらの組み合わせを指定することができます。</dl>
+
+</div>
+
+
+<h2 id="doc10_3366">9.6  練習問題</h2>
+
+
+<h3 id="doc10_3368">9.6.1  アニメーションを作ろう</h3>
+
+<p class="first_ja">今回習ったことを用いて、楽しいアニメーションを作成してください。</p>
+
+<h4 id="doc10_3373">9.6.1.1  作品例</h4>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter09/image/block/AnimationSample.jpg" alt="図 9.6.1.1.1 AnimationSample">
+</div>
+
+
+<div id="doc10_src:AnimationSample" class="caption">リスト 9.6.1.1.1 AnimationSample.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * アニメーションのサンプル
+  3:  * 
+  4:  * 2003/05/08 Yoshiaki Matsuzawa 
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> AnimationSample <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> AnimationSample());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		TextTurtle text = <span class="keyword">new</span> TextTurtle(<span class="quote">&quot;注目-&gt;&quot;</span>);
+ 17: 		TextTurtle number = <span class="keyword">new</span> TextTurtle(<span class="quote">&quot;&quot;</span>);
+ 18: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>);
+ 19: 		{ <span class="comment">// 初期化</span>
+ 20: 			number.warp(200, 100);
+ 21: 			car.hide();
+ 22: 		}
+ 23: 		{ <span class="comment">// アニメーションループ</span>
+ 24: 			<span class="keyword">int</span> i = 10;
+ 25: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 26: 				sleep(1);
+ 27: 				{ <span class="comment">// 一コマの処理</span>
+ 28: 					number.text(i);
+ 29: 					<span class="keyword">if</span> (i == 3) {
+ 30: 						number.color(java.awt.Color.red);
+ 31: 					}
+ 32: 					<span class="keyword">if</span> (i &lt;= 0) {
+ 33: 						text.looks(car);
+ 34: 						number.text(<span class="quote">&quot;ぼかーん!!&quot;</span>);
+ 35: 					}
+ 36: 				}
+ 37: 				i--;
+ 38: 				update();
+ 39: 			}
+ 40: 		}
+ 41: 	}
+ 42: 
+ 43: }
+</pre>
+
+<p class="first_ja"><a href="chapter09/src/AnimationSample.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、AnimationSampleプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="AnimationSample"/>
+</applet></p>
+<p>ファイル名は「MyAnimation.java」とすること．</p>
+
+<h3 id="doc10_3396">9.6.2  0655アニメーションを作ろう（１）</h3>
+
+<p class="first_ja">「たなくじ」または「おれねこ」のアニメーションを作ります。（それが何か分からない人は、googleってみると良いでしょう。）
+					ただし，画像は1枚だけ表示するものを作ってください。</p>
+<p>注意点:
+				
+<ul>
+<li> 素材と作品例は授業で指示します。
+<li> 画像は必ず1枚だけ表示するものを作ってください。（複数枚には挑戦しないこと）
+<li> 音を鳴らすSoundTurtleの使い方については、付録を参照してください。
+<li> ファイル名は「Zero655.java」とすること．</ul></p>
+
+<h3 id="doc10_3420">9.6.3  0655アニメーションを作ろう（２）</h3>
+
+<p class="first_ja">前の問題（0655アニメーションを作ろう（１））を改良して，画像を3枚表示するものを作ってください。</p>
+<p>注意点については（１）と同様のこと．ファイル名は「Zero655.java」のままでよい。</p>
+
+<h3 id="doc10_3429">9.6.4  0655アニメーションを作ろう（３）</h3>
+
+<p class="first_ja">前の問題（0655アニメーションを作ろう（２））を改良して，画像をたくさん表示し、お手本と同用のものになるように改良してください。
+					音楽と画像があってると良いですね。</p>
+<p>注意点については（１）と同様のこと．ファイル名は「Zero655.java」のままでよい。</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c8.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/ぱらぱら漫画アニメーション</td>
+<td><a href="index_p1_c10.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

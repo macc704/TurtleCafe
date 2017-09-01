@@ -1,0 +1,1446 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p3_c13.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p3.html#doc1_part:two" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">プログラムの部品化</a>/再帰プログラムとその「美」</td>
+<td><a href="index_p4.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_54">14  再帰プログラムとその「美」</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc15_5849" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.1  学習目標</a>
+<li> <a href="#doc15_5861" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.2  再帰呼び出し</a>
+<ul>
+<li> <a href="#doc15_5863" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.2.1  あらまし</a>
+<li> <a href="#doc15_5872" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.2.2  階乗計算</a>
+<li> <a href="#doc15_5969" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.2.3  フィボナッチ数列</a>
+</ul>
+<li> <a href="#doc15_6064" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.3  フラクタル図形</a>
+<li> <a href="#doc15_6145" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.4  練習問題</a>
+<ul>
+<li> <a href="#doc15_6147" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.4.1  自然な木を描こう</a>
+<li> <a href="#doc15_6179" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.4.2  トーナメント表を描いてみよう</a>
+<li> <a href="#doc15_6190" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.4.3  ギャスケットを描いてみよう</a>
+<li> <a href="#doc15_6201" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.4.4  スーパースターを描いてみよう</a>
+<li> <a href="#doc15_6212" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.4.5  コッホ曲線を描いてみよう</a>
+<li> <a href="#doc15_6223" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.4.6  ひまわりの絵を描こう</a>
+<li> <a href="#doc15_6235" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">14.4.7  葉っぱの絵を描こう</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc15_5849">14.1  学習目標</h2>
+
+
+<ul>
+<li> メソッドの再帰呼出しとその実行過程を理解する
+<li> 再帰プログラム，再帰構造の美しさを楽しむ</ul>
+
+
+<h2 id="doc15_5861">14.2  再帰呼び出し</h2>
+
+
+<h3 id="doc15_5863">14.2.1  あらまし</h3>
+
+<p class="first_ja">メソッドが自分自身を呼び出す処理を、再帰メソッド呼び出しと言う。(実は自分自身を呼び出すように見えて，もう一つのコピーを呼び出しているだけなのですがね．)</p>
+<p>メソッドの再帰呼び出しを使うことで，いろいろな面白いプログラムが書ける．</p>
+
+<h3 id="doc15_5872">14.2.2  階乗計算</h3>
+
+<p class="first_ja">数学で使う概念の一つに階乗がある．</p>
+<p>nの階乗は１からnまでの数を掛け合わせたもので，n!と書く．次に例を示す．</p>
+
+<ul>
+<li> 2! = 2 * 1 = 2
+<li> 3! = 3 * 2 * 1 = 6
+<li> 4! = 4 * 3 * 2 * 1 = 12</ul>
+
+<p>nの階乗は以下の式で求められる．</p>
+
+<ul>
+<li> n! = n * (n-1)!</ul>
+
+<p>つまり，n-1の階乗が求められれば，それにnをかけることでnの階乗が求められる．</p>
+<p>この式を応用し，再帰を使うことで，階乗を求めるプログラムを次のように書ける．</p>
+
+<div id="doc15_src:Factorial" class="caption">リスト 14.2.2.1 Factorial.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * Factorial.java
+  3:  * 階乗を計算するプログラム
+  4:  * Created on 2011/12/18
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> Factorial <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> Factorial());
+ 11: 	}
+ 12: 
+ 13: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 14: 		print(<span class="quote">&quot;factorial(1) = &quot;</span> + factorial(1));
+ 15: 		print(<span class="quote">&quot;factorial(2) = &quot;</span> + factorial(2));
+ 16: 		print(<span class="quote">&quot;factorial(3) = &quot;</span> + factorial(3));
+ 17: 		print(<span class="quote">&quot;factorial(4) = &quot;</span> + factorial(4));
+ 18: 		print(<span class="quote">&quot;factorial(5) = &quot;</span> + factorial(5));
+ 19: 	}
+ 20: 
+ 21: 	<span class="keyword">int</span> factorial(<span class="keyword">int</span> n) {
+ 22: 		<span class="keyword">int</span> result;
+ 23: 		<span class="keyword">if</span> (n == 1) {
+ 24: 			result = 1;
+ 25: 		} <span class="keyword">else</span> {
+ 26: 			result = n * factorial(n - 1);
+ 27: 		}
+ 28: 		<span class="keyword">return</span> result;
+ 29: 	}
+ 30: 
+ 31: }				
+</pre>
+
+<p><a href="chapter13/src/Factorial.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Factorialプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter13_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Factorial"/>
+</applet></p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter13/image/block/Factorial.jpg">
+</div>
+
+<div class="fyi">
+<div class=title>再帰の終点</div>
+
+<p class="first_ja">上記の例ではfactorial()メソッドからfactorial()メソッドを呼んでいるので，再帰の終点を作ってやらないと呼出しが無限に続いて，プログラムが止まらなくなる．
+					（実際には，呼び出すごとにメソッドがスタックと呼ばれるメモリに読み込まれるので，そのメモリがいっぱいになってStackOverFlowErrorというエラーを出して止まる．</p>
+<p>したがって，どこかで止めるプログラムを書かなければならない．上記の例では，</p>
+
+<pre id="doc15_5931" class="program">
+						
+if (n == 1) {
+	result = 1;
+}
+					
+</pre>
+
+<p>の部分がそれにあたる．</p>
+</div>
+
+<p>再帰のプログラムはメソッドの中で自分自身のメソッドを呼び出しているのが特徴だが，自分自身に見えるけれども実は新たなコピーを作り，呼び出しているだけである．</p>
+<p>このコピーの様子を視覚化して理解するために，呼出し過程を図示してみよう．</p>
+
+<div id="doc15_src:FactorialWithPrint" class="caption">リスト 14.2.2.2 FactorialWithPrint.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * Factorial.java
+  3:  * 階乗を計算するプログラム(プリント付き)
+  4:  * Created on 2011/12/18 macchan
+  5:  * Revised on 2012/12/18 macchan
+  6:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  7:  */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> FactorialWithPrint {
+  9: 
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		FactorialWithPrint factorialWithPrint = <span class="keyword">new</span> FactorialWithPrint();
+ 12: 		factorialWithPrint.run();
+ 13: 	}
+ 14: 
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> run() {
+ 16: 		System.out.println(<span class="quote">&quot;factorial(5, 0) = &quot;</span> + factorial(5, 0));
+ 17: 	}
+ 18: 
+ 19: 	<span class="keyword">int</span> factorial(<span class="keyword">int</span> n, <span class="keyword">int</span> indentCount) {
+ 20: 		printStart(n, indentCount);
+ 21: 		<span class="keyword">int</span> result;
+ 22: 		<span class="keyword">if</span> (n == 1) {
+ 23: 			result = 1;
+ 24: 		} <span class="keyword">else</span> {
+ 25: 			result = n * factorial(n - 1, indentCount + 1);
+ 26: 		}
+ 27: 		printEnd(result, indentCount);
+ 28: 		<span class="keyword">return</span> result;
+ 29: 	}
+ 30: 
+ 31: 	<span class="keyword">void</span> printStart(<span class="keyword">int</span> length, <span class="keyword">int</span> indentCount) {
+ 32: 		makeIndent(indentCount);
+ 33: 		System.out.print(<span class="quote">&quot;factorial(&quot;</span> + length + <span class="quote">&quot;, &quot;</span> + indentCount + <span class="quote">&quot;)&quot;</span>);
+ 34: 		System.out.println(<span class="quote">&quot;&quot;</span>);
+ 35: 	}
+ 36: 
+ 37: 	<span class="keyword">void</span> printEnd(<span class="keyword">int</span> result, <span class="keyword">int</span> indentCount) {
+ 38: 		makeIndent(indentCount);
+ 39: 		System.out.print(<span class="quote">&quot;// return &quot;</span> + result);
+ 40: 		System.out.println(<span class="quote">&quot;&quot;</span>);
+ 41: 	}
+ 42: 
+ 43: 	<span class="keyword">void</span> makeIndent(<span class="keyword">int</span> indentCount) {
+ 44: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; indentCount; i++) {
+ 45: 			System.out.print(<span class="quote">&quot;\t&quot;</span>);
+ 46: 		}
+ 47: 	}
+ 48: 
+ 49: }
+</pre>
+
+<p><a href="chapter13/src/FactorialWithPrint.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、FactorialWithPrintプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter13_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="FactorialWithPrint"/>
+</applet></p>
+
+<pre id="doc15_5958" class="console">
+					
+factorial(5, 0)
+	factorial(4, 1)
+		factorial(3, 2)
+			factorial(2, 3)
+				factorial(1, 4)
+				// return 1
+			// return 2
+		// return 6
+	// return 24
+// return 120			
+				
+</pre>
+
+<p>異なる引数でメソッドが呼ばれているだけということが分かったと思う．</p>
+<p>（ちなみに，階乗の計算は総和と同じように繰り返しでも書ける．）</p>
+
+<h3 id="doc15_5969">14.2.3  フィボナッチ数列</h3>
+
+<p class="first_ja">フィボナッチ数列という数列がある．これも文系の諸君にはあまりなじみがないかもしれないが，
+				自然界によくみられる不思議な数列である．（<a href="http://www.rd.mmtr.or.jp/~bunryu/pain1.shtml" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">この</a>サイトなどをみてみよう）</p>
+<p>fib(n)は次の式で求められる．</p>
+
+<ul>
+<li> fib(n) = fib(n-1) + fib(n-2)</ul>
+
+<p>以下が具体例である．</p>
+
+<ul>
+<li> fib(1) = 1
+<li> fib(2) = 2
+<li> fib(3) = fib(2) + fib(1) = 3
+<li> fib(4) = fib(3) + fib(2) = 5
+<li> fib(5) = fib(4) + fib(3) = 8
+<li> fib(6) = fib(5) + fib(4) = 13</ul>
+
+<p>フィボナッチ数列も再帰の例でよく出てくる例で，再帰を使うことでプログラムを次のように書ける．</p>
+
+<div id="doc15_src:Fibonacci" class="caption">リスト 14.2.3.1 Fibonacci.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * Fibonacchi.java
+  3:  * フィボナッチ数列を計算するプログラム
+  4:  * Created on 2011/12/18
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> Fibonacci <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> Fibonacci());
+ 11: 	}
+ 12: 
+ 13: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 14: 		print(<span class="quote">&quot;fib(1) = &quot;</span> + fib(1));
+ 15: 		print(<span class="quote">&quot;fib(2) = &quot;</span> + fib(2));
+ 16: 		print(<span class="quote">&quot;fib(3) = &quot;</span> + fib(3));
+ 17: 		print(<span class="quote">&quot;fib(4) = &quot;</span> + fib(4));
+ 18: 		print(<span class="quote">&quot;fib(5) = &quot;</span> + fib(5));
+ 19: 		print(<span class="quote">&quot;fib(6) = &quot;</span> + fib(6));
+ 20: 		print(<span class="quote">&quot;fib(7) = &quot;</span> + fib(7));
+ 21: 	}
+ 22: 
+ 23: 	<span class="keyword">int</span> fib(<span class="keyword">int</span> n) {
+ 24: 		<span class="keyword">int</span> value;
+ 25: 		<span class="keyword">if</span> (n == 1) {
+ 26: 			value = 1;
+ 27: 		} <span class="keyword">else</span> <span class="keyword">if</span> (n == 2) {
+ 28: 			value = 2;
+ 29: 		} <span class="keyword">else</span> {
+ 30: 			value = fib(n - 1) + fib(n - 2);
+ 31: 		}
+ 32: 		<span class="keyword">return</span> value;
+ 33: 	}
+ 34: 
+ 35: }				
+</pre>
+
+<p><a href="chapter13/src/Fibonacci.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Fibonacciプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter13_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Fibonacci"/>
+</applet></p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="">
+</div>
+
+<p>これも呼出し過程を図示してみよう</p>
+
+<div id="doc15_src:FibonacciWithPrint" class="caption">リスト 14.2.3.2 FibonacciWithPrint.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * Fibonacchi.java
+  3:  * フィボナッチ数列を計算するプログラム(プリント付き)
+  4:  * Created on 2011/12/18 macchan
+  5:  * Revised on 2012/12/18 macchan
+  6:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  7:  */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> FibonacciWithPrint {
+  9: 
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		FibonacciWithPrint fibonacciWithPrint = <span class="keyword">new</span> FibonacciWithPrint();
+ 12: 		fibonacciWithPrint.run();
+ 13: 	}
+ 14: 
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> run() {
+ 16: 		System.out.print(<span class="quote">&quot;fib(5, 0) = &quot;</span> + fib(5, 0));
+ 17: 	}
+ 18: 
+ 19: 	<span class="keyword">int</span> fib(<span class="keyword">int</span> n, <span class="keyword">int</span> indentCount) {
+ 20: 		printStart(n, indentCount);
+ 21: 		<span class="keyword">int</span> value;
+ 22: 		<span class="keyword">if</span> (n == 1) {
+ 23: 			value = 1;
+ 24: 		} <span class="keyword">else</span> <span class="keyword">if</span> (n == 2) {
+ 25: 			value = 2;
+ 26: 		} <span class="keyword">else</span> {
+ 27: 			value = fib(n - 1, indentCount + 1) + fib(n - 2, indentCount + 1);
+ 28: 		}
+ 29: 		printEnd(value, indentCount);
+ 30: 		<span class="keyword">return</span> value;
+ 31: 	}
+ 32: 
+ 33: 	<span class="keyword">void</span> printStart(<span class="keyword">int</span> length, <span class="keyword">int</span> indentCount) {
+ 34: 		makeIndent(indentCount);
+ 35: 		System.out.print(<span class="quote">&quot;fib(&quot;</span> + length + <span class="quote">&quot;, &quot;</span> + indentCount + <span class="quote">&quot;)&quot;</span>);
+ 36: 		System.out.println(<span class="quote">&quot;&quot;</span>);
+ 37: 	}
+ 38: 
+ 39: 	<span class="keyword">void</span> printEnd(<span class="keyword">int</span> result, <span class="keyword">int</span> indentCount) {
+ 40: 		makeIndent(indentCount);
+ 41: 		System.out.print(<span class="quote">&quot;// return &quot;</span> + result);
+ 42: 		System.out.println(<span class="quote">&quot;&quot;</span>);
+ 43: 	}
+ 44: 
+ 45: 	<span class="keyword">void</span> makeIndent(<span class="keyword">int</span> indentCount) {
+ 46: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; indentCount; i++) {
+ 47: 			System.out.print(<span class="quote">&quot;\t&quot;</span>);
+ 48: 		}
+ 49: 	}
+ 50: 
+ 51: }
+</pre>
+
+<p><a href="chapter13/src/FibonacciWithPrint.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、FibonacciWithPrintプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter13_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="FibonacciWithPrint"/>
+</applet></p>
+
+<pre id="doc15_6046" class="console">
+					
+fib(5, 0)
+	fib(4, 1)
+		fib(3, 2)
+			fib(2, 3)
+			// return 2
+			fib(1, 3)
+			// return 1
+		// return 3
+		fib(2, 2)
+		// return 2
+	// return 5
+	fib(3, 1)
+		fib(2, 2)
+		// return 2
+		fib(1, 2)
+		// return 1
+	// return 3
+// return 8			
+				
+</pre>
+
+<div class="fyi">
+<div class=title>再帰とプログラムの効率</div>
+
+<p class="first_ja">最後の例の呼出し過程をよく見るとfib(1)とかfib(2)は何回も呼ばれており，大変効率が悪いプログラムである．</p>
+<p>再帰プログラムでは，プログラムが計算式と似たように，わかりやすく書ける代わりに，効率が悪くなることがある．（絶対にそうなるわけではない）</p>
+<p>上記のフィボナッチ数列のプログラムは，fib(20)くらいまでは動作するが，fib(50)ではコンピュータはお手上げ状態のはず（計算が終わらない）はずである．試してみよう．
+					実は，現実には，フィボナッチ数列は，「再帰を使ってはいけない例」として有名である．</p>
+</div>
+
+
+<h2 id="doc15_6064">14.3  フラクタル図形</h2>
+
+<p class="first_ja">フラクタル図形は簡単に言えば「どんなに拡大しても複雑な図形」のことをさす。(wikipedia 2011)</p>
+<p>フラクタル図形の一種である自己相似図形は，自分自身と同じ形のミニチュアが自分の中に入れ子になっている図形をさす．</p>
+<p>自己相似図形と再帰プログラムには深い関係があり，再帰プログラムを使ってフラクタル図形を書くことができる．</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter13/image/tree.jpg" alt="図 14.3.1 tree">
+</div>
+
+<p>このような図形を書くには，まず繰り返される基本的な図形と変換ルールを考える．この場合は以下のように「Y」に小さな「Y」を足していく
+			プログラムを考える．</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter13/image/maketree.png" alt="図 14.3.2 maketree">
+</div>
+
+<p>まず，「Y」を描くプログラムを書く．ここで一回テストしてみることが重要である．
+			（いきなり再帰のプログラム書こうとした先輩は，ことごとく失敗しています！）</p>
+
+<div id="doc15_src:DrawY" class="caption">リスト 14.3.1 DrawY.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * DrawY.java
+  3:  * Yを描くプログラム
+  4:  * Created on 2011/12/18
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> DrawY <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> DrawY());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		window.size(500, 500);
+ 17: 		warp(250, 400); <span class="comment">// 木を描く位置まで移動する</span>
+ 18: 
+ 19: 		drawY(50);
+ 20: 	}
+ 21: 
+ 22: 	<span class="comment">// Yを描く</span>
+ 23: 	<span class="keyword">void</span> drawY(<span class="keyword">int</span> length) {
+ 24: 		fd(length);<span class="comment">// 幹を描く</span>
+ 25: 
+ 26: 		<span class="comment">// 左の枝を描く</span>
+ 27: 		lt(30);
+ 28: 		fd(length / 2);
+ 29: 		bk(length / 2);
+ 30: 		rt(30);
+ 31: 
+ 32: 		<span class="comment">// 右の枝を描く</span>
+ 33: 		rt(30);
+ 34: 		fd(length / 2);
+ 35: 		bk(length / 2);
+ 36: 		lt(30);
+ 37: 
+ 38: 		bk(length);<span class="comment">// 幹の根元に戻る</span>
+ 39: 	}
+ 40: 
+ 41: }
+</pre>
+
+<p><a href="chapter13/src/DrawY.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、DrawYプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter13_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DrawY"/>
+</applet></p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter13/image/block/DrawY.jpg">
+</div>
+
+<p>次に，大きな「Y」の先に小さな「Y」を書くように，再帰呼び出しを行う．再帰の終点も忘れずに！</p>
+
+<div id="doc15_src:DrawTree" class="caption">リスト 14.3.2 DrawTree.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * DrawTree.java
+  3:  * 再帰を使って木を描くプログラム
+  4:  * Created on 2011/12/18
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> DrawTree <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> DrawTree());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		window.size(500, 500);
+ 17: 		warp(250, 400); <span class="comment">// 木を描く位置まで移動する</span>
+ 18: 
+ 19: 		drawY(50);
+ 20: 	}
+ 21: 
+ 22: 	<span class="comment">// Yを描く</span>
+ 23: 	<span class="keyword">void</span> drawY(<span class="keyword">int</span> length) {
+ 24: 
+ 25: 		<span class="keyword">if</span> (length &lt; 5) {<span class="comment">// 再帰の終点</span>
+ 26: 			<span class="keyword">return</span>;
+ 27: 		}
+ 28: 
+ 29: 		fd(length);<span class="comment">// 幹を描く</span>
+ 30: 
+ 31: 		<span class="comment">// 左の枝を描く</span>
+ 32: 		lt(30);
+ 33: 		fd(length / 2);
+ 34: 		drawY(length / 2);
+ 35: 		bk(length / 2);
+ 36: 		rt(30);
+ 37: 
+ 38: 		<span class="comment">// 右の枝を描く</span>
+ 39: 		rt(30);
+ 40: 		fd(length / 2);
+ 41: 		drawY(length / 2);
+ 42: 		bk(length / 2);
+ 43: 		lt(30);
+ 44: 
+ 45: 		bk(length);<span class="comment">// 幹の根元に戻る</span>
+ 46: 
+ 47: 	}
+ 48: }
+</pre>
+
+<p><a href="chapter13/src/DrawTree.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、DrawTreeプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter13_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DrawTree"/>
+</applet></p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter13/image/block/DrawTree.jpg">
+</div>
+
+<p>このプログラムのメソッドの呼出し過程を表示すると，次のようになる．</p>
+
+<div id="doc15_src:DrawTreeWithPrint" class="caption">リスト 14.3.3 DrawTreeWithPrint.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * DrawTreeWithPrint.java
+  3:  * 再帰を使って木を描くプログラム(プリント付き)
+  4:  * Created on 2011/12/18 macchan
+  5:  * Revised on 2012/12/18 macchan
+  6:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  7:  */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> DrawTreeWithPrint <span class="keyword">extends</span> Turtle {
+  9: 
+ 10: 	<span class="comment">// 起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		Turtle.startTurtle(<span class="keyword">new</span> DrawTreeWithPrint());
+ 13: 	}
+ 14: 
+ 15: 	<span class="comment">// タートルを動かす処理</span>
+ 16: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 17: 		window.size(500, 500);
+ 18: 		warp(250, 400); <span class="comment">// 木を描く位置まで移動する</span>
+ 19: 
+ 20: 		drawY(50, 0);
+ 21: 	}
+ 22: 
+ 23: 	<span class="comment">// Yを描く</span>
+ 24: 	<span class="keyword">void</span> drawY(<span class="keyword">int</span> length, <span class="keyword">int</span> indentCount) {
+ 25: 		printStart(length, indentCount);
+ 26: 
+ 27: 		<span class="keyword">if</span> (length &lt; 5) {<span class="comment">// 再帰の終点</span>
+ 28: 			printEnd(indentCount);
+ 29: 			<span class="keyword">return</span>;
+ 30: 		}
+ 31: 
+ 32: 		fd(length);<span class="comment">// 幹を描く</span>
+ 33: 
+ 34: 		<span class="comment">// 左の枝を描く</span>
+ 35: 		lt(30);
+ 36: 		fd(length / 2);
+ 37: 		drawY(length / 2, indentCount + 1);
+ 38: 		bk(length / 2);
+ 39: 		rt(30);
+ 40: 
+ 41: 		<span class="comment">// 右の枝を描く</span>
+ 42: 		rt(30);
+ 43: 		fd(length / 2);
+ 44: 		drawY(length / 2, indentCount + 1);
+ 45: 		bk(length / 2);
+ 46: 		lt(30);
+ 47: 
+ 48: 		bk(length);<span class="comment">// 幹の根元に戻る</span>
+ 49: 
+ 50: 		printEnd(indentCount);
+ 51: 	}
+ 52: 
+ 53: 	<span class="keyword">void</span> printStart(<span class="keyword">int</span> length, <span class="keyword">int</span> indentCount) {
+ 54: 		makeIndent(indentCount);
+ 55: 		System.out.print(<span class="quote">&quot;drawY(&quot;</span> + length + <span class="quote">&quot;, &quot;</span> + indentCount + <span class="quote">&quot;)&quot;</span>);
+ 56: 		System.out.println(<span class="quote">&quot;&quot;</span>);
+ 57: 	}
+ 58: 
+ 59: 	<span class="keyword">void</span> printEnd(<span class="keyword">int</span> indentCount) {
+ 60: 		makeIndent(indentCount);
+ 61: 		System.out.print(<span class="quote">&quot;//&quot;</span>);
+ 62: 		System.out.println(<span class="quote">&quot;&quot;</span>);
+ 63: 	}
+ 64: 
+ 65: 	<span class="keyword">void</span> makeIndent(<span class="keyword">int</span> indentCount) {
+ 66: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; indentCount; i++) {
+ 67: 			System.out.print(<span class="quote">&quot;\t&quot;</span>);
+ 68: 		}
+ 69: 	}
+ 70: 
+ 71: }
+</pre>
+
+<p><a href="chapter13/src/DrawTreeWithPrint.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、DrawTreeWithPrintプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter13_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DrawTreeWithPrint"/>
+</applet></p>
+
+<pre id="doc15_6137" class="console">
+					
+drawY(50, 0)
+	drawY(25, 1)
+		drawY(12, 2)
+			drawY(6, 3)
+				drawY(3, 4)
+				//
+				drawY(3, 4)
+				//
+			//
+			drawY(6, 3)
+				drawY(3, 4)
+				//
+				drawY(3, 4)
+				//
+			//
+		//
+		drawY(12, 2)
+			drawY(6, 3)
+				drawY(3, 4)
+				//
+				drawY(3, 4)
+				//
+			//
+			drawY(6, 3)
+				drawY(3, 4)
+				//
+				drawY(3, 4)
+				//
+			//
+		//
+	//
+	drawY(25, 1)
+		drawY(12, 2)
+			drawY(6, 3)
+				drawY(3, 4)
+				//
+				drawY(3, 4)
+				//
+			//
+			drawY(6, 3)
+				drawY(3, 4)
+				//
+				drawY(3, 4)
+				//
+			//
+		//
+		drawY(12, 2)
+			drawY(6, 3)
+				drawY(3, 4)
+				//
+				drawY(3, 4)
+				//
+			//
+			drawY(6, 3)
+				drawY(3, 4)
+				//
+				drawY(3, 4)
+				//
+			//
+		//
+	//
+//			
+</pre>
+
+<p>（呼び出し過程もフラクタル図形になっているところが印象的である．）</p>
+
+<h2 id="doc15_6145">14.4  練習問題</h2>
+
+
+<h3 id="doc15_6147">14.4.1  自然な木を描こう</h3>
+
+<p class="first_ja">木を描くサンプルプログラムを改造して、自然な木を描くプログラムにしよう。</p>
+<p>【自然な木に見せるためのヒント】</p>
+
+<ul>
+<li> 小さい枝の生える角度と長さを乱数を使って決めるようにする。
+
+<ul>
+<li> 角度は-45度から45度の間にする。
+<li> 長さは元の枝の長さの0.6から0.9倍くらいの長さにする。</ul>
+
+<li> 枝から生える枝の数を、2本から3本にする．</ul>
+
+<p>ファイル名は「NaturalTree.java」とすること．</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter13/image/cooltree.jpg" alt="図 14.4.1.1 cooltree">
+</div>
+
+
+<h3 id="doc15_6179">14.4.2  トーナメント表を描いてみよう</h3>
+
+<p class="first_ja">メソッドの再帰呼出しを応用して，下記の図を書いてみましょう．</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter13/image/tournament.jpg" alt="図 14.4.2.1 tournament">
+</div>
+
+<p>ファイル名は「Tournament.java」とすること．</p>
+
+<h3 id="doc15_6190">14.4.3  ギャスケットを描いてみよう</h3>
+
+<p class="first_ja">メソッドの再帰呼出しを応用して，下記の図を書いてみましょう．</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter13/image/gasket.jpg" alt="図 14.4.3.1 gasket">
+</div>
+
+<p>ファイル名は「Gasket.java」とすること．</p>
+
+<h3 id="doc15_6201">14.4.4  スーパースターを描いてみよう</h3>
+
+<p class="first_ja">メソッドの再帰呼出しを応用して，下記の図を書いてみましょう．</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter13/image/superstar.jpg" alt="図 14.4.4.1 superstar">
+</div>
+
+<p>ファイル名は「SuperStar.java」とすること．</p>
+
+<h3 id="doc15_6212">14.4.5  コッホ曲線を描いてみよう</h3>
+
+<p class="first_ja">メソッドの再帰呼出しを応用して，下記の図を書いてみましょう．</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter13/image/koch.png" alt="図 14.4.5.1 koch">
+</div>
+
+<p>ファイル名は「Koch.java」とすること．</p>
+
+<h3 id="doc15_6223">14.4.6  ひまわりの絵を描こう</h3>
+
+<p class="first_ja"><a href="http://www.rd.mmtr.or.jp/~bunryu/pain1.shtml" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">この</a>サイトを参考にして，ひまわりの絵を描いてみましょう．</p>
+<p>ファイル名は「Sunflower.java」とすること．</p>
+
+<h3 id="doc15_6235">14.4.7  葉っぱの絵を描こう</h3>
+
+<p class="first_ja"><a href="http://kamakura.ryoma.co.jp/~aoki/paradigm/furactal.htm" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">この</a>サイトを参考にして，葉っぱの絵を描いてみましょう．</p>
+<p>ファイル名は「Leaf.java」とすること．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p3_c13.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p3.html#doc1_part:two" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">プログラムの部品化</a>/再帰プログラムとその「美」</td>
+<td><a href="index_p4.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

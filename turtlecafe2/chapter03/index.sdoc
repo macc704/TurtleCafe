@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>プログラムに知性を(条件分岐)</title>
+</head>
+<body>
+<section title="学習目標">
+<ul>
+<li>条件分岐のあるプログラムの実行順序を理解し、応用してプログラムが書けるようになる</li>
+<li>比較演算子、論理演算子をつかって条件式を記述することができるようになる</li>
+<li>変数の有効範囲について、ブロックという言葉を用いて説明できるようになる</li>
+</ul>
+</section>
+<section title="条件分岐を使う">
+<p>今回のテーマは条件に応じて動作が変化するプログラムを書くことです。</p>
+<p>ユーザの入力に応じた絵を書かせてみましょう。</p>
+<subsection title="条件分岐">
+<p>次のプログラムを見てみましょう。</p>
+<program title="Condition.java" id="src:Condition" src="src/Condition.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter03/src/Condition.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Conditionプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter03_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Condition"/>
+</applet>]]></native>
+<p>
+					いままでのプログラムでは、命令が必ず上から順番に全て実行されていました。
+					これを<em>順次実行</em>といいます。
+				</p>
+<p>
+					今回登場する"条件分岐"を使うと、命令の実行される順番を変更、制御することができます。
+				</p>
+<p>
+					条件分岐の一般的な形は次のとおりです。
+				</p>
+<program>
+if( [条件式] ) {
+	処理A
+} else {
+	処理B
+}
+				</program>
+<p>条件式が成立(true)のした場合には、処理Aが実行され、処理Bは実行されません。</p>
+<p>逆に条件式が不成立(false)の場合には、処理Bが実行され、処理Aは実行されません。</p>
+<p>これをフローチャートと呼ばれる図を用いて書くと、次のようになります。</p>
+<figure title="条件分岐のフローチャート" src="image/if_flow_chart" style="scale:1.0"/>
+<p>
+					ちなみに、elseブロックは必要が無ければ省略できます。次のような形になります。
+				</p>
+<program>
+if( [条件式] ) {
+	処理A
+}
+				</program>
+<p>このように書くと、条件式が成立した時に処理Aが実行され、不成立の時には処理Aを飛ばします。</p>
+</subsection>
+<subsection title="条件式の評価">
+<p>条件式の評価の過程を見ていきましょう。</p>
+<subsubsection title="成立(true)する場合">
+<figure title="成立(true)する場合" src="image/condition_true" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="不成立(false)する場合">
+<figure title="不成立(false)する場合" src="image/condition_false" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="注意すること">
+<p>注意することは、条件式で、同じかどうか調べるには「==」(イコールを2つ)にしなければならないことです。</p>
+<p>これに対して、「=」(イコール1つ)は代入ですので、注意してください。</p>
+</subsubsection>
+</subsection>
+<subsection title="複数の分岐">
+<subsubsection title="じゃんけんプログラム">
+<p>複数に分岐するプログラムを書くこともできます。</p>
+<p>次のじゃんけんプログラムを見てみましょう。</p>
+<program title="Janken.java" id="src:Janken" src="src/Janken.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter03/src/Janken.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Jankenプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter03_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Janken"/>
+</applet>]]></native>
+</subsubsection>
+<subsubsection title="じゃんけんの手のデータの扱いについて">
+<p>
+						じゃんけんプログラムのような現実問題を扱うときに問題となるのは、
+						データ（グー、チョキ、パーの手）をどうコンピュータで扱えるようにするかです。
+						コンピュータでは、そのままこの概念を表すことができないので、
+						ここでは、1,2,3の数値で表すという方法で実現することを考えましょう。
+					</p>
+<figure title="じゃんけんの手をどのようにプログラムのデータとして扱うか" src="image/janken_data_model" style="scale:1.0"/>
+<p>
+						このように、現実に即したプログラムを作成するためには、
+						データをコンピュータが扱う形式に変換するという作業が必要になります。
+						この作業のことをデータ構造の設計(モデル化)といいます。
+					</p>
+</subsubsection>
+<subsubsection title="複数の条件分岐">
+<p>
+						else if 文を使うと、複数にわたる条件分岐を記述することができます。
+					</p>
+<p>
+						記述例(書式)を以下に示します。ちなみに、一つのif文に対して、else if文はいくつでも書くことができます。
+					</p>
+<program>
+if( [条件式] ) {
+	処理A
+} else if( [条件式] ) {
+	処理B
+} else{
+	処理C
+}
+					</program>
+<p>
+						この場合のフローチャートは次のようになります。
+					</p>
+<figure title="複数にわたる条件分岐のフローチャート" src="image/ifelse_flow_chart" style="scale:1.0"/>
+</subsubsection>
+</subsection>
+</section>
+<section title="いろいろな条件式">
+<subsection title="比較演算子">
+<p>次のプログラムを見てみましょう。</p>
+<program title="Rohrer.java" id="src:Rohrer" src="src/Rohrer.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter03/src/Rohrer.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Rohrerプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter03_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Rohrer"/>
+</applet>]]></native>
+<p>
+					今度のプログラムでは、ローレル指数の範囲に対応して、メッセージが変わっていますね。
+					このように、プログラムでは、変数に入っている値が同じかどうかを調べるだけでなく、
+					大きさの大小を比較して、条件を判定することもできます。
+				</p>
+<table title="Javaで使える数値の比較演算子">
+<tbody>
+<tr>
+<th>演算子</th>
+<th>表記例</th>
+<th>評価</th>
+</tr>
+<tr>
+<th>==</th>
+<td>A==B</td>
+<td>AとBが同じ値の時成立(true)</td>
+</tr>
+<tr>
+<th>!=</th>
+<td>A!=B</td>
+<td>AとBが同じ値でない時成立(true)</td>
+</tr>
+<tr>
+<th>&gt;</th>
+<td>A&gt;B</td>
+<td>AがBより大きい時成立(true)</td>
+</tr>
+<tr>
+<th>&lt;</th>
+<td>A&lt;B</td>
+<td>AがBより小さい時成立(true)</td>
+</tr>
+<tr>
+<th>&gt;=</th>
+<td>A&gt;=B</td>
+<td>AがB以上の時成立(true)</td>
+</tr>
+<tr>
+<th>&lt;=</th>
+<td>A&lt;=B</td>
+<td>AがB以下の時成立(true)</td>
+</tr>
+</tbody>
+</table>
+</subsection>
+<subsection title="論理演算子">
+<p>次のプログラムを見てみましょう。</p>
+<program title="Rohrer2.java" id="src:Rohrer2" src="src/Rohrer2.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter03/src/Rohrer2.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Rohrer2プログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter03_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Rohrer2"/>
+</applet>]]></native>
+<p>
+					今度のプログラムも、前例とやっていることは同じなのですが、条件文がちょっと異なっていますね。
+				</p>
+<p>
+					論理演算子を使うと、2つの条件式を使って、それらの条件が両方とも(And)もしくは、
+					どちらか(Or)が成立した時のように、組み合わされた条件式全体の条件を判定することができます。
+				</p>
+<table title="Javaで使える論理演算子">
+<tbody>
+<tr>
+<th>演算子</th>
+<th>表記例</th>
+<th>意味</th>
+</tr>
+<tr>
+<th>&amp;&amp;</th>
+<td>A&amp;&amp;B</td>
+<td>AとB両方ともtrueの時true</td>
+</tr>
+<tr>
+<th>||</th>
+<td>A||B</td>
+<td>AもしくはBがtrueの時true</td>
+</tr>
+</tbody>
+</table>
+<subsubsection title="論理演算子の評価の過程">
+<p>論理演算子の評価の過程を見ていきましょう。</p>
+<subsubsection title="And演算子が成立(true)する場合" sequencable="false">
+<figure title="And演算子が成立(true)する場合" src="image/condition_logic_and_true" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="And演算子が不成立(false)する場合" sequencable="false">
+<figure title="And演算子が不成立(false)する場合" src="image/condition_logic_and_false" style="scale:1.0"/>
+</subsubsection>
+</subsubsection>
+</subsection>
+</section>
+<section title="変数の有効範囲">
+<p>変数はブロック(「{}」で囲まれた範囲)内でのみ有効なので注意しましょう。</p>
+<p>例えば、次のような例の場合の変数の有効範囲は下表のようになります。</p>
+<program>
+void start(){				
+	
+	int z;
+	
+	if( [条件式] ) {
+	
+		int x;
+		処理A
+		
+	} else {
+	
+		int y;
+		処理B
+		
+	}
+}
+				</program>
+<table title="変数の有効範囲">
+<thead>
+<tr>
+<th>変数名</th>
+<th>処理A</th>
+<th>処理B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>有効</td>
+<td>無効</td>
+</tr>
+<tr>
+<td>y</td>
+<td>無効</td>
+<td>有効</td>
+</tr>
+<tr>
+<td>z</td>
+<td>有効</td>
+<td>有効</td>
+</tr>
+</tbody>
+</table>
+<p>有効範囲外で変数を呼び出そうとすると、コンパイルエラーが出ます。</p>
+<p>
+					有効範囲外なら同じ変数名を使うことができます。
+					その場合、それぞれの変数が違う値を持つことになります。
+				</p>
+</section>
+<section title="練習問題">
+<subsection title="問題1：絵の描き分けプログラムを作ろう">
+<p>
+				前回作ったプログラムを改造して、条件式を使って、
+				ユーザの入力に応じて、タートルの書く絵を変えるプログラムを書いてください。
+				余裕がある人は、条件文を駆使して実用的なプログラムに挑戦してみてください。			
+			</p>
+</subsection>
+<subsection title="問題2：おみくじプログラムを作ろう">
+<p>
+				乱数と条件分岐を使って、「大吉」「中吉」「小吉」「凶」を表示するプログラムを作りましょう。
+				大吉のときだけ、タートルの絵（星など）を描くようにしましょう。			
+			</p>
+</subsection>
+</section>
+</body>
+</doc>

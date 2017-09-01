@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>Turtle Cafe 2</title>
+<subtitle>Version 2.0 For Shizuoka University</subtitle>
+<author>Yoshiaki Matsuzawa</author>
+<hp>http://www.inf.shizuoka.ac.jp/</hp>
+<date>Version 2.0 For Shizuoka University (2011/09/27)</date>
+</head>
+<body>
+<part title="Javaプログラミング入門" id="part:one">
+<chapter src="introduction_ronproeditor/index.sdoc" sequenciable="false"/>
+<chapter src="chapter01/index.sdoc"/>
+<chapter src="chapter02/index.sdoc"/>
+<chapter src="chapter03/index.sdoc"/>
+<chapter src="chapter04/index.sdoc"/>
+<chapter src="chapter05/index.sdoc"/>
+<chapter src="chapter06/index.sdoc"/>
+<chapter src="chapter07/index.sdoc"/>
+<chapter src="chapter08/index.sdoc"/>
+<chapter src="chapter09/index.sdoc"/>
+<chapter src="chapter10/index.sdoc"/>
+</part>
+<part title="プログラムの部品化" id="part:two">
+<chapter src="chapter11/index.sdoc"/>
+<chapter src="chapter12/index.sdoc"/>
+</part>
+<part title="データ構造とアルゴリズム" id="part:three">
+<chapter src="chapter13/index.sdoc"/>
+</part>
+<part title="付録" id="part:extra">
+<!-- <chapter src="introduction_mac/index.sdoc" sequenciable="false"/> -->
+<!-- <chapter src="introduction_win/index.sdoc" sequenciable="false"/> -->
+<chapter src="appendix_turtle/index.sdoc" sequenciable="false"/>
+<chapter src="appendix_soundlib/index.sdoc" sequenciable="false"/>
+<chapter src="appendix_finalexample/index.sdoc" sequenciable="false"/>
+</part>
+</body>
+</doc>

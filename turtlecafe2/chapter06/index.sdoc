@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>はじめてのCUIプログラム</title>
+</head>
+<body>
+<section title="学習目標">
+<ul>
+<li>CUIプログラムが書けるようになる。</li>
+<li>変数の型（整数型・文字列型・浮動小数点型）を理解する</li>
+</ul>
+</section>
+<section title="はじめてのCUIプログラム">
+<subsection title="CUIとは">
+<p>【Character User Interface】</p>
+<p>
+					ユーザに対する情報の表示を文字によって行ない、すべての操作をキーボードを用いて行なうユーザインターフェースのこと。
+				</p>
+<p>ユーザから入力を受け取ることもできる。（IT用語辞典より）</p>
+</subsection>
+<subsection title="タートルプログラムとの違い">
+<p>
+					今までは、プログラミング初心者のために用意された
+					「タートルライブラリ」
+					<note>
+						論プロエディタで使用しているタートルライブラリは、萩野先生が９８年に作ったものをもとに、大岩研究室で機能追加を行ったものです。
+					</note>
+					というライブラリを使ってプログラミングをしてきました。
+				</p>
+<p>
+					ライブラリとは、特定の機能を持ったプログラムを１つのファイルにまとめたものです。
+					ライブラリは単体で実行することはできず、他のプログラムの１部として動作します。
+				</p>
+<p>
+					fd(100)やinput()やprint()などの命令は、「タートルライブラリ」というプログラムがなければ使えません。
+					（論プロエディタには、「タートルライブラリ」があらかじめ入っています）
+				</p>
+<p>
+					これから学習するCUIプログラムでは、Java標準ライブラリという、Javaにはじめから入っている、
+					プロでも使っているライブラリを使ってプログラミングをします。
+				</p>
+</subsection>
+<subsection title="情報の表示とユーザ入力の受け取り">
+<p>次のプログラムはユーザから文字列の入力を受け取り、おうむ返しするプログラムです。</p>
+<program title="InputAndPrint.java" id="src:InputAndPrint" src="src/InputAndPrint.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter06/src/InputAndPrint.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、InputAndPrintプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter06_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="InputAndPrintApplet"/>
+</applet>]]></native>
+</subsection>
+<subsection title="Java標準ライブラリ">
+<subsubsection title="インポート">
+<p>
+						importとは、名前空間を取り込む命令です。
+						import文を書くと、別パッケージの中にあるクラス名をフルネームで指定しなくてすむようなります。
+						Java標準ライブラリの機能である「java.util.Scanner」をパッケージ名（java.util）なしで使うために、
+						このプログラムでは１行目でライブラリをインポートしています。
+					</p>
+<p>
+						System.outは、Java標準ライブラリ（rt.jar）の中の「java.lang」というパッケージに入っていますが、
+						これはJavaの仕様により自動でインポートされるので、import文を書かなくても使えます。</p>
+<p>
+						（論プロエディタでは、タートルライブラリ（blib.jar）をコンパイル時にクラスパスに追加することで、
+						インポート文を書かなくても使えるようにしてありました。）
+					</p>
+<program>import java.util.*;</program>
+</subsubsection>
+<subsubsection title="入力を受け付ける命令">
+<p>
+						Java標準ライブラリの「Scanner」を使って、ユーザからの入力を受け付けることができます。
+						タートルプログラムでは、input()命令を使っていました。
+					</p>
+<program>
+19:	Scanner scanner = new Scanner(System.in);//入力を受け取るためのスキャナを作る
+23:	String text = scanner.nextLine();//スキャナを使って文字を読み込む
+					</program>
+<p>
+						スキャナーは、文字以外にも、整数や浮動小数点数などを読み込むことができます。
+						これらについては、あとで説明します。
+					</p>
+<program>
+int number = scanner.nextInt();//スキャナを使って整数を読み込む
+double number = scanner.nextDouble();//スキャナを使って浮動小数点数を読み込む
+					</program>
+</subsubsection>
+<subsubsection title="コンソールに出力する命令">
+<p>
+						Java標準ライブラリの「System.out」を使って、コンソールに文字を出力することができます。
+						タートルプログラムでは、print()命令を使っていました。
+					</p>
+<program>
+22:	System.out.print("好きな文字を入力&gt;&gt;");//改行なしで""内の文字を出力する
+27:	System.out.println(reply);//改行ありで（）内の文字（文字列型の変数の中身）を出力する
+					</program>
+</subsubsection>
+</subsection>
+<subsection title="変数の型-文字列型">
+<p>
+					変数には、今までタートルプログラムでも使ってきたint（整数）型のほかに、
+					String（文字列）型や、double（浮動小数点数）型があります。
+				</p>
+<p>
+					おうむ返しプログラムでは、ユーザから入力された文字を保存しておくために、
+					String（文字列）型の変数を用意しています。
+				</p>
+<p>
+					また、「あなたの入力したのは」と、「text（入力された文字列）」と、 「ですね」を+記号で連結し、
+					まとめて「reply」という文字列型の変数に入れて、出力しています。
+				</p>
+</subsection>
+</section>
+<section title="入力、処理、出力">
+<subsection title="西暦和暦変換プログラム">
+<p>次のプログラムは、西暦を入力すると、変換処理を行い、和暦を出力するプログラムです。</p>
+<program title="ConvertYearApplication1.java" id="src:ConvertYearApplication1" src="src/ConvertYearApplication1.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter06/src/ConvertYearApplication1.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、ConvertYearApplication1プログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter06_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ConvertYearApplication1Applet"/>
+</applet>]]></native>
+</subsection>
+<subsection title="変数の型-整数型">
+<p>
+					このプログラムでは、西暦（整数型）を読み込んで、
+					西暦和暦変換処理を行い、和暦（文字列型）にして出力しています。 整数を読み込む命令は以下のとおりです。
+				</p>
+<program>
+16:	Scanner scanner = new Scanner(System.in);//入力を受け取るためのスキャナを作る
+29:	year = scanner.nextInt();//スキャナを使って整数を読み込む
+				</program>
+<p>
+					整数は文字列と連結し、文字列として保存することができます。
+					このプログラムでは、西暦を和暦に変換するときに、
+					年号（文字列型）と、年（整数型）を連結し、文字列型として出力しています。
+				</p>
+<program>35:	japaneseYear = "昭和" + (year - 1925);</program>
+<fyi title="やってみよう！">
+<p>合計金額を人数で割った数を表示する「割り勘計算機」を作りましょう。</p>
+<p>まず「合計金額を入力してください&gt;&gt;」と表示し、合計金額の入力を受け取り、</p>
+<p>次に「飲み会参加人数を入力してください&gt;&gt;」と表示し、人数の入力を受け取り、</p>
+<p>最後に「ひとりあたりの金額は●●円です」と表示しましょう。</p>
+<p>結果は、整数（小数点以下切捨て）で出すようにしてください。</p>
+<p>（すべての変数を整数型にして実装すると、Javaの仕様により、計算結果の小数点以下は切り捨てられます。「<a href="#sec:cast">キャスト</a>」の項で説明してあります）</p>
+</fyi>
+</subsection>
+</section>
+<section title="変数の型とキャスト">
+<subsection title="平均得点計算プログラム">
+<p>次のプログラムは３教科の平均を計算し、小数点１位を四捨五入して平均点を出力するプログラムです。</p>
+<program title="ScoreAverage.java" id="src:ScoreAverage" src="src/ScoreAverage.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter06/src/ScoreAverage.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、ScoreAverageプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter06_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ScoreAverageApplet"/>
+</applet>]]></native>
+</subsection>
+<subsection title="変数の型-浮動小数点数型">
+<p>このプログラムでは、浮動小数点数（double)を扱っています。</p>
+<p>
+					浮動小数点数には誤差があります。 これは、コンピュータは２進法で計算をしており、
+					普段わたしたちが使っている１０進法とは違うためです。
+				</p>
+<fyi title="やってみよう！">
+<p>0.1を10回足すプログラムを作り、結果を表示しましょう。</p>
+</fyi>
+<fyi title="やってみよう！">
+<p>0.125を8回足すプログラムを作り、結果を表示しましょう。</p>
+</fyi>
+<fyi title="考えてみよう">
+<p>なぜ上記２つの結果が違うのか、考えてみましょう。</p>
+</fyi>
+</subsection>
+<subsection title="キャスト（型変換）" id="sec:cast">
+<p>
+					通常、整数型に浮動小数点数型を代入するなど、値を型の違う変数を代入することはできません
+					（浮動小数点数型の変数に整数を代入するなど、Javaで認められているものは、特別な処理をしなくても自動で型変換が行われ、代入ができる）。
+				</p>
+<p>
+					このような場合、プログラマが明示的に「キャスト（型変換）」を行う必要があります。キャストの命令は、次のように書きます。
+				</p>
+<program>（変換したい型）変換元の変数；</program>
+<p>
+					今回のプログラムでは、以下のようにしてdouble型の変数をint型にキャストして、int型の変数に代入しています。
+				</p>
+<program>34:	int result = (int) (average / 10);</program>
+<p>
+					Javaでは、double型をint型にキャストすると、小数点以下は切り捨てられます。
+					この仕様を利用して、四捨五入のプログラムは以下のように書くこともできます。
+				</p>
+<program>
+//平均を四捨五入する
+average = average+0.5;
+int result = (int) (average);
+				</program>
+</subsection>
+</section>
+<section title="CUIプログラムの作り方">
+<subsection title="クラス（ファイル）の作り方">
+<p>
+					論プロエディタのクラス（ファイル）作成画面のテンプレートの中から「CUI」を選んでください。
+					このテンプレートにはあらかじめimport文と、起動処理が書かれています。
+				</p>
+</subsection>
+<subsection title="新しい命令-変数の型と変数宣言"/>
+<p>変数には整数型（int）、文字列型（String）、浮動小数点型（double)などがあります。</p>
+<p>文字列や浮動小数点数を変数に保存したい場合は、以下のように書きます。</p>
+<fyi title="それぞれの型の変数宣言と代入文の例">
+<dl>
+<dt>int x=0;</dt>
+<dd>
+<p>整数型の変数ｘを作り、０を代入しています。</p>
+</dd>
+<dt>double y=0.01;</dt>
+<dd>
+<p>浮動小数点数方の変数ｙを作り、０．０１を代入しています。</p>
+</dd>
+<dt>String text="hello";</dt>
+<dd>
+<p>文字列型の変数textを作り、「hello」という文字列を代入しています。</p>
+</dd>
+</dl>
+</fyi>
+<subsection title="新しい命令-Java標準ライブラリを使った命令">
+<subsubsection title="標準出力に文字を出力する命令">
+<dl>
+<dt>System.out.println("hello")</dt>
+<dd>
+<p>
+								 "（ダブルクォーテーション）で囲まれた文字（例ではhello)を、標準出力（コンソール）に出力します。
+							</p>
+</dd>
+</dl>
+</subsubsection>
+<subsubsection title="ユーザから入力を受け取る命令">
+<dl>
+<dt>
+							Scanner scanner = new Scanner(System.in);
+						</dt>
+<dd>
+<p>
+								文字を受け取るための「スキャナー」を生成します（下の３つの命令を使うためには、必ず、下の３つの命令の前にこの命令を書いておく必要がある）
+							</p>
+</dd>
+<dt>int x = scanner.nextInt()</dt>
+<dd>
+<p>整数の入力を受け取り、その値をxという変数に保存します。</p>
+</dd>
+<dt>double y = scanner.nextDouble()</dt>
+<dd>
+<p>浮動小数点数の入力を受け取り、その値をyという変数に保存します。</p>
+</dd>
+<dt>String text = scanner.nextLine()</dt>
+<dd>
+<p>文字列の入力を受け取り、その値をtextという変数に保存します。</p>
+</dd>
+</dl>
+</subsubsection>
+</subsection>
+</section>
+<section title="練習問題">
+<subsection title="問題1：体型評価プログラムを作ろう">
+<subsubsection title="概要">
+<p>
+						このプログラムは、身長と体重の入力を実数で受け付ける。
+						その入力をもとにBMI指数と、その値から評価されたコメントを出力する。
+					</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							身長と体重の入力を受け取り、BMI指数と、その値から評価されたコメントを出力する。
+							<ul>
+<li>入力：体重(g)と身長(cm）の実数値</li>
+<li>出力：BMI指数（小数点1桁で四捨五入することが望ましい，およびコメント）</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>BMI指数は体重(kg)を身長(m)の二乗で割った数値である。</li>
+<li>
+							BMI指数から体型を次のように評価し、コメントとする（18.5未満＝やせ、18.5-25未満＝標準、25-35未満＝肥満、35以上＝高度肥満）。
+						</li>
+</ul>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>文字など処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>身長と体重の入力にはscanner.nextDouble()を使用すること。</li>
+</ol>
+</subsubsection>
+</subsection>
+<subsection title="問題2：恋愛占いプログラムを作ろう">
+<subsubsection title="概要">
+<p>
+						このプログラムは、男女の名前を入力すると、
+						その恋愛成就確率を百分率で判定し、コメント付で出力する。
+					</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							男女の名前の入力を受け取り、恋愛成就確率をコメント付で出力する。
+							<ul>
+<li>入力：男女の名前（姓名をつなげたもの）の入力</li>
+<li>出力：恋愛成就確率(0-100%実数でも整数でも可)、コメント</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+							成就確率算出アルゴリズムは自由でよいが、指定された範囲の値になるようにすること。コメントは自由でよい。楽しめるように工夫すること。
+						</li>
+</ul>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>男女の名前の入力にはscanner.nextLine()を使用すること。</li>
+</ol>
+</subsubsection>
+<fyi title="文字列からハッシュコード（整数）を求める命令">
+<p>入力された文字列からハッシュコード
+						<note>
+						ハッシュコードとは、ハッシュ関数という、特定のデータを固定長のデータに変換する関数によって求められた値のことです。
+						同じデータからは同じハッシュコードが生成されます。
+						ハッシュコードは、情報セキュリティを高めるための技術として、パスワードの保管やデータの改ざんの検出などに使われています。
+						今回、このプログラムでは相性判断のために、文字列を数値に変換するための手段としてハッシュコードを使いましたが、これはハッシュコードの本来の使い方ではありません。
+						</note>
+						を求めるには、hashCode()命令を使います。</p>
+<p>以下のプログラムを参考にしてください。</p>
+<program>
+//文字の入力を受けとる
+System.out.print("文字を入力&gt;&gt;");
+String text = scanner.nextLine();
+
+//入力された文字をハッシュコード（整数）に変換し、その値をnumberという変数に保存する
+int number = text.hashCode();
+
+//ハッシュコードの出力を行う
+System.out.println("あなたの入力した文字のハッシュコードは" + number + "ですね");
+					</program>
+</fyi>
+<fyi title="実装のヒント">
+<p>
+					ハッシュコードは正負の非常に大きな値を取ります。これを100までの整数にして、
+					百分率表示に使うためには、「負の数だったら（-1）をかけて、正の数にする」
+					「数が100より大きい間、数を10で割り続ける」といった方法が使えます。
+					</p>
+</fyi>
+</subsection>
+<subsection title="問題3：単位取得状況評価プログラムを作ろう">
+<subsubsection title="概要">
+<p>
+						このプログラムは、SFC生の単位取得の状況の入力を受け取り、
+						それを評価し、卒業するためのコメントを出力する。
+					</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							経過した学期数と現在取得した単位数の入力を受け取り、その値から評価されたコメントを出力する。
+							<ul>
+<li>入力：経過した学期数(0-20)の整数値，取得済みの単位数</li>
+<li>出力：今後1学期あたりにとらねばならない単位数(CPS:Credit Per Semester)，およびコメント</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>最終的に取得すべき単位数などはSFCの学則に従うものとする。</li>
+<li>
+							コメントは自由に考えてよいが、間違ったコメントはしてはいけない。たとえば、20単位以上は留年確定であるのに、「がんばれば何とかなる」と表示する等。
+						</li>
+</ul>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>文字など処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>単位数の入力にはscanner.nextInt()を使用すること。</li>
+</ol>
+</subsubsection>
+</subsection>
+</section>
+<section title="発展問題">
+<subsection title="問題1：脳トレ　論プロ風">
+<subsubsection title="概要">
+<p>
+						ユーザが計算問題を解くことで脳を鍛えるソフトウエアである。
+						このプログラムは、足し算の計算問題を自動生成して、何問か出題し、そのつど答えあわせをする。
+					</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時、および終了時にその旨をユーザに知らせるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました．」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました．」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							足し算の計算問題を生成する。
+							<ul>
+<li>出力：問題　（３　＋　４　＝　？）</li>
+</ul>
+							各数字の桁数は一桁の整数である（答えは任意の桁数の整数とする）
+						</li>
+<li>
+							出題し、答えあわせをする。
+							<ul>
+<li>入力：回答</li>
+<li>出力：答えあわせの結果（正解 or 不正解(正答を添える)）</li>
+</ul>
+</li>
+<li>2)、3)を連続で10回行い、最後に正答率を出力する。</li>
+</ol>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>入力はscanner.nextInt()を利用すること。</li>
+</ol>
+</subsubsection>
+</subsection>
+<subsection title="問題2：マイホーム大作戦">
+<subsubsection title="概要">
+<p>
+						マイホームローンの返済計算を行うプログラムである。ユーザは家を買うときに利用することを想定する。
+						システムは、家の値段と利率、月々の返済金額を入力として受け取り、
+						返済が終わるまでにかかる期間を計算し、コメントとともに出力する。
+					</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							家の値段とローン年数、利率、月々の返済金額を入力として受け取り、月々の返済金額を計算して出力する。
+							<ul>
+<li>入力：家の値段（整数：万円単位だと使いやすい）、利率（百分率の実数）、月々の返済金額（整数）</li>
+<li>出力：かかる期間（○年）、総返済金額，コメント</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+							ただし、返済方法は、元利均等方式（借入元金と借入利息を合わせて月々、同じ金額を返済する方式）とし、
+							利息は年単位で複利計算を行うものとする。
+						</li>
+<li>
+							たとえば、10000円を利率5％で借り、月々の返済金額が100円の場合、1年目の返済が終了すると、10000円（借入元金）+ 500円（利子）- 1200円（100 * 12ヶ月）= 9300円の借入元金が残る。
+						</li>
+<li>
+							ヒント：返せない場合はプログラムがループする可能性があるので、事前にチェックするとよい。
+							1円未満は切捨てとする（利息はdouble型で計算して、一年ごとに切り捨てるように）。
+						</li>
+<li>
+							なお、コメントは各自工夫してよい（100万円：ちょっと安すぎる家では？ 50年：長すぎるのは？ などなど）。
+						</li>
+</ul>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>入力はscanner.nextInt()を利用すること。</li>
+</ol>
+</subsubsection>
+</subsection>
+<subsection title="問題3：ザ･バイナリサーチ">
+<subsubsection title="概要">
+<p>
+						「数あてゲーム」である。システムはまず，１-１０００までの整数をランダムに選ぶ（表示しない）。
+						ユーザはこの数をなるべく少ない回答で当てるのが目的である．ユーザは推測した数を入力し、
+						システムは数が当っていたら、あたったことをユーザに知らせて終了、
+						外れていたら、大きすぎるのか、小さすぎるのかをユーザに知らせて再入力を求める。
+					</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時、および終了時にその旨をユーザに知らせるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました．」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました．」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							整数をランダムに選ぶ。
+							<ul>
+<li>出力：問題の正解　（１-１０００までのランダムな整数）</li>
+</ul>
+</li>
+<li>
+							回答の入力を受けつけ、答えあわせをする。
+							<ul>
+<li>プロンプト：「私が選んだ数を当ててみてね．」</li>
+<li>入力：回答（整数）</li>
+<li>正解時出力：「正解です．おめでとう！」と出力して終了する。</li>
+<li>不正解時出力：「ちがいます．」の後、大きすぎるか、小さすぎるかを出力する。</li>
+</ul>
+</li>
+</ol>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>入力はscanner.nextInt()を利用すること。</li>
+</ol>
+</subsubsection>
+<fyi title="乱数を求める命令">
+<p>Java標準ライブラリを用いた、乱数を求める命令は以下のとおりです。</p>
+<p>（タートルライブラリのrandom([数]）命令とは、返ってくる値が違います。この命令では、0以上、1より小さい小数が返ってきます）</p>
+<program>
+//乱数を発生させ、numberという変数に保存する
+double number=Math.random();
+
+//乱数の出力を行う
+System.out.println( "今回の乱数は" + number + "ですね");
+					</program>
+</fyi>
+</subsection>
+</section>
+</body>
+</doc>

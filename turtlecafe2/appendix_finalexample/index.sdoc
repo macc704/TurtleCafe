@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>最終作品例</title>
+</head>
+<body>
+<section title="Java最終作品例（2007年度秋学期履修者の作品）">
+<subsection title="やすしゲーム">
+<p>
+						横スクロールアクションゲーム。車を避けながら事務所までやすしをたどり着かせることが目的。
+						キーボードの上下キーで操作できる。（半角英数モードにしておくこと）
+				</p>
+<p>
+			下のボタンを押すと、YasushiGameプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="appendix_finalexample_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="YasushiGame"/>
+</applet>]]></native>
+</subsection>
+<subsection title="神経衰弱">
+<p>
+						タイトル画面で左クリックすると、説明を見ることができる。右クリックするとゲーム開始。
+						カードに触れると、カードを裏返すことができる。
+				</p>
+<p>
+			下のボタンを押すと、ShinkeiSuijyakuプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="appendix_finalexample_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ShinkeiSuijyaku"/>
+</applet>]]></native>
+</subsection>
+<subsection title="しりとりゲーム">
+<p>
+						３文字しりとりゲーム。左上の入力ボックスに１文字ずつひらがなを入れることでコンピュータとしりとりができる。
+						入力ボックスの移動は、スペースキーで行える（半角英数モードにしておくこと）。
+				</p>
+<p>
+			下のボタンを押すと、Shiritori2プログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="appendix_finalexample_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Shiritori2"/>
+</applet>]]></native>
+</subsection>
+<subsection title="ドイツ語ワークブック">
+<p>
+						ドイツ語自習ワークブックのCUIプログラム。
+				</p>
+<p>
+			下のボタンを押すと、DeutschprogramAppletプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="appendix_finalexample_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DeutschprogramApplet"/>
+</applet>]]></native>
+</subsection>
+<subsection title="タロット占い">
+<p>
+						ちらばったカードから１枚を選ぶタロット占いゲーム
+				</p>
+<p>
+			下のボタンを押すと、Tarotプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="appendix_finalexample_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Tarot"/>
+</applet>]]></native>
+</subsection>
+<subsection title="ゴジラと対決ゲーム">
+<p>
+						シューティングゲーム。画面上のボタン操作で、ゴジラと撃ち合う。
+				</p>
+<p>
+			下のボタンを押すと、Finalmissonプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="appendix_finalexample_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Finalmisson"/>
+</applet>]]></native>
+</subsection>
+<subsection title="インベーダーゲーム">
+<p>
+						シューティングゲーム。上キーで弾を発射、左右キーで移動ができる。
+				</p>
+<p>
+			下のボタンを押すと、ShootingGameプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="appendix_finalexample_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ShootingGame"/>
+</applet>]]></native>
+</subsection>
+</section>
+</body>
+</doc>

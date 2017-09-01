@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='Shift_JIS' ?>
+
+<!DOCTYPE doc SYSTEM "../smartdoc.dtd"[
+<!ENTITY CHAPTER "chapter10">
+]>
+
+<doc xml:lang='ja'>
+
+	<head>
+		<title>ゲームを作ろう！</title>
+	</head>
+
+	<body>
+
+		<section title="学習目標">
+			<ul>
+				<li>キーボード、マウスを使ってユーザと対話するプログラムを作れるようになる</li>
+				<li>オブジェクト同士の当たり判定を取得し、オブジェクトが連携して動作するプログラムを作れるようになる</li>
+			</ul>
+		</section>
+
+		<section title="キーボード入力の判定">
+
+			<section title="キーコードの取得">
+
+			<p>
+				key()命令を使うと、いま押されているキーボードの番号（キーコード）を
+				調べることができます。
+			</p>
+			<p>
+				次のプログラムは、車がキーにあわせて、上下左右に動くプログラムです。
+			</p>
+			<text.turtle.applet class="HandleKey" chapter="&CHAPTER;"/>
+				<fyi title="キー入力を受け取る新しい命令">
+					<dl>
+						<dt>key()</dt>
+						<dd>
+							<p>
+								いま押されているキーボードの番号（キーコード）を調べることができます。
+							</p>
+							<p>
+								何も押されていない時は、キーコードが -1 になります。
+							</p>
+						</dd>
+					</dl>
+				</fyi>
+
+			</section>
+
+			<section title="キーコードを調べる">
+			<p>
+				キーボードのキーに対応するキーコードを調べるには、
+				次のプログラムを使うと良いでしょう。
+			</p>
+			<text.turtle.applet class="CheckKeycode" chapter="&CHAPTER;"/>
+			</section>
+		</section>
+
+		<section title="マウス入力の判定">
+
+			<section title="マウスの位置を調べる">
+
+			<p>
+				mouseX()、mouseY() 命令を使うと，
+				マウスが今どこにいるのかを調べることができます。
+			</p>
+			<p>下のプログラムは、マウスの位置に車が移動するプログラムです。</p>
+			<text.turtle.applet class="HandleMouse" chapter="&CHAPTER;"/>
+				<fyi title="マウスの位置を調べる新しい命令">
+					<dl>
+						<dt>mouseX()</dt>
+						<dd>
+							<p>
+								マウスのx座標を取得します。
+							</p>
+						</dd>
+						<dt>mouseY()</dt>
+						<dd>
+							<p>
+								マウスのy座標を取得します。
+							</p>
+						</dd>
+					</dl>
+				</fyi>
+			<p>
+				x()、y()、mouseX()、mouseY()命令で取得した座標は，
+				わざわざ変数に入れなくても、そのまま他の命令で使う値として使うこともできます。
+			</p>
+
+			<text.turtle.applet class="HandleMouse2" chapter="&CHAPTER;"/>
+			</section>
+
+			<section title="マウスが押されているかどうか調べる">
+
+			<p>
+				mouseDown()命令を使うと、マウスが押されているか調べることができます。
+				mouseX()、mouseY() 命令と組み合わせて使うと、どこで押されているかも調べられます。
+			</p>
+			<p>下のプログラムは、マウスをクリックした所に車が移動するプログラムです。</p>
+			<text.turtle.applet class="HandleMouse3" chapter="&CHAPTER;"/>
+
+				<fyi title="マウス入力を調べる新しい命令">
+					<dl>
+						<dt>mouseDown()</dt>
+						<dd>
+							<p>
+								いまマウスが押されているかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+							</p>
+						</dd>
+					</dl>
+				</fyi>
+
+			</section>
+
+			<section title="マウス入力を詳しく調べる">
+
+			<p>
+				マウスボタンの左右や、ダブルクリックを調べる場合は，
+				次のようなプログラムを書きます。
+			</p>
+
+			<text.turtle.applet class="HandleMouse4" chapter="&CHAPTER;"/>
+
+				<fyi title="マウス入力を詳しく調べる新しい命令">
+					<dl>
+						<dt>leftMouseDown()</dt>
+						<dd>
+							<p>
+								いまマウスの左ボタンが押されているかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+							</p>
+						</dd>
+						<dt>rightMouseDown()</dt>
+						<dd>
+							<p>
+								いまマウスの右ボタンが押されているかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+							</p>
+						</dd>
+						<dt>doubleClick()</dt>
+						<dd>
+							<p>
+								マウスがダブルクリックされたかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+							</p>
+						</dd>
+					</dl>
+				</fyi>
+			</section>
+		</section>
+
+		<section title="あたり判定">
+
+			<section title="２つのオブジェクトのあたり判定">
+
+			<p>
+				intersects()命令を使うと、2つのオブジェクトが当たっているかどうか、
+				調べることができます。
+			</p>
+			<p>
+				下のプログラムは、車がドラえもんに当たると、ドラえもんが小さくなるプログラムです（マウスで車を動かせます）。
+			</p>
+
+			<text.turtle.applet class="IntersectsJudge" chapter="&CHAPTER;"/>
+				<fyi title="あたり判定に関する新しい命令">
+					<dl>
+						<dt>intersects([判定相手のオブジェクト])</dt>
+						<dd>
+							オブジェクトが、指定された判定相手のオブジェクトと当たっているかどうか調べます。
+							必ず、if文の条件文の中に書いて下さい。
+						</dd>
+					</dl>
+				</fyi>
+			</section>
+
+			<section title="座標とオブジェクトのあたり判定">
+
+			<p>
+				2つのオブジェクトのあたり判定でなく、マウスの位置が、オブジェクトと当たっているか判定したい時があります。
+			</p>
+			<p>
+				下のプログラムは、マウスが車の上に来る（マウスの座標が車の領域に含まれる）と、車が小さくなるプログラムです。
+			</p>
+
+			<text.turtle.applet class="ContainsJudge" chapter="&CHAPTER;"/>
+				<fyi title="座標とオブジェクトのあたり判定に関する新しい命令">
+					<dl>
+						<dt>contains([x座標], [y座標])</dt>
+						<dd>
+							オブジェクトが指定された座標内に含まれているかどうか調べます。
+							必ず、if文の条件文の中に書いて下さい。
+						</dd>
+					</dl>
+				</fyi>
+			</section>
+
+		</section>
+
+		<section title="課題">
+			<section title="簡単なゲームを作ろう">
+			<p>
+				これで，このテキストの内容はすべておしまいです。
+				ここまでの内容を駆使して、面白いソフトウエアを作ってくださることを期待します。
+			</p>
+			<fyi title="やってみよう！">
+			<p>
+				プレイヤーの画像を用意し、キーボードの矢印（↑→←↓）キーを使って、プレイヤーを上下左右に操作するプログラムを作りましょう。
+			</p>
+			<p>
+				プレイヤーの画像は、ネットのフリー素材集などから好みのものを探し、ダウンロードして使ってください。
+			</p>
+			</fyi>
+			<fyi title="やってみよう！">
+			<p>
+				アイテム（<a href="#sec:imageturtle">画像タートル</a>）と得点板（<a href="#sec:textturtle">テキストタートル</a>）をつくり、プレイヤーを操作してアイテムを取る（アイテムに触れる）と得点が増えるプログラムを作りましょう。
+			</p>
+			<p>
+				アイテムの画像は、ネットのフリー素材集などから好みのものを探し、ダウンロードして使ってください。
+			</p>
+			</fyi>
+			<fyi title="やってみよう！">
+			<p>
+				自由な発想で、簡単なオリジナルゲームを作りましょう。
+			</p>
+			</fyi>
+			<p>
+				最後に、シューティングゲームのサンプルプログラムを贈ります。操作方法はプログラムを読めばわかります。GOOD LUCK!
+			</p>
+			<text.turtle.applet class="ShootingGame" chapter="&CHAPTER;"/>
+			</section>
+		</section>
+
+	</body>
+</doc>
+
+

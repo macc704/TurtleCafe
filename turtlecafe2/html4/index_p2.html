@@ -1,0 +1,814 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c10.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/CUI情報処理プログラミング</td>
+<td><a href="index_p2_c11.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="part" id="doc1_part:onedash">2  CUI情報処理プログラミング</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="index_p2_c11.html#doc1_45" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11  はじめてのCUIプログラム</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_3973" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.1  学習目標</a>
+<li> <a href="index_p2_c11.html#doc12_3985" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2  はじめてのCUIプログラム</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_3987" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.1  CUIとは</a>
+<li> <a href="index_p2_c11.html#doc12_3999" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.2  タートルプログラムとの違い</a>
+<li> <a href="index_p2_c11.html#doc12_4017" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.3  情報の表示とユーザ入力の受け取り</a>
+<li> <a href="index_p2_c11.html#doc12_4039" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.4  Java標準ライブラリ</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4041" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.4.1  インポート</a>
+<li> <a href="index_p2_c11.html#doc12_4056" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.4.2  入力を受け付ける命令</a>
+<li> <a href="index_p2_c11.html#doc12_4071" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.4.3  コンソールに出力する命令</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4081" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.5  変数の型-文字列型</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4094" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.3  入力、処理、出力</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4096" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.3.1  西暦和暦変換プログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4118" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.3.2  変数の型-整数型</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4134" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.4  変数の型とキャスト</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4136" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.4.1  平均得点計算プログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4158" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.4.2  変数の型-浮動小数点数型</a>
+<li> <a href="index_p2_c11.html#doc12_sec:cast" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.4.3  キャスト（型変換）</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4195" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5  CUIプログラムの作り方</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4197" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.1  クラス（ファイル）の作り方</a>
+<li> <a href="index_p2_c11.html#doc12_4203" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.2  新しい命令-変数の型と変数宣言</a>
+<li> <a href="index_p2_c11.html#doc12_sec:method" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.3  Java標準ライブラリを使った命令</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4247" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.3.1  標準出力に文字を出力する命令</a>
+<li> <a href="index_p2_c11.html#doc12_4271" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.3.2  ユーザから入力を受け取る命令</a>
+<li> <a href="index_p2_c11.html#doc12_4313" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.3.3  乱数を求める命令(その１)</a>
+<li> <a href="index_p2_c11.html#doc12_4328" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.3.4  乱数を求める命令(その２)</a>
+</ul>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4372" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6  練習問題</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4374" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.1  0.1を10回加算するプログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4383" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.2  0.125を8回加算するプログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4392" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.3  乱数生成プログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4410" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.4  四捨五入プログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4431" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.5  割り勘計算機</a>
+<li> <a href="index_p2_c11.html#doc12_4458" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.6  体型評価プログラム</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4460" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.6.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4466" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.6.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4505" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.6.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4511" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.6.4  プログラム設計条件</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4530" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.7  恋愛占いプログラム</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4532" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.7.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4538" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.7.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4574" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.7.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4580" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.7.4  プログラム設計条件</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4617" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.8  単位取得状況評価プログラム</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4619" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.8.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4625" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.8.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4664" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.8.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4670" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.8.4  プログラム設計条件</a>
+</ul>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4687" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7  発展問題</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4689" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.1  脳トレ　論プロ風</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4691" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.1.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4697" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.1.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4739" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.1.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4745" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.1.4  プログラム設計条件</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4763" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.2  マイホーム大作戦</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4765" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.2.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4771" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.2.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4816" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.2.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4822" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.2.4  プログラム設計条件</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4838" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.3  ザ･バイナリサーチ</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4840" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.3.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4846" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.3.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4891" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.3.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4897" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.3.4  プログラム設計条件</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4913" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.4  世界の○○</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4915" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.4.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4921" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.4.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4948" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.4.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4954" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.4.4  プログラム設計条件</a>
+</ul>
+</ul>
+</ul>
+</ul>
+</div>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c10.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/CUI情報処理プログラミング</td>
+<td><a href="index_p2_c11.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>音を鳴らしてみよう</title>
+</head>
+<body>
+<section title="音を鳴らす方法">
+<p>BSoundライブラリを使うと、MP3、WAVE、MIDI形式のファイルを制御して、音を鳴らすことができます。</p>
+<p>BSoundライブラリをプログラム内で利用するためには、プログラムの行頭に次の1行を加えます。</p>
+<program>
+import blib.sound.BSound;
+			</program>
+<p>MP3、WAVE、MIDI以外のファイルを鳴らしたい場合は、<a href="http://media-convert.com/ja/" target="_blank">変換サイト</a>で対応できるファイル形式に変換してください。</p>
+</section>
+<section title="BSoundの使い方">
+<subsection title="BGMを鳴らす場合">
+<p>BGMなど再生時間が長い音を鳴らす場合は、まず再生するファイルを指定して、BSound オブジェクトを作成します。</p>
+<program>
+BSound bgm = new BSound("bgm.mp3"); //BSoundオブジェクトを作成する
+				</program>
+<p>そして、作成したBSoundオブジェクトに対して、play() や stop() などの命令を行います。</p>
+<program>
+bgm.play(); //BGMを再生する
+				</program>
+</subsection>
+<subsection title="効果音を鳴らす場合">
+<p>効果音など再生時間が短い音を鳴らす場合は、BGMと同じ方法でも鳴らすことができますが、次のような簡易的な命令を使うこともできます。</p>
+<program>
+BSound.play("fire.wav");
+				</program>
+<p>また、次のように音量を指定して再生することもできます。</p>
+<program>
+BSound.play("fire.wav", 100); //効果音を再生する
+				</program>
+<p>ただし、上記2つの簡易的な命令で音を再生した場合、その音を途中で停止したり、音量を変更したりすることができません。</p>
+</subsection>
+<subsection title="あらかじめ音を読み込んでおく">
+<p>音の再生時に反応速度が重要な場合は、あらかじめ音を読み込んでおくこと、再生するまでの反応速度を早くすることができます。</p>
+<program>
+BSound.load("fire.wav"); // あらかじめ効果音を読み込んでおく
+BSound.play("fire.wav"); // 効果音を再生する
+				</program>
+<p>ただし、再生時間が長い大きなファイルを読み込む場合は、それだけメモリが必要になります。</p>
+</subsection>
+</section>
+<section title="BSoundで利用できる命令">
+<subsection title="再生と停止">
+<dl>
+<dt>play()</dt>
+<dd>
+						音を1度だけ再生します。
+					</dd>
+<dt>loop()</dt>
+<dd>
+						音をループ再生します。音の再生が終わると、もう一度はじめから再生します。
+						stop()が呼ばれるまで再生し続けます。
+					</dd>
+<dt>stop()</dt>
+<dd>
+						音を停止します。
+					</dd>
+<dt>isPlaying()</dt>
+<dd>
+						音が再生中かどうか調べます。必ず、if文の条件文の中に書いて下さい。
+					</dd>
+</dl>
+</subsection>
+<subsection title="音量の取得・変更">
+<dl>
+<dt>getVolume()</dt>
+<dd>
+						音量を取得します。取得する音量は0(消音)から100(最大音量)のいずれかです。
+					</dd>
+<dt>setVolume(??)</dt>
+<dd>
+						音量を??に設定します。設定できる音量は0(消音)から100(最大音量)までです。
+					</dd>
+<dt>getDefaultVolume()</dt>
+<dd>
+						初期設定の音量を取得します。取得する音量は0(消音)から100(最大音量)のいずれかです。
+					</dd>
+
+					※midiファイルの音量は常に100です(音量調整はできません)。
+				</dl>
+</subsection>
+<subsection title="簡易再生">
+<dl>
+<dt>BSound.play(??)</dt>
+<dd>
+						指定した音ファイルを再生します。効果音など再生時間が短いファイルを再生する場合に最適です。
+						ただし、この方法で再生した音は途中で停止したり、音量を変更したりすることはできません。
+					</dd>
+<dt>BSound.play(??, ??)</dt>
+<dd>
+						1番目の引数で指定した音ファイルを、2番目の引数で指定した音量(0-100)で再生します。
+						効果音など再生時間が短いファイルを再生する場合に最適です。
+						ただし、この方法で再生した音は途中で停止したり、音量を変更したりすることはできません。
+					</dd>
+</dl>
+</subsection>
+<subsection title="音の読み込み">
+<dl>
+<dt>BSound.load(??)</dt>
+<dd>
+						指定した音ファイルを読み込みます。
+						ファイルを読み込んだ場合、反応速度が早くなりますが、ファイルを読み込むためのメモリ領域が必要です。
+					</dd>
+</dl>
+</subsection>
+</section>
+<section title="練習問題">
+<subsection title="問題1：シューティングゲームに効果音をつけよう">
+<p>11章の最後にあるシューティングゲームを改良して、効果音をつけましょう。</p>
+<p>次の2つの場合において、好きな音を鳴らして下さい。</p>
+<ul>
+<li>ドラえもんが弾を発射したとき（上キーを押したとき）。</li>
+<li>弾が星に衝突したとき。</li>
+</ul>
+</subsection>
+<subsection title="問題2：シューティングゲームにBGMをつけよう">
+<p>上の問題で効果音をつけたシューティングゲームに、今度はBGMをつけましょう。</p>
+</subsection>
+</section>
+<section title="練習問題解答例">
+<program title="ShootingGameWithSound.java" id="src:ShootingGameWithSound" src="src/ShootingGameWithSound.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="appendix_soundlib/src/ShootingGameWithSound.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、ShootingGameWithSoundプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="appendix_soundlib_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ShootingGameWithSound"/>
+</applet>]]></native>
+</section>
+</body>
+</doc>

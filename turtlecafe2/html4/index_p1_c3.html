@@ -1,0 +1,1350 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c2.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/コンピュータに情報を記憶させてみよう（変数）</td>
+<td><a href="index_p1_c4.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_26">3  コンピュータに情報を記憶させてみよう（変数）</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc4_818" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.1  学習目標</a>
+<li> <a href="#doc4_836" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.2  変数</a>
+<ul>
+<li> <a href="#doc4_841" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.2.1  変数と値</a>
+<li> <a href="#doc4_876" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.2.2  変数を使ったプログラムの実行</a>
+<ul>
+<li> <a href="#doc4_881" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.2.2.1  変数の宣言</a>
+<li> <a href="#doc4_886" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.2.2.2  変数へ値を代入する</a>
+<li> <a href="#doc4_891" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.2.2.3  変数を評価して値にする</a>
+</ul>
+<li> <a href="#doc4_897" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.2.3  複数の変数と変数名</a>
+<ul>
+<li> <a href="#doc4_905" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.2.3.1  複数の変数と変数名</a>
+<li> <a href="#doc4_924" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.2.3.2  プログラムの実行過程</a>
+</ul>
+</ul>
+<li> <a href="#doc4_942" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.3  コンピュータに計算をさせる</a>
+<ul>
+<li> <a href="#doc4_944" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.3.1  計算式を使ったプログラム</a>
+<li> <a href="#doc4_1011" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.3.2  計算式を使ったプログラムの実行</a>
+<li> <a href="#doc4_1019" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.3.3  計算式と代入文を使ったプログラムの実行</a>
+</ul>
+<li> <a href="#doc4_1034" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.4  ユーザと対話する（インタラクティブ）なプログラム</a>
+<ul>
+<li> <a href="#doc4_1036" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.4.1  入力を受け付ける</a>
+<li> <a href="#doc4_1067" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.4.2  ユーザにメッセージを出す</a>
+</ul>
+<li> <a href="#doc4_1099" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.5  おみくじ</a>
+<ul>
+<li> <a href="#doc4_1101" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.5.1  乱数</a>
+</ul>
+<li> <a href="#doc4_1139" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.6  練習問題</a>
+<ul>
+<li> <a href="#doc4_1141" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.6.1  与えられた大きさの正五角形を描くプログラム</a>
+<li> <a href="#doc4_1150" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">3.6.2  乱数を使って星を描くプログラム</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc4_818">3.1  学習目標</h2>
+
+
+<ul>
+<li> 整数型の変数の作成（宣言），書き込み（代入），読み込み（評価と値）が使えるようになる
+<li> 複数の変数（変数名による区別をしつつ）が使えるようになる
+<li> 計算式（四則演算＋剰余計算）が使えるようになる
+<li> ＣＵＩを使ってユーザ対話をするプログラムが作れるようになる</ul>
+
+
+<h2 id="doc4_836">3.2  変数</h2>
+
+<p class="first_ja">今回新しく&quot;変数&quot;が登場します。家の大きさを変更できる次のプログラムをみてみましょう。</p>
+
+<h3 id="doc4_841">3.2.1  変数と値</h3>
+
+<p class="first_ja">次のプログラムを見てみましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/block_VariableHouse.png" alt="図 3.2.1.1 VariableHouse">
+</div>
+
+
+<div id="doc4_src:VariableHouse" class="caption">リスト 3.2.1.1 VariableHouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を書くプログラム (変数あり)
+  3:  * 2003/05/08 Yoshiaki Matsuzawa
+  4:  * 2012/10/16 改訂 Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> VariableHouse <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> VariableHouse());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		<span class="keyword">int</span> x;<span class="comment">// 変数xを宣言する</span>
+ 17: 		x = 50;<span class="comment">// 変数xに値50を代入する</span>
+ 18: 
+ 19: 		{<span class="comment">// 屋根を書く</span>
+ 20: 			rt(30); <span class="comment">// 30度右に回る</span>
+ 21: 			fd(x); <span class="comment">// x歩前に進む</span>
+ 22: 			rt(120);
+ 23: 			fd(x);
+ 24: 			rt(120);
+ 25: 			fd(x);
+ 26: 		}
+ 27: 
+ 28: 		{<span class="comment">// 本体を書く</span>
+ 29: 			lt(90);
+ 30: 			fd(x);
+ 31: 			lt(90);
+ 32: 			fd(x);
+ 33: 			lt(90);
+ 34: 			fd(x);
+ 35: 			lt(90);
+ 36: 			fd(x);
+ 37: 		}
+ 38: 	}
+ 39: 
+ 40: }
+</pre>
+
+<p><a href="chapter02/src/VariableHouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、VariableHouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="VariableHouse"/>
+</applet></p>
+<p></p>
+<p>変数はデータを格納しておく場所のことです。
+					プログラムでは、「メモリ」の許す限り、データを格納しておくことが出来ます。</p>
+<p>格納する場所を一つにつき、一つの名前をつけることが出来ます。</p>
+<p>実際に格納されるデータのことを「値」といいます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/table_model_value.gif" alt="図 3.2.1.2 変数と値">
+</div>
+
+
+<h3 id="doc4_876">3.2.2  変数を使ったプログラムの実行</h3>
+
+<p class="first_ja">プログラムの実行過程と変数を見ていきましょう。</p>
+
+<h4 id="doc4_881">3.2.2.1  変数の宣言</h4>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/table_model_x_01.gif" alt="図 3.2.2.1.1 変数の宣言">
+</div>
+
+
+<h4 id="doc4_886">3.2.2.2  変数へ値を代入する</h4>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/table_model_x_02.gif" alt="図 3.2.2.2.1 変数へ値を代入する">
+</div>
+
+
+<h4 id="doc4_891">3.2.2.3  変数を評価して値にする</h4>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/table_model_x_03.gif" alt="図 3.2.2.3.1 変数を評価して値にする">
+</div>
+
+
+<h3 id="doc4_897">3.2.3  複数の変数と変数名</h3>
+
+<p class="first_ja">変数はいくつでも使うことが出来ます。</p>
+<p>区別するために、変数には異なる名前をつけなければなりません。
+					異なる名前ならば好きな名前をつけることが出来ます。
+					空白や特殊記号が使えないのはクラス名と同じです。</p>
+
+<h4 id="doc4_905">3.2.3.1  複数の変数と変数名</h4>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/block_MultiVariableHouse.png" alt="図 3.2.3.1.1 MultiVariableHouse">
+</div>
+
+
+<div id="doc4_src:MultiVariableHouse" class="caption">リスト 3.2.3.1.1 MultiVariableHouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を書くプログラム (変数は複数作れる）
+  3:  * 2003/05/08  Yoshiaki Matsuzawa
+  4:  * 2012/10/16 改訂 Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> MultiVariableHouse <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> MultiVariableHouse());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		<span class="keyword">int</span> length;<span class="comment">// 1辺の長さ</span>
+ 17: 		<span class="keyword">int</span> rightAngle;<span class="comment">// 直角</span>
+ 18: 
+ 19: 		length = 50;<span class="comment">// 1辺の長さを50に設定する</span>
+ 20: 		rightAngle = 90;<span class="comment">// 直角を90度に設定する</span>
+ 21: 
+ 22: 		{<span class="comment">// 屋根を書く</span>
+ 23: 			rt(30); <span class="comment">// 30度右に回る</span>
+ 24: 			fd(length); <span class="comment">// x歩前に進む</span>
+ 25: 			rt(120);
+ 26: 			fd(length);
+ 27: 			rt(120);
+ 28: 			fd(length);
+ 29: 		}
+ 30: 
+ 31: 		{<span class="comment">// 本体を書く</span>
+ 32: 			lt(rightAngle);
+ 33: 			fd(length);
+ 34: 			lt(rightAngle);
+ 35: 			fd(length);
+ 36: 			lt(rightAngle);
+ 37: 			fd(length);
+ 38: 			lt(rightAngle);
+ 39: 			fd(length);
+ 40: 		}
+ 41: 	}
+ 42: 
+ 43: }
+</pre>
+
+<p class="first_ja"><a href="chapter02/src/MultiVariableHouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、MultiVariableHouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="MultiVariableHouse"/>
+</applet></p>
+
+<h4 id="doc4_924">3.2.3.2  プログラムの実行過程</h4>
+
+<p class="first_ja">プログラムの実行過程を追ってみましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/table_model_name_01.gif" alt="図 3.2.3.2.1 変数の宣言">
+</div>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/table_model_name_02.gif" alt="図 3.2.3.2.2 変数の宣言">
+</div>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/table_model_name_03.gif" alt="図 3.2.3.2.3 変数への値の代入">
+</div>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/table_model_name_04.gif" alt="図 3.2.3.2.4 変数への値の代入">
+</div>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/table_model_name_05.gif" alt="図 3.2.3.2.5 変数を評価して値にする">
+</div>
+
+
+<h2 id="doc4_942">3.3  コンピュータに計算をさせる</h2>
+
+
+<h3 id="doc4_944">3.3.1  計算式を使ったプログラム</h3>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/block_DoubleHouse.png" alt="図 3.3.1.1 DoubleHouse">
+</div>
+
+
+<div id="doc4_src:DoubleHouse" class="caption">リスト 3.3.1.1 DoubleHouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を2つ書くプログラム (計算させるプログラムの例)
+  3:  * 2003/05/08  Yoshiaki Matsuzawa
+  4:  * 2012/10/16 改訂 Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> DoubleHouse <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> DoubleHouse());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		<span class="keyword">int</span> length = 100;<span class="comment">// 1辺の長さ</span>
+ 17: 		<span class="keyword">int</span> smallHouseLength;<span class="comment">// 小さい家の1辺の長さ</span>
+ 18: 		<span class="keyword">int</span> rightAngle = 90;<span class="comment">// 直角</span>
+ 19: 		smallHouseLength = length / 2;
+ 20: 
+ 21: 		{<span class="comment">// 屋根を書く</span>
+ 22: 			rt(30); <span class="comment">// 30度右に回る</span>
+ 23: 			fd(length); <span class="comment">// x歩前に進む</span>
+ 24: 			rt(120);
+ 25: 			fd(length);
+ 26: 			rt(120);
+ 27: 			fd(length);
+ 28: 		}
+ 29: 
+ 30: 		{<span class="comment">// 本体を書く</span>
+ 31: 			lt(rightAngle);
+ 32: 			fd(length);
+ 33: 			lt(rightAngle);
+ 34: 			fd(length);
+ 35: 			lt(rightAngle);
+ 36: 			fd(length);
+ 37: 			lt(rightAngle);
+ 38: 			fd(length);
+ 39: 		}
+ 40: 
+ 41: 		{<span class="comment">// 小さい家を書く位置まで移動する</span>
+ 42: 			up();
+ 43: 			lt(rightAngle * 2);
+ 44: 			fd(length * 2);
+ 45: 			lt(rightAngle);
+ 46: 			down();
+ 47: 		}
+ 48: 
+ 49: 		{<span class="comment">// 小さい家の屋根を書く</span>
+ 50: 			rt(30);
+ 51: 			fd(smallHouseLength);
+ 52: 			rt(120);
+ 53: 			fd(smallHouseLength);
+ 54: 			rt(120);
+ 55: 			fd(smallHouseLength);
+ 56: 		}
+ 57: 
+ 58: 		{ <span class="comment">// 小さい家の本体を書く</span>
+ 59: 			lt(rightAngle);
+ 60: 			fd(smallHouseLength);
+ 61: 			lt(rightAngle);
+ 62: 			fd(smallHouseLength);
+ 63: 			lt(rightAngle);
+ 64: 			fd(smallHouseLength);
+ 65: 			lt(rightAngle);
+ 66: 			fd(smallHouseLength);
+ 67: 		}
+ 68: 	}
+ 69: 
+ 70: }
+</pre>
+
+<p class="first_ja"><a href="chapter02/src/DoubleHouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、DoubleHouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DoubleHouse"/>
+</applet></p>
+<p>コンピュータは計算機ですから、計算をさせることが出来ます。例えば、次のように書くと</p>
+
+<pre id="doc4_965" class="program">
+rightAngle * 2
+				
+</pre>
+
+<p>掛け算を行うことが出来ます。</p>
+<p>このような、計算を行う書法のことを「式」といいます。</p>
+<p>Javaで使うことが出来る基本的な計算命令を以下に示します。</p>
+
+<dl>
+<dt>
++
+<dd>
+足し算をします
+<dt>
+-
+<dd>
+引き算をします
+<dt>
+*
+<dd>
+掛け算をします
+<dt>
+/
+<dd>
+割り算をします
+<dt>
+%
+<dd>
+割り算の余りを求めます</dl>
+
+
+<h3 id="doc4_1011">3.3.2  計算式を使ったプログラムの実行</h3>
+
+<p class="first_ja">次のように評価（計算）されて、具体的な値になり、プログラムが動きます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/table_model_expression_01.gif" alt="図 3.3.2.1 変数の宣言">
+</div>
+
+
+<h3 id="doc4_1019">3.3.3  計算式と代入文を使ったプログラムの実行</h3>
+
+<p class="first_ja">計算式があっても、右辺から評価されるのは一緒です。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/table_model_expression_02.gif" alt="図 3.3.3.1 変数の宣言">
+</div>
+
+<div class="fyi">
+<div class=title>考えてみよう</div>
+
+<p class="first_ja">次のようなプログラムが動かない（コンパイルエラーとなる）のは何故ですか？考えてみましょう。</p>
+
+<pre id="doc4_1028" class="program">
+length / 2  = smallHouseLength;
+				
+</pre>
+
+</div>
+
+
+<h2 id="doc4_1034">3.4  ユーザと対話する（インタラクティブ）なプログラム</h2>
+
+
+<h3 id="doc4_1036">3.4.1  入力を受け付ける</h3>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/block_InputHouse.png" alt="図 3.4.1.1 InputHouse">
+</div>
+
+
+<div id="doc4_src:InputHouse" class="caption">リスト 3.4.1.1 InputHouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を書くプログラム (1辺の長さを入力する)
+  3:  * 2003/05/08  Yoshiaki Matsuzawa
+  4:  * 2012/10/16 改訂 Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> InputHouse <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> InputHouse());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		<span class="keyword">int</span> length;<span class="comment">// 1辺の長さ</span>
+ 17: 		<span class="keyword">int</span> rightAngle = 90;<span class="comment">// 直角</span>
+ 18: 
+ 19: 		length = input();<span class="comment">// 1辺の長さを入力値に設定する</span>
+ 20: 
+ 21: 		{<span class="comment">// 屋根を書く</span>
+ 22: 			rt(30); <span class="comment">// 30度右に回る</span>
+ 23: 			fd(length); <span class="comment">// x歩前に進む</span>
+ 24: 			rt(120);
+ 25: 			fd(length);
+ 26: 			rt(120);
+ 27: 			fd(length);
+ 28: 		}
+ 29: 
+ 30: 		{<span class="comment">// 本体を書く</span>
+ 31: 			lt(rightAngle);
+ 32: 			fd(length);
+ 33: 			lt(rightAngle);
+ 34: 			fd(length);
+ 35: 			lt(rightAngle);
+ 36: 			fd(length);
+ 37: 			lt(rightAngle);
+ 38: 			fd(length);
+ 39: 		}
+ 40: 	}
+ 41: 
+ 42: }
+</pre>
+
+<p class="first_ja"><a href="chapter02/src/InputHouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、InputHouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="InputHouse"/>
+</applet></p>
+<p>入力を受け付けるには、</p>
+
+<pre id="doc4_1057" class="program">
+input()
+			
+</pre>
+
+<p>命令を使います。</p>
+<p>評価すると、ユーザが入力した値になります。そして、その値が変数に代入されます。</p>
+
+<h3 id="doc4_1067">3.4.2  ユーザにメッセージを出す</h3>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/block_PromptHouse.png" alt="図 3.4.2.1 PromptHouse">
+</div>
+
+
+<div id="doc4_src:PromptHouse" class="caption">リスト 3.4.2.1 PromptHouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を書くプログラム (プロンプト付き)
+  3:  * 2003/05/08  Yoshiaki Matsuzawa
+  4:  * 2012/10/16 改訂 Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> PromptHouse <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> PromptHouse());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		<span class="keyword">int</span> length;<span class="comment">// 1辺の長さ</span>
+ 17: 		<span class="keyword">int</span> rightAngle = 90;<span class="comment">// 直角</span>
+ 18: 
+ 19: 		{<span class="comment">// 入力を受け取る</span>
+ 20: 			print(<span class="quote">&quot;1辺の長さを入力してください&quot;</span>);
+ 21: 			length = input();<span class="comment">// 1辺の長さを入力値に設定する</span>
+ 22: 		}
+ 23: 
+ 24: 		{<span class="comment">// 屋根を書く</span>
+ 25: 			rt(30); <span class="comment">// 30度右に回る</span>
+ 26: 			fd(length); <span class="comment">// x歩前に進む</span>
+ 27: 			rt(120);
+ 28: 			fd(length);
+ 29: 			rt(120);
+ 30: 			fd(length);
+ 31: 		}
+ 32: 
+ 33: 		{<span class="comment">// 本体を書く</span>
+ 34: 			lt(rightAngle);
+ 35: 			fd(length);
+ 36: 			lt(rightAngle);
+ 37: 			fd(length);
+ 38: 			lt(rightAngle);
+ 39: 			fd(length);
+ 40: 			lt(rightAngle);
+ 41: 			fd(length);
+ 42: 		}
+ 43: 	}
+ 44: 
+ 45: }
+</pre>
+
+<p class="first_ja"><a href="chapter02/src/PromptHouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、PromptHouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="PromptHouse"/>
+</applet></p>
+<p>ユーザにメッセージを出すには</p>
+
+<pre id="doc4_1088" class="program">
+print(&quot;ここに出したいメッセージを書く&quot;)
+			
+</pre>
+
+<p>命令を使います。</p>
+<p>出したいメッセージを「&quot;」（ダブルクォーテーション）で囲んでください。</p>
+
+<h2 id="doc4_1099">3.5  おみくじ</h2>
+
+
+<h3 id="doc4_1101">3.5.1  乱数</h3>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter02/image/block_RandomHouse.png" alt="図 3.5.1.1 RandomHouse">
+</div>
+
+
+<div id="doc4_src:RandomHouse" class="caption">リスト 3.5.1.1 RandomHouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を書くプログラム (ランダムな大きさにする)
+  3:  * 2003/05/08 Yoshiaki Matsuzawa
+  4:  * 2012/10/16 改訂 Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> RandomHouse <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> RandomHouse());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		<span class="keyword">int</span> length;<span class="comment">// 1辺の長さ</span>
+ 17: 		<span class="keyword">int</span> rightAngle = 90;<span class="comment">// 直角</span>
+ 18: 
+ 19: 		length = random(100);<span class="comment">// 1辺の長さを0-99までのランダム値に設定する</span>
+ 20: 
+ 21: 		{<span class="comment">// 屋根を書く</span>
+ 22: 			rt(30); <span class="comment">// 30度右に回る</span>
+ 23: 			fd(length); <span class="comment">// x歩前に進む</span>
+ 24: 			rt(120);
+ 25: 			fd(length);
+ 26: 			rt(120);
+ 27: 			fd(length);
+ 28: 		}
+ 29: 
+ 30: 		{<span class="comment">// 本体を書く</span>
+ 31: 			lt(rightAngle);
+ 32: 			fd(length);
+ 33: 			lt(rightAngle);
+ 34: 			fd(length);
+ 35: 			lt(rightAngle);
+ 36: 			fd(length);
+ 37: 			lt(rightAngle);
+ 38: 			fd(length);
+ 39: 		}
+ 40: 	}
+ 41: 
+ 42: }
+</pre>
+
+<p class="first_ja"><a href="chapter02/src/RandomHouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、RandomHouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="RandomHouse"/>
+</applet></p>
+<p>乱数値を（命令毎に毎回変わる値）に取得するには</p>
+
+<pre id="doc4_1122" class="program">
+random(数)
+			
+</pre>
+
+<p>命令を使います。</p>
+<p>実行されるごとに異なる値が自動的に選択されます。</p>
+<p>「０」から「数の所に書いた数」未満のどれかの数字が選択されます。</p>
+<p>（例：random(10)のとき、0から9までの１０種類のどれかの数が選択されます）</p>
+
+<h2 id="doc4_1139">3.6  練習問題</h2>
+
+
+<h3 id="doc4_1141">3.6.1  与えられた大きさの正五角形を描くプログラム</h3>
+
+<p class="first_ja">ユーザの入力を受け取り、その長さを一辺の長さとして正五角形を描くプログラムを作ってください。</p>
+<p>ファイル名は「Pentagon2.java」とすること．</p>
+
+<h3 id="doc4_1150">3.6.2  乱数を使って星を描くプログラム</h3>
+
+<p class="first_ja">長さに乱数を使い、実行するたびに大きさが変わる星を描くプログラムを作ってください。
+				乱数は50以上100未満の間になるようにすること。</p>
+<p>ファイル名は「Star2.java」とすること．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c2.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/コンピュータに情報を記憶させてみよう（変数）</td>
+<td><a href="index_p1_c4.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

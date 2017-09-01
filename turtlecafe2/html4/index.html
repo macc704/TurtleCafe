@@ -1,0 +1,1446 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td></td>
+<td>Turtle Cafe 2</td>
+<td><a href="index_p1.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="title">Turtle Cafe 2<br><small>Version 2.2.3 For 静大プログラミング2013</small></h1>
+
+<div class=date>2013/12/17</div>
+<div class=author>Yoshiaki Matsuzawa</div>
+<div class=hp><a href="http://www.inf.shizuoka.ac.jp/" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">http://www.inf.shizuoka.ac.jp/</a></div>
+<h2>目次</h2>
+
+<div class="toc">
+<ul>
+<li> <a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1  Javaプログラミング入門</a>
+<ul>
+<li> <a href="index_p1_c1.html#doc1_22" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1  論プロエディタでJavaプログラムを動かしてみよう</a>
+<ul>
+<li> <a href="index_p1_c1.html#doc2_98" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.1  学習目標</a>
+<li> <a href="index_p1_c1.html#doc2_110" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.2  環境のインストール</a>
+<ul>
+<li> <a href="index_p1_c1.html#doc2_112" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.2.1  JDKのインストール</a>
+<ul>
+<li> <a href="index_p1_c1.html#doc2_117" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.2.1.1  JDKがインストールされているか調べる</a>
+<li> <a href="index_p1_c1.html#doc2_129" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.2.1.2  JDKのインストール</a>
+</ul>
+<li> <a href="index_p1_c1.html#doc2_151" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.2.2  論プロエディタのインストール</a>
+</ul>
+<li> <a href="index_p1_c1.html#doc2_161" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.3  論プロエディタの基本的な使い方</a>
+<ul>
+<li> <a href="index_p1_c1.html#doc2_163" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.3.1  論プロエディタの基本</a>
+<ul>
+<li> <a href="index_p1_c1.html#doc2_165" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.3.1.1  起動の仕方</a>
+<li> <a href="index_p1_c1.html#doc2_176" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.3.1.2  各部名称・機能</a>
+<li> <a href="index_p1_c1.html#doc2_sec:resource" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.3.1.3  リソース</a>
+</ul>
+<li> <a href="index_p1_c1.html#doc2_sec:programmingprocess" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.3.2  プログラム作成の流れ</a>
+<ul>
+<li> <a href="index_p1_c1.html#doc2_287" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.3.2.1  プログラムの編集</a>
+<li> <a href="index_p1_c1.html#doc2_298" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.3.2.2  コンパイル</a>
+<li> <a href="index_p1_c1.html#doc2_327" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.3.2.3  実行</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c1.html#doc2_358" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.4  発展的な使い方</a>
+<ul>
+<li> <a href="index_p1_c1.html#doc2_360" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.4.1  サンプルプログラムの使い方</a>
+<ul>
+<li> <a href="index_p1_c1.html#doc2_362" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.4.1.1  サンプルプログラムの使い方</a>
+<li> <a href="index_p1_c1.html#doc2_391" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.4.1.2  リソースとファイルシステムの関係</a>
+</ul>
+<li> <a href="index_p1_c1.html#doc2_408" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.4.2  その他の機能</a>
+<li> <a href="index_p1_c1.html#doc2_459" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">1.4.3  ショートカットキー</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c2.html#doc1_24" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2  はじめてのJavaタートルプログラミング</a>
+<ul>
+<li> <a href="index_p1_c2.html#doc3_482" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.1  学習目標</a>
+<li> <a href="index_p1_c2.html#doc3_494" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.2  最初のプログラムの解説</a>
+<ul>
+<li> <a href="index_p1_c2.html#doc3_499" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.2.1  家を書くサンプルプログラム</a>
+<li> <a href="index_p1_c2.html#doc3_sec:elements" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.2.2  プログラムの要素</a>
+<ul>
+<li> <a href="index_p1_c2.html#doc3_523" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.2.2.1  ブロック</a>
+<li> <a href="index_p1_c2.html#doc3_sec:class" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.2.2.2  クラス</a>
+<li> <a href="index_p1_c2.html#doc3_544" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.2.2.3  メソッド</a>
+<li> <a href="index_p1_c2.html#doc3_559" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.2.2.4  命令</a>
+<li> <a href="index_p1_c2.html#doc3_625" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.2.2.5  命令の区切り</a>
+<li> <a href="index_p1_c2.html#doc3_637" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.2.2.6  コメント</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c2.html#doc3_660" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.3  プログラムの作成手順</a>
+<ul>
+<li> <a href="index_p1_c2.html#doc3_662" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.3.1  ファイルの作成</a>
+<li> <a href="index_p1_c2.html#doc3_668" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.3.2  プログラムの書き方</a>
+</ul>
+<li> <a href="index_p1_c2.html#doc3_sec:programmiss" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.4  プログラムミスと対処</a>
+<ul>
+<li> <a href="index_p1_c2.html#doc3_sec:compileerror" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.4.1  コンパイルエラー</a>
+<li> <a href="index_p1_c2.html#doc3_692" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.4.2  バグ</a>
+</ul>
+<li> <a href="index_p1_c2.html#doc3_708" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.5  タートルを使って好きな図形を書くためのテクニック</a>
+<ul>
+<li> <a href="index_p1_c2.html#doc3_710" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.5.1  曲線が書きたい</a>
+<li> <a href="index_p1_c2.html#doc3_744" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.5.2  タートルの最初の位置を変えたい</a>
+</ul>
+<li> <a href="index_p1_c2.html#doc3_751" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.6  練習問題</a>
+<ul>
+<li> <a href="index_p1_c2.html#doc3_753" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.6.1  正五角形描こう</a>
+<li> <a href="index_p1_c2.html#doc3_764" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.6.2  星を描こう</a>
+<li> <a href="index_p1_c2.html#doc3_775" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.6.3  こんぺいとうを描こう</a>
+<li> <a href="index_p1_c2.html#doc3_786" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.6.4  トライフォースを描こう</a>
+<li> <a href="index_p1_c2.html#doc3_797" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2.6.5  好きな図形を描こう</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c3.html#doc1_26" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3  コンピュータに情報を記憶させてみよう（変数）</a>
+<ul>
+<li> <a href="index_p1_c3.html#doc4_818" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.1  学習目標</a>
+<li> <a href="index_p1_c3.html#doc4_836" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.2  変数</a>
+<ul>
+<li> <a href="index_p1_c3.html#doc4_841" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.2.1  変数と値</a>
+<li> <a href="index_p1_c3.html#doc4_876" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.2.2  変数を使ったプログラムの実行</a>
+<ul>
+<li> <a href="index_p1_c3.html#doc4_881" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.2.2.1  変数の宣言</a>
+<li> <a href="index_p1_c3.html#doc4_886" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.2.2.2  変数へ値を代入する</a>
+<li> <a href="index_p1_c3.html#doc4_891" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.2.2.3  変数を評価して値にする</a>
+</ul>
+<li> <a href="index_p1_c3.html#doc4_897" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.2.3  複数の変数と変数名</a>
+<ul>
+<li> <a href="index_p1_c3.html#doc4_905" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.2.3.1  複数の変数と変数名</a>
+<li> <a href="index_p1_c3.html#doc4_924" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.2.3.2  プログラムの実行過程</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c3.html#doc4_942" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.3  コンピュータに計算をさせる</a>
+<ul>
+<li> <a href="index_p1_c3.html#doc4_944" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.3.1  計算式を使ったプログラム</a>
+<li> <a href="index_p1_c3.html#doc4_1011" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.3.2  計算式を使ったプログラムの実行</a>
+<li> <a href="index_p1_c3.html#doc4_1019" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.3.3  計算式と代入文を使ったプログラムの実行</a>
+</ul>
+<li> <a href="index_p1_c3.html#doc4_1034" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.4  ユーザと対話する（インタラクティブ）なプログラム</a>
+<ul>
+<li> <a href="index_p1_c3.html#doc4_1036" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.4.1  入力を受け付ける</a>
+<li> <a href="index_p1_c3.html#doc4_1067" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.4.2  ユーザにメッセージを出す</a>
+</ul>
+<li> <a href="index_p1_c3.html#doc4_1099" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.5  おみくじ</a>
+<ul>
+<li> <a href="index_p1_c3.html#doc4_1101" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.5.1  乱数</a>
+</ul>
+<li> <a href="index_p1_c3.html#doc4_1139" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.6  練習問題</a>
+<ul>
+<li> <a href="index_p1_c3.html#doc4_1141" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.6.1  与えられた大きさの正五角形を描くプログラム</a>
+<li> <a href="index_p1_c3.html#doc4_1150" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3.6.2  乱数を使って星を描くプログラム</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c4.html#doc1_28" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4  プログラムに知性を(条件分岐)</a>
+<ul>
+<li> <a href="index_p1_c4.html#doc5_1174" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.1  学習目標</a>
+<li> <a href="index_p1_c4.html#doc5_1189" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.2  条件分岐を使う</a>
+<ul>
+<li> <a href="index_p1_c4.html#doc5_1197" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.2.1  条件分岐</a>
+<li> <a href="index_p1_c4.html#doc5_1254" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.2.2  条件式の評価</a>
+<ul>
+<li> <a href="index_p1_c4.html#doc5_1259" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.2.2.1  成立(true)する場合</a>
+<li> <a href="index_p1_c4.html#doc5_1264" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.2.2.2  不成立(false)する場合</a>
+<li> <a href="index_p1_c4.html#doc5_1269" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.2.2.3  注意すること</a>
+</ul>
+<li> <a href="index_p1_c4.html#doc5_1279" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.2.3  複数の分岐</a>
+<ul>
+<li> <a href="index_p1_c4.html#doc5_1281" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.2.3.1  じゃんけんプログラム</a>
+<li> <a href="index_p1_c4.html#doc5_1306" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.2.3.2  じゃんけんの手のデータの扱いについて</a>
+<li> <a href="index_p1_c4.html#doc5_1317" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.2.3.3  複数の条件分岐</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c4.html#doc5_1336" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.3  いろいろな条件式</a>
+<ul>
+<li> <a href="index_p1_c4.html#doc5_1338" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.3.1  比較演算子</a>
+<li> <a href="index_p1_c4.html#doc5_1453" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.3.2  論理演算子</a>
+<ul>
+<li> <a href="index_p1_c4.html#doc5_1522" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.3.2.1  論理演算子の評価の過程</a>
+<ul>
+<li> <a href="index_p1_c4.html#doc5_1527" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">  And演算子が成立(true)する場合</a>
+<li> <a href="index_p1_c4.html#doc5_1532" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">  And演算子が不成立(false)する場合</a>
+</ul>
+</ul>
+</ul>
+<li> <a href="index_p1_c4.html#doc5_1540" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.4  変数のスコープ（有効範囲）</a>
+<li> <a href="index_p1_c4.html#doc5_1615" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.5  練習問題</a>
+<ul>
+<li> <a href="index_p1_c4.html#doc5_1617" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.5.1  絵の描き分けプログラムを作ろう</a>
+<li> <a href="index_p1_c4.html#doc5_1626" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.5.2  おみくじプログラムを作ろう</a>
+<li> <a href="index_p1_c4.html#doc5_1635" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4.5.3  評点グレード変換プログラムを作ろう</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c5.html#doc1_30" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5  コンピュータの得意な仕事(繰り返し)</a>
+<ul>
+<li> <a href="index_p1_c5.html#doc6_1660" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.1  学習目標</a>
+<li> <a href="index_p1_c5.html#doc6_1669" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.2  繰り返し</a>
+<ul>
+<li> <a href="index_p1_c5.html#doc6_1677" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.2.1  何を繰り返すのか</a>
+<li> <a href="index_p1_c5.html#doc6_1702" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.2.2  繰り返しを使ったプログラム</a>
+<ul>
+<li> <a href="index_p1_c5.html#doc6_1744" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.2.2.1  プログラムのフローチャート</a>
+<li> <a href="index_p1_c5.html#doc6_1749" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.2.2.2  繰り返しのフローチャート</a>
+</ul>
+<li> <a href="index_p1_c5.html#doc6_1758" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.2.3  繰り返しを使ったプログラムの実行過程</a>
+<ul>
+<li> <a href="index_p1_c5.html#doc6_1763" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.2.3.1  変数の宣言</a>
+<li> <a href="index_p1_c5.html#doc6_1768" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.2.3.2  変数を初期化する(1を代入)</a>
+<li> <a href="index_p1_c5.html#doc6_1773" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.2.3.3  変数を評価して条件を判定する</a>
+<li> <a href="index_p1_c5.html#doc6_1778" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.2.3.4  変数に1を加える</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c5.html#doc6_1788" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.3  応用：円を書くプログラム</a>
+<ul>
+<li> <a href="index_p1_c5.html#doc6_1793" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.3.1  円を書きつづけるプログラム</a>
+</ul>
+<li> <a href="index_p1_c5.html#doc6_1813" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.4  練習問題</a>
+<ul>
+<li> <a href="index_p1_c5.html#doc6_1815" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.4.1  円を描くプログラムを改良しよう</a>
+<li> <a href="index_p1_c5.html#doc6_1824" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.4.2  円の描かれ方について考察しよう</a>
+<li> <a href="index_p1_c5.html#doc6_1833" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.4.3  四角形を繰り返しを使って描こう</a>
+<li> <a href="index_p1_c5.html#doc6_1842" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.4.4  五角形を繰り返しを使って描こう</a>
+<li> <a href="index_p1_c5.html#doc6_1851" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.4.5  星を繰り返しを使って描こう</a>
+<li> <a href="index_p1_c5.html#doc6_1860" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5.4.6  アスタリスクを繰り返しを使って描こう</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c6.html#doc1_32" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6  ブロックの入れ子構造</a>
+<ul>
+<li> <a href="index_p1_c6.html#doc7_1883" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.1  学習目標</a>
+<li> <a href="index_p1_c6.html#doc7_1895" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.2  繰り返しの入れ子</a>
+<ul>
+<li> <a href="index_p1_c6.html#doc7_1900" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.2.1  窓を描く（４つの四角形を描く）プログラム</a>
+<li> <a href="index_p1_c6.html#doc7_1932" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.2.2  ブロックの入れ子</a>
+<li> <a href="index_p1_c6.html#doc7_1952" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.2.3  インデント</a>
+</ul>
+<li> <a href="index_p1_c6.html#doc7_1970" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.3  入れ子と並列の違いの考察：花を描くプログラム</a>
+<ul>
+<li> <a href="index_p1_c6.html#doc7_1977" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.3.1  花びらを描く</a>
+<li> <a href="index_p1_c6.html#doc7_2001" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.3.2  花を描く</a>
+<li> <a href="index_p1_c6.html#doc7_2028" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.3.3  花を描く（間違い）</a>
+</ul>
+<li> <a href="index_p1_c6.html#doc7_2059" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.4  繰り返し変数の利用</a>
+<ul>
+<li> <a href="index_p1_c6.html#doc7_2061" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.4.1  目玉を描くプログラム</a>
+<li> <a href="index_p1_c6.html#doc7_2088" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.4.2  奇数と偶数を判定する</a>
+</ul>
+<li> <a href="index_p1_c6.html#doc7_2116" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.5  練習問題</a>
+<ul>
+<li> <a href="index_p1_c6.html#doc7_2119" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.5.1  四角形を10個描くプログラムを作ろう</a>
+<li> <a href="index_p1_c6.html#doc7_2127" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.5.2  四角形を100個描くプログラムを作ろう</a>
+<li> <a href="index_p1_c6.html#doc7_2135" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.5.3  四角形と三角形を交互に100個描くプログラムを作ろう</a>
+<li> <a href="index_p1_c6.html#doc7_2143" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.5.4  貝殻を描くプログラムを作ろう</a>
+<li> <a href="index_p1_c6.html#doc7_2159" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.5.5  タイヤを描くプログラムを作ろう</a>
+<li> <a href="index_p1_c6.html#doc7_2170" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.5.6  ドラえもんを描くプログラムを作ろう</a>
+<li> <a href="index_p1_c6.html#doc7_2178" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">6.5.7  キーボードを描くプログラムを作ろう</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c7.html#doc1_34" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7  たくさんのタートル</a>
+<ul>
+<li> <a href="index_p1_c7.html#doc8_2201" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.1  学習目標</a>
+<li> <a href="index_p1_c7.html#doc8_2213" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.2  複数のタートルを使う</a>
+<ul>
+<li> <a href="index_p1_c7.html#doc8_2221" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.2.1  2匹のタートルを使うプログラム</a>
+<li> <a href="index_p1_c7.html#doc8_2245" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.2.2  タートル（オブジェクト）の生成</a>
+<li> <a href="index_p1_c7.html#doc8_2253" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.2.3  タートル(オブジェクト)への命令</a>
+</ul>
+<li> <a href="index_p1_c7.html#doc8_2265" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.3  同時に動いているように見せるために</a>
+<li> <a href="index_p1_c7.html#doc8_2319" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.4  練習問題</a>
+<ul>
+<li> <a href="index_p1_c7.html#doc8_2321" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.4.1  4匹のタートルでまんじ（卍）を描こう</a>
+<li> <a href="index_p1_c7.html#doc8_2348" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.4.2  タートルリレー</a>
+<li> <a href="index_p1_c7.html#doc8_2375" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.4.3  タートルレース</a>
+<li> <a href="index_p1_c7.html#doc8_2402" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.4.4  たくさんのタートルで絵を描こう</a>
+<li> <a href="index_p1_c7.html#doc8_2411" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">7.4.5  星と五角形を同時に描こう</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c8.html#doc1_36" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8  アニメーション入門（いままで作ったものを動かそう）</a>
+<ul>
+<li> <a href="index_p1_c8.html#doc9_2438" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.1  学習目標</a>
+<li> <a href="index_p1_c8.html#doc9_2450" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.2  アニメーションの基本</a>
+<ul>
+<li> <a href="index_p1_c8.html#doc9_2455" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.2.1  回る家</a>
+<li> <a href="index_p1_c8.html#doc9_2497" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.2.2  アニメーションの基本構造</a>
+<li> <a href="index_p1_c8.html#doc9_2530" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.2.3  アニメーションをするための新しい命令</a>
+<li> <a href="index_p1_c8.html#doc9_2557" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.2.4  円を描く家</a>
+</ul>
+<li> <a href="index_p1_c8.html#doc9_2597" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.3  座標の制御</a>
+<ul>
+<li> <a href="index_p1_c8.html#doc9_2599" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.3.1  上向きのまま右に動かす</a>
+<li> <a href="index_p1_c8.html#doc9_2643" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.3.2  ワープを使う</a>
+</ul>
+<li> <a href="index_p1_c8.html#doc9_2741" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.4  大きさの変更(拡大/縮小)</a>
+<ul>
+<li> <a href="index_p1_c8.html#doc9_2743" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.4.1  大きさを変更するプログラム</a>
+<li> <a href="index_p1_c8.html#doc9_2789" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.4.2  徐々に大きくする</a>
+</ul>
+<li> <a href="index_p1_c8.html#doc9_2879" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.5  練習問題</a>
+<ul>
+<li> <a href="index_p1_c8.html#doc9_2881" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.5.1  オブジェクトの回転</a>
+<li> <a href="index_p1_c8.html#doc9_2891" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.5.2  流れ星アニメーションを作ろう</a>
+<li> <a href="index_p1_c8.html#doc9_2957" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">8.5.3  ハードル走アニメーションを作ろう</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c9.html#doc1_38" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9  ぱらぱら漫画アニメーション</a>
+<ul>
+<li> <a href="index_p1_c9.html#doc10_3013" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.1  学習目標</a>
+<li> <a href="index_p1_c9.html#doc10_sec:imageturtle" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.2  画像を使ったプログラム</a>
+<li> <a href="index_p1_c9.html#doc10_3065" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.3  オブジェクトを隠す/出現させる</a>
+<li> <a href="index_p1_c9.html#doc10_3150" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.4  ぱらぱら漫画アニメーション</a>
+<ul>
+<li> <a href="index_p1_c9.html#doc10_3152" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.4.1  見た目を別のオブジェクトのものに</a>
+<li> <a href="index_p1_c9.html#doc10_3206" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.4.2  人を動作させる</a>
+<li> <a href="index_p1_c9.html#doc10_3250" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.4.3  背景を動かす（画面のスクロール）</a>
+</ul>
+<li> <a href="index_p1_c9.html#doc10_sec:textturtle" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.5  文字をオブジェクトして扱う</a>
+<ul>
+<li> <a href="index_p1_c9.html#doc10_3284" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.5.1  文字を回す</a>
+<li> <a href="index_p1_c9.html#doc10_3309" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.5.2  文字を変化させる</a>
+</ul>
+<li> <a href="index_p1_c9.html#doc10_3366" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.6  練習問題</a>
+<ul>
+<li> <a href="index_p1_c9.html#doc10_3368" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.6.1  アニメーションを作ろう</a>
+<ul>
+<li> <a href="index_p1_c9.html#doc10_3373" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.6.1.1  作品例</a>
+</ul>
+<li> <a href="index_p1_c9.html#doc10_3396" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.6.2  0655アニメーションを作ろう（１）</a>
+<li> <a href="index_p1_c9.html#doc10_3420" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.6.3  0655アニメーションを作ろう（２）</a>
+<li> <a href="index_p1_c9.html#doc10_3429" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">9.6.4  0655アニメーションを作ろう（３）</a>
+</ul>
+</ul>
+<li> <a href="index_p1_c10.html#doc1_40" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10  ゲームを作ろう！</a>
+<ul>
+<li> <a href="index_p1_c10.html#doc11_3457" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.1  学習目標</a>
+<li> <a href="index_p1_c10.html#doc11_3469" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.2  キーボード入力の判定</a>
+<ul>
+<li> <a href="index_p1_c10.html#doc11_3471" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.2.1  キーコードの取得</a>
+<li> <a href="index_p1_c10.html#doc11_3514" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.2.2  キーコードを調べる</a>
+<li> <a href="index_p1_c10.html#doc11_3536" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.2.3  個別にキーが押されているかどうかを調べて，同時押しに対応する</a>
+</ul>
+<li> <a href="index_p1_c10.html#doc11_3574" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.3  マウス入力の判定</a>
+<ul>
+<li> <a href="index_p1_c10.html#doc11_3576" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.3.1  マウスの位置を調べる</a>
+<li> <a href="index_p1_c10.html#doc11_3644" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.3.2  マウスが押されているかどうか調べる</a>
+<li> <a href="index_p1_c10.html#doc11_3684" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.3.3  マウス入力を詳しく調べる</a>
+<li> <a href="index_p1_c10.html#doc11_3739" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.3.4  ドラッグを調べる</a>
+</ul>
+<li> <a href="index_p1_c10.html#doc11_3795" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.4  あたり判定</a>
+<ul>
+<li> <a href="index_p1_c10.html#doc11_3797" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.4.1  ２つのオブジェクトのあたり判定</a>
+<li> <a href="index_p1_c10.html#doc11_3834" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.4.2  座標とオブジェクトのあたり判定</a>
+</ul>
+<li> <a href="index_p1_c10.html#doc11_3872" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.5  練習問題</a>
+<ul>
+<li> <a href="index_p1_c10.html#doc11_3874" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.5.1  プレイヤーを操作出来るようにしよう</a>
+<li> <a href="index_p1_c10.html#doc11_3892" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.5.2  画像をドラッグ出来るようにしよう</a>
+<li> <a href="index_p1_c10.html#doc11_3907" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.5.3  得点板を作ろう</a>
+<li> <a href="index_p1_c10.html#doc11_3922" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">10.5.4  ゲームを作ろう</a>
+</ul>
+</ul>
+</ul>
+<li> <a href="index_p2.html#doc1_part:onedash" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2  CUI情報処理プログラミング</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc1_45" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11  はじめてのCUIプログラム</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_3973" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.1  学習目標</a>
+<li> <a href="index_p2_c11.html#doc12_3985" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2  はじめてのCUIプログラム</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_3987" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.1  CUIとは</a>
+<li> <a href="index_p2_c11.html#doc12_3999" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.2  タートルプログラムとの違い</a>
+<li> <a href="index_p2_c11.html#doc12_4017" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.3  情報の表示とユーザ入力の受け取り</a>
+<li> <a href="index_p2_c11.html#doc12_4039" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.4  Java標準ライブラリ</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4041" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.4.1  インポート</a>
+<li> <a href="index_p2_c11.html#doc12_4056" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.4.2  入力を受け付ける命令</a>
+<li> <a href="index_p2_c11.html#doc12_4071" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.4.3  コンソールに出力する命令</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4081" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.2.5  変数の型-文字列型</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4094" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.3  入力、処理、出力</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4096" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.3.1  西暦和暦変換プログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4118" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.3.2  変数の型-整数型</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4134" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.4  変数の型とキャスト</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4136" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.4.1  平均得点計算プログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4158" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.4.2  変数の型-浮動小数点数型</a>
+<li> <a href="index_p2_c11.html#doc12_sec:cast" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.4.3  キャスト（型変換）</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4195" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5  CUIプログラムの作り方</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4197" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.1  クラス（ファイル）の作り方</a>
+<li> <a href="index_p2_c11.html#doc12_4203" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.2  新しい命令-変数の型と変数宣言</a>
+<li> <a href="index_p2_c11.html#doc12_sec:method" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.3  Java標準ライブラリを使った命令</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4247" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.3.1  標準出力に文字を出力する命令</a>
+<li> <a href="index_p2_c11.html#doc12_4271" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.3.2  ユーザから入力を受け取る命令</a>
+<li> <a href="index_p2_c11.html#doc12_4313" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.3.3  乱数を求める命令(その１)</a>
+<li> <a href="index_p2_c11.html#doc12_4328" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.5.3.4  乱数を求める命令(その２)</a>
+</ul>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4372" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6  練習問題</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4374" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.1  0.1を10回加算するプログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4383" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.2  0.125を8回加算するプログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4392" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.3  乱数生成プログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4410" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.4  四捨五入プログラム</a>
+<li> <a href="index_p2_c11.html#doc12_4431" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.5  割り勘計算機</a>
+<li> <a href="index_p2_c11.html#doc12_4458" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.6  体型評価プログラム</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4460" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.6.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4466" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.6.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4505" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.6.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4511" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.6.4  プログラム設計条件</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4530" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.7  恋愛占いプログラム</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4532" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.7.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4538" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.7.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4574" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.7.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4580" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.7.4  プログラム設計条件</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4617" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.8  単位取得状況評価プログラム</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4619" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.8.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4625" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.8.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4664" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.8.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4670" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.6.8.4  プログラム設計条件</a>
+</ul>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4687" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7  発展問題</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4689" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.1  脳トレ　論プロ風</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4691" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.1.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4697" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.1.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4739" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.1.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4745" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.1.4  プログラム設計条件</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4763" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.2  マイホーム大作戦</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4765" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.2.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4771" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.2.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4816" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.2.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4822" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.2.4  プログラム設計条件</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4838" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.3  ザ･バイナリサーチ</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4840" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.3.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4846" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.3.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4891" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.3.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4897" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.3.4  プログラム設計条件</a>
+</ul>
+<li> <a href="index_p2_c11.html#doc12_4913" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.4  世界の○○</a>
+<ul>
+<li> <a href="index_p2_c11.html#doc12_4915" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.4.1  概要</a>
+<li> <a href="index_p2_c11.html#doc12_4921" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.4.2  機能</a>
+<li> <a href="index_p2_c11.html#doc12_4948" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.4.3  エラー処理</a>
+<li> <a href="index_p2_c11.html#doc12_4954" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">11.7.4.4  プログラム設計条件</a>
+</ul>
+</ul>
+</ul>
+</ul>
+<li> <a href="index_p3.html#doc1_part:two" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">3  プログラムの部品化</a>
+<ul>
+<li> <a href="index_p3_c12.html#doc1_50" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12  命令をつくる（１）：メソッド・引数付メソッド</a>
+<ul>
+<li> <a href="index_p3_c12.html#doc13_4982" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.1  学習目標</a>
+<li> <a href="index_p3_c12.html#doc13_4994" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.2  メソッド</a>
+<ul>
+<li> <a href="index_p3_c12.html#doc13_4996" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.2.1  メソッドとその目的</a>
+<li> <a href="index_p3_c12.html#doc13_5014" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.2.2  メソッド定義とメソッド呼び出し</a>
+<li> <a href="index_p3_c12.html#doc13_5074" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.2.3  メソッドの処理の順序</a>
+<li> <a href="index_p3_c12.html#doc13_5104" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.2.4  メソッドの定義位置の注意点</a>
+</ul>
+<li> <a href="index_p3_c12.html#doc13_5132" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.3  引数付メソッド</a>
+<ul>
+<li> <a href="index_p3_c12.html#doc13_5134" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.3.1  引数とその目的</a>
+<li> <a href="index_p3_c12.html#doc13_5140" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.3.2  引数を用いた、四角形を描くメソッドの抽象化</a>
+<li> <a href="index_p3_c12.html#doc13_5197" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.3.3  引数を用いた、多角形を描くメソッドの抽象化</a>
+</ul>
+<li> <a href="index_p3_c12.html#doc13_5243" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.4  変数の有効範囲と引数</a>
+<ul>
+<li> <a href="index_p3_c12.html#doc13_5245" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.4.1  変数の有効範囲</a>
+<li> <a href="index_p3_c12.html#doc13_5267" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.4.2  引数付メソッド定義とメソッド呼び出し</a>
+</ul>
+<li> <a href="index_p3_c12.html#doc13_5301" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.5  メソッドの設計・あるいはプログラムの構造化</a>
+<ul>
+<li> <a href="index_p3_c12.html#doc13_5314" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.5.1  窓付きの家を描くプログラム（引数を用いた、多角形を描くメソッドの抽象化）</a>
+</ul>
+<li> <a href="index_p3_c12.html#doc13_5350" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.6  練習問題</a>
+<ul>
+<li> <a href="index_p3_c12.html#doc13_5353" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.6.1  円を描くメソッドを作ろう</a>
+<li> <a href="index_p3_c12.html#doc13_5362" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.6.2  大きさが変わる家を描くメソッドを作ろう</a>
+<li> <a href="index_p3_c12.html#doc13_5371" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.6.3  中心角を指定して円弧を描くメソッドを作ろう</a>
+<li> <a href="index_p3_c12.html#doc13_5385" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.6.4  レモン型の図形を描くメソッドを作ろう</a>
+<li> <a href="index_p3_c12.html#doc13_5394" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.6.5  メソッドの多段呼び出しの練習をしよう</a>
+<li> <a href="index_p3_c12.html#doc13_5405" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.6.6  メソッドの再利用をしよう</a>
+<li> <a href="index_p3_c12.html#doc13_5416" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.6.7  マス目</a>
+<li> <a href="index_p3_c12.html#doc13_5441" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">12.6.8  構造化プログラミングによる自由作品</a>
+</ul>
+</ul>
+<li> <a href="index_p3_c13.html#doc1_52" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13  命令をつくる（２）：戻り値付メソッド</a>
+<ul>
+<li> <a href="index_p3_c13.html#doc14_5472" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.1  学習目標</a>
+<li> <a href="index_p3_c13.html#doc14_5484" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.2  戻り値付メソッド</a>
+<ul>
+<li> <a href="index_p3_c13.html#doc14_5486" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.2.1  戻り値とは</a>
+<li> <a href="index_p3_c13.html#doc14_5492" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.2.2  相性占い1(int型の戻り値)</a>
+<li> <a href="index_p3_c13.html#doc14_5531" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.2.3  相性占い2(String型の戻り値)</a>
+<li> <a href="index_p3_c13.html#doc14_5546" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.2.4  相性占い2d(return文)</a>
+<li> <a href="index_p3_c13.html#doc14_5562" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.2.5  相性占い3(真偽値型)</a>
+<li> <a href="index_p3_c13.html#doc14_5580" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.2.6  相性占い3d(多段呼び出し　＋　if文の中に命令)</a>
+</ul>
+<li> <a href="index_p3_c13.html#doc14_5608" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.3  メソッドの設計・あるいはプログラムの構造化(2)</a>
+<ul>
+<li> <a href="index_p3_c13.html#doc14_5610" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.3.1  西暦和暦変換プログラム</a>
+<li> <a href="index_p3_c13.html#doc14_5629" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.3.2  構造化された西暦変換プログラム</a>
+</ul>
+<li> <a href="index_p3_c13.html#doc14_5646" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.4  メソッドの単体テスト</a>
+<ul>
+<li> <a href="index_p3_c13.html#doc14_5648" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.4.1  結果の出力</a>
+<li> <a href="index_p3_c13.html#doc14_5667" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.4.2  テストのメソッド化</a>
+<li> <a href="index_p3_c13.html#doc14_5683" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.4.3  期待値とテスト正否の出力</a>
+</ul>
+<li> <a href="index_p3_c13.html#doc14_5701" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.5  練習問題</a>
+<ul>
+<li> <a href="index_p3_c13.html#doc14_5703" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.5.1  年齢計算</a>
+<li> <a href="index_p3_c13.html#doc14_5718" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.5.2  税込み価格計算</a>
+<li> <a href="index_p3_c13.html#doc14_5733" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.5.3  勝率計算</a>
+<li> <a href="index_p3_c13.html#doc14_5748" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.5.4  BMI</a>
+<li> <a href="index_p3_c13.html#doc14_5763" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.5.5  総和</a>
+<li> <a href="index_p3_c13.html#doc14_5778" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.5.6  ランダム</a>
+<li> <a href="index_p3_c13.html#doc14_5793" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.5.7  じゃんけん</a>
+<li> <a href="index_p3_c13.html#doc14_5808" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">13.5.8  コイン投げのシミュレーション</a>
+</ul>
+</ul>
+<li> <a href="index_p3_c14.html#doc1_54" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14  再帰プログラムとその「美」</a>
+<ul>
+<li> <a href="index_p3_c14.html#doc15_5849" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.1  学習目標</a>
+<li> <a href="index_p3_c14.html#doc15_5861" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.2  再帰呼び出し</a>
+<ul>
+<li> <a href="index_p3_c14.html#doc15_5863" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.2.1  あらまし</a>
+<li> <a href="index_p3_c14.html#doc15_5872" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.2.2  階乗計算</a>
+<li> <a href="index_p3_c14.html#doc15_5969" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.2.3  フィボナッチ数列</a>
+</ul>
+<li> <a href="index_p3_c14.html#doc15_6064" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.3  フラクタル図形</a>
+<li> <a href="index_p3_c14.html#doc15_6145" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.4  練習問題</a>
+<ul>
+<li> <a href="index_p3_c14.html#doc15_6147" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.4.1  自然な木を描こう</a>
+<li> <a href="index_p3_c14.html#doc15_6179" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.4.2  トーナメント表を描いてみよう</a>
+<li> <a href="index_p3_c14.html#doc15_6190" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.4.3  ギャスケットを描いてみよう</a>
+<li> <a href="index_p3_c14.html#doc15_6201" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.4.4  スーパースターを描いてみよう</a>
+<li> <a href="index_p3_c14.html#doc15_6212" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.4.5  コッホ曲線を描いてみよう</a>
+<li> <a href="index_p3_c14.html#doc15_6223" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.4.6  ひまわりの絵を描こう</a>
+<li> <a href="index_p3_c14.html#doc15_6235" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">14.4.7  葉っぱの絵を描こう</a>
+</ul>
+</ul>
+</ul>
+<li> <a href="index_p4.html#doc1_part:three" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">4  データ構造とアルゴリズム</a>
+<ul>
+<li> <a href="index_p4_c15.html#doc1_59" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15  集合データ構造入門</a>
+<ul>
+<li> <a href="index_p4_c15.html#doc16_6263" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.1  学習目標</a>
+<li> <a href="index_p4_c15.html#doc16_6272" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.2  集合データ構造</a>
+<ul>
+<li> <a href="index_p4_c15.html#doc16_6274" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.2.1  ListTurtle入門</a>
+<li> <a href="index_p4_c15.html#doc16_6397" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.2.2  アニメーションへの応用</a>
+</ul>
+<li> <a href="index_p4_c15.html#doc16_6429" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.3  ListTurtleの命令リスト</a>
+<ul>
+<li> <a href="index_p4_c15.html#doc16_6431" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.3.1  リストを作る命令</a>
+<li> <a href="index_p4_c15.html#doc16_6458" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.3.2  追加と削除</a>
+<li> <a href="index_p4_c15.html#doc16_6530" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.3.3  取得関係</a>
+<li> <a href="index_p4_c15.html#doc16_6548" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.3.4  カーソル関係</a>
+<li> <a href="index_p4_c15.html#doc16_6620" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.3.5  その他の命令</a>
+</ul>
+<li> <a href="index_p4_c15.html#doc16_6639" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.4  練習問題</a>
+<ul>
+<li> <a href="index_p4_c15.html#doc16_6641" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.4.1  アニメーションをListTurtleを使って作り直そう</a>
+<li> <a href="index_p4_c15.html#doc16_6650" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">15.4.2  大量流れ星アニメーションを作ろう</a>
+</ul>
+</ul>
+<li> <a href="index_p4_c16.html#doc1_61" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16  集合データ構造とアルゴリズム（１）：並び替え</a>
+<ul>
+<li> <a href="index_p4_c16.html#doc17_6677" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.1  学習目標</a>
+<li> <a href="index_p4_c16.html#doc17_6692" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.2  カードプログラムの要素技術</a>
+<ul>
+<li> <a href="index_p4_c16.html#doc17_6698" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.2.1  CardTurtle</a>
+<ul>
+<li> <a href="index_p4_c16.html#doc17_6734" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.2.1.1  CardTurtleの仕様</a>
+</ul>
+<li> <a href="index_p4_c16.html#doc17_6781" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.2.2  デバッガの使用</a>
+</ul>
+<li> <a href="index_p4_c16.html#doc17_6788" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.3  並替えアルゴリズム</a>
+<ul>
+<li> <a href="index_p4_c16.html#doc17_6790" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.3.1  並替えアルゴリズムの設計</a>
+<li> <a href="index_p4_c16.html#doc17_6845" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.3.2  最小値検索プログラム</a>
+<li> <a href="index_p4_c16.html#doc17_6882" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.3.3  最小値選択法による並替えプログラム</a>
+</ul>
+<li> <a href="index_p4_c16.html#doc17_6905" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.4  練習問題</a>
+<ul>
+<li> <a href="index_p4_c16.html#doc17_6908" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.4.1  ウォーミングアップ問題集</a>
+<ul>
+<li> <a href="index_p4_c16.html#doc17_6913" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.4.1.1  問題(1)</a>
+<li> <a href="index_p4_c16.html#doc17_6919" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.4.1.2  問題(2)</a>
+<li> <a href="index_p4_c16.html#doc17_6925" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.4.1.3  問題(3)</a>
+</ul>
+<li> <a href="index_p4_c16.html#doc17_6932" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.4.2  挿入法の並替えプログラムを作ろう</a>
+<li> <a href="index_p4_c16.html#doc17_6969" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">16.4.3  アルゴリズムを改良しよう</a>
+</ul>
+</ul>
+<li> <a href="index_p4_c17.html#doc1_63" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17  集合データ構造とアルゴリズム（２）：辞書</a>
+<ul>
+<li> <a href="index_p4_c17.html#doc18_6991" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.1  学習目標</a>
+<li> <a href="index_p4_c17.html#doc18_7000" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.2  入力プログラムの要素技術</a>
+<ul>
+<li> <a href="index_p4_c17.html#doc18_7002" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.2.1  InputTurtle</a>
+<ul>
+<li> <a href="index_p4_c17.html#doc18_7007" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.2.1.1  おうむ返しプログラム（入力タートルバージョン）</a>
+<li> <a href="index_p4_c17.html#doc18_7032" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.2.1.2  2つの入力タートルの制御</a>
+<li> <a href="index_p4_c17.html#doc18_7057" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.2.1.3  InputTurtleの仕様</a>
+</ul>
+<li> <a href="index_p4_c17.html#doc18_7118" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.2.2  ButtonTurtle</a>
+<ul>
+<li> <a href="index_p4_c17.html#doc18_7145" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.2.2.1  ButtonTurtleの仕様</a>
+</ul>
+</ul>
+<li> <a href="index_p4_c17.html#doc18_7189" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.3  辞書のプログラム</a>
+<li> <a href="index_p4_c17.html#doc18_7229" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.4  練習問題</a>
+<ul>
+<li> <a href="index_p4_c17.html#doc18_7231" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.4.1  入力タートルの練習</a>
+<li> <a href="index_p4_c17.html#doc18_7240" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.4.2  作文さん</a>
+<li> <a href="index_p4_c17.html#doc18_7270" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">17.4.3  タイピングゲーム</a>
+</ul>
+</ul>
+<li> <a href="index_p4_c18.html#doc1_65" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18  Java標準APIによる集合データ構造</a>
+<ul>
+<li> <a href="index_p4_c18.html#doc19_7319" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18.1  学習目標</a>
+<li> <a href="index_p4_c18.html#doc19_7331" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18.2  APIとJavaAPIドキュメント</a>
+<li> <a href="index_p4_c18.html#doc19_7379" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18.3  LinkedList</a>
+<ul>
+<li> <a href="index_p4_c18.html#doc19_7384" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18.3.1  カーソルを使わない方法</a>
+<li> <a href="index_p4_c18.html#doc19_7404" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18.3.2  LinkedList</a>
+</ul>
+<li> <a href="index_p4_c18.html#doc19_7440" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18.4  配列</a>
+<ul>
+<li> <a href="index_p4_c18.html#doc19_7462" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18.4.1  配列の使い方</a>
+</ul>
+<li> <a href="index_p4_c18.html#doc19_7493" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18.5  集合データ構造の使い方のまとめ</a>
+<li> <a href="index_p4_c18.html#doc19_7638" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18.6  練習問題</a>
+<ul>
+<li> <a href="index_p4_c18.html#doc19_7640" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18.6.1  0655アニメーションを標準APIで作り直そう</a>
+<li> <a href="index_p4_c18.html#doc19_7649" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">18.6.2  大量流れ星アニメーションを標準APIで作り直そう</a>
+</ul>
+</ul>
+<li> <a href="index_p4_c19.html#doc1_67" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19  文字列とアルゴリズム</a>
+<ul>
+<li> <a href="index_p4_c19.html#doc20_7670" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.1  学習目標</a>
+<li> <a href="index_p4_c19.html#doc20_7685" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.2  ファイル入出力</a>
+<ul>
+<li> <a href="index_p4_c19.html#doc20_7704" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.2.1  ファイル入出力の仕様</a>
+</ul>
+<li> <a href="index_p4_c19.html#doc20_7729" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.3  作文遊び</a>
+<ul>
+<li> <a href="index_p4_c19.html#doc20_7734" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.3.1  作文さん</a>
+<li> <a href="index_p4_c19.html#doc20_7769" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.3.2  反転さん</a>
+<li> <a href="index_p4_c19.html#doc20_7789" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.3.3  判定さん</a>
+<li> <a href="index_p4_c19.html#doc20_7809" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.3.4  回文さん</a>
+</ul>
+<li> <a href="index_p4_c19.html#doc20_7830" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.4  Webスクレイピング</a>
+<ul>
+<li> <a href="index_p4_c19.html#doc20_7832" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.4.1  WebからHTMLの読み込み</a>
+<li> <a href="index_p4_c19.html#doc20_7857" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.4.2  読み込んだHTMLからのスクレイピング</a>
+</ul>
+<li> <a href="index_p4_c19.html#doc20_7896" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.5  練習問題</a>
+<ul>
+<li> <a href="index_p4_c19.html#doc20_7898" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.5.1  ケンブリッジ変換</a>
+<li> <a href="index_p4_c19.html#doc20_7919" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.5.2  CSVファイルの読み込み</a>
+<li> <a href="index_p4_c19.html#doc20_7948" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">19.5.3  問題3：Webマッシュアップ</a>
+</ul>
+</ul>
+</ul>
+<li> <a href="index_p5.html#doc1_part:extra" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">5  付録</a>
+<ul>
+<li> <a href="index_p5_c20.html#doc1_72" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">20  やり残したJava文法</a>
+<ul>
+<li> <a href="index_p5_c20.html#doc21_7977" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">20.1  学習目標</a>
+<li> <a href="index_p5_c20.html#doc21_7986" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">20.2  繰り返しの制御</a>
+<li> <a href="index_p5_c20.html#doc21_8024" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">20.3  論理否定演算子</a>
+</ul>
+<li> <a href="index_p5_c21.html#doc1_76" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21  タートルの仕様</a>
+<ul>
+<li> <a href="index_p5_c21.html#doc22_8060" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1  タートルの命令リスト</a>
+<ul>
+<li> <a href="index_p5_c21.html#doc22_8062" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.1  基本的な命令</a>
+<li> <a href="index_p5_c21.html#doc22_8170" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.2  オブジェクトの生成に関する命令</a>
+<li> <a href="index_p5_c21.html#doc22_8200" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.3  画面の描画処理に関する命令</a>
+<li> <a href="index_p5_c21.html#doc22_8218" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.4  座標に関する命令</a>
+<li> <a href="index_p5_c21.html#doc22_8242" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.5  大きさに関する命令</a>
+<li> <a href="index_p5_c21.html#doc22_8310" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.6  オブジェクトを出現/隠す命令</a>
+<li> <a href="index_p5_c21.html#doc22_8346" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.7  オブジェクトの見た目を変える命令</a>
+<li> <a href="index_p5_c21.html#doc22_8358" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.8  テキストの中身を変える命令</a>
+<li> <a href="index_p5_c21.html#doc22_8370" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.9  キー・マウス入力に関する命令</a>
+<li> <a href="index_p5_c21.html#doc22_8442" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.1.10  オブジェクトの接触に関する命令</a>
+</ul>
+<li> <a href="index_p5_c21.html#doc22_8461" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">21.2  タートルで作ってはいけないメソッド名</a>
+</ul>
+<li> <a href="index_p5_c22.html#doc1_78" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22  音を鳴らしてみよう</a>
+<ul>
+<li> <a href="index_p5_c22.html#doc23_8772" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.1  音を鳴らす方法</a>
+<li> <a href="index_p5_c22.html#doc23_8784" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.2  SoundTurtleの使い方</a>
+<li> <a href="index_p5_c22.html#doc23_8799" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.3  あらかじめ音を読み込んでおく</a>
+<li> <a href="index_p5_c22.html#doc23_8811" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.4  SoundTurtleで利用できる命令</a>
+<ul>
+<li> <a href="index_p5_c22.html#doc23_8813" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.4.1  再生と停止</a>
+<li> <a href="index_p5_c22.html#doc23_8843" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.4.2  音量の取得・変更</a>
+<li> <a href="index_p5_c22.html#doc23_8861" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.4.3  音の読み込み</a>
+</ul>
+<li> <a href="index_p5_c22.html#doc23_8874" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.5  練習問題</a>
+<ul>
+<li> <a href="index_p5_c22.html#doc23_8876" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.5.1  シューティングゲームに効果音をつけよう</a>
+<li> <a href="index_p5_c22.html#doc23_8897" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.5.2  シューティングゲームにBGMをつけよう</a>
+</ul>
+<li> <a href="index_p5_c22.html#doc23_8907" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">22.6  練習問題解答例</a>
+</ul>
+<li> <a href="index_p5_c23.html#doc1_80" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23  セル・オートマトン</a>
+<ul>
+<li> <a href="index_p5_c23.html#doc24_8933" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.1  セルオートマトンとは</a>
+<li> <a href="index_p5_c23.html#doc24_8942" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.2  １次元セルオートマトン</a>
+<ul>
+<li> <a href="index_p5_c23.html#doc24_8944" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.2.1  CellTurtleの基本的な使い方</a>
+<li> <a href="index_p5_c23.html#doc24_8981" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.2.2  ルール</a>
+<li> <a href="index_p5_c23.html#doc24_9011" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.2.3  アサリの貝殻の模様と１次元オートマトン</a>
+</ul>
+<li> <a href="index_p5_c23.html#doc24_9022" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.3  ２次元セルオートマトン</a>
+<li> <a href="index_p5_c23.html#doc24_9056" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.4  CellTurtleで利用できる命令</a>
+<ul>
+<li> <a href="index_p5_c23.html#doc24_9058" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.4.1  「位置」について</a>
+<li> <a href="index_p5_c23.html#doc24_9069" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.4.2  移動の命令</a>
+<li> <a href="index_p5_c23.html#doc24_9123" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.4.3  CellTurtleのマーク処理命令</a>
+<li> <a href="index_p5_c23.html#doc24_9189" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.4.4  ２次元オートマトンのターン処理命令</a>
+</ul>
+<li> <a href="index_p5_c23.html#doc24_9208" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5  練習問題</a>
+<ul>
+<li> <a href="index_p5_c23.html#doc24_9210" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.1  １次元セルオートマトンのいろいろなルールを試してみよう</a>
+<li> <a href="index_p5_c23.html#doc24_9230" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.2  ルールをメソッドにしてみよう</a>
+<li> <a href="index_p5_c23.html#doc24_9251" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.3  ルールをメソッドにしてみよう改</a>
+<li> <a href="index_p5_c23.html#doc24_9269" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.4  2次元セルオートマトンを試してみよう</a>
+<li> <a href="index_p5_c23.html#doc24_9297" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.5  2次元セルオートマトンのいろいろなルールを試してみよう</a>
+<li> <a href="index_p5_c23.html#doc24_9309" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.5.6  ライフゲームを作ってみよう</a>
+</ul>
+<li> <a href="index_p5_c23.html#doc24_9343" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">23.6  参考文献</a>
+</ul>
+</ul>
+</ul>
+</div>
+
+<h2>索引</h2>
+
+<table>
+<tbody>
+</tbody>
+</table>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td></td>
+<td>Turtle Cafe 2</td>
+<td><a href="index_p1.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

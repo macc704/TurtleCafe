@@ -1,0 +1,953 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2011/11/09" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p4_c19.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p4.html#doc1_part:extra" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">付録</a>/音を鳴らしてみよう</td>
+<td><a href="index_p4_c21.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_70">20  音を鳴らしてみよう</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc21_7718" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">20.1  音を鳴らす方法</a>
+<li> <a href="#doc21_7730" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">20.2  SoundTurtleの使い方</a>
+<li> <a href="#doc21_7745" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">20.3  あらかじめ音を読み込んでおく</a>
+<li> <a href="#doc21_7757" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">20.4  SoundTurtleで利用できる命令</a>
+<ul>
+<li> <a href="#doc21_7759" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">20.4.1  再生と停止</a>
+<li> <a href="#doc21_7789" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">20.4.2  音量の取得・変更</a>
+<li> <a href="#doc21_7807" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">20.4.3  音の読み込み</a>
+</ul>
+<li> <a href="#doc21_7820" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">20.5  練習問題</a>
+<ul>
+<li> <a href="#doc21_7822" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">20.5.1  問題1：シューティングゲームに効果音をつけよう</a>
+<li> <a href="#doc21_7840" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">20.5.2  問題2：シューティングゲームにBGMをつけよう</a>
+</ul>
+<li> <a href="#doc21_7847" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">20.6  練習問題解答例</a>
+</ul>
+</div>
+
+<h2 id="doc21_7718">20.1  音を鳴らす方法</h2>
+
+<p class="first_ja">SoundTurtleを使うと、MP3、WAVE、MIDI形式のファイルを制御して、音を鳴らすことができます。</p>
+<p>MP3、WAVE、MIDI以外のファイルを鳴らしたい場合は、<a href="http://media-convert.com/ja/" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">変換サイト</a>で対応できるファイル形式に変換してください。</p>
+
+<h2 id="doc21_7730">20.2  SoundTurtleの使い方</h2>
+
+<p class="first_ja">まず再生するファイルを指定して、SoundTurtleオブジェクトを作成します。</p>
+
+<pre id="doc21_7735" class="program">
+SoundTurtle bgm = new SoundTurtle(&quot;bgm.mp3&quot;); 
+				
+</pre>
+
+<p>そして、作成したSoundTurtleオブジェクトに対して、play() や stop() などの命令を行います。</p>
+
+<pre id="doc21_7741" class="program">
+bgm.play(); //BGMを再生する
+bgm.stop(); //BGMを停止する
+				
+</pre>
+
+
+<h2 id="doc21_7745">20.3  あらかじめ音を読み込んでおく</h2>
+
+<p class="first_ja">音の再生時に反応速度が重要な場合は、あらかじめ音を読み込んでおくこと、再生するまでの反応速度を早くすることができます。</p>
+
+<pre id="doc21_7750" class="program">
+SoundTurtle fire = new SoundTurtle(&quot;fire.mp3&quot;); 				
+fire.loadOnMemory();// あらかじめ効果音を読み込んでおく
+fire.play();// 効果音を再生する				
+				
+</pre>
+
+<p>ただし、再生時間が長い大きなファイルを読み込む場合は、それだけメモリが必要になります。</p>
+
+<h2 id="doc21_7757">20.4  SoundTurtleで利用できる命令</h2>
+
+
+<h3 id="doc21_7759">20.4.1  再生と停止</h3>
+
+
+<dl>
+<dt>
+play()
+<dd>
+音を1度だけ再生します。
+<dt>
+loop()
+<dd>
+音をループ再生します。音の再生が終わると、もう一度はじめから再生します。stop()が呼ばれるまで再生し続けます。
+<dt>
+stop()
+<dd>
+音を停止します。
+<dt>
+isPlaying()
+<dd>
+音が再生中かどうか調べます。必ず、if文の条件文の中に書いて下さい。</dl>
+
+
+<h3 id="doc21_7789">20.4.2  音量の取得・変更</h3>
+
+
+<dl>
+<dt>
+getVolume()
+<dd>
+音量を取得します。取得する音量は0(消音)から100(最大音量)のいずれかです。
+<dt>
+setVolume(??)
+<dd>
+音量を??に設定します。設定できる音量は0(消音)から100(最大音量)までです。</dl>
+
+
+<h3 id="doc21_7807">20.4.3  音の読み込み</h3>
+
+
+<dl>
+<dt>
+loadOnMemory()
+<dd>
+指定した音ファイルを読み込みます。ファイルを読み込んだ場合、反応速度が早くなりますが、ファイルを読み込むためのメモリ領域が必要です。</dl>
+
+
+<h2 id="doc21_7820">20.5  練習問題</h2>
+
+
+<h3 id="doc21_7822">20.5.1  問題1：シューティングゲームに効果音をつけよう</h3>
+
+<p class="first_ja">11章の最後にあるシューティングゲームを改良して、効果音をつけましょう。</p>
+<p>次の2つの場合において、好きな音を鳴らして下さい。</p>
+
+<ul>
+<li> ドラえもんが弾を発射したとき（上キーを押したとき）。
+<li> 弾が星に衝突したとき。</ul>
+
+
+<h3 id="doc21_7840">20.5.2  問題2：シューティングゲームにBGMをつけよう</h3>
+
+<p class="first_ja">上の問題で効果音をつけたシューティングゲームに、今度はBGMをつけましょう。</p>
+
+<h2 id="doc21_7847">20.6  練習問題解答例</h2>
+
+
+<div id="doc21_src:ShootingGameWithSound" class="caption">リスト 20.6.1 ShootingGameWithSound.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/**
+  2:  * シューティングゲーム（音付き）
+  3:  * 
+  4:  * Yoshiaki Matsuzawa (2011/09/28)
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> ShootingGameWithSound <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> ShootingGameWithSound());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		System.out.println(<span class="quote">&quot;ShootingGameWithSound: Version 8&quot;</span>);
+ 16: 
+ 17: 		hide();<span class="comment">// タートルを消す</span>
+ 18: 
+ 19: 		<span class="comment">// 画面の調整</span>
+ 20: 		window.size(640, 480);
+ 21: 		window.warp(100, 100);
+ 22: 
+ 23: 		<span class="keyword">int</span> score; <span class="comment">// 得点を入れる変数</span>
+ 24: 
+ 25: 		<span class="comment">// キャラクターの生成</span>
+ 26: 		Star enemy = <span class="keyword">new</span> Star(); <span class="comment">// enemyという名前の星を生成</span>
+ 27: 		Doraemon player = <span class="keyword">new</span> Doraemon(); <span class="comment">// playerという名前のドラえもんを生成</span>
+ 28: 		Circle bullet = <span class="keyword">new</span> Circle(); <span class="comment">// bullet(弾)という名前の円を作成</span>
+ 29: 
+ 30: 		<span class="comment">// 得点板の生成</span>
+ 31: 		TextTurtle scoreBoard = <span class="keyword">new</span> TextTurtle(); <span class="comment">// scoreBoardという名前のTextTurtleを生成</span>
+ 32: 
+ 33: 		<span class="comment">// 音楽の生成</span>
+ 34: 		SoundTurtle hit = <span class="keyword">new</span> SoundTurtle(<span class="quote">&quot;hit.mp3&quot;</span>);
+ 35: 		hit.loadOnMemory();
+ 36: 		SoundTurtle fire = <span class="keyword">new</span> SoundTurtle(<span class="quote">&quot;fire.mp3&quot;</span>);
+ 37: 		fire.loadOnMemory();
+ 38: 
+ 39: 		SoundTurtle bgm = <span class="keyword">new</span> SoundTurtle(<span class="quote">&quot;bgm.mp3&quot;</span>);
+ 40: 		<span class="comment">// BSound bgm = new BSound(&quot;bgm.mp3&quot;);</span>
+ 41: 		bgm.play();
+ 42: 
+ 43: 		<span class="comment">// 弾を適切な大きさに調整</span>
+ 44: 		bullet.size(20, 20);
+ 45: 
+ 46: 		<span class="comment">// キャラクターの位置を調整</span>
+ 47: 		enemy.warp(200, 100);
+ 48: 		player.warp(320, 350);
+ 49: 		bullet.warp(-100, -100);<span class="comment">// 弾は最初見えない位置に置いておく</span>
+ 50: 
+ 51: 		<span class="comment">// 得点板の位置を調整</span>
+ 52: 		scoreBoard.warp(600, 50);
+ 53: 
+ 54: 		<span class="comment">// 得点を初期化</span>
+ 55: 		score = 0;
+ 56: 
+ 57: 		<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 58: 
+ 59: 			<span class="comment">// --- 待つ ---</span>
+ 60: 			sleep(0.025);
+ 61: 
+ 62: 			<span class="comment">// --- 処理 ---</span>
+ 63: 
+ 64: 			<span class="comment">// 敵を動かす(流れ星と一緒)</span>
+ 65: 			enemy.warp(enemy.x() + 5, enemy.y());
+ 66: 			enemy.rt(10);
+ 67: 
+ 68: 			<span class="comment">// もし，敵が右端だったら</span>
+ 69: 			<span class="keyword">if</span> (enemy.x() &gt; 640) {
+ 70: 				enemy.warp(0, enemy.y());<span class="comment">// 左端にワープ</span>
+ 71: 			}
+ 72: 
+ 73: 			<span class="comment">// ドラえもんを左右に動かす</span>
+ 74: 			<span class="keyword">if</span> (key() == 37) { <span class="comment">// 左</span>
+ 75: 				player.warp(player.x() - 5, player.y());
+ 76: 			} <span class="keyword">else</span> <span class="keyword">if</span> (key() == 39) { <span class="comment">// 右</span>
+ 77: 				player.warp(player.x() + 5, player.y());
+ 78: 			}
+ 79: 
+ 80: 			<span class="comment">// 上が押されたら，</span>
+ 81: 			<span class="keyword">if</span> (key() == 38) {
+ 82: 				<span class="comment">// 弾を出す(弾をドラえもんと同じ位置にする)</span>
+ 83: 				bullet.warp(player.x(), player.y());
+ 84: 				fire.play();
+ 85: 			}
+ 86: 
+ 87: 			<span class="comment">// 弾を上に動かす</span>
+ 88: 			<span class="comment">// (見えなくても，上に動かしつづける)</span>
+ 89: 			bullet.warp(bullet.x(), bullet.y() - 5);
+ 90: 
+ 91: 			<span class="comment">// もし，弾が敵に当たっていたら</span>
+ 92: 			<span class="keyword">if</span> (bullet.intersects(enemy)) {
+ 93: 				score++;<span class="comment">// 得点を増やす</span>
+ 94: 
+ 95: 				<span class="comment">// 衝突音を鳴らす</span>
+ 96: 				hit.play();
+ 97: 			}
+ 98: 
+ 99: 			<span class="comment">// 得点板の数字を更新</span>
+100: 			scoreBoard.text(score);
+101: 
+102: 			<span class="comment">// --- 再描画 ---</span>
+103: 			update();
+104: 		}
+105: 
+106: 	}
+107: 
+108: }
+</pre>
+
+<p class="first_ja"><a href="appendix_soundlib/src/ShootingGameWithSound.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、ShootingGameWithSoundプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="appendix_soundlib_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ShootingGameWithSound"/>
+</applet></p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p4_c19.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p4.html#doc1_part:extra" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">付録</a>/音を鳴らしてみよう</td>
+<td><a href="index_p4_c21.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

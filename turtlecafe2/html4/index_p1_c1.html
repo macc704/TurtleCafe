@@ -1,0 +1,1034 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p1.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/論プロエディタでJavaプログラムを動かしてみよう</td>
+<td><a href="index_p1_c2.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_22">1  論プロエディタでJavaプログラムを動かしてみよう</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc2_98" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.1  学習目標</a>
+<li> <a href="#doc2_110" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.2  環境のインストール</a>
+<ul>
+<li> <a href="#doc2_112" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.2.1  JDKのインストール</a>
+<ul>
+<li> <a href="#doc2_117" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.2.1.1  JDKがインストールされているか調べる</a>
+<li> <a href="#doc2_129" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.2.1.2  JDKのインストール</a>
+</ul>
+<li> <a href="#doc2_151" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.2.2  論プロエディタのインストール</a>
+</ul>
+<li> <a href="#doc2_161" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.3  論プロエディタの基本的な使い方</a>
+<ul>
+<li> <a href="#doc2_163" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.3.1  論プロエディタの基本</a>
+<ul>
+<li> <a href="#doc2_165" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.3.1.1  起動の仕方</a>
+<li> <a href="#doc2_176" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.3.1.2  各部名称・機能</a>
+<li> <a href="#doc2_sec:resource" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.3.1.3  リソース</a>
+</ul>
+<li> <a href="#doc2_sec:programmingprocess" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.3.2  プログラム作成の流れ</a>
+<ul>
+<li> <a href="#doc2_287" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.3.2.1  プログラムの編集</a>
+<li> <a href="#doc2_298" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.3.2.2  コンパイル</a>
+<li> <a href="#doc2_327" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.3.2.3  実行</a>
+</ul>
+</ul>
+<li> <a href="#doc2_358" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.4  発展的な使い方</a>
+<ul>
+<li> <a href="#doc2_360" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.4.1  サンプルプログラムの使い方</a>
+<ul>
+<li> <a href="#doc2_362" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.4.1.1  サンプルプログラムの使い方</a>
+<li> <a href="#doc2_391" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.4.1.2  リソースとファイルシステムの関係</a>
+</ul>
+<li> <a href="#doc2_408" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.4.2  その他の機能</a>
+<li> <a href="#doc2_459" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">1.4.3  ショートカットキー</a>
+</ul>
+</ul>
+</div>
+<p class="first_ja">論プロエディタを使ったJavaタートルグラフィックスのプログラムの開発環境を整備しましょう。</p>
+<p>テキストエディタを使って実行環境を整備することもできますが、
+			ここでは、初心者向けのエディタ「論プロエディタ」を使う方法を解説します。</p>
+
+<h2 id="doc2_98">1.1  学習目標</h2>
+
+<p class="first_ja"><ul>
+<li> 論プロエディタを使い、自分のコンピュータでサンプルプログラム（HelloWorld.java）が動かせるようになる</ul></p>
+
+<h2 id="doc2_110">1.2  環境のインストール</h2>
+
+
+<h3 id="doc2_112">1.2.1  JDKのインストール</h3>
+
+<p class="first_ja">JDK(Java SE Development Kit)とは、Java開発環境のことです。
+					自分のPCでJavaを開発するためには、JDKをインストールする必要があります。
+					（あらかじめインストールされているJREでは、Javaを動かすことは出来ますが、Javaのプログラムを作ることは出来ません）</p>
+
+<h4 id="doc2_117">1.2.1.1  JDKがインストールされているか調べる</h4>
+
+<p class="first_ja">コマンドプロンプト（「Windows」＞「プログラム」＞「アクセサリ」の中にあります）を開いて、次のコマンドを打ってください</p>
+
+<div id="doc2_122" class="caption">図 1.2.1.1.1 JDKの確認</div>
+<pre class="console" style="margin-top:0">
+javac -version
+					
+</pre>
+
+<p>授業で指示されたバージョンが入っているかどうか確認してください。</p>
+
+<h4 id="doc2_129">1.2.1.2  JDKのインストール</h4>
+
+<p class="first_ja">JDK(Java Development Kit)をインストールします。</p>
+<p>JDKは現在、Oracle社が開発・配布しています。						
+						<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">ここ</a>
+						からダウンロードし、インストールすることも出来ます。（授業で指示された場所からダウンロードしてください。）</p>
+<p>インストールが終わったら、環境変数の設定をします。
+						配布された資料に従って､設定を行ってください。
+						（又は<a href="http://mail2.nara-edu.ac.jp/~asait/java/java_install/java_install.htm" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">ここ</a>のサイトなどが
+						参考になります。）</p>
+<p>環境変数の設定が終わったら、コマンドプロンプトを開き、「JDKがインストールされているか調べる」で説明した方法で、
+						コマンドが実行できるかどうか確認してください。</p>
+
+<h3 id="doc2_151">1.2.2  論プロエディタのインストール</h3>
+
+<p class="first_ja">Javaの初心者向けエディタ「論プロエディタ」をダウンロードしよう。</p>
+<p>インストールは、フォルダをデスクトップに解凍するだけです。</p>
+
+<h2 id="doc2_161">1.3  論プロエディタの基本的な使い方</h2>
+
+
+<h3 id="doc2_163">1.3.1  論プロエディタの基本</h3>
+
+
+<h4 id="doc2_165">1.3.1.1  起動の仕方</h4>
+
+<p class="first_ja">論プロエディタフォルダの中の「RonproEditor.jar」をダブルクリックすると起動できます。
+						（動かない人は、RonproEditor.batをダブルクリックしてみてください。）</p>
+<p>起動画面は以下のようになります</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="introduction_ronproeditor/image/RonproEditor.png" alt="図 1.3.1.1.1 起動画面">
+</div>
+
+
+<h4 id="doc2_176">1.3.1.2  各部名称・機能</h4>
+
+<p class="first_ja">各部の名称と機能は以下の通りです</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="introduction_ronproeditor/image/RonproEditorName.png" alt="図 1.3.1.2.1 起動画面">
+</div>
+
+
+<dl>
+<dt>
+リソースビューワ
+<dd>
+<a href="#doc2_sec:resource" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">リソース</a>のツリーを表示します。プロジェクトをクリックすると展開し、所属しているクラスが表示されます。
+<dt>
+エディタ
+<dd>
+<a href="#doc2_sec:programmingprocess" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">ソースコード</a>を編集するためのエディタ
+<dt>
+コンソール
+<dd>
+コンパイル、実行したときに標準入出力につながれます。Macのターミナル、Winのコマンドプロンプトに相当するものです。<a href="index_p5.html#doc1_part:extra" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">論プロエディタを使わない場合</a>はこれらで代用できます。コンパイル、実行したときに当該プログラムの文字情報の入出力が行われ、コンパイル時には<a href="index_p1_c2.html#doc3_sec:compileerror" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">エラーが出力</a>されます。実行時には当該プログラムが必要とする文字情報の入出力が行われます。表示されている文字情報は、コンパイルするたびにクリアされます。</dl>
+
+
+<h4 id="doc2_sec:resource">1.3.1.3  リソース</h4>
+
+<p class="first_ja">リソースとは、論プロエディタで使用するデータのことです。
+						基本的には、<a href="index_p1_c2.html#doc3_sec:class" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">クラス</a>のことです。</p>
+<p>クラスをまとめられると使いやすい（回別に分けないとごちゃごちゃになる）ので、
+						プロジェクトを用意しています。プロジェクトは、クラスをまとめておくものです。</p>
+
+<dl>
+<dt>
+プロジェクト
+<dd>
+プロジェクトとは、プログラムを入れておくフォルダのようなものです。この授業では、「lecture01」など、授業ごとにプロジェクトを作るものとします。
+<dt>
+クラス（ファイル）
+<dd>
+クラスとは、Javaのプログラムの単位のことです。Javaでは、原則的に１つのクラスは１つのファイルに書かれるため、論プロエディタではクラスとファイルをまとめてクラス（ファイル）とし、ひとつの単位として扱っています。</dl>
+
+<div class="fyi">
+<div class=title>プロジェクトとクラス（ファイル）を作ろう</div>
+
+<p class="first_ja">まず、論プロエディタの「File」メニューから「NewProject」を選んで「kougi07」というプロジェクトを作ろう。</p>
+<p>次に、論プロエディタの「File」メニューから「NewFile(Class)」を選び、「Turtle」テンプレートを選んで、「HelloWorld」というクラスを作ろう。</p>
+</div>
+
+<p>これで、「lecture01」プロジェクトの中に、「HelloWorld.java」というファイルが作成された。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="introduction_ronproeditor/image/HelloWorld.png" alt="図 1.3.1.3.1 HelloWorld.java作成完了画面">
+</div>
+
+
+<h3 id="doc2_sec:programmingprocess">1.3.2  プログラム作成の流れ</h3>
+
+<p class="first_ja">Javaプログラムを作成して実行するには、次のようなプロセスをたどることになります。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="introduction_ronproeditor/image/process.gif" alt="図 1.3.2.1 Javaプログラム作成のプロセス">
+</div>
+
+
+<dl>
+<dt>
+ソースコード
+<dd>
+プログラムが書かれたテキストファイルのこと
+<dt>
+バイトコード
+<dd>
+プログラムをコンピュータが実行できる形式に変換したもの
+<dt>
+コンパイル
+<dd>
+ソースコードをバイトコードに変換すること</dl>
+
+
+<h4 id="doc2_287">1.3.2.1  プログラムの編集</h4>
+
+<p class="first_ja">それでは、先ほど作った「HelloWorld.java」を編集してみよう。</p>
+<p>以下のプログラムと同じプログラムを打ち込んでみよう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="introduction_ronproeditor/image/HelloWorldSource.png" alt="図 1.3.2.1.1 HelloWorldソースコード">
+</div>
+
+
+<h4 id="doc2_298">1.3.2.2  コンパイル</h4>
+
+<p class="first_ja">次に、ソースコード（HelloWorld.java）をコンパイルしてみよう。</p>
+<p>論プロエディタの「Java」メニューから「Compile」を選ぼう。</p>
+<p>コンパイルが成功すると、このような表示がコンソールに出ます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="introduction_ronproeditor/image/ConsoleCompile.png" alt="図 1.3.2.2.1 コンパイル">
+</div>
+
+<p>プロジェクトの中で初めてタートルプログラムをコンパイルしたときに、
+						「注」という赤い警告のメッセージが出ますが、
+						プログラムは問題なくコンパイルされているので、心配しなくて大丈夫です。</p>
+<p>（Javaは5.0から新しい文法が用意され、その文法に従っていないものには
+						警告が出るようになりました。タートルライブラリは98年に作られたもので、
+						一部に古いJavaの文法を使っているため、このような警告メッセージが出ます。）</p>
+<p><b>プログラムにミスがあると、コンパイルは成功しません。</b>
+						詳しくは<a href="index_p1_c2.html#doc3_sec:compileerror" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">２章の「コンパイルエラー」</a> を参考にしてください。</p>
+
+<h4 id="doc2_327">1.3.2.3  実行</h4>
+
+<p class="first_ja">次に、プログラムを実行しよう。「Java」メニューから「Run」を選ぼう。</p>
+<p>コンソールに「HelloWorld!」が出ていれば成功です。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="introduction_ronproeditor/image/ConsoleRun.png" alt="図 1.3.2.3.1 コンパイル">
+</div>
+
+<p>無限ループするプログラムを書いてしまった、など、プログラムが止まらなくなることがあります。
+						そのような場合は、Javaメニューにある「Kill（実行強制停止）」を使ってプログラムを止めること。</p>
+<div class="fyi">
+<div class=title>やってみよう！</div>
+
+<p class="first_ja">「print(&quot;Hello World!&quot;);」の次の行に「fd(100);」と書いて、コンパイル、実行してみよう。</p>
+<p>下のボタンと同じ結果が得られれば成功です。</p>
+<p>下のボタンを押すと、HelloTurtleプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="introduction_ronproeditor_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HelloTurtle"/>
+</applet></p>
+</div>
+
+
+<h2 id="doc2_358">1.4  発展的な使い方</h2>
+
+
+<h3 id="doc2_360">1.4.1  サンプルプログラムの使い方</h3>
+
+
+<h4 id="doc2_362">1.4.1.1  サンプルプログラムの使い方</h4>
+
+<p class="first_ja">サンプルプログラム「House.java」を
+						<a href="introduction_cns/src/House.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+						からダウンロードし、
+						論プロエディタフォルダの中にある「MyProjects」フォルダの中の「Kougi07」フォルダに保存しよう。</p>
+<p>論プロエディタの画面で「F5」を押すと、表示が更新されて「Kougi07」プロジェクトの中にHouse.javaが表示されます。
+						House.javaをダブルクリックすると、エディタにプログラムが表示されます。</p>
+<p>「F5」を押してリソースビューワを更新しないとクラス（ファイル）が表示されないので、
+						サンプルプログラムをダウンロードして「MyProjects」フォルダに追加したら、必ず「F5」を押すこと。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="introduction_ronproeditor/image/HouseDownloaded.png" alt="図 1.4.1.1.1 House.javaを論プロエディタで読み込んだ様子">
+</div>
+
+<div class="fyi">
+<div class=title>やってみよう！</div>
+
+<p class="first_ja">サンプルプログラムをコンパイルし、実行してみよう。
+							次のボタンと同じ結果が得られれば、成功です。</p>
+<p>下のボタンを押すと、Houseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="introduction_ronproeditor_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="House"/>
+</applet></p>
+</div>
+
+
+<h4 id="doc2_391">1.4.1.2  リソースとファイルシステムの関係</h4>
+
+<p class="first_ja">論プロエディタの「プロジェクト」と「クラス（ファイル）」の２つのリソースは、
+						ファイルシステム（MacやWindowsの通常の画面）ではそれぞれ「フォルダ」と「ファイル」に対応します。</p>
+<p>プロジェクト「Kougi07」は、論プロエディタフォルダの中の「MyProjects」フォルダの中の「Kougi07」フォルダに対応します。</p>
+<p>クラス（ファイル）「HelloWorld.java」は、Kougi07」フォルダの中の「HelloWorld.java」に対応します。</p>
+<p>論プロエディタで作ったプロジェクトやクラス（ファイル）は、ファイルシステムで見ることができるし、
+						ファイルシステムで作ったフォルダやファイルを論プロエディタで読み込むこともできます。</p>
+
+<h3 id="doc2_408">1.4.2  その他の機能</h3>
+
+<p class="first_ja">論プロエディタのその他の機能を紹介します。
+					
+<dl>
+<dt>
+Rename
+<dd>
+リソースの名前を変更できる。
+<dt>
+Delete
+<dd>
+リソースを削除できる
+<dt>
+Refresh
+<dd>
+リソースビューワを更新できる。サンプルプログラムをダウンロードしたときなど、ファイルシステムからファイルやフォルダを追加したときに使う。
+<dt>
+Undo（やり直し）
+<dd>
+作業をひとつ前の状態に戻すことができる。
+<dt>
+Redo（やり直しのキャンセル）
+<dd>
+直前のUndoを取り消して、Undoする前の状態に戻すことができる。
+<dt>
+Format
+<dd>
+プログラムを整形し、見やすくする。括弧の対応の確認などに役立つ。
+<dt>
+Kill
+<dd>
+現在実行している（複数実行している場合、すべての）プログラムを強制的に停止することが出来る。無限ループのプログラムを書いてしまったときなど、プログラムが止まらなくなってしまったときに、役立つ。</dl></p>
+
+<h3 id="doc2_459">1.4.3  ショートカットキー</h3>
+
+<p class="first_ja">論プロエディタは、ほとんどのコマンドをショートカットで実行できるように作られています。
+					ショートカットキーを使ってコマンドを実行したいときは、メニューの右に表示されているキーを同時押ししてください。
+					（例：コンパイル（Ctrl+E）→「Ctrl」キーと「E」キーを同時に押す）</p>
+<p>ショートカットキーは覚えやすいように、 編集にかかわるコマンドのショートカットは左下（ZXCV）に、
+					Javaにかかわるコマンドのショートカットは左上（WSER）に集中しています。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="introduction_ronproeditor/image/keyboard.png" alt="図 1.4.3.1 ショートカットキー">
+</div>
+
+<p>（http://www2d.biglobe.ne.jp/~msyk/index.htmlの「キーボード配列案」のフリー画像をお借りしました。）</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p1.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/論プロエディタでJavaプログラムを動かしてみよう</td>
+<td><a href="index_p1_c2.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

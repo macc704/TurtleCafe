@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<!--$$Id: build.xml,v 1.1 2007/06/09 16:38:26 macchan Exp $$-->
+
+<!-- 
+	txsltを実行するためだけに存在するbuild.xml
+-->	
+<project basedir="." default="all">
+
+	<property environment="env"/>
+	
+	<property name="xsl.root" value="${env.CREWDOC_HOME}/xsl/ronprotext.xsl"/>
+	
+	<target name="all" depends=""/>
+	
+	<!-- TXSLT -->
+	<target name="txslt">
+		<xslt processor="trax" basedir="." destdir="." style="${xsl.root}" extension=".sdoc" includes="**/*.xml" excludes="**/build.xml" force="yes"/>
+	</target>	
+	
+</project>

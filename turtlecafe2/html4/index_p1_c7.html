@@ -1,0 +1,1079 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c6.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/たくさんのタートル</td>
+<td><a href="index_p1_c8.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_34">7  たくさんのタートル</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc8_2201" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.1  学習目標</a>
+<li> <a href="#doc8_2213" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.2  複数のタートルを使う</a>
+<ul>
+<li> <a href="#doc8_2221" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.2.1  2匹のタートルを使うプログラム</a>
+<li> <a href="#doc8_2245" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.2.2  タートル（オブジェクト）の生成</a>
+<li> <a href="#doc8_2253" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.2.3  タートル(オブジェクト)への命令</a>
+</ul>
+<li> <a href="#doc8_2265" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.3  同時に動いているように見せるために</a>
+<li> <a href="#doc8_2319" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.4  練習問題</a>
+<ul>
+<li> <a href="#doc8_2321" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.4.1  4匹のタートルでまんじ（卍）を描こう</a>
+<li> <a href="#doc8_2348" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.4.2  タートルリレー</a>
+<li> <a href="#doc8_2375" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.4.3  タートルレース</a>
+<li> <a href="#doc8_2402" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.4.4  たくさんのタートルで絵を描こう</a>
+<li> <a href="#doc8_2411" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">7.4.5  星と五角形を同時に描こう</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc8_2201">7.1  学習目標</h2>
+
+
+<ul>
+<li> オブジェクトの作成と命令を行うことができる
+<li> 複数のオブジェクトを区別して命令を行うことができる</ul>
+
+
+<h2 id="doc8_2213">7.2  複数のタートルを使う</h2>
+
+<p class="first_ja">オブジェクトタートル編では、いままで習った制御構造を利用して、簡単なゲームやアニメーションなどのアプリケーションを作っていきたいと思います。</p>
+<p>アニメーションでは、「オブジェクト」と呼ばれるものを生成して、
+				そのオブジェクトに対して命令をすることになります。
+				その練習のために、まず、複数のタートルを扱ってみましょう。</p>
+
+<h3 id="doc8_2221">7.2.1  2匹のタートルを使うプログラム</h3>
+
+<p class="first_ja">次のプログラムを見てみましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter07/image/block/TwoTurtles.jpg" alt="図 7.2.1.1 TwoTurtles">
+</div>
+
+
+<div id="doc8_src:TwoTurtles" class="caption">リスト 7.2.1.1 TwoTurtles.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * タートルを2匹使って、2つの円を書くプログラム
+  3:  * 2003/06/16 Yoshiaki Matsuzawa
+  4:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> TwoTurtles <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> TwoTurtles());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		Turtle kameTaro = <span class="keyword">new</span> Turtle();
+ 16: 		Turtle kameJiro = <span class="keyword">new</span> Turtle();
+ 17: 		{ <span class="comment">// アニメーションをする</span>
+ 18: 			<span class="keyword">int</span> i = 0;
+ 19: 			<span class="keyword">while</span> (i &lt; 360) {
+ 20: 				{ <span class="comment">// 亀太郎は右回り</span>
+ 21: 					kameTaro.rt(1);
+ 22: 					kameTaro.fd(1);
+ 23: 				}
+ 24: 				{ <span class="comment">// 亀次郎は左回り</span>
+ 25: 					kameJiro.lt(1);
+ 26: 					kameJiro.fd(1);
+ 27: 				}
+ 28: 				i++;
+ 29: 			}
+ 30: 		}
+ 31: 	}
+ 32: 
+ 33: }
+</pre>
+
+<p><a href="chapter07/src/TwoTurtles.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、TwoTurtlesプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter07_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="TwoTurtles"/>
+</applet></p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter07/image/twoturtles.gif" alt="図 7.2.1.2 2匹のタートルを使うプログラム">
+</div>
+
+
+<h3 id="doc8_2245">7.2.2  タートル（オブジェクト）の生成</h3>
+
+<p class="first_ja">タートル（オブジェクト）を一匹生成するには、次のような命令文を書きます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter07/image/newturtle.gif" alt="図 7.2.2.1 タートル(オブジェクト)の生成">
+</div>
+
+
+<h3 id="doc8_2253">7.2.3  タートル(オブジェクト)への命令</h3>
+
+<p class="first_ja">生成されたタートル（オブジェクト）に命令するには、次のような命令文を書きます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter07/image/objectcommand.gif" alt="図 7.2.3.1 タートル(オブジェクト)への命令">
+</div>
+
+<p>このように、オブジェクトを生成して、
+				生成したオブジェクトに対して命令を行う手法を「オブジェクト指向プログラミング」といい、
+				現在のプログラミングでよく使われる手法です。</p>
+
+<h2 id="doc8_2265">7.3  同時に動いているように見せるために</h2>
+
+<p class="first_ja">オブジェクトはいくつでも生成することができます。
+					次のプログラムを見てみましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter07/image/block/FourTurtles.jpg" alt="図 7.3.1 FourTurtles">
+</div>
+
+
+<div id="doc8_src:FourTurtles" class="caption">リスト 7.3.1 FourTurtles.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * タートルを4匹使って、4つの円を書くプログラム
+  3:  * 2003/06/16 Yoshiaki Matsuzawa
+  4:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> FourTurtles <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> FourTurtles());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		Turtle kameTaro = <span class="keyword">new</span> Turtle();
+ 16: 		Turtle kameJiro = <span class="keyword">new</span> Turtle();
+ 17: 		Turtle kameSaburo = <span class="keyword">new</span> Turtle();
+ 18: 		Turtle kameShiro = <span class="keyword">new</span> Turtle();
+ 19: 		{ <span class="comment">// 亀三郎と亀四郎は後ろに下がる</span>
+ 20: 			kameSaburo.bk(100);
+ 21: 			kameShiro.bk(100);
+ 22: 		}
+ 23: 		{ <span class="comment">// 亀太郎は右回り</span>
+ 24: 			<span class="keyword">int</span> i = 0;
+ 25: 			<span class="keyword">while</span> (i &lt; 360) {
+ 26: 				kameTaro.rt(1);
+ 27: 				kameTaro.fd(1);
+ 28: 				i++;
+ 29: 			}
+ 30: 		}
+ 31: 		{ <span class="comment">// c//亀次郎は左回り</span>
+ 32: 			<span class="keyword">int</span> i = 0;
+ 33: 			<span class="keyword">while</span> (i &lt; 360) {
+ 34: 				kameJiro.lt(1);
+ 35: 				kameJiro.fd(1);
+ 36: 				i++;
+ 37: 			}
+ 38: 		}
+ 39: 		{ <span class="comment">// c//亀三郎は右回り</span>
+ 40: 			<span class="keyword">int</span> i = 0;
+ 41: 			<span class="keyword">while</span> (i &lt; 360) {
+ 42: 				kameSaburo.rt(1);
+ 43: 				kameSaburo.fd(1);
+ 44: 				i++;
+ 45: 			}
+ 46: 		}
+ 47: 		{ <span class="comment">// c//亀四郎は左回り</span>
+ 48: 			<span class="keyword">int</span> i = 0;
+ 49: 			<span class="keyword">while</span> (i &lt; 360) {
+ 50: 				kameShiro.lt(1);
+ 51: 				kameShiro.fd(1);
+ 52: 				i++;
+ 53: 			}
+ 54: 		}
+ 55: 	}
+ 56: 
+ 57: }
+</pre>
+
+<p><a href="chapter07/src/FourTurtles.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、FourTurtlesプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter07_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="FourTurtles"/>
+</applet></p>
+<p>このプログラムを下のプログラムと比較してみましょう。
+					（同じ図形を書くのですが、動きが異なるはずです。）</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter07/image/block/FourTurtles2.jpg" alt="図 7.3.2 FourTurtles2">
+</div>
+
+
+<div id="doc8_src:FourTurtles2" class="caption">リスト 7.3.2 FourTurtles2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * タートルを4匹使って、4つの円を書くプログラム (同時に動くバージョン)
+  3:  * 2003/06/16 Yoshiaki Matsuzawa
+  4:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> FourTurtles2 <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> FourTurtles2());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		<span class="comment">// 4匹のカメを生成</span>
+ 17: 		Turtle kameTaro = <span class="keyword">new</span> Turtle();
+ 18: 		Turtle kameJiro = <span class="keyword">new</span> Turtle();
+ 19: 		Turtle kameSaburo = <span class="keyword">new</span> Turtle();
+ 20: 		Turtle kameShiro = <span class="keyword">new</span> Turtle();
+ 21: 
+ 22: 		{<span class="comment">// 亀三郎と亀四郎は後ろに下がる</span>
+ 23: 			kameSaburo.bk(100);
+ 24: 			kameShiro.bk(100);
+ 25: 		}
+ 26: 
+ 27: 		{<span class="comment">// アニメーションする</span>
+ 28: 			<span class="keyword">int</span> i = 0;
+ 29: 			<span class="keyword">while</span> (i &lt; 360) {
+ 30: 
+ 31: 				{<span class="comment">// 亀太郎は右回り</span>
+ 32: 					kameTaro.rt(1);
+ 33: 					kameTaro.fd(1);
+ 34: 				}
+ 35: 
+ 36: 				{ <span class="comment">// 亀次郎は左回り</span>
+ 37: 					kameJiro.lt(1);
+ 38: 					kameJiro.fd(1);
+ 39: 				}
+ 40: 
+ 41: 				{ <span class="comment">// 亀三郎は右回り</span>
+ 42: 					kameSaburo.rt(1);
+ 43: 					kameSaburo.fd(1);
+ 44: 				}
+ 45: 
+ 46: 				{<span class="comment">// 亀四郎は左回り</span>
+ 47: 					kameShiro.lt(1);
+ 48: 					kameShiro.fd(1);
+ 49: 				}
+ 50: 
+ 51: 				i++;
+ 52: 			}
+ 53: 		}
+ 54: 
+ 55: 	}
+ 56: 
+ 57: }
+</pre>
+
+<p><a href="chapter07/src/FourTurtles2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、FourTurtles2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter07_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="FourTurtles2"/>
+</applet></p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter07/image/fourturtles1.gif" alt="図 7.3.3 4匹のタートルを使うプログラム(1)">
+</div>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter07/image/fourturtles2.gif" alt="図 7.3.4 4匹のタートルを使うプログラム(2)">
+</div>
+
+<div class="fyi">
+<div class=title>コンピュータは同時に2度の命令をできない</div>
+
+<p class="first_ja">2つ目のプログラムでは、タートルを細かく切り替えて少しずつ動かすことによって、
+						4匹のタートルが同時に動いているように見せることができます。</p>
+<p>コンピュータは2つの仕事を同時に行うことはできません。
+					みなさんが使っているパソコンは、インターネットをやっている間にメールを見て、印刷しながらワープロも使ったりすることができます。
+					これは、実は、このタートルの例のように、細かく切り替えていろいろな仕事を少しずつしているからなのです。</p>
+</div>
+
+
+<h2 id="doc8_2319">7.4  練習問題</h2>
+
+
+<h3 id="doc8_2321">7.4.1  4匹のタートルでまんじ（卍）を描こう</h3>
+
+<p class="first_ja">以下の実行例のように、4匹のタートルを同時に動かしてまんじを書くプログラムを作ってみよう</p>
+<p>下のボタンを押すと、Swastikaプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter07_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Swastika"/>
+</applet></p>
+<div class="fyi">
+<div class=title>まんじを書くプログラムで利用する命令</div>
+
+
+<dl>
+<dt>
+hide()
+<dd>
+最初から表示されている亀（カメ子）を消します。（別に消してなくても課題は受理しますけど、消したいですよね。）</dl>
+
+</div>
+
+<p>ファイル名は「Swastika.java」とすること．</p>
+
+<h3 id="doc8_2348">7.4.2  タートルリレー</h3>
+
+<p class="first_ja">以下の実行例のように、4匹のタートルでリレーを書くプログラムを作ってみよう</p>
+<p>下のボタンを押すと、TurtleRelayプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter07_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="TurtleRelay"/>
+</applet></p>
+<div class="fyi">
+<div class=title>タートルリレーで利用する命令</div>
+
+
+<dl>
+<dt>
+warp([X座標],[Y座標])
+<dd>
+亀の位置を座標の位置にワープさせます。最初に亀を配置する時に使ってください（使用例：kameTaro.warp(100,200)）</dl>
+
+</div>
+
+<p>ファイル名は「TurtleRelay.java」とすること．</p>
+
+<h3 id="doc8_2375">7.4.3  タートルレース</h3>
+
+<p class="first_ja">以下の実行例のように、3匹のタートルがレースするプログラムを作ってみよう。</p>
+<p>下のボタンを押すと、TurtleRaceプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter07_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="TurtleRace"/>
+</applet></p>
+<div class="fyi">
+<div class=title>タートルレースで利用する命令</div>
+
+
+<dl>
+<dt>
+sleep([秒の指定])
+<dd>
+指定された秒数だけ、コンピュータが眠り（止まり）ます。1を入れれば1秒止まり、0.1入れれば0.1秒止まります。「ヨーイドン！」の時に使ってください。</dl>
+
+</div>
+
+<p>ファイル名は「TurtleRace.java」とすること．</p>
+
+<h3 id="doc8_2402">7.4.4  たくさんのタートルで絵を描こう</h3>
+
+<p class="first_ja">今まで描いた絵を、何匹かのタートルを使って、タートルの共同作業で描いてみよう。
+				（複数のタートルが同時に動作するのは難しいので、やらなくて良い）</p>
+<p>ファイル名は「ManyTurtles.java」とすること．</p>
+
+<h3 id="doc8_2411">7.4.5  星と五角形を同時に描こう</h3>
+
+<p class="first_ja">以下の実行例のように、2匹のタートルがそれぞれ星と五角形を同時に描くようなアニメーションを作ろう。
+				（難易度高め）</p>
+<p>下のボタンを押すと、Concurrentプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter07_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Concurrent"/>
+</applet></p>
+<p>ファイル名は「Concurrent.java」とすること．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c6.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/たくさんのタートル</td>
+<td><a href="index_p1_c8.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

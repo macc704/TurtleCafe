@@ -1,0 +1,1489 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c3.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/プログラムに知性を(条件分岐)</td>
+<td><a href="index_p1_c5.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_28">4  プログラムに知性を(条件分岐)</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc5_1174" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.1  学習目標</a>
+<li> <a href="#doc5_1189" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.2  条件分岐を使う</a>
+<ul>
+<li> <a href="#doc5_1197" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.2.1  条件分岐</a>
+<li> <a href="#doc5_1254" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.2.2  条件式の評価</a>
+<ul>
+<li> <a href="#doc5_1259" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.2.2.1  成立(true)する場合</a>
+<li> <a href="#doc5_1264" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.2.2.2  不成立(false)する場合</a>
+<li> <a href="#doc5_1269" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.2.2.3  注意すること</a>
+</ul>
+<li> <a href="#doc5_1279" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.2.3  複数の分岐</a>
+<ul>
+<li> <a href="#doc5_1281" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.2.3.1  じゃんけんプログラム</a>
+<li> <a href="#doc5_1306" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.2.3.2  じゃんけんの手のデータの扱いについて</a>
+<li> <a href="#doc5_1317" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.2.3.3  複数の条件分岐</a>
+</ul>
+</ul>
+<li> <a href="#doc5_1336" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.3  いろいろな条件式</a>
+<ul>
+<li> <a href="#doc5_1338" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.3.1  比較演算子</a>
+<li> <a href="#doc5_1453" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.3.2  論理演算子</a>
+<ul>
+<li> <a href="#doc5_1522" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.3.2.1  論理演算子の評価の過程</a>
+<ul>
+<li> <a href="#doc5_1527" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">  And演算子が成立(true)する場合</a>
+<li> <a href="#doc5_1532" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">  And演算子が不成立(false)する場合</a>
+</ul>
+</ul>
+</ul>
+<li> <a href="#doc5_1540" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.4  変数のスコープ（有効範囲）</a>
+<li> <a href="#doc5_1615" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.5  練習問題</a>
+<ul>
+<li> <a href="#doc5_1617" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.5.1  絵の描き分けプログラムを作ろう</a>
+<li> <a href="#doc5_1626" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.5.2  おみくじプログラムを作ろう</a>
+<li> <a href="#doc5_1635" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">4.5.3  評点グレード変換プログラムを作ろう</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc5_1174">4.1  学習目標</h2>
+
+
+<ul>
+<li> 条件分岐のあるプログラムの実行順序を理解し、応用してプログラムが書けるようになる
+<li> 比較演算子、論理演算子をつかって条件式を記述することができるようになる
+<li> 変数の有効範囲について、ブロックという言葉を用いて説明できるようになる</ul>
+
+
+<h2 id="doc5_1189">4.2  条件分岐を使う</h2>
+
+<p class="first_ja">今回のテーマは条件に応じて動作が変化するプログラムを書くことです。</p>
+<p>ユーザの入力に応じた絵を書かせてみましょう。</p>
+
+<h3 id="doc5_1197">4.2.1  条件分岐</h3>
+
+<p class="first_ja">次のプログラムを見てみましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter03/image/block_Condition.png" alt="図 4.2.1.1 Condition">
+</div>
+
+
+<div id="doc5_src:Condition" class="caption">リスト 4.2.1.1 Condition.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 入力された番号の絵を書くプログラム
+  3:  * 2003/05/08  Yoshiaki Matsuzawa
+  4:  * 2012/10/16 改訂 Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> Condition <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> Condition());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		<span class="keyword">int</span> pictureNumber;<span class="comment">// 絵の番号</span>
+ 17: 
+ 18: 		{<span class="comment">// ユーザから入力を受け取る</span>
+ 19: 			print(<span class="quote">&quot;書きたい絵の番号を入力してください。(1.家, 2.星)&quot;</span>);
+ 20: 			pictureNumber = input();
+ 21: 		}
+ 22: 
+ 23: 		<span class="keyword">if</span> (pictureNumber == 1) {<span class="comment">// 入力された番号が1ならば</span>
+ 24: 			{<span class="comment">// c//家を書く</span>
+ 25: 
+ 26: 				<span class="keyword">int</span> length = 50;<span class="comment">// 1辺の長さ</span>
+ 27: 				<span class="keyword">int</span> rightAngle = 90;<span class="comment">// 直角</span>
+ 28: 
+ 29: 				{<span class="comment">// 屋根を書く</span>
+ 30: 					rt(30); <span class="comment">// 30度右に回る</span>
+ 31: 					fd(length); <span class="comment">// x歩前に進む</span>
+ 32: 					rt(120);
+ 33: 					fd(length);
+ 34: 					rt(120);
+ 35: 					fd(length);
+ 36: 				}
+ 37: 
+ 38: 				{<span class="comment">// 本体を書く</span>
+ 39: 					lt(rightAngle);
+ 40: 					fd(length);
+ 41: 					lt(rightAngle);
+ 42: 					fd(length);
+ 43: 					lt(rightAngle);
+ 44: 					fd(length);
+ 45: 					lt(rightAngle);
+ 46: 					fd(length);
+ 47: 				}
+ 48: 			}
+ 49: 
+ 50: 		} <span class="keyword">else</span> {<span class="comment">// 入力された番号が1以外ならば</span>
+ 51: 			{<span class="comment">// c//星を書く</span>
+ 52: 
+ 53: 				<span class="keyword">int</span> length = 100;<span class="comment">// 1辺の長さ</span>
+ 54: 				<span class="keyword">int</span> angle = 144;<span class="comment">// 星を書くときに曲がる角度</span>
+ 55: 
+ 56: 				{<span class="comment">// 星を書く</span>
+ 57: 					rt(18);
+ 58: 					fd(length);
+ 59: 					rt(angle);
+ 60: 					fd(length);
+ 61: 					rt(angle);
+ 62: 					fd(length);
+ 63: 					rt(angle);
+ 64: 					fd(length);
+ 65: 					rt(angle);
+ 66: 					fd(length);
+ 67: 				}
+ 68: 			}
+ 69: 
+ 70: 		}
+ 71: 
+ 72: 	}
+ 73: 
+ 74: }
+</pre>
+
+<p><a href="chapter03/src/Condition.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Conditionプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter03_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Condition"/>
+</applet></p>
+<p>いままでのプログラムでは、命令が必ず上から順番に全て実行されていました。
+					これを<em>順次実行</em>といいます。</p>
+<p>今回登場する&quot;条件分岐&quot;を使うと、命令の実行される順番を変更、制御することができます。</p>
+<p>条件分岐の一般的な形は次のとおりです。</p>
+
+<pre id="doc5_1230" class="program">
+if( [条件式] ) {
+	処理A
+} else {
+	処理B
+}
+				
+</pre>
+
+<p>条件式が成立(true)のした場合には、処理Aが実行され、処理Bは実行されません。</p>
+<p>逆に条件式が不成立(false)の場合には、処理Bが実行され、処理Aは実行されません。</p>
+<p>これをフローチャートと呼ばれる図を用いて書くと、次のようになります。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter03/image/if_flow_chart.gif" alt="図 4.2.1.2 条件分岐のフローチャート">
+</div>
+
+<p>ちなみに、elseブロックは必要が無ければ省略できます。次のような形になります。</p>
+
+<pre id="doc5_1247" class="program">
+if( [条件式] ) {
+	処理A
+}
+				
+</pre>
+
+<p>このように書くと、条件式が成立した時に処理Aが実行され、不成立の時には処理Aを飛ばします。</p>
+
+<h3 id="doc5_1254">4.2.2  条件式の評価</h3>
+
+<p class="first_ja">条件式の評価の過程を見ていきましょう。</p>
+
+<h4 id="doc5_1259">4.2.2.1  成立(true)する場合</h4>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter03/image/condition_true.gif" alt="図 4.2.2.1.1 成立(true)する場合">
+</div>
+
+
+<h4 id="doc5_1264">4.2.2.2  不成立(false)する場合</h4>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter03/image/condition_false.gif" alt="図 4.2.2.2.1 不成立(false)する場合">
+</div>
+
+
+<h4 id="doc5_1269">4.2.2.3  注意すること</h4>
+
+<p class="first_ja">注意することは、条件式で、同じかどうか調べるには「==」(イコールを2つ)にしなければならないことです。</p>
+<p>これに対して、「=」(イコール1つ)は代入ですので、注意してください。</p>
+
+<h3 id="doc5_1279">4.2.3  複数の分岐</h3>
+
+
+<h4 id="doc5_1281">4.2.3.1  じゃんけんプログラム</h4>
+
+<p class="first_ja">複数に分岐するプログラムを書くこともできます。</p>
+<p>次のじゃんけんプログラムを見てみましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter03/image/block_Janken.png" alt="図 4.2.3.1.1 Janken">
+</div>
+
+
+<div id="doc5_src:Janken" class="caption">リスト 4.2.3.1.1 Janken.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * じゃんけんプログラム
+  3:  * 2003/05/08  Yoshiaki Matsuzawa
+  4:  * 2012/10/16 改訂 Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> Janken <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> Janken());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		<span class="keyword">int</span> handNumber;<span class="comment">// じゃんけんの手</span>
+ 17: 
+ 18: 		<span class="comment">// じゃんけんの手は　1をグー,2をチョキ,3をパーとする</span>
+ 19: 		handNumber = random(3) + 1;<span class="comment">// random(3)は0から2までの値を発生するので1を足す</span>
+ 20: 
+ 21: 		<span class="keyword">if</span> (handNumber == 1) {
+ 22: 			{<span class="comment">// c//グーを書く</span>
+ 23: 				fd(30);
+ 24: 
+ 25: 				lt(30);
+ 26: 				fd(25);
+ 27: 				rt(60);
+ 28: 				fd(25);
+ 29: 				rt(150);
+ 30: 				fd(30);
+ 31: 				lt(180);
+ 32: 				fd(20);
+ 33: 
+ 34: 				fd(20);
+ 35: 				rt(90);
+ 36: 				fd(20);
+ 37: 				rt(90);
+ 38: 				fd(20);
+ 39: 				lt(90);
+ 40: 				fd(5);
+ 41: 
+ 42: 				lt(90);
+ 43: 				fd(20);
+ 44: 				rt(90);
+ 45: 				fd(20);
+ 46: 				rt(90);
+ 47: 				fd(20);
+ 48: 				lt(90);
+ 49: 				fd(5);
+ 50: 
+ 51: 				lt(90);
+ 52: 				fd(20);
+ 53: 				rt(90);
+ 54: 				fd(20);
+ 55: 				rt(90);
+ 56: 				fd(20);
+ 57: 				lt(90);
+ 58: 				fd(5);
+ 59: 
+ 60: 				lt(90);
+ 61: 				fd(20);
+ 62: 				rt(90);
+ 63: 				fd(20);
+ 64: 				rt(90);
+ 65: 				fd(20);
+ 66: 
+ 67: 				fd(65);
+ 68: 			}
+ 69: 
+ 70: 		} <span class="keyword">else</span> <span class="keyword">if</span> (handNumber == 2) {
+ 71: 			{<span class="comment">// c//チョキを書く</span>
+ 72: 
+ 73: 				fd(30);
+ 74: 
+ 75: 				lt(30);
+ 76: 				fd(25);
+ 77: 				rt(60);
+ 78: 				fd(25);
+ 79: 				rt(150);
+ 80: 				fd(30);
+ 81: 				lt(180);
+ 82: 				fd(30);
+ 83: 
+ 84: 				lt(15);
+ 85: 				fd(80);
+ 86: 				rt(105);
+ 87: 				fd(20);
+ 88: 				rt(75);
+ 89: 				fd(80);
+ 90: 				lt(75);
+ 91: 
+ 92: 				lt(75);
+ 93: 				fd(80);
+ 94: 				rt(75);
+ 95: 				fd(20);
+ 96: 				rt(105);
+ 97: 				fd(80);
+ 98: 				fd(20);
+ 99: 				lt(105);
+100: 				fd(5);
+101: 
+102: 				lt(90);
+103: 				fd(20);
+104: 				rt(90);
+105: 				fd(20);
+106: 				rt(90);
+107: 				fd(20);
+108: 				lt(90);
+109: 				fd(5);
+110: 
+111: 				lt(90);
+112: 				fd(20);
+113: 				rt(90);
+114: 				fd(20);
+115: 				rt(90);
+116: 				fd(20);
+117: 
+118: 				fd(65);
+119: 			}
+120: 
+121: 		} <span class="keyword">else</span> <span class="keyword">if</span> (handNumber == 3) {
+122: 			{<span class="comment">// c//パーを書く</span>
+123: 
+124: 				fd(30);
+125: 
+126: 				lt(30);
+127: 				fd(80);
+128: 				rt(120);
+129: 				fd(20);
+130: 				rt(60);
+131: 				fd(40);
+132: 				lt(150);
+133: 				fd(15);
+134: 
+135: 				fd(80);
+136: 				rt(90);
+137: 				fd(20);
+138: 				rt(90);
+139: 				fd(80);
+140: 				lt(90);
+141: 				fd(5);
+142: 
+143: 				lt(90);
+144: 				fd(80);
+145: 				rt(90);
+146: 				fd(20);
+147: 				rt(90);
+148: 				fd(80);
+149: 				lt(90);
+150: 				fd(5);
+151: 
+152: 				lt(90);
+153: 				fd(80);
+154: 				rt(90);
+155: 				fd(20);
+156: 				rt(90);
+157: 				fd(80);
+158: 				lt(90);
+159: 				fd(5);
+160: 
+161: 				lt(90);
+162: 				fd(80);
+163: 				rt(90);
+164: 				fd(20);
+165: 				rt(90);
+166: 				fd(80);
+167: 
+168: 				fd(75);
+169: 			}
+170: 
+171: 		} <span class="keyword">else</span> { <span class="comment">// 1,2,3以外の場合</span>
+172: 
+173: 			print(<span class="quote">&quot;不正な数です。&quot;</span>);
+174: 
+175: 		}
+176: 
+177: 	}
+178: 
+179: }
+</pre>
+
+<p><a href="chapter03/src/Janken.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Jankenプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter03_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Janken"/>
+</applet></p>
+
+<h4 id="doc5_1306">4.2.3.2  じゃんけんの手のデータの扱いについて</h4>
+
+<p class="first_ja">じゃんけんプログラムのような現実問題を扱うときに問題となるのは、
+						データ（グー、チョキ、パーの手）をどうコンピュータで扱えるようにするかです。
+						コンピュータでは、そのままこの概念を表すことができないので、
+						ここでは、1,2,3の数値で表すという方法で実現することを考えましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter03/image/janken_data_model.gif" alt="図 4.2.3.2.1 じゃんけんの手をどのようにプログラムのデータとして扱うか">
+</div>
+
+<p>このように、現実に即したプログラムを作成するためには、
+						データをコンピュータが扱う形式に変換するという作業が必要になります。
+						この作業のことをデータ構造の設計(モデル化)といいます。</p>
+
+<h4 id="doc5_1317">4.2.3.3  複数の条件分岐</h4>
+
+<p class="first_ja">else if 文を使うと、複数にわたる条件分岐を記述することができます。</p>
+<p>記述例(書式)を以下に示します。ちなみに、一つのif文に対して、else if文はいくつでも書くことができます。</p>
+
+<pre id="doc5_1325" class="program">
+if( [条件式] ) {
+	処理A
+} else if( [条件式] ) {
+	処理B
+} else{
+	処理C
+}
+					
+</pre>
+
+<p>この場合のフローチャートは次のようになります。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter03/image/ifelse_flow_chart.gif" alt="図 4.2.3.3.1 複数にわたる条件分岐のフローチャート">
+</div>
+
+
+<h2 id="doc5_1336">4.3  いろいろな条件式</h2>
+
+
+<h3 id="doc5_1338">4.3.1  比較演算子</h3>
+
+<p class="first_ja">次のプログラムを見てみましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter03/image/block_Rohrer.png" alt="図 4.3.1.1 Rohrer">
+</div>
+
+
+<div id="doc5_src:Rohrer" class="caption">リスト 4.3.1.1 Rohrer.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 健康管理プログラム
+  3:  * （身長と体重からローレル指数を計算し、体型に対するコメントを表示する）
+  4:  * 2003/05/08  Yoshiaki Matsuzawa
+  5:  * 2012/10/16 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> Rohrer <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> Rohrer());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		<span class="keyword">int</span> height; <span class="comment">// 身長</span>
+ 18: 		<span class="keyword">int</span> weight; <span class="comment">// 体重</span>
+ 19: 		<span class="keyword">int</span> rohrer; <span class="comment">// ローレル指数</span>
+ 20: 
+ 21: 		{<span class="comment">// ユーザの入力を受け取る</span>
+ 22: 			print(<span class="quote">&quot;身長を入力してください&quot;</span>);
+ 23: 			height = input();
+ 24: 			print(<span class="quote">&quot;体重を入力してください&quot;</span>);
+ 25: 			weight = input();
+ 26: 		}
+ 27: 
+ 28: 		{<span class="comment">// ローレル指数を求める</span>
+ 29: 			rohrer = weight * 10000000 / height / height / height;
+ 30: 			print(<span class="quote">&quot;ローレル指数は&quot;</span> + rohrer + <span class="quote">&quot;です。&quot;</span>);
+ 31: 		}
+ 32: 
+ 33: 		{<span class="comment">// 体型に対するコメントを提示する</span>
+ 34: 			<span class="keyword">if</span> (rohrer &lt; 100) {
+ 35: 				print(<span class="quote">&quot;やせすぎですね。&quot;</span>);
+ 36: 			} <span class="keyword">else</span> <span class="keyword">if</span> (rohrer &lt; 115) {
+ 37: 				print(<span class="quote">&quot;やせていますね。&quot;</span>);
+ 38: 			} <span class="keyword">else</span> <span class="keyword">if</span> (rohrer &lt; 145) {
+ 39: 				print(<span class="quote">&quot;普通ですね。&quot;</span>);
+ 40: 			} <span class="keyword">else</span> <span class="keyword">if</span> (rohrer &lt; 160) {
+ 41: 				print(<span class="quote">&quot;太っていますね。&quot;</span>);
+ 42: 			} <span class="keyword">else</span> {
+ 43: 				print(<span class="quote">&quot;太りすぎですね。&quot;</span>);
+ 44: 			}
+ 45: 		}
+ 46: 	}
+ 47: }
+</pre>
+
+<p><a href="chapter03/src/Rohrer.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Rohrerプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter03_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Rohrer"/>
+</applet></p>
+<p>今度のプログラムでは、ローレル指数の範囲に対応して、メッセージが変わっていますね。
+					このように、プログラムでは、変数に入っている値が同じかどうかを調べるだけでなく、
+					大きさの大小を比較して、条件を判定することもできます。</p>
+
+<div class="table">
+<table id="doc5_1362" class="data" rules="groups">
+<caption>表 4.3.1.1 Javaで使える数値の比較演算子</caption>
+<colgroup span=3>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th align="center">演算子</th>
+<th align="center">表記例</th>
+<th align="center">評価</th>
+</tr>
+<tr>
+<th align="center">==</th>
+<td>A==B</td>
+<td>AとBが同じ値の時成立(true)</td>
+</tr>
+<tr>
+<th align="center">!=</th>
+<td>A!=B</td>
+<td>AとBが同じ値でない時成立(true)</td>
+</tr>
+<tr>
+<th align="center">&gt;</th>
+<td>A&gt;B</td>
+<td>AがBより大きい時成立(true)</td>
+</tr>
+<tr>
+<th align="center">&lt;</th>
+<td>A&lt;B</td>
+<td>AがBより小さい時成立(true)</td>
+</tr>
+<tr>
+<th align="center">&gt;=</th>
+<td>A&gt;=B</td>
+<td>AがB以上の時成立(true)</td>
+</tr>
+<tr>
+<th align="center">&lt;=</th>
+<td>A&lt;=B</td>
+<td>AがB以下の時成立(true)</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h3 id="doc5_1453">4.3.2  論理演算子</h3>
+
+<p class="first_ja">次のプログラムを見てみましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter03/image/block_Rohrer2.png" alt="図 4.3.2.1 Rohrer2">
+</div>
+
+
+<div id="doc5_src:Rohrer2" class="caption">リスト 4.3.2.1 Rohrer2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 健康管理プログラム
+  3:  * （身長と体重からローレル指数を計算し、体型に対するコメントを表示する）
+  4:  * 2003/05/08  Yoshiaki Matsuzawa
+  5:  * 2012/10/16 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> Rohrer2 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> Rohrer2());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		<span class="keyword">int</span> height; <span class="comment">// 身長</span>
+ 18: 		<span class="keyword">int</span> weight; <span class="comment">// 体重</span>
+ 19: 		<span class="keyword">int</span> rohrer; <span class="comment">// ローレル指数</span>
+ 20: 
+ 21: 		{<span class="comment">// ユーザの入力を受け取る</span>
+ 22: 			print(<span class="quote">&quot;身長を入力してください&quot;</span>);
+ 23: 			height = input();
+ 24: 			print(<span class="quote">&quot;体重を入力してください&quot;</span>);
+ 25: 			weight = input();
+ 26: 		}
+ 27: 
+ 28: 		{<span class="comment">// ローレル指数を求める</span>
+ 29: 			rohrer = weight * 10000000 / height / height / height;
+ 30: 			print(<span class="quote">&quot;ローレル指数は&quot;</span> + rohrer + <span class="quote">&quot;です。&quot;</span>);
+ 31: 		}
+ 32: 
+ 33: 		{<span class="comment">// 体型に対するコメントを提示する</span>
+ 34: 			<span class="keyword">if</span> (rohrer &lt; 100) {
+ 35: 				print(<span class="quote">&quot;やせすぎですね。&quot;</span>);
+ 36: 			}
+ 37: 			<span class="keyword">if</span> (rohrer &gt;= 100 &amp;&amp; rohrer &lt; 115) {
+ 38: 				print(<span class="quote">&quot;やせていますね。&quot;</span>);
+ 39: 			}
+ 40: 			<span class="keyword">if</span> (rohrer &gt;= 115 &amp;&amp; rohrer &lt; 145) {
+ 41: 				print(<span class="quote">&quot;普通ですね。&quot;</span>);
+ 42: 			}
+ 43: 			<span class="keyword">if</span> (rohrer &gt;= 145 &amp;&amp; rohrer &lt; 160) {
+ 44: 				print(<span class="quote">&quot;太っていますね。&quot;</span>);
+ 45: 			}
+ 46: 			<span class="keyword">if</span> (rohrer &gt;= 160) {
+ 47: 				print(<span class="quote">&quot;太りすぎですね。&quot;</span>);
+ 48: 			}
+ 49: 		}
+ 50: 	}
+ 51: }
+</pre>
+
+<p><a href="chapter03/src/Rohrer2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Rohrer2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter03_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Rohrer2"/>
+</applet></p>
+<p>今度のプログラムも、前例とやっていることは同じなのですが、条件文がちょっと異なっていますね。</p>
+<p>論理演算子を使うと、2つの条件式を使って、それらの条件が両方とも(And)もしくは、
+					どちらか(Or)が成立した時のように、組み合わされた条件式全体の条件を判定することができます。</p>
+
+<div class="table">
+<table id="doc5_1480" class="data" rules="groups">
+<caption>表 4.3.2.1 Javaで使える論理演算子</caption>
+<colgroup span=3>
+<col>
+<col>
+<col>
+</colgroup>
+<tbody>
+<tr>
+<th align="center">演算子</th>
+<th align="center">表記例</th>
+<th align="center">意味</th>
+</tr>
+<tr>
+<th align="center">&amp;&amp;</th>
+<td>A&amp;&amp;B</td>
+<td>AとB両方ともtrueの時true</td>
+</tr>
+<tr>
+<th align="center">||</th>
+<td>A||B</td>
+<td>AもしくはBがtrueの時true</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<h4 id="doc5_1522">4.3.2.1  論理演算子の評価の過程</h4>
+
+<p class="first_ja">論理演算子の評価の過程を見ていきましょう。</p>
+
+<h4 id="doc5_1527">  And演算子が成立(true)する場合</h4>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter03/image/condition_logic_and_true.gif" alt="図 .1 And演算子が成立(true)する場合">
+</div>
+
+
+<h4 id="doc5_1532">  And演算子が不成立(false)する場合</h4>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter03/image/condition_logic_and_false.gif" alt="図 .1 And演算子が不成立(false)する場合">
+</div>
+
+
+<h2 id="doc5_1540">4.4  変数のスコープ（有効範囲）</h2>
+
+<p class="first_ja">変数には有効範囲（スコープといいます）があります．Javaでは基本的に，宣言した変数のブロック内(「{}」で囲まれた範囲)がスコープになります．</p>
+<p>例えば、次のような例の場合の各変数のスコープは下表のようになります。</p>
+
+<pre id="doc5_1548" class="program">
+void start(){				
+	
+	int z;
+	
+	if( [条件式] ) {
+	
+		int x;
+		処理A
+		
+	} else {
+	
+		int y;
+		処理B
+		
+	}
+}
+				
+</pre>
+
+
+<div class="table">
+<table id="doc5_1551" class="data" rules="groups">
+<caption>表 4.4.1 変数のスコープ</caption>
+<colgroup span=3>
+<col>
+<col>
+<col>
+</colgroup>
+<thead>
+<tr>
+<th align="center">変数名</th>
+<th align="center">処理A</th>
+<th align="center">処理B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>有効</td>
+<td>無効</td>
+</tr>
+<tr>
+<td>y</td>
+<td>無効</td>
+<td>有効</td>
+</tr>
+<tr>
+<td>z</td>
+<td>有効</td>
+<td>有効</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<p>スコープ外で変数を呼び出そうとすると、コンパイルエラーが出ます。</p>
+<p>スコープ外なら同じ変数名を使うことができます。
+					その場合、それぞれの変数が違う値を持つことになります。</p>
+
+<h2 id="doc5_1615">4.5  練習問題</h2>
+
+
+<h3 id="doc5_1617">4.5.1  絵の描き分けプログラムを作ろう</h3>
+
+<p class="first_ja">前回作ったプログラムを改造して、条件式を使って、
+				ユーザの入力に応じて、タートルの書く絵を変えるプログラムを書いてください。
+				余裕がある人は、条件文を駆使して実用的なプログラムに挑戦してみてください。</p>
+<p>ファイル名は「FigureShop.java」とすること．</p>
+
+<h3 id="doc5_1626">4.5.2  おみくじプログラムを作ろう</h3>
+
+<p class="first_ja">乱数と条件分岐を使って、「大吉」「中吉」「小吉」「凶」を表示するプログラムを作りましょう。
+				大吉のときだけ、タートルの絵（星など）を描くようにしましょう。</p>
+<p>ファイル名は「Omikuji.java」とすること．</p>
+
+<h3 id="doc5_1635">4.5.3  評点グレード変換プログラムを作ろう</h3>
+
+<p class="first_ja">入力と条件分岐を使って、「秀」「優」「良」「可」「不可」を表示するプログラムを作りましょう。
+				ユーザが評点を入力すると、それに応じたグレードが表示されるようにプログラムを書いてください。
+				評点区分とグレードの定義は<a href="http://www.hedc.shizuoka.ac.jp/out/gpa/GPAsite/a1.html" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">静大の評価制度</a>を利用すること。</p>
+<p>ファイル名は「Grade.java」とすること．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c3.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/プログラムに知性を(条件分岐)</td>
+<td><a href="index_p1_c5.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

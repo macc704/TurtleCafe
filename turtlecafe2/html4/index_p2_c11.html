@@ -1,0 +1,1619 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p2.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p2.html#doc1_part:onedash" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">CUI情報処理プログラミング</a>/はじめてのCUIプログラム</td>
+<td><a href="index_p3.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_45">11  はじめてのCUIプログラム</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc12_3973" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.1  学習目標</a>
+<li> <a href="#doc12_3985" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.2  はじめてのCUIプログラム</a>
+<ul>
+<li> <a href="#doc12_3987" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.2.1  CUIとは</a>
+<li> <a href="#doc12_3999" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.2.2  タートルプログラムとの違い</a>
+<li> <a href="#doc12_4017" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.2.3  情報の表示とユーザ入力の受け取り</a>
+<li> <a href="#doc12_4039" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.2.4  Java標準ライブラリ</a>
+<ul>
+<li> <a href="#doc12_4041" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.2.4.1  インポート</a>
+<li> <a href="#doc12_4056" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.2.4.2  入力を受け付ける命令</a>
+<li> <a href="#doc12_4071" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.2.4.3  コンソールに出力する命令</a>
+</ul>
+<li> <a href="#doc12_4081" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.2.5  変数の型-文字列型</a>
+</ul>
+<li> <a href="#doc12_4094" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.3  入力、処理、出力</a>
+<ul>
+<li> <a href="#doc12_4096" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.3.1  西暦和暦変換プログラム</a>
+<li> <a href="#doc12_4118" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.3.2  変数の型-整数型</a>
+</ul>
+<li> <a href="#doc12_4134" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.4  変数の型とキャスト</a>
+<ul>
+<li> <a href="#doc12_4136" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.4.1  平均得点計算プログラム</a>
+<li> <a href="#doc12_4158" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.4.2  変数の型-浮動小数点数型</a>
+<li> <a href="#doc12_sec:cast" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.4.3  キャスト（型変換）</a>
+</ul>
+<li> <a href="#doc12_4195" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.5  CUIプログラムの作り方</a>
+<ul>
+<li> <a href="#doc12_4197" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.5.1  クラス（ファイル）の作り方</a>
+<li> <a href="#doc12_4203" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.5.2  新しい命令-変数の型と変数宣言</a>
+<li> <a href="#doc12_sec:method" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.5.3  Java標準ライブラリを使った命令</a>
+<ul>
+<li> <a href="#doc12_4247" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.5.3.1  標準出力に文字を出力する命令</a>
+<li> <a href="#doc12_4271" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.5.3.2  ユーザから入力を受け取る命令</a>
+<li> <a href="#doc12_4313" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.5.3.3  乱数を求める命令(その１)</a>
+<li> <a href="#doc12_4328" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.5.3.4  乱数を求める命令(その２)</a>
+</ul>
+</ul>
+<li> <a href="#doc12_4372" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6  練習問題</a>
+<ul>
+<li> <a href="#doc12_4374" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.1  0.1を10回加算するプログラム</a>
+<li> <a href="#doc12_4383" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.2  0.125を8回加算するプログラム</a>
+<li> <a href="#doc12_4392" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.3  乱数生成プログラム</a>
+<li> <a href="#doc12_4410" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.4  四捨五入プログラム</a>
+<li> <a href="#doc12_4431" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.5  割り勘計算機</a>
+<li> <a href="#doc12_4458" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.6  体型評価プログラム</a>
+<ul>
+<li> <a href="#doc12_4460" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.6.1  概要</a>
+<li> <a href="#doc12_4466" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.6.2  機能</a>
+<li> <a href="#doc12_4505" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.6.3  エラー処理</a>
+<li> <a href="#doc12_4511" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.6.4  プログラム設計条件</a>
+</ul>
+<li> <a href="#doc12_4530" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.7  恋愛占いプログラム</a>
+<ul>
+<li> <a href="#doc12_4532" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.7.1  概要</a>
+<li> <a href="#doc12_4538" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.7.2  機能</a>
+<li> <a href="#doc12_4574" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.7.3  エラー処理</a>
+<li> <a href="#doc12_4580" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.7.4  プログラム設計条件</a>
+</ul>
+<li> <a href="#doc12_4617" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.8  単位取得状況評価プログラム</a>
+<ul>
+<li> <a href="#doc12_4619" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.8.1  概要</a>
+<li> <a href="#doc12_4625" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.8.2  機能</a>
+<li> <a href="#doc12_4664" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.8.3  エラー処理</a>
+<li> <a href="#doc12_4670" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.6.8.4  プログラム設計条件</a>
+</ul>
+</ul>
+<li> <a href="#doc12_4687" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7  発展問題</a>
+<ul>
+<li> <a href="#doc12_4689" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.1  脳トレ　論プロ風</a>
+<ul>
+<li> <a href="#doc12_4691" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.1.1  概要</a>
+<li> <a href="#doc12_4697" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.1.2  機能</a>
+<li> <a href="#doc12_4739" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.1.3  エラー処理</a>
+<li> <a href="#doc12_4745" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.1.4  プログラム設計条件</a>
+</ul>
+<li> <a href="#doc12_4763" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.2  マイホーム大作戦</a>
+<ul>
+<li> <a href="#doc12_4765" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.2.1  概要</a>
+<li> <a href="#doc12_4771" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.2.2  機能</a>
+<li> <a href="#doc12_4816" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.2.3  エラー処理</a>
+<li> <a href="#doc12_4822" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.2.4  プログラム設計条件</a>
+</ul>
+<li> <a href="#doc12_4838" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.3  ザ･バイナリサーチ</a>
+<ul>
+<li> <a href="#doc12_4840" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.3.1  概要</a>
+<li> <a href="#doc12_4846" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.3.2  機能</a>
+<li> <a href="#doc12_4891" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.3.3  エラー処理</a>
+<li> <a href="#doc12_4897" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.3.4  プログラム設計条件</a>
+</ul>
+<li> <a href="#doc12_4913" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.4  世界の○○</a>
+<ul>
+<li> <a href="#doc12_4915" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.4.1  概要</a>
+<li> <a href="#doc12_4921" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.4.2  機能</a>
+<li> <a href="#doc12_4948" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.4.3  エラー処理</a>
+<li> <a href="#doc12_4954" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">11.7.4.4  プログラム設計条件</a>
+</ul>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc12_3973">11.1  学習目標</h2>
+
+
+<ul>
+<li> CUIプログラムが書けるようになる。
+<li> 変数の型（整数型・文字列型・浮動小数点型）を理解する</ul>
+
+
+<h2 id="doc12_3985">11.2  はじめてのCUIプログラム</h2>
+
+
+<h3 id="doc12_3987">11.2.1  CUIとは</h3>
+
+<p class="first_ja">【Character User Interface】</p>
+<p>ユーザに対する情報の表示を文字によって行ない、すべての操作をキーボードを用いて行なうユーザインターフェースのこと。</p>
+<p>ユーザから入力を受け取ることもできる。（IT用語辞典より）</p>
+
+<h3 id="doc12_3999">11.2.2  タートルプログラムとの違い</h3>
+
+<p class="first_ja">今までは、プログラミング初心者のために用意された
+					「タートルライブラリ」
+					<span class=note><a href="#note2" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)" title="論プロエディタで使用しているタートルライブラリは、萩野先生が９８年に作ったものをもとに、大岩研究室で機能追加を行ったものです。"><sup>(2)</sup></a></span>
+					というライブラリを使ってプログラミングをしてきました。</p>
+<p>ライブラリとは、特定の機能を持ったプログラムを１つのファイルにまとめたものです。
+					ライブラリは単体で実行することはできず、他のプログラムの１部として動作します。</p>
+<p>fd(100)やinput()やprint()などの命令は、「タートルライブラリ」というプログラムがなければ使えません。
+					（論プロエディタには、「タートルライブラリ」があらかじめ入っています）</p>
+<p>これから学習するCUIプログラムでは、Java標準ライブラリという、Javaにはじめから入っている、
+					プロでも使っているライブラリを使ってプログラミングをします。</p>
+
+<div class=footnote>
+<ol>
+<li id="note2" value="2"> 論プロエディタで使用しているタートルライブラリは、萩野先生が９８年に作ったものをもとに、大岩研究室で機能追加を行ったものです。</ol>
+</div>
+
+
+<h3 id="doc12_4017">11.2.3  情報の表示とユーザ入力の受け取り</h3>
+
+<p class="first_ja">次のプログラムはユーザから文字列の入力を受け取り、おうむ返しするプログラムです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter06/image/block/InputAndPrint.jpg">
+</div>
+
+
+<div id="doc12_src:InputAndPrint" class="caption">リスト 11.2.3.1 InputAndPrint.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="keyword">import</span> java.util.*;
+  2: 
+  3: <span class="comment">/**
+  4: * プログラム名： おうむ返しのプログラム
+  5: * 作成者： Yoshiaki Matsuzawa
+  6: * 作成日： 2007/09/22
+  7: */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> InputAndPrint{
+  9: 	
+ 10: 	<span class="comment">//起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		InputAndPrint main = <span class="keyword">new</span> InputAndPrint();
+ 13: 		main.run();
+ 14: 	}
+ 15: 	
+ 16: 	<span class="comment">//おうむ返しをする</span>
+ 17: 	<span class="keyword">public</span> <span class="keyword">void</span> run() {
+ 18: 		<span class="comment">//前処理</span>
+ 19: 		Scanner scanner = <span class="keyword">new</span> Scanner(System.in);<span class="comment">//入力を受け取るためのスキャナ</span>
+ 20: 		
+ 21: 		<span class="comment">//入力を受けとる</span>
+ 22: 		System.out.print(<span class="quote">&quot;好きな文字を入力&gt;&gt;&quot;</span>);
+ 23: 		String text = scanner.nextLine();
+ 24: 		
+ 25: 		<span class="comment">//出力を行う</span>
+ 26: 		String reply = <span class="quote">&quot;あなたの入力したのは&quot;</span> + text + <span class="quote">&quot;ですね&quot;</span>;
+ 27: 		System.out.println(reply);
+ 28: 	}
+ 29: 	
+ 30: }
+</pre>
+
+<p><a href="chapter06/src/InputAndPrint.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、InputAndPrintプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter06_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="InputAndPrintApplet"/>
+</applet></p>
+
+<h3 id="doc12_4039">11.2.4  Java標準ライブラリ</h3>
+
+
+<h4 id="doc12_4041">11.2.4.1  インポート</h4>
+
+<p class="first_ja">importとは、名前空間を取り込む命令です。
+						import文を書くと、別パッケージの中にあるクラス名をフルネームで指定しなくてすむようなります。
+						Java標準ライブラリの機能である「java.util.Scanner」をパッケージ名（java.util）なしで使うために、
+						このプログラムでは１行目でライブラリをインポートしています。</p>
+<p>System.outは、Java標準ライブラリ（rt.jar）の中の「java.lang」というパッケージに入っていますが、
+						これはJavaの仕様により自動でインポートされるので、import文を書かなくても使えます。</p>
+<p>（ちなみに，今までのタートルプログラムは，デフォルトパッケージ（パッケージ名がないパッケージ）に
+						インポート文を書かなくても使えていました．</p>
+
+<pre id="doc12_4052" class="program">
+import java.util.*;
+</pre>
+
+
+<h4 id="doc12_4056">11.2.4.2  入力を受け付ける命令</h4>
+
+<p class="first_ja">Java標準ライブラリの「Scanner」を使って、ユーザからの入力を受け付けることができます。
+						タートルプログラムでは、input()命令を使っていました。</p>
+
+<pre id="doc12_4061" class="program">
+19:	Scanner scanner = new Scanner(System.in);//入力を受け取るためのスキャナを作る
+23:	String text = scanner.nextLine();//スキャナを使って文字を読み込む
+					
+</pre>
+
+<p>スキャナーは、文字以外にも、整数や浮動小数点数などを読み込むことができます。
+						これらについては、あとで説明します。</p>
+
+<pre id="doc12_4067" class="program">
+int number = scanner.nextInt();//スキャナを使って整数を読み込む
+double number = scanner.nextDouble();//スキャナを使って浮動小数点数を読み込む
+					
+</pre>
+
+
+<h4 id="doc12_4071">11.2.4.3  コンソールに出力する命令</h4>
+
+<p class="first_ja">Java標準ライブラリの「System.out」を使って、コンソールに文字を出力することができます。
+						タートルプログラムでは、print()命令を使っていました。</p>
+
+<pre id="doc12_4076" class="program">
+22:	System.out.print(&quot;好きな文字を入力&gt;&gt;&quot;);//改行なしで&quot;&quot;内の文字を出力する
+27:	System.out.println(reply);//改行ありで（）内の文字（文字列型の変数の中身）を出力する
+					
+</pre>
+
+
+<h3 id="doc12_4081">11.2.5  変数の型-文字列型</h3>
+
+<p class="first_ja">変数には、今までタートルプログラムでも使ってきたint（整数）型のほかに、
+					String（文字列）型や、double（浮動小数点数）型があります。</p>
+<p>おうむ返しプログラムでは、ユーザから入力された文字を保存しておくために、
+					String（文字列）型の変数を用意しています。</p>
+<p>また、「あなたの入力したのは」と、「text（入力された文字列）」と、 「ですね」を+記号で連結し、
+					まとめて「reply」という文字列型の変数に入れて、出力しています。</p>
+
+<h2 id="doc12_4094">11.3  入力、処理、出力</h2>
+
+
+<h3 id="doc12_4096">11.3.1  西暦和暦変換プログラム</h3>
+
+<p class="first_ja">次のプログラムは、西暦を入力すると、変換処理を行い、和暦を出力するプログラムです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter06/image/block/ConvertYearApplication1.jpg">
+</div>
+
+
+<div id="doc12_src:ConvertYearApplication1" class="caption">リスト 11.3.1.1 ConvertYearApplication1.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="keyword">import</span> java.util.*;
+  2: 
+  3: <span class="comment">/**
+  4:  * 西暦和暦変換プログラム（メソッドなし）
+  5:  * 
+  6:  * @author オブプロ例題
+  7:  * @version 1.0
+  8:  */</span>
+  9: <span class="keyword">public</span> <span class="keyword">class</span> ConvertYearApplication1{
+ 10: 	
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		ConvertYearApplication1 main = <span class="keyword">new</span> ConvertYearApplication1();
+ 13: 		main.run();
+ 14: 	}
+ 15: 
+ 16: 	Scanner scanner = <span class="keyword">new</span> Scanner(System.in);
+ 17: 	
+ 18: 	<span class="comment">// 西暦を和暦に変換する</span>
+ 19: 	<span class="keyword">public</span> <span class="keyword">void</span> run() {
+ 20: 		<span class="comment">// アプリケーションの開始を知らせる</span>
+ 21: 		System.out.println(<span class="quote">&quot;西暦和暦変換プログラムを開始します&quot;</span>);
+ 22: 
+ 23: 		{<span class="comment">// 西暦を和暦に変換する</span>
+ 24: 			<span class="keyword">int</span> year;
+ 25: 			String japaneseYear;
+ 26: 
+ 27: 			<span class="comment">// 西暦を入力する</span>
+ 28: 			System.out.println(<span class="quote">&quot;西暦を入力してください&quot;</span>);
+ 29: 			year = scanner.nextInt();
+ 30: 
+ 31: 			<span class="comment">// 西暦を和暦に変換する</span>
+ 32: 			<span class="keyword">if</span> (year &gt;= 1989) {
+ 33: 				japaneseYear = <span class="quote">&quot;平成&quot;</span> + (year - 1988);
+ 34: 			} <span class="keyword">else</span> <span class="keyword">if</span> (year &gt;= 1926) {
+ 35: 				japaneseYear = <span class="quote">&quot;昭和&quot;</span> + (year - 1925);
+ 36: 			} <span class="keyword">else</span> {
+ 37: 				japaneseYear = <span class="quote">&quot;不明&quot;</span>;
+ 38: 			}
+ 39: 
+ 40: 			<span class="comment">// 変換結果を出力する</span>
+ 41: 			System.out.println(year + <span class="quote">&quot;年は&quot;</span> + japaneseYear + <span class="quote">&quot;年です.&quot;</span>);
+ 42: 		}
+ 43: 
+ 44: 		<span class="comment">// アプリケーションの終了を知らせる</span>
+ 45: 		System.out.println(<span class="quote">&quot;西暦和暦変換プログラムを終了します&quot;</span>);
+ 46: 	}
+ 47: }
+</pre>
+
+<p><a href="chapter06/src/ConvertYearApplication1.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、ConvertYearApplication1プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter06_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ConvertYearApplication1Applet"/>
+</applet></p>
+
+<h3 id="doc12_4118">11.3.2  変数の型-整数型</h3>
+
+<p class="first_ja">このプログラムでは、西暦（整数型）を読み込んで、
+					西暦和暦変換処理を行い、和暦（文字列型）にして出力しています。 整数を読み込む命令は以下のとおりです。</p>
+
+<pre id="doc12_4123" class="program">
+16:	Scanner scanner = new Scanner(System.in);//入力を受け取るためのスキャナを作る
+29:	year = scanner.nextInt();//スキャナを使って整数を読み込む
+				
+</pre>
+
+<p>整数は文字列と連結し、文字列として保存することができます。
+					このプログラムでは、西暦を和暦に変換するときに、
+					年号（文字列型）と、年（整数型）を連結し、文字列型として出力しています。</p>
+
+<pre id="doc12_4129" class="program">
+35:	japaneseYear = &quot;昭和&quot; + (year - 1925);
+</pre>
+
+
+<h2 id="doc12_4134">11.4  変数の型とキャスト</h2>
+
+
+<h3 id="doc12_4136">11.4.1  平均得点計算プログラム</h3>
+
+<p class="first_ja">次のプログラムは３教科の平均を計算し、小数点１位を四捨五入して平均点を出力するプログラムです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter06/image/block/ScoreAverage.jpg">
+</div>
+
+
+<div id="doc12_src:ScoreAverage" class="caption">リスト 11.4.1.1 ScoreAverage.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="keyword">import</span> java.util.*;
+  2: 
+  3: <span class="comment">/**
+  4: * プログラム名：成績平均計算プログラム
+  5: * 作成者： Megumi Araki
+  6: * 作成日： Sat Oct 20 15:11:37 JST 2007
+  7: */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> ScoreAverage{
+  9: 	
+ 10: 	<span class="comment">//起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		ScoreAverage main = <span class="keyword">new</span> ScoreAverage();
+ 13: 		main.run();
+ 14: 	}
+ 15: 	
+ 16: 	<span class="comment">//メイン処理</span>
+ 17: 	<span class="keyword">public</span> <span class="keyword">void</span> run() {
+ 18: 		
+ 19: 		<span class="comment">//各教科の点数を設定する</span>
+ 20: 		<span class="keyword">int</span> japanese = 49; <span class="comment">//国語</span>
+ 21: 		<span class="keyword">int</span> mathematics = 72; <span class="comment">//数学</span>
+ 22: 		<span class="keyword">int</span> english = 25; <span class="comment">//英語</span>
+ 23: 		
+ 24: 		<span class="comment">//３教科の合計点を求める</span>
+ 25: 		<span class="keyword">double</span> total = japanese + mathematics  + english;
+ 26: 		<span class="comment">//３教科の平均を求める</span>
+ 27: 		<span class="keyword">double</span> average = total / 3.0; <span class="comment">//平均を計算する</span>
+ 28: 		
+ 29: 		<span class="comment">//平均を四捨五入する</span>
+ 30: 		average = average * 10;
+ 31: 		<span class="keyword">if</span> ((average % 10) &gt;= 5) { <span class="comment">//１の位が５以上なら</span>
+ 32: 			average = average + 10; <span class="comment">//繰り上げる</span>
+ 33: 		}
+ 34: 		<span class="keyword">int</span> result = (<span class="keyword">int</span>) (average / 10);<span class="comment">//double型のaverageをint型に型変換して、resultに代入する</span>
+ 35: 		
+ 36: 		<span class="comment">//四捨五入した平均を表示する</span>
+ 37: 		System.out.println(result);
+ 38: 		
+ 39: 	}
+ 40: 	
+ 41: }
+</pre>
+
+<p><a href="chapter06/src/ScoreAverage.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、ScoreAverageプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter06_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ScoreAverageApplet"/>
+</applet></p>
+
+<h3 id="doc12_4158">11.4.2  変数の型-浮動小数点数型</h3>
+
+<p class="first_ja">このプログラムでは、浮動小数点数（double)を扱っています。</p>
+<p>浮動小数点数には誤差があります。 これは、コンピュータは２進法で計算をしており、
+					普段わたしたちが使っている１０進法とは違うためです。</p>
+
+<h3 id="doc12_sec:cast">11.4.3  キャスト（型変換）</h3>
+
+<p class="first_ja">通常、整数型に浮動小数点数型を代入するなど、値を型の違う変数を代入することはできません
+					（浮動小数点数型の変数に整数を代入するなど、Javaで認められているものは、特別な処理をしなくても自動で型変換が行われ、代入ができる）。</p>
+<p>このような場合、プログラマが明示的に「キャスト（型変換）」を行う必要があります。キャストの命令は、次のように書きます。</p>
+
+<pre id="doc12_4178" class="program">
+（変換したい型）変換元の変数；
+</pre>
+
+<p>今回のプログラムでは、以下のようにしてdouble型の変数をint型にキャストして、int型の変数に代入しています。</p>
+
+<pre id="doc12_4184" class="program">
+34:	int result = (int) (average / 10);
+</pre>
+
+<p>Javaでは、double型をint型にキャストすると、小数点以下は切り捨てられます。
+					この仕様を利用して、四捨五入のプログラムは以下のように書くこともできます。</p>
+
+<pre id="doc12_4190" class="program">
+//平均を四捨五入する
+average = average+0.5;
+int result = (int) (average);
+				
+</pre>
+
+
+<h2 id="doc12_4195">11.5  CUIプログラムの作り方</h2>
+
+
+<h3 id="doc12_4197">11.5.1  クラス（ファイル）の作り方</h3>
+
+<p class="first_ja">論プロエディタのクラス（ファイル）作成画面のテンプレートの中から「CUI」を選んでください。
+					このテンプレートにはあらかじめimport文と、起動処理が書かれています。</p>
+
+<h3 id="doc12_4203">11.5.2  新しい命令-変数の型と変数宣言</h3>
+
+<p class="first_ja">変数には整数型（int）、文字列型（String）、浮動小数点型（double)などがあります。</p>
+<p>文字列や浮動小数点数を変数に保存したい場合は、以下のように書きます。</p>
+<div class="fyi">
+<div class=title>それぞれの型の変数宣言と代入文の例</div>
+
+
+<dl>
+<dt>
+int x=0;
+<dd>
+整数型の変数ｘを作り、０を代入しています。
+<dt>
+double y=0.01;
+<dd>
+浮動小数点数方の変数ｙを作り、０．０１を代入しています。
+<dt>
+String text=&quot;hello&quot;;
+<dd>
+文字列型の変数textを作り、「hello」という文字列を代入しています。</dl>
+
+</div>
+
+
+<h3 id="doc12_sec:method">11.5.3  Java標準ライブラリを使った命令</h3>
+
+
+<h4 id="doc12_4247">11.5.3.1  標準出力に文字を出力する命令</h4>
+
+
+<dl>
+<dt>
+System.out.println(&quot;hello&quot;)
+<dd>
+&quot;（ダブルクォーテーション）で囲まれた文字（例ではhello)を、標準出力（コンソール）に出力します。（改行します）
+<dt>
+System.out.print(&quot;hello&quot;)
+<dd>
+&quot;（ダブルクォーテーション）で囲まれた文字（例ではhello)を、標準出力（コンソール）に出力します。（改行しません）</dl>
+
+
+<h4 id="doc12_4271">11.5.3.2  ユーザから入力を受け取る命令</h4>
+
+
+<dl>
+<dt>
+Scanner scanner = new Scanner(System.in);
+<dd>
+文字を受け取るための「スキャナー」を生成します（下の３つの命令を使うためには、必ず、下の３つの命令の前にこの命令を書いておく必要がある）
+<dt>
+int x = scanner.nextInt()
+<dd>
+整数の入力を受け取り、その値をxという変数に保存します。
+<dt>
+double y = scanner.nextDouble()
+<dd>
+浮動小数点数の入力を受け取り、その値をyという変数に保存します。
+<dt>
+String text = scanner.nextLine()
+<dd>
+文字列の入力を受け取り、その値をtextという変数に保存します。</dl>
+
+
+<h4 id="doc12_4313">11.5.3.3  乱数を求める命令(その１)</h4>
+
+
+<dl>
+<dt>
+double number　=　Math.random();
+<dd>
+乱数を発生させ，numberという変数に保存します．
+									この命令では、0.0 ≦ x ＜ 1.0  の範囲double型実数を生成します．
+									（タートルライブラリのrandom([数]）命令とは、生成する値の範囲が異なるので注意）</dl>
+
+
+<h4 id="doc12_4328">11.5.3.4  乱数を求める命令(その２)</h4>
+
+
+<dl>
+<dt>
+Random random = new Random();
+<dd>
+乱数生成器をを生成します．（randomクラスの命令を使うためには、この命令を書いておく必要があります）
+<dt>
+Random random = new Random([数値]);
+<dd>
+乱数生成器をを生成します．（randomクラスの命令を使うためには、この命令を書いておく必要があります）
+									（[数値]によって，ランダムシードを指定します．）
+<dt>
+int x = random.nextInt([数値])
+<dd>
+0 ≦ x ＜ [数値]の範囲のint型の乱数を生成し，その値をxという変数に保存します．
+<dt>
+double y = random.nextDouble()
+<dd>
+0.0 ≦ y ＜ 1.0の範囲のdouble型の乱数を生成し，その値をyという変数に保存します．</dl>
+
+
+<h2 id="doc12_4372">11.6  練習問題</h2>
+
+
+<h3 id="doc12_4374">11.6.1  0.1を10回加算するプログラム</h3>
+
+<p class="first_ja">0.1を10回加算し、その結果を出力するプログラムを作りましょう。</p>
+<p>ファイル名は「DoubleChecker1.java」とすること</p>
+
+<h3 id="doc12_4383">11.6.2  0.125を8回加算するプログラム</h3>
+
+<p class="first_ja">0.125を8回加算し、その結果を出力するプログラムを作りましょう。</p>
+<p>ファイル名は「DoubleChecker2.java」とすること</p>
+
+<h3 id="doc12_4392">11.6.3  乱数生成プログラム</h3>
+
+<p class="first_ja">乱数を使って10から20の整数をランダムに出力するプログラムを作りましょう。</p>
+<p>実行する度に異なる整数が出力されるようにすること。</p>
+<p>（利用する命令は「<a href="#doc12_sec:method" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">Java標準ライブラリを使った命令</a>」の項で説明してあります）</p>
+<p>ファイル名は「RandomGenerator.java」とすること</p>
+
+<h3 id="doc12_4410">11.6.4  四捨五入プログラム</h3>
+
+<p class="first_ja">小数点第二位を四捨五入するプログラムを作りましょう。（例： 18.54 → 18.5　, 20.18 → 20.2）</p>
+<p>ユーザーが入力した実数を受け取り、その実数の小数点第二位を四捨五入し、その結果を出力すること。</p>
+<p>（利用する命令は「<a href="#doc12_sec:method" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">Java標準ライブラリを使った命令</a>」、四捨五入のヒントは「<a href="#doc12_sec:cast" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">キャスト</a>」の項で説明してあります）</p>
+<p>ファイル名は「Round.java」とすること</p>
+
+<h3 id="doc12_4431">11.6.5  割り勘計算機</h3>
+
+<p class="first_ja">合計金額を人数で割った数を表示する「割り勘計算機」を作りましょう。</p>
+<p>まず「合計金額を入力してください&gt;&gt;」と表示し、合計金額の入力を受け取り、</p>
+<p>次に「飲み会参加人数を入力してください&gt;&gt;」と表示し、人数の入力を受け取り、</p>
+<p>最後に「ひとりあたりの金額は●●円です」と表示しましょう。</p>
+<p>結果は、整数（小数点以下切捨て）で出すようにしてください。</p>
+<p>（すべての変数を整数型にして実装すると、Javaの仕様により、計算結果の小数点以下は切り捨てられます。「<a href="#doc12_sec:cast" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">キャスト</a>」の項で説明してあります）</p>
+<p>ファイル名は「BillSplit.java」とすること</p>
+
+<h3 id="doc12_4458">11.6.6  体型評価プログラム</h3>
+
+
+<h4 id="doc12_4460">11.6.6.1  概要</h4>
+
+<p class="first_ja">このプログラムは、身長と体重の入力を実数で受け付ける。
+						その入力をもとにBMI指数と、その値から評価されたコメントを出力する。</p>
+
+<h4 id="doc12_4466">11.6.6.2  機能</h4>
+
+
+<ol>
+<li> プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+<ul>
+<li> 起動時出力：「開始しました」（適宜変えてよい）
+<li> 終了時出力：「終了しました」（適宜変えてよい）</ul>
+<li> 身長と体重の入力を受け取り、BMI指数と、その値から評価されたコメントを出力する。
+<ul>
+<li> 入力：体重(kg)と身長(cm）の実数値
+<li> 出力：BMI指数（小数点第二位で四捨五入することが望ましい），およびコメント</ul></ol>
+
+
+<ul>
+<li> BMI指数は体重(kg)を身長(m)の二乗で割った数値である。(身長の単位に注意してね！)
+<li> BMI指数から体型を次のように評価し、コメントとする（18.5未満＝やせ、18.5-25未満＝標準、25-35未満＝肥満、35以上＝高度肥満）。</ul>
+
+
+<h4 id="doc12_4505">11.6.6.3  エラー処理</h4>
+
+<p class="first_ja">文字など処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+
+<h4 id="doc12_4511">11.6.6.4  プログラム設計条件</h4>
+
+
+<ol>
+<li> 入出力は起動したコンソールから行う（CUIプログラムである）。
+<li> 身長と体重の入力にはscanner.nextDouble()を使用すること。
+<li> 身長と体重の入力にはscanner.nextDouble()を使用すること。</ol>
+
+<p class="first_ja">ファイル名は「BMI.java」とすること．</p>
+
+<h3 id="doc12_4530">11.6.7  恋愛占いプログラム</h3>
+
+
+<h4 id="doc12_4532">11.6.7.1  概要</h4>
+
+<p class="first_ja">このプログラムは、男女の名前を入力すると、
+						その恋愛成就確率を百分率で判定し、コメント付で出力する。</p>
+
+<h4 id="doc12_4538">11.6.7.2  機能</h4>
+
+
+<ol>
+<li> プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+<ul>
+<li> 起動時出力：「開始しました」（適宜変えてよい）
+<li> 終了時出力：「終了しました」（適宜変えてよい）</ul>
+<li> 男女の名前の入力を受け取り、恋愛成就確率をコメント付で出力する。
+<ul>
+<li> 入力：男女の名前（姓名をつなげたもの）の入力
+<li> 出力：恋愛成就確率(0-100%実数でも整数でも可)、コメント</ul></ol>
+
+
+<ul>
+<li> 成就確率算出アルゴリズムは自由でよいが、指定された範囲の値になるようにすること。コメントは自由でよい。楽しめるように工夫すること。</ul>
+
+
+<h4 id="doc12_4574">11.6.7.3  エラー処理</h4>
+
+<p class="first_ja">処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+
+<h4 id="doc12_4580">11.6.7.4  プログラム設計条件</h4>
+
+
+<ol>
+<li> 入出力は起動したコンソールから行う（CUIプログラムである）。
+<li> 男女の名前の入力にはscanner.nextLine()を使用すること。</ol>
+
+<div class="fyi">
+<div class=title>文字列からハッシュコード（整数）を求める命令</div>
+
+<p class="first_ja">入力された文字列からハッシュコード
+						<span class=note><a href="#note3" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)" title="ハッシュコードとは、ハッシュ関数という、特定のデータを固定長のデータに変換する関数によって求められた値のことです。同じデータからは同じハッシュコードが生成されます。ハッシュコードは、情報セキュリティを高めるための技術として、パスワードの保管やデータの改ざんの検出などに使われています。今回、このプログラムでは相性判断のために、文字列を数値に変換するための手段としてハッシュコードを使いましたが、これはハッシュコードの本来の使い方ではありません。"><sup>(3)</sup></a></span>
+						を求めるには、hashCode()命令を使います。</p>
+<p>以下のプログラムを参考にしてください。</p>
+
+<pre id="doc12_4603" class="program">
+//文字の入力を受けとる
+System.out.print(&quot;文字を入力&gt;&gt;&quot;);
+String text = scanner.nextLine();
+
+//入力された文字をハッシュコード（整数）に変換し、その値をnumberという変数に保存する
+int number = text.hashCode();
+
+//ハッシュコードの出力を行う
+System.out.println(&quot;あなたの入力した文字のハッシュコードは&quot; + number + &quot;ですね&quot;);
+					
+</pre>
+
+</div>
+
+<div class="fyi">
+<div class=title>実装のヒント</div>
+
+<p class="first_ja">ハッシュコードは正負の非常に大きな値を取ります。これを100までの整数にして、
+					百分率表示に使うためには、「負の数だったら（-1）をかけて、正の数にする」
+					「数が100より大きい間、数を10で割り続ける」といった方法が使えます。</p>
+</div>
+
+<p class="first_ja">ファイル名は「LoveChecker.java」とすること．</p>
+
+<div class=footnote>
+<ol>
+<li id="note3" value="3"> ハッシュコードとは、ハッシュ関数という、特定のデータを固定長のデータに変換する関数によって求められた値のことです。同じデータからは同じハッシュコードが生成されます。ハッシュコードは、情報セキュリティを高めるための技術として、パスワードの保管やデータの改ざんの検出などに使われています。今回、このプログラムでは相性判断のために、文字列を数値に変換するための手段としてハッシュコードを使いましたが、これはハッシュコードの本来の使い方ではありません。</ol>
+</div>
+
+
+<h3 id="doc12_4617">11.6.8  単位取得状況評価プログラム</h3>
+
+
+<h4 id="doc12_4619">11.6.8.1  概要</h4>
+
+<p class="first_ja">このプログラムは、あなたの単位取得状況の入力を受け取り、
+						それを評価し、卒業するためのコメントを出力する。</p>
+
+<h4 id="doc12_4625">11.6.8.2  機能</h4>
+
+
+<ol>
+<li> プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+<ul>
+<li> 起動時出力：「開始しました」（適宜変えてよい）
+<li> 終了時出力：「終了しました」（適宜変えてよい）</ul>
+<li> 経過した学期数と現在取得した単位数の入力を受け取り、その値から評価されたコメントを出力する。
+<ul>
+<li> 入力：経過した学期数(0-20)の整数値，取得済みの単位数
+<li> 出力：今後1学期あたりにとらねばならない単位数(CPS:Credit Per Semester)，およびコメント</ul></ol>
+
+
+<ul>
+<li> 最終的に取得すべき単位数などの規則は学則に従うものとする。
+<li> コメントは自由に考えてよい。</ul>
+
+
+<h4 id="doc12_4664">11.6.8.3  エラー処理</h4>
+
+<p class="first_ja">文字など処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+
+<h4 id="doc12_4670">11.6.8.4  プログラム設計条件</h4>
+
+
+<ol>
+<li> 入出力は起動したコンソールから行う（CUIプログラムである）。
+<li> 単位数の入力にはscanner.nextInt()を使用すること。</ol>
+
+<p class="first_ja">ファイル名は「CreditChecker.java」とすること．</p>
+
+<h2 id="doc12_4687">11.7  発展問題</h2>
+
+
+<h3 id="doc12_4689">11.7.1  脳トレ　論プロ風</h3>
+
+
+<h4 id="doc12_4691">11.7.1.1  概要</h4>
+
+<p class="first_ja">ユーザが計算問題を解くことで脳を鍛えるソフトウエアである。
+						このプログラムは、足し算の計算問題を自動生成して、何問か出題し、そのつど答えあわせをする。</p>
+
+<h4 id="doc12_4697">11.7.1.2  機能</h4>
+
+
+<ol>
+<li> プログラムの起動時、および終了時にその旨をユーザに知らせるメッセージを出力する。
+<ul>
+<li> 起動時出力：「開始しました．」（適宜変えてよい）
+<li> 終了時出力：「終了しました．」（適宜変えてよい）</ul>
+<li> <p>足し算の計算問題を生成する。</p>
+
+<ul>
+<li> 出力：問題　（３　＋　４　＝　？）</ul>
+
+<p>各数字の桁数は一桁の整数である（答えは任意の桁数の整数とする）</p>
+<li> 出題し、答えあわせをする。
+<ul>
+<li> 入力：回答
+<li> 出力：答えあわせの結果（正解or不正解(正答を添える)）</ul>
+<li> 2)、3)を連続で10回行い、最後に正答率を出力する。</ol>
+
+
+<h4 id="doc12_4739">11.7.1.3  エラー処理</h4>
+
+<p class="first_ja">処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+
+<h4 id="doc12_4745">11.7.1.4  プログラム設計条件</h4>
+
+
+<ol>
+<li> 入出力は起動したコンソールから行う（CUIプログラムである）。
+<li> 入力はscanner.nextInt()を利用すること。</ol>
+
+<p class="first_ja">ファイル名は「Training.java」とすること．</p>
+
+<h3 id="doc12_4763">11.7.2  マイホーム大作戦</h3>
+
+
+<h4 id="doc12_4765">11.7.2.1  概要</h4>
+
+<p class="first_ja">マイホームローンの返済計算を行うプログラムである。ユーザは家を買うときに利用することを想定する。
+						家の値段とローン年数、利率、月々の返済金額を入力として受け取り、
+						返済が終わるまでにかかる期間、総返済金額を計算し、コメントとともに出力する。</p>
+
+<h4 id="doc12_4771">11.7.2.2  機能</h4>
+
+
+<ol>
+<li> プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+<ul>
+<li> 起動時出力：「開始しました」（適宜変えてよい）
+<li> 終了時出力：「終了しました」（適宜変えてよい）</ul>
+<li> 家の値段とローン年数、利率、月々の返済金額を入力として受け取り、返済が終わるまでにかかる期間、総返済金額を計算し、コメントとともに出力する。
+<ul>
+<li> 入力：家の値段（整数：万円単位だと使いやすい）、利率（百分率の実数）、月々の返済金額（整数）
+<li> 出力：かかる期間（○年）、総返済金額，コメント</ul></ol>
+
+
+<ul>
+<li> ただし、返済方法は、元利均等方式（借入元金と借入利息を合わせて月々、同じ金額を返済する方式）とし、利息は年単位で複利計算を行うものとする。
+<li> たとえば、10000円を利率5％で借り、月々の返済金額が100円の場合、1年目の返済が終了すると、10000円（借入元金）+ 500円（利子）- 1200円（100 * 12ヶ月）= 9300円の借入元金が残る。
+<li> ヒント：返せない場合はプログラムがループする可能性があるので、事前にチェックするとよい。1円未満は切捨てとする（利息はdouble型で計算して、一年ごとに切り捨てるように）。
+<li> なお、コメントは各自工夫してよい（100万円：ちょっと安すぎる家では？50年：長すぎるのは？などなど）。</ul>
+
+
+<h4 id="doc12_4816">11.7.2.3  エラー処理</h4>
+
+<p class="first_ja">処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+
+<h4 id="doc12_4822">11.7.2.4  プログラム設計条件</h4>
+
+
+<ol>
+<li> 入出力は起動したコンソールから行う（CUIプログラムである）。
+<li> 入力はscanner.nextInt()を利用すること。</ol>
+
+<p class="first_ja">ファイル名は「Loan.java」とすること．</p>
+
+<h3 id="doc12_4838">11.7.3  ザ･バイナリサーチ</h3>
+
+
+<h4 id="doc12_4840">11.7.3.1  概要</h4>
+
+<p class="first_ja">「数あてゲーム」である。システムはまず，１-１０００までの整数をランダムに選ぶ（表示しない）。
+						ユーザはこの数をなるべく少ない回答で当てるのが目的である．ユーザは推測した数を入力し、
+						システムは数が当っていたら、あたったことをユーザに知らせて終了、
+						外れていたら、大きすぎるのか、小さすぎるのかをユーザに知らせて再入力を求める。</p>
+
+<h4 id="doc12_4846">11.7.3.2  機能</h4>
+
+
+<ol>
+<li> プログラムの起動時、および終了時にその旨をユーザに知らせるメッセージを出力する。
+<ul>
+<li> 起動時出力：「開始しました．」（適宜変えてよい）
+<li> 終了時出力：「終了しました．」（適宜変えてよい）</ul>
+<li> 整数をランダムに選ぶ。
+<ul>
+<li> 出力：問題の正解　（１-１０００までのランダムな整数）</ul>
+<li> 回答の入力を受けつけ、答えあわせをする。
+<ul>
+<li> プロンプト：「私が選んだ数を当ててみてね．」
+<li> 入力：回答（整数）
+<li> 正解時出力：「正解です．おめでとう！」と出力して終了する。
+<li> 不正解時出力：「ちがいます．」の後、大きすぎるか、小さすぎるかを出力する。</ul></ol>
+
+
+<h4 id="doc12_4891">11.7.3.3  エラー処理</h4>
+
+<p class="first_ja">処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+
+<h4 id="doc12_4897">11.7.3.4  プログラム設計条件</h4>
+
+
+<ol>
+<li> 入出力は起動したコンソールから行う（CUIプログラムである）。
+<li> 入力はscanner.nextInt()を利用すること。</ol>
+
+<p class="first_ja">ファイル名は「Binary.java」とすること．</p>
+
+<h3 id="doc12_4913">11.7.4  世界の○○</h3>
+
+
+<h4 id="doc12_4915">11.7.4.1  概要</h4>
+
+<p class="first_ja">芸人のマネをするソフトウェアである。
+						任意の自然数を受取り、その数だけ数を数える。</p>
+
+<h4 id="doc12_4921">11.7.4.2  機能</h4>
+
+
+<ol>
+<li> プログラムの起動時、および終了時にその旨をユーザに知らせるメッセージを出力する。
+<ul>
+<li> 起動時出力：「開始しました．」（適宜変えてよい）
+<li> 終了時出力：「終了しました．」（適宜変えてよい）</ul>
+<li> 自然数の入力を受取り、その数まで数える。３の倍数の時にバカになり、５の倍数の時には犬っぽくなる。（数える毎に改行してください）
+<pre id="doc12_4939" class="console">
+１
+２
+３(;.ﾟДﾟ.;)ﾉ
+４
+５^U)┬┬~
+６(;.ﾟДﾟ.;)ﾉ
+７											
+							
+</pre>
+<li> ３がつく数のときもバカになるとなおよい（がこれを作るのは結構難しい。）</ol>
+
+
+<h4 id="doc12_4948">11.7.4.3  エラー処理</h4>
+
+<p class="first_ja">処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+
+<h4 id="doc12_4954">11.7.4.4  プログラム設計条件</h4>
+
+
+<ol>
+<li> 入出力は起動したコンソールから行う（CUIプログラムである）。
+<li> 入力はscanner.nextInt()を利用すること。</ol>
+
+<p class="first_ja">ファイル名は「FizzBuzz.java」とすること．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p2.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p2.html#doc1_part:onedash" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">CUI情報処理プログラミング</a>/はじめてのCUIプログラム</td>
+<td><a href="index_p3.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

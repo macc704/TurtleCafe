@@ -1,0 +1,1202 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p4_c16.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p4.html#doc1_part:three" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">データ構造とアルゴリズム</a>/集合データ構造とアルゴリズム（２）：辞書</td>
+<td><a href="index_p4_c18.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_63">17  集合データ構造とアルゴリズム（２）：辞書</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc18_6991" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.1  学習目標</a>
+<li> <a href="#doc18_7000" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.2  入力プログラムの要素技術</a>
+<ul>
+<li> <a href="#doc18_7002" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.2.1  InputTurtle</a>
+<ul>
+<li> <a href="#doc18_7007" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.2.1.1  おうむ返しプログラム（入力タートルバージョン）</a>
+<li> <a href="#doc18_7032" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.2.1.2  2つの入力タートルの制御</a>
+<li> <a href="#doc18_7057" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.2.1.3  InputTurtleの仕様</a>
+</ul>
+<li> <a href="#doc18_7118" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.2.2  ButtonTurtle</a>
+<ul>
+<li> <a href="#doc18_7145" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.2.2.1  ButtonTurtleの仕様</a>
+</ul>
+</ul>
+<li> <a href="#doc18_7189" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.3  辞書のプログラム</a>
+<li> <a href="#doc18_7229" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.4  練習問題</a>
+<ul>
+<li> <a href="#doc18_7231" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.4.1  入力タートルの練習</a>
+<li> <a href="#doc18_7240" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.4.2  作文さん</a>
+<li> <a href="#doc18_7270" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">17.4.3  タイピングゲーム</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc18_6991">17.1  学習目標</h2>
+
+
+<ul>
+<li> 辞書の概念を理解し，プログラムが書けるようになる</ul>
+
+
+<h2 id="doc18_7000">17.2  入力プログラムの要素技術</h2>
+
+
+<h3 id="doc18_7002">17.2.1  InputTurtle</h3>
+
+<p class="first_ja">辞書を作るには、タートル画面から入力を受け付ける部品が必要です。
+					入力を受け付けるには入力タートルを使います（まだひらがなしか入力できません、すみません）。</p>
+
+<h4 id="doc18_7007">17.2.1.1  おうむ返しプログラム（入力タートルバージョン）</h4>
+
+<p class="first_ja">このプログラムは、入力された文字をそのまま表示するプログラムです。</p>
+
+<div id="doc18_src:InputTurtleSample1" class="caption">リスト 17.2.1.1.1 InputTurtleSample1.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * プログラム名：おうむ返しプログラム（入力タートルバージョン） 
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> InputTurtleSample1 <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> InputTurtleSample1(), args);
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		hide();
+ 17: 		<span class="comment">// 入力ボックス</span>
+ 18: 		InputTurtle input = <span class="keyword">new</span> InputTurtle();
+ 19: 		input.warp(30, 30);
+ 20: 		<span class="comment">// 表示用テキスト</span>
+ 21: 		TextTurtle text = <span class="keyword">new</span> TextTurtle(<span class="quote">&quot;ここに文字が表示されます&quot;</span>);
+ 22: 		text.fontsize(14);
+ 23: 
+ 24: 		<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 25: 			sleep(0.025);<span class="comment">// 待つ</span>
+ 26: 
+ 27: 			<span class="comment">// エンターキーが押されたら</span>
+ 28: 			<span class="keyword">if</span> (key() == 10) {
+ 29: 				text.text(input.text());<span class="comment">// 表示用テキストの内容を入力ボックスの内容に変える</span>
+ 30: 				input.clearText();<span class="comment">// 表示用テキストの内容をリセットする</span>
+ 31: 			}
+ 32: 
+ 33: 			update();<span class="comment">// 再描画する</span>
+ 34: 		}
+ 35: 	}
+ 36: }
+</pre>
+
+<p><a href="chapter16/src/InputTurtleSample1.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、InputTurtleSample1プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter16_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="InputTurtleSample1"/>
+</applet></p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter16/image/block/InputTurtleSample1.jpg">
+</div>
+
+<p>キー入力を受けつけ、エンターキーが押されたら、おうむ返しをして、入力ボックスをリセットしています。</p>
+
+<h4 id="doc18_7032">17.2.1.2  2つの入力タートルの制御</h4>
+
+<p class="first_ja">上記プログラムでは、入力タートルを2つ以上作った場合に、両方のタートルに文字が入力されてしまいます。
+						これを解決する方法を次のプログラムに示します。このプログラムは、入力タートルを2つを作り、
+						キー操作によってどちらの入力ボックスを使うか切り替えるプログラムです。</p>
+
+<div id="doc18_src:InputTurtleSample2" class="caption">リスト 17.2.1.2.1 InputTurtleSample2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * プログラム名：２つの入力ボックスを切り替えるプログラム 
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> InputTurtleSample2 <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> InputTurtleSample2(), args);
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		hide();
+ 17: 
+ 18: 		<span class="comment">// 入力ボックス1</span>
+ 19: 		InputTurtle input1 = <span class="keyword">new</span> InputTurtle();
+ 20: 		input1.warp(30, 30);
+ 21: 
+ 22: 		<span class="comment">// 入力ボックス2</span>
+ 23: 		InputTurtle input2 = <span class="keyword">new</span> InputTurtle();
+ 24: 		input2.warp(30, 60);
+ 25: 		input2.setActive(<span class="keyword">false</span>);
+ 26: 
+ 27: 		<span class="comment">// 表示用テキスト</span>
+ 28: 		TextTurtle text = <span class="keyword">new</span> TextTurtle(<span class="quote">&quot;ここに文字が表示されます&quot;</span>);
+ 29: 		text.fontsize(10);
+ 30: 
+ 31: 		<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 32: 
+ 33: 			sleep(0.025);<span class="comment">// 待つ</span>
+ 34: 
+ 35: 			<span class="comment">// エンターキーが押されたら</span>
+ 36: 			<span class="keyword">if</span> (key() == 10) {
+ 37: 				<span class="keyword">if</span> (input1.isActive()) {
+ 38: 					text.text(input1.text());
+ 39: 					input1.clearText();
+ 40: 				} <span class="keyword">else</span> <span class="keyword">if</span> (input2.isActive()) {
+ 41: 					text.text(input2.text());
+ 42: 					input2.clearText();
+ 43: 				}
+ 44: 			}
+ 45: 
+ 46: 			<span class="comment">// スペースキーが押されたら</span>
+ 47: 			<span class="keyword">if</span> (key() == 32) {
+ 48: 				<span class="keyword">if</span> (input1.isActive()) {
+ 49: 					input1.setActive(<span class="keyword">false</span>);
+ 50: 					input2.setActive(<span class="keyword">true</span>);
+ 51: 				} <span class="keyword">else</span> <span class="keyword">if</span> (input2.isActive()) {
+ 52: 					input1.setActive(<span class="keyword">true</span>);
+ 53: 					input2.setActive(<span class="keyword">false</span>);
+ 54: 				}
+ 55: 			}
+ 56: 
+ 57: 			update();<span class="comment">// 再描画する</span>
+ 58: 		}
+ 59: 	}
+ 60: }
+</pre>
+
+<p><a href="chapter16/src/InputTurtleSample2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、InputTurtleSample2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter16_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="InputTurtleSample2"/>
+</applet></p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter16/image/block/InputTurtleSample2.jpg">
+</div>
+
+<p>スペースキーが押されたら、フォーカスを切り替えています。</p>
+
+<h4 id="doc18_7057">17.2.1.3  InputTurtleの仕様</h4>
+
+
+<dl>
+<dt>
+String text()
+<dd>
+入力タートルの内容を取得します
+<dt>
+String getText()
+<dd>
+text()と同様です
+<dt>
+void setActive(boolean active)
+<dd>
+入力受付状態を設定します
+<dt>
+boolean isActive()
+<dd>
+入力受付状態を調べます
+<dt>
+void clearText()
+<dd>
+入力タートルの内容を消去します
+<dt>
+void toJapaneseMode()
+<dd>
+日本語入力モードにします。入力できるのはかなのみです。
+<dt>
+void toEnglishMode()
+<dd>
+英語入力モードにします。入力できるのは小文字のみです。
+<dt>
+int fontsize()
+<dd>
+フォントサイズを取得します
+<dt>
+void fontsize(int size)
+<dd>
+フォントサイズを指定します</dl>
+
+
+<h3 id="doc18_7118">17.2.2  ButtonTurtle</h3>
+
+<p class="first_ja">ButtonTurtleはボタンが押されたことを検知することが出来るオブジェクトです．サンプルプログラムを下記します．</p>
+
+<div id="doc18_src:ButtonSample" class="caption">リスト 17.2.2.1 ButtonSample.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * プログラム名：ボタンのサンプルプログラム
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> ButtonSample <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> ButtonSample(), args);
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		hide();
+ 17: 
+ 18: 		<span class="comment">// ボタンを作る</span>
+ 19: 		ButtonTurtle helloButton = <span class="keyword">new</span> ButtonTurtle(<span class="quote">&quot;押してください！&quot;</span>);
+ 20: 
+ 21: 		<span class="comment">// アニメションループ</span>
+ 22: 		<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 23: 			sleep(0.025);
+ 24: 
+ 25: 			<span class="keyword">if</span> (helloButton.isClicked()) {<span class="comment">// helloButtonがクリックされたら</span>
+ 26: 				print(<span class="quote">&quot;押されました&quot;</span>);
+ 27: 			} <span class="keyword">else</span> {<span class="comment">// 何もクリックされていなかったら</span>
+ 28: 				<span class="comment">// 何もしない</span>
+ 29: 			}
+ 30: 
+ 31: 			update();
+ 32: 		}
+ 33: 	}
+ 34: 
+ 35: }
+</pre>
+
+<p><a href="chapter16/src/ButtonSample.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、ButtonSampleプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter16_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ButtonSample"/>
+</applet></p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter16/image/block/ButtonSample.jpg">
+</div>
+
+<div class="fyi">
+<div class=title>ButtonTurtleを使うプログラム実行の注意</div>
+
+<p class="first_ja">ボタンを使ったプログラムをアプレットで実行する際には、必ず、ボタンが表示されている画面を一度クリックしてください。
+					ボタンが表示されている画面をクリックしないと、ボタンへの入力が受け付けられません。</p>
+</div>
+
+
+<h4 id="doc18_7145">17.2.2.1  ButtonTurtleの仕様</h4>
+
+
+<dl>
+<dt>
+boolean isClicked()
+<dd>
+ボタンがクリックされたか調べます
+<dt>
+String text()
+<dd>
+ボタンのラベルを文字列型で取得します
+<dt>
+String getText()
+<dd>
+text()と同様です
+<dt>
+void text([ボタンのラベル])
+<dd>
+ボタンのラベルを、指定したボタンのラベルに変えます
+<dt>
+int fontsize()
+<dd>
+ボタンのラベルのフォントサイズを取得します
+<dt>
+int fontsize(int size)
+<dd>
+ボタンのラベルのフォントサイズを指定します</dl>
+
+
+<h2 id="doc18_7189">17.3  辞書のプログラム</h2>
+
+<p class="first_ja">このプログラムは、２つのリストを使った絵辞書プログラムです。</p>
+<p>１つのリストに、索引となるキーを入れ、もうひとつのリストにはデータを入れています。
+				ユーザが入力した語が、キーのリストにあるかどうか調べて、
+				あれば、キーのリストのカーソル位置と同じカーソル位置にあるデータを返します。</p>
+
+<div id="doc18_src:DictionaryApplication" class="caption">リスト 17.3.1 DictionaryApplication.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * プログラム名：絵辞書アプリケーション 
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> DictionaryApplication <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> DictionaryApplication(), args);
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		hide();
+ 17: 		window.setSize(700, 500);
+ 18: 
+ 19: 		<span class="comment">// 入力ボックス</span>
+ 20: 		InputTurtle input = <span class="keyword">new</span> InputTurtle();
+ 21: 		input.toJapaneseMode();
+ 22: 		input.warpByTopLeft(30, 30);
+ 23: 
+ 24: 		<span class="comment">// 出力結果</span>
+ 25: 		ImageTurtle result = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;notfound.gif&quot;</span>);
+ 26: 		result.size(100, 100);
+ 27: 		result.warpByTopLeft(30, 60);
+ 28: 
+ 29: 		<span class="comment">// 辞書の読みを入れておく入れ物</span>
+ 30: 		ListTurtle&lt;CardTurtle&gt; keys = <span class="keyword">new</span> ListTurtle&lt;CardTurtle&gt;(<span class="keyword">true</span>);
+ 31: 		keys.warpByTopLeft(30, 200);
+ 32: 		keys.addLast(<span class="keyword">new</span> CardTurtle(<span class="quote">&quot;りんご&quot;</span>));
+ 33: 		keys.addLast(<span class="keyword">new</span> CardTurtle(<span class="quote">&quot;いちご&quot;</span>));
+ 34: 		keys.addLast(<span class="keyword">new</span> CardTurtle(<span class="quote">&quot;すいか&quot;</span>));
+ 35: 		keys.addLast(<span class="keyword">new</span> CardTurtle(<span class="quote">&quot;みかん&quot;</span>));
+ 36: 
+ 37: 		<span class="comment">// 辞書の内容（絵）を入れておく入れ物</span>
+ 38: 		ListTurtle&lt;ImageTurtle&gt; values = <span class="keyword">new</span> ListTurtle&lt;ImageTurtle&gt;(<span class="keyword">true</span>);
+ 39: 		values.warpByTopLeft(30, 250);
+ 40: 		values.addLast(<span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;apple.gif&quot;</span>));
+ 41: 		values.addLast(<span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;strawberry.gif&quot;</span>));
+ 42: 		values.addLast(<span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;wm.gif&quot;</span>));
+ 43: 		values.addLast(<span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;orange.gif&quot;</span>));
+ 44: 		values.addLast(<span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;notfound.gif&quot;</span>));
+ 45: 
+ 46: 		<span class="comment">//検索ボタン</span>
+ 47: 		ButtonTurtle button = <span class="keyword">new</span> ButtonTurtle(<span class="quote">&quot;検索！&quot;</span>);
+ 48: 		button.warpByTopLeft(200, 30);
+ 49: 
+ 50: 		<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 51: 			sleep(0.025);<span class="comment">// 待つ</span>
+ 52: 
+ 53: 			<span class="keyword">if</span>(button.isClicked()){
+ 54: 				<span class="comment">//検索する</span>
+ 55: 				String key = input.text();		
+ 56: 				<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; keys.getSize(); i++) {<span class="comment">// １つずつ調べる</span>
+ 57: 					keys.setCursor(i);
+ 58: 					<span class="keyword">if</span> (keys.getObjectAtCursor().getText().equals(key)) {<span class="comment">// 見つかった</span>
+ 59: 						values.setCursor(i);
+ 60: 						result.looks(values.getObjectAtCursor());
+ 61: 						input.clearText();
+ 62: 					}
+ 63: 				}
+ 64: 			}
+ 65: 
+ 66: 			update();<span class="comment">// 再描画する</span>
+ 67: 		}
+ 68: 	}
+ 69: 
+ 70: }
+</pre>
+
+<p><a href="chapter16/src/DictionaryApplication.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、DictionaryApplicationプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter16_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DictionaryApplication"/>
+</applet></p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter16/image/block/DictionaryApplication.jpg">
+</div>
+
+<div class="fyi">
+<div class=title>文字列の内容が一致しているか調べる命令</div>
+
+<p class="first_ja">このプログラムでは文字列の内容が一致しているかどうか調べるために、equals命令を使っています。</p>
+
+<pre id="doc18_7218" class="program">
+if (key.getStringAtCursor().equals(searchKey))
+				
+</pre>
+
+<p>数値の同値性を調べるためにこれまで利用してきた==命令は、
+					文字列の同値性を調べるためには使えません（正確には、使えます（コンパイルは通る）が、
+					内容ではなくオブジェクトが同じかどうか比較してしまうので、誤った結果になる場合があります）。</p>
+<p>文字列の内容が一致しているかどうか調べたいときは、A.equals(B)のように、
+					equals命令を使う必要があります（A,Bはそれぞれ文字列型の変数）。</p>
+</div>
+
+
+<h2 id="doc18_7229">17.4  練習問題</h2>
+
+
+<h3 id="doc18_7231">17.4.1  入力タートルの練習</h3>
+
+<p class="first_ja">入力タートルを１つ用意し、スペースキーで入力モード（日本語、英語）を切り替えるプログラムを作ってみよう。</p>
+<p>ファイル名は「ChangeMode.java」とすること．</p>
+
+<h3 id="doc18_7240">17.4.2  作文さん</h3>
+
+<p class="first_ja">このプログラムは、リストに名詞と動詞を保存して、作文するプログラムです。</p>
+<p>（リストは、ウインドウの下のほうに隠れています。ウインドウを広げてみてください）</p>
+<p>下のボタンを押すと、SakubunApplicationプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter16_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="SakubunApplication"/>
+</applet></p>
+<div class="fyi">
+<div class=title>実装のヒント</div>
+
+<p class="first_ja">このプログラムでは、入力ボックスをコピーし、コピーしたものをリストに入れています。</p>
+<p>以下のプログラムでは、inputという入力タートルの内容をテキストタートルにコピーし、
+					そのテキストタートルをnounsというリストに入れています。</p>
+
+<pre id="doc18_7262" class="program">
+nouns.addLast(new TextTurtle(input.text()));
+						
+</pre>
+
+</div>
+
+<p>ファイル名は「Sakubun.java」とすること．</p>
+
+<h3 id="doc18_7270">17.4.3  タイピングゲーム</h3>
+
+<p class="first_ja">このプログラムは、リストに絵と単語を保存して、タイピングゲームをするプログラムです。</p>
+<p>（リストは、ウインドウの下のほうに隠れています。ウインドウを広げてみてください）</p>
+<p>下のボタンを押すと、TypingApplicationプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter16_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="TypingApplication"/>
+</applet></p>
+<div class="fyi">
+<div class=title>実装のヒント</div>
+
+<p class="first_ja">このプログラムでは、時間を扱います。以下のプログラムは、開始時間をミリ秒で取得するプログラムです。</p>
+<p>long型は、int型よりも桁数の大きな数字を扱える型です。</p>
+
+<pre id="doc18_7292" class="program">
+long startTime = System.currentTimeMillis();
+						
+</pre>
+
+<p>以下のように、開始時間と終了時間の差（ミリ秒単位）を求め、
+						それを分単位に変換し、タイピング文字数をかかった時間（分）で割ることで、
+						タイピング速度を求めることができます。</p>
+
+<pre id="doc18_7298" class="program">
+long endTime = System.currentTimeMillis();
+long miliTime = endTime - startTime;//かかった時間（ミリ秒）
+double time = (double) miliTime / (double) 1000 / (double) 60;//かかった時間(分)
+int speed = (int) (inputCharacterCount / time);
+result.text(&quot;あなたのタイピング速度は&quot; + speed + &quot;文字/分です．&quot;);
+					
+</pre>
+
+</div>
+
+<p>ファイル名は「Typing.java」とすること．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p4_c16.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p4.html#doc1_part:three" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">データ構造とアルゴリズム</a>/集合データ構造とアルゴリズム（２）：辞書</td>
+<td><a href="index_p4_c18.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

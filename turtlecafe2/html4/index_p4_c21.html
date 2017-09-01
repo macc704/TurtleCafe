@@ -1,0 +1,1197 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2011/11/09" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p4_c20.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p4.html#doc1_part:extra" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">付録</a>/セル・オートマトン</td>
+<td><a href="index_p4_c22.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_72">21  セル・オートマトン</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc22_7873" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.1  セルオートマトンとは</a>
+<li> <a href="#doc22_7882" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.2  １次元セルオートマトン</a>
+<ul>
+<li> <a href="#doc22_7884" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.2.1  CellTurtleの基本的な使い方</a>
+<li> <a href="#doc22_7921" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.2.2  ルール</a>
+<li> <a href="#doc22_7951" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.2.3  アサリの貝殻の模様と１次元オートマトン</a>
+</ul>
+<li> <a href="#doc22_7962" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.3  ２次元セルオートマトン</a>
+<li> <a href="#doc22_7996" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.4  CellTurtleで利用できる命令</a>
+<ul>
+<li> <a href="#doc22_7998" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.4.1  「位置」について</a>
+<li> <a href="#doc22_8009" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.4.2  移動の命令</a>
+<li> <a href="#doc22_8063" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.4.3  CellTurtleのマーク処理命令</a>
+<li> <a href="#doc22_8129" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.4.4  ２次元オートマトンのターン処理命令</a>
+</ul>
+<li> <a href="#doc22_8148" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.5  練習問題</a>
+<ul>
+<li> <a href="#doc22_8150" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.5.1  １次元セルオートマトンのいろいろなルールを試してみよう</a>
+<li> <a href="#doc22_8167" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.5.2  ルールをメソッドにしてみよう</a>
+<li> <a href="#doc22_8185" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.5.3  ルールをメソッドにしてみよう改</a>
+<li> <a href="#doc22_8200" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.5.4  2次元セルオートマトンを試してみよう</a>
+<li> <a href="#doc22_8225" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.5.5  2次元セルオートマトンのいろいろなルールを試してみよう</a>
+<li> <a href="#doc22_8234" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.5.6  ライフゲームを作ってみよう</a>
+</ul>
+<li> <a href="#doc22_8265" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">21.6  参考文献</a>
+</ul>
+</div>
+
+<h2 id="doc22_7873">21.1  セルオートマトンとは</h2>
+
+<p class="first_ja">格子状のセルと単純な規則からなる、離散的計算モデルである。
+			計算可能性理論、数学、理論生物学などの研究で利用される。
+			非常に単純化されたモデルであるが、生命現象、結晶の成長、乱流といった複雑な自然現象を模した、驚くほどに豊かな結果を与えてくれる。
+			(wikipedia 2011/12/18)</p>
+<p>百聞は一見にしかず，プログラムでセルオートマトンの美しさを体験してみましょう．</p>
+
+<h2 id="doc22_7882">21.2  １次元セルオートマトン</h2>
+
+
+<h3 id="doc22_7884">21.2.1  CellTurtleの基本的な使い方</h3>
+
+<p class="first_ja">セルオートマトンのプログラムを書くには，CellTurtleを使います。以下のプログラムを実行して，タートルの動きを見てみましょう．</p>
+
+<div id="doc22_src:Cell1DSample" class="caption">リスト 21.2.1.1 Cell1DSample.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * CellSample.java
+  3:  * 1次元セルオートマトンのサンプルプログラム
+  4:  * Created on 2011/12/16
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> Cell1DSample <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> Cell1DSample());
+ 11: 	}
+ 12: 
+ 13: 	<span class="keyword">void</span> start() {
+ 14: 		window.setSize(800, 600);
+ 15: 		hide();
+ 16: 
+ 17: 		<span class="comment">// セルタートル, 赤いタートル　初期位置(10, 10) 右向き</span>
+ 18: 		CellTurtle ct = <span class="keyword">new</span> CellTurtle(10);<span class="comment">// 大きさ10</span>
+ 19: 
+ 20: 		<span class="comment">// 種の行を書く</span>
+ 21: 		ct.fd(10);
+ 22: 		ct.mark();
+ 23: 		ct.bk(10);
+ 24: 		ct.right(1);
+ 25: 
+ 26: 		<span class="comment">// 五行の処理を行う</span>
+ 27: 		<span class="keyword">for</span> (<span class="keyword">int</span> j = 0; j &lt; 5; j++) {
+ 28: 			<span class="comment">// 一行の処理を行う</span>
+ 29: 			<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 20; i++) {
+ 30: 				<span class="keyword">if</span> (!ct.isMarked(7) &amp;&amp; !ct.isMarked(4) &amp;&amp; ct.isMarked(1)) {
+ 31: 					ct.mark();
+ 32: 				}
+ 33: 				ct.fd(1);
+ 34: 			}
+ 35: 			ct.bk(20);
+ 36: 			ct.right(1);
+ 37: 		}
+ 38: 	}
+ 39: }
+</pre>
+
+<p><a href="appendix_cell/src/Cell1DSample.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Cell1DSampleプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="appendix_cell_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Cell1DSample"/>
+</applet></p>
+<p>タートルの操作は基本的には同じですが，fd(x)の命令では，１ドットではなくて，１コマ進みます．
+				１コマの大きさは，new CellTurtle(x)のところのxで指定します．</p>
+<p>セルオートマトンの１行目は「種」です．一つだけ黒いセルを作ります.　mark()メソッドで足元を黒いセルにすることができます．</p>
+<p>2行目からの処理では，isMarkメソッドを使って前の行のセルが黒かどうか調べて，ルールにマッチするときにmarkをつけています．</p>
+<p>isMarkメソッドの引数1, 4, 7については下記を参照のこと．</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="appendix_cell/image/kinbo.jpg" alt="図 21.2.1.1 kinbo">
+</div>
+
+<p>(「CellTurtleで利用できる命令＞位置について」にも同様の解説があります．)</p>
+
+<h3 id="doc22_7921">21.2.2  ルール</h3>
+
+<p class="first_ja">１次元のセルオートマトンでは，前の行の3つのセルのパターンからそのセルが白か黒かを決めます．
+				3つのセルの組み合わせは2の3乗=8パターンあるので，その8パターンについてのルールが決まっている必要があります．
+				それらのパターンは，例えば以下のような具合です．（各ルールに組み合わせの番号がついています）</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="appendix_cell/image/1d-4rules.jpg" alt="図 21.2.2.1 1d-4rules">
+</div>
+
+<p>上図の250番のルールで示されるセルオートマトンを，以下のプログラムで実装してみます．</p>
+
+<div id="doc22_src:Cell1DSample2" class="caption">リスト 21.2.2.1 Cell1DSample2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * CellSample.java
+  3:  * 1次元セルオートマトンのサンプルプログラム
+  4:  * Created on 2011/12/16
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> Cell1DSample2 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> Cell1DSample2());
+ 11: 	}
+ 12: 
+ 13: 	<span class="keyword">void</span> start() {
+ 14: 		window.setSize(800, 600);
+ 15: 		hide();
+ 16: 
+ 17: 		<span class="keyword">int</span> len = 21;
+ 18: 
+ 19: 		<span class="comment">// セルタートル, 赤いタートル　初期位置(10, 10) 右向き</span>
+ 20: 		CellTurtle ct = <span class="keyword">new</span> CellTurtle(10);<span class="comment">// 大きさ10</span>
+ 21: 
+ 22: 		<span class="comment">// 種の行を書く</span>
+ 23: 		ct.fd(len / 2);
+ 24: 		ct.mark();
+ 25: 		ct.bk(len / 2);
+ 26: 		ct.right(1);
+ 27: 
+ 28: 		<span class="comment">// 五行の処理を行う</span>
+ 29: 		<span class="keyword">for</span> (<span class="keyword">int</span> j = 0; j &lt; len; j++) {
+ 30: 			<span class="comment">// 一行の処理を行う</span>
+ 31: 			<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; len; i++) {
+ 32: 				<span class="keyword">if</span> (ct.isMarked(7) &amp;&amp; ct.isMarked(4) &amp;&amp; ct.isMarked(1)) {<span class="comment">// ■■■</span>
+ 33: 					ct.mark();
+ 34: 				} <span class="keyword">else</span> <span class="keyword">if</span> (ct.isMarked(7) &amp;&amp; ct.isMarked(4) &amp;&amp; !ct.isMarked(1)) {<span class="comment">// ■■□</span>
+ 35: 					ct.mark();
+ 36: 				} <span class="keyword">else</span> <span class="keyword">if</span> (ct.isMarked(7) &amp;&amp; !ct.isMarked(4) &amp;&amp; ct.isMarked(1)) {<span class="comment">// ■□■</span>
+ 37: 					ct.mark();
+ 38: 				} <span class="keyword">else</span> <span class="keyword">if</span> (ct.isMarked(7) &amp;&amp; !ct.isMarked(4) &amp;&amp; !ct.isMarked(1)) {<span class="comment">// ■□□</span>
+ 39: 					ct.mark();
+ 40: 				} <span class="keyword">else</span> <span class="keyword">if</span> (!ct.isMarked(7) &amp;&amp; ct.isMarked(4) &amp;&amp; ct.isMarked(1)) {<span class="comment">// □■■</span>
+ 41: 					ct.mark();
+ 42: 				} <span class="keyword">else</span> <span class="keyword">if</span> (!ct.isMarked(7) &amp;&amp; ct.isMarked(4) &amp;&amp; !ct.isMarked(1)) {<span class="comment">// □■□</span>
+ 43: 				} <span class="keyword">else</span> <span class="keyword">if</span> (!ct.isMarked(7) &amp;&amp; !ct.isMarked(4) &amp;&amp; ct.isMarked(1)) {<span class="comment">// □□■</span>
+ 44: 					ct.mark();
+ 45: 				} <span class="keyword">else</span> <span class="keyword">if</span> (!ct.isMarked(7) &amp;&amp; !ct.isMarked(4)
+ 46: 						&amp;&amp; !ct.isMarked(1)) {<span class="comment">// □□□</span>
+ 47: 				}
+ 48: 				ct.fd(1);
+ 49: 			}
+ 50: 			ct.bk(len);
+ 51: 			ct.right(1);
+ 52: 		}
+ 53: 	}
+ 54: }
+</pre>
+
+<p><a href="appendix_cell/src/Cell1DSample2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Cell1DSample2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="appendix_cell_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Cell1DSample2"/>
+</applet></p>
+<p>8パターンのルールの組み合わせなので，全部で256パターンのルールがあることになります．</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="appendix_cell/image/1d-rule-all.jpg" alt="図 21.2.2.2 1d-rule-all">
+</div>
+
+
+<h3 id="doc22_7951">21.2.3  アサリの貝殻の模様と１次元オートマトン</h3>
+
+<p class="first_ja">どうでしょう？似ていませんか？</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="appendix_cell/image/shell01.jpg" alt="図 21.2.3.1 shell01">
+</div>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="appendix_cell/image/shell02.jpg" alt="図 21.2.3.2 shell02">
+</div>
+
+
+<h2 id="doc22_7962">21.3  ２次元セルオートマトン</h2>
+
+<p class="first_ja">セルオートマトンを２次元に拡張することができます。</p>
+<p>２次元のセルオートマトンでは，あるセルの近傍にある４つのセル（上下左右）のパターンを読み取り，次のターンのそのセルの状態を決めます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="appendix_cell/image/2d-rule.jpg" alt="図 21.3.1 2d-rule">
+</div>
+
+<p>以下，すべてのセルに対して，黒いセルが見つかったらその近傍の４つのセルを反転させる例です．</p>
+
+<div id="doc22_src:Cell2DSample" class="caption">リスト 21.3.1 Cell2DSample.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * Cell2DSample.java
+  3:  * 2次元セルオートマトンのサンプルプログラム
+  4:  * Created on 2011/12/18
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> Cell2DSample <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> Cell2DSample());
+ 11: 	}
+ 12: 
+ 13: 	<span class="keyword">void</span> start() {
+ 14: 		window.changeSpeed(<span class="quote">&quot;very fast&quot;</span>);
+ 15: 		window.setSize(800, 600);
+ 16: 		hide();
+ 17: 
+ 18: 		<span class="keyword">int</span> cellCount = 11;<span class="comment">// 縦横のマスの数</span>
+ 19: 
+ 20: 		CellTurtle ct = <span class="keyword">new</span> CellTurtle(10);
+ 21: 
+ 22: 		<span class="comment">// 種を作る</span>
+ 23: 		ct.right(cellCount / 2);
+ 24: 		ct.fd(cellCount / 2);
+ 25: 		ct.mark();
+ 26: 		ct.bk(cellCount / 2);
+ 27: 		ct.left(cellCount / 2);
+ 28: 
+ 29: 		<span class="comment">// 繰り返して更新する</span>
+ 30: 		<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 31: 			<span class="comment">// １ステップの前処理</span>
+ 32: 			sleep(0.1);
+ 33: 			ct.beginNextTurn();
+ 34: 
+ 35: 			<span class="comment">// １ステップの処理（すべてのマスを書き換える）</span>
+ 36: 			<span class="keyword">for</span> (<span class="keyword">int</span> j = 0; j &lt; cellCount; j++) {
+ 37: 				<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; cellCount; i++) {
+ 38: 					<span class="keyword">if</span> (ct.isMarked()) {
+ 39: 						ct.flip(2);<span class="comment">// 黒白を反転する</span>
+ 40: 						ct.flip(4);
+ 41: 						ct.flip(6);
+ 42: 						ct.flip(8);
+ 43: 					}
+ 44: 					ct.fd(1);
+ 45: 				}
+ 46: 				ct.bk(cellCount);
+ 47: 				ct.right();
+ 48: 			}
+ 49: 			ct.left(cellCount);
+ 50: 		}
+ 51: 	}
+ 52: }
+</pre>
+
+<p><a href="appendix_cell/src/Cell2DSample.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Cell2DSampleプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="appendix_cell_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Cell2DSample"/>
+</applet></p>
+<p>2次元セルオートマトンでは，	格子を書き換えていくので，書き換えのタイミングを教えてあげる必要があります．
+			このCellTurtleライブラリでは，書き換えのタイミングでsleep(0.1)とbeginNextTurn()メソッドを呼んでください．</p>
+<p>CellTurtleプログラムでは，mark()のほかに，位置を指定してセルをマークするmark(int location),
+			白いセルに戻すunmark(), unmark(int location)，白黒を反転するflip(), flip(int location)等も使えます．</p>
+
+<h2 id="doc22_7996">21.4  CellTurtleで利用できる命令</h2>
+
+
+<h3 id="doc22_7998">21.4.1  「位置」について</h3>
+
+<p class="first_ja">タートルの位置を中心に３&times;３の範囲で，位置に番号がついています．markされているか（黒いセルかどうか）を調べることができます。</p>
+<p>位置の番号は以下の図の通りです．(覚えやすいように携帯電話のボタン配列と同じにしました．）</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="appendix_cell/image/kinbo.jpg" alt="図 21.4.1.1 kinbo">
+</div>
+
+
+<h3 id="doc22_8009">21.4.2  移動の命令</h3>
+
+
+<dl>
+<dt>
+void fd(int x)
+<dd>
+タートルが前にxマス移動します
+<dt>
+void fd()
+<dd>
+タートルが前に1マス移動します
+<dt>
+void bk(int x)
+<dd>
+タートルが後ろにxマス移動します
+<dt>
+void bk()
+<dd>
+タートルが後ろに1マス移動します
+<dt>
+void right(double x)
+<dd>
+タートルが右にxマス移動します
+<dt>
+void right()
+<dd>
+タートルが右に1マス移動します
+<dt>
+void left(double x)
+<dd>
+タートルが左にxマス移動します
+<dt>
+void left()
+<dd>
+タートルが左に1マス移動します</dl>
+
+
+<h3 id="doc22_8063">21.4.3  CellTurtleのマーク処理命令</h3>
+
+
+<dl>
+<dt>
+boolean isMarked(int position)
+<dd>
+引数positionで与えられた「位置」にマークがついているか（黒いセルかどうか）を調べます．
+<dt>
+boolean isMarked()
+<dd>
+足元にマークがついているか調べます．isMarked(5)と効力は同じです．
+<dt>
+void mark(int position)
+<dd>
+引数positionで与えられた「位置」にマークをつけます（セルを黒くします）．
+<dt>
+void mark()
+<dd>
+足元にマークをつけます．mark(5)と効力は同じです．
+<dt>
+void unmark(int position)
+<dd>
+引数positionで与えられた「位置」のマークをはずします（セルを白くします）．
+<dt>
+void mark()
+<dd>
+足元のマークをはずします．unmark(5)と効力は同じです．
+<dt>
+void unmark(int position)
+<dd>
+引数positionで与えられた「位置」のマークをはずします（セルを白くします）．
+<dt>
+void mark()
+<dd>
+足元のマークをはずします．unmark(5)と効力は同じです．
+<dt>
+void flip(int position)
+<dd>
+引数positionで与えられた「位置」のマークを反転します（黒ければ白に，白ければ黒にします）．
+<dt>
+void flip()
+<dd>
+足元のマークを反転します．flip(5)と効力は同じです．</dl>
+
+
+<h3 id="doc22_8129">21.4.4  ２次元オートマトンのターン処理命令</h3>
+
+
+<dl>
+<dt>
+void beginNextTurn()
+<dd>
+ターンを始める前に呼んでください．（ターンモードに入ると，次にこのメソッドが呼ばれるまで，前ターンのセルの状態を取得できます．）
+<dt>
+void endTurn()
+<dd>
+ターンが終了するときに呼んでください．（即時書き換えモードに遷移するだけなので，呼ばなくても動きます．）</dl>
+
+
+<h2 id="doc22_8148">21.5  練習問題</h2>
+
+
+<h3 id="doc22_8150">21.5.1  １次元セルオートマトンのいろいろなルールを試してみよう</h3>
+
+<p class="first_ja">１次元セルオートマトンの例題を改変して，いろいろなルールでオートマトンを試してみよう。</p>
+<p>ルールを変えると，例えば以下のように模様が変わります。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="appendix_cell/image/1d-ex.jpg" alt="図 21.5.1.1 1d-ex">
+</div>
+
+<p>大きさも増やしてみましょう（変数を使うといいですネ！）</p>
+<p>好きなルールを見つけて、友達と比較しよう。</p>
+
+<h3 id="doc22_8167">21.5.2  ルールをメソッドにしてみよう</h3>
+
+<p class="first_ja">例題のままではルールを変更するのが多少ややこしいので，簡単にルールを変えられるようにルールをメソッドにしてみましょう。
+				具体的には，ルールを調べてmark()を読んでいる箇所について，</p>
+
+<pre id="doc22_8172" class="program">
+						
+void mark(CellTurtle ct, int r1, int r2, int r3, int r4, int r5, int r6, int r7, int r8){...}
+					
+</pre>
+
+<p>というメソッドを作り，例えば</p>
+
+<pre id="doc22_8178" class="program">
+						
+mark(ct, 1, 0, 0, 1, 1, 1, 1, 1);
+					
+</pre>
+
+<p>というように呼び出すことで特定のルールを適用できるようにしてみましょう．</p>
+
+<h3 id="doc22_8185">21.5.3  ルールをメソッドにしてみよう改</h3>
+
+<p class="first_ja">前問題について，ルール番号でmarkできるよう，すなわち，</p>
+
+<pre id="doc22_8190" class="program">
+						
+void mark(CellTurtle ct, int rule){...}
+					
+</pre>
+
+<p>というメソッドを作って，8つのルールに変換するメソッドを作ってみよう．</p>
+<p>ちなみに中級以上では，これは１行で書いてほしい．（しかし，ビット演算とシフト演算が必要だ！）</p>
+
+<h3 id="doc22_8200">21.5.4  2次元セルオートマトンを試してみよう</h3>
+
+<p class="first_ja">２次元セルオートマトンを作ってみよう。</p>
+<p>まず，4つの近傍のいずれかが黒いセルならば，自分を黒くするルールで次のひし形ができるかテストしてみよう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="appendix_cell/image/2d-all.jpg" alt="図 21.5.4.1 2d-all">
+</div>
+
+<p>次に，4つの近傍のうち，黒いセルの数が1または4の時，自分を黒くするルールで次の模様ができるかどうかテストしてみよう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="appendix_cell/image/2d-1or4.jpg" alt="図 21.5.4.2 2d-1or4">
+</div>
+
+<p>下のボタンを押すと、Cell2DSample2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="appendix_cell_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Cell2DSample2"/>
+</applet></p>
+<p>ヒント：まず，4つの近傍のいくつがマークされているかを調べるメソッドを作ろう．</p>
+
+<h3 id="doc22_8225">21.5.5  2次元セルオートマトンのいろいろなルールを試してみよう</h3>
+
+<p class="first_ja">前の課題で作ったルールを改変して，いろいろなルールでオートマトンを試してみよう。</p>
+<p>好きなルールを見つけて、友達と比較しよう。</p>
+
+<h3 id="doc22_8234">21.5.6  ライフゲームを作ってみよう</h3>
+
+<p class="first_ja">セルオートマトンの応用例として，ライフゲームがある．</p>
+<p><a href="http://ja.wikipedia.org/wiki/%E3%83%A9%E3%82%A4%E3%83%95%E3%82%B2%E3%83%BC%E3%83%A0" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">wikipediaのライフゲームの説明</a>
+				を参考にして，ライフゲームを作ってみよう。</p>
+<p>参考1:銀河</p>
+<p>下のボタンを押すと、Galaxyプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="appendix_cell_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Galaxy"/>
+</applet></p>
+<p>参考2:グライダー銃</p>
+<p>下のボタンを押すと、Gliderプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="appendix_cell_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Glider"/>
+</applet></p>
+
+<h2 id="doc22_8265">21.6  参考文献</h2>
+
+<p class="first_ja">オートマトンの画像はStephen Wolfram，&quot;A New Kind of Science&quot;, Wolfram Media Inc, 2002からお借りしました．</p>
+<p>貝殻の画像は<a href="http://homepage3.nifty.com/kuebiko/science/freestdy/CellAM.htm" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">ここ</a>からお借りしました．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p4_c20.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p4.html#doc1_part:extra" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">付録</a>/セル・オートマトン</td>
+<td><a href="index_p4_c22.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

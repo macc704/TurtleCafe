@@ -1,0 +1,1122 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c1.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/はじめてのJavaタートルプログラミング</td>
+<td><a href="index_p1_c3.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_24">2  はじめてのJavaタートルプログラミング</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc3_482" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.1  学習目標</a>
+<li> <a href="#doc3_494" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.2  最初のプログラムの解説</a>
+<ul>
+<li> <a href="#doc3_499" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.2.1  家を書くサンプルプログラム</a>
+<li> <a href="#doc3_sec:elements" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.2.2  プログラムの要素</a>
+<ul>
+<li> <a href="#doc3_523" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.2.2.1  ブロック</a>
+<li> <a href="#doc3_sec:class" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.2.2.2  クラス</a>
+<li> <a href="#doc3_544" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.2.2.3  メソッド</a>
+<li> <a href="#doc3_559" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.2.2.4  命令</a>
+<li> <a href="#doc3_625" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.2.2.5  命令の区切り</a>
+<li> <a href="#doc3_637" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.2.2.6  コメント</a>
+</ul>
+</ul>
+<li> <a href="#doc3_660" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.3  プログラムの作成手順</a>
+<ul>
+<li> <a href="#doc3_662" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.3.1  ファイルの作成</a>
+<li> <a href="#doc3_668" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.3.2  プログラムの書き方</a>
+</ul>
+<li> <a href="#doc3_sec:programmiss" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.4  プログラムミスと対処</a>
+<ul>
+<li> <a href="#doc3_sec:compileerror" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.4.1  コンパイルエラー</a>
+<li> <a href="#doc3_692" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.4.2  バグ</a>
+</ul>
+<li> <a href="#doc3_708" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.5  タートルを使って好きな図形を書くためのテクニック</a>
+<ul>
+<li> <a href="#doc3_710" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.5.1  曲線が書きたい</a>
+<li> <a href="#doc3_744" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.5.2  タートルの最初の位置を変えたい</a>
+</ul>
+<li> <a href="#doc3_751" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.6  練習問題</a>
+<ul>
+<li> <a href="#doc3_753" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.6.1  正五角形描こう</a>
+<li> <a href="#doc3_764" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.6.2  星を描こう</a>
+<li> <a href="#doc3_775" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.6.3  こんぺいとうを描こう</a>
+<li> <a href="#doc3_786" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.6.4  トライフォースを描こう</a>
+<li> <a href="#doc3_797" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">2.6.5  好きな図形を描こう</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc3_482">2.1  学習目標</h2>
+
+<p class="first_ja"><ul>
+<li> タートルの基本的な命令を使いこなし、タートルで図形が描けるようになる</ul></p>
+
+<h2 id="doc3_494">2.2  最初のプログラムの解説</h2>
+
+<p class="first_ja">最初の例題として､「家を描くサンプルプログラム」を解説します。</p>
+
+<h3 id="doc3_499">2.2.1  家を書くサンプルプログラム</h3>
+
+<p class="first_ja">家を描くサンプルプログラムを示します。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter01/image/House_Block.png" alt="図 2.2.1.1 Curve">
+</div>
+
+
+<div id="doc3_src:House" class="caption">リスト 2.2.1.1 House.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を書くプログラム
+  3:  * 2003/05/08
+  4:  * Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> House <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> House());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		{<span class="comment">// 屋根を書く</span>
+ 17: 			rt(30); <span class="comment">//30度右を向く</span>
+ 18: 			fd(50); <span class="comment">//50歩前に進む</span>
+ 19: 			rt(120);
+ 20: 			fd(50);
+ 21: 			rt(120);
+ 22: 			fd(50);
+ 23: 		}
+ 24: 
+ 25: 		{<span class="comment">// 本体を書く</span>
+ 26: 			lt(90);
+ 27: 			fd(50);
+ 28: 			lt(90);
+ 29: 			fd(50);
+ 30: 			lt(90);
+ 31: 			fd(50);
+ 32: 			lt(90);
+ 33: 			fd(50);
+ 34: 		}
+ 35: 	}
+ 36: 
+ 37: }
+</pre>
+
+<p><a href="chapter01/src/House.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Houseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter01_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="House"/>
+</applet></p>
+
+<h3 id="doc3_sec:elements">2.2.2  プログラムの要素</h3>
+
+
+<h4 id="doc3_523">2.2.2.1  ブロック</h4>
+
+<p class="first_ja">中括弧で囲まれた部分をブロックと呼びます。 Javaプログラムは複数のブロックから構成されます。
+						ブロックの中にブロックを入れることも出来ます。</p>
+
+<h4 id="doc3_sec:class">2.2.2.2  クラス</h4>
+
+<p class="first_ja">Javaプログラムの一つの単位をクラスと呼びます。
+						本格的なプログラムでは、クラスが複数になりますが、しばらくは一つだけです。</p>
+<p>クラスを作るための先頭行は、
+						
+<pre id="doc3_536" class="program">
+6: public class [クラス名] extends Turtle{
+						
+</pre>
+
+
+						となる。この行の最後の括弧から、対応する括弧（ファイルの一番最後にある括弧）までがクラスブロックです。
+						Javaのプログラムは全てクラスブロックの中に書かれます。</p>
+<p>クラス名は自由に決められますが、気をつけてほしいのは、
+						ファイル名はクラス名に「.java」をつけたものにすることです。
+						（例えば、クラス名がHouseならファイル名はHouse.javaにする必要がある)
+						論プロエディタでは自動でクラス名とファイル名をそろえてくれるので、考えなくてOKです。</p>
+
+<h4 id="doc3_544">2.2.2.3  メソッド</h4>
+
+
+<pre id="doc3_546" class="program">
+  14: 	void [メソッド名](){
+					
+</pre>
+
+<p class="first_ja">から始まるブロックをメソッドブロックといいます。
+						Javaのプログラムの命令は、全てメソッドブロックの中に書かれます。
+						メソッドは、命令をまとめて一つに束ねたもの、ということもできます。</p>
+<p>メソッドブロックはクラスブロックの中に書く必要があります。
+						タートルプログラムは、startという名前のメソッドを最初に実行しようとします。だから、タートルで作る一つ目のメソッド名はstartでなければなりません。</p>
+<p>しばらくすると、複数のメソッドを扱いますが、現時点では、
+						プログラムはstart()の中括弧の中に書く、と覚えておけばよいでしょう。</p>
+
+<h4 id="doc3_559">2.2.2.4  命令</h4>
+
+<p class="first_ja">startメソッドブロックの中にある、rt(30)やfd(60)がタートルに指示する命令です。</p>
+<p>メソッド内に書かれた命令は、
+						<em>必ず上から順番に実行されます。</em></p>
+<p>以下にタートルに指示できる命令の一覧を示します。</p>
+
+<dl>
+<dt>
+rt([角度の指定])
+<dd>
+タートルを指定した角度だけ右に回す
+<dt>
+lt([角度の指定])
+<dd>
+タートルを指定した角度だけ左に回す
+<dt>
+fd([長さの指定])
+<dd>
+タートルを指定した長さだけ進める
+<dt>
+bk([長さの指定)
+<dd>
+タートルを指定した長さだけ後ろに進める
+<dt>
+up()
+<dd>
+タートルがペンを上げる(軌跡がかかれなくなる)。
+<dt>
+down()
+<dd>
+タートルがペンを下げる(軌跡がかかれるようになる)。
+<dt>
+color([色の指定])
+<dd>
+ペンの色を変える
+								<span class=note><a href="#note1" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)" title="赤なら、color(java.awt.Color.red)。青なら、color(java.awt.Color.blue)のように指定する。"><sup>(1)</sup></a></span></dl>
+
+
+<div class=footnote>
+<ol>
+<li id="note1" value="1"> 赤なら、color(java.awt.Color.red)。青なら、color(java.awt.Color.blue)のように指定する。</ol>
+</div>
+
+
+<h4 id="doc3_625">2.2.2.5  命令の区切り</h4>
+
+<p class="first_ja">Javaのプログラムでは命令と命令の区切りに必ず「;」（セミコロン）を入れる必要があります。
+						これを入れないと、コンピュータがどこで命令が区切られているのか、理解することができません。</p>
+<p>ちなみに、セミコロンが入っていれば、複数の命令を次のように同じ行に書いてもＯＫです。</p>
+
+<pre id="doc3_633" class="program">
+lt(30); fd(50);
+</pre>
+
+
+<h4 id="doc3_637">2.2.2.6  コメント</h4>
+
+<p class="first_ja">コメントはプログラム（命令）としては考慮されず、読み飛ばされます。
+						しかし、人間が読めないとメンテナンスにこまるためにコメントをつけておきます。ファイルの先頭には、プログラムのタイトル、名前や日付を忘れずに。</p>
+
+<dl>
+<dt>
+範囲指定コメント
+<dd>
+「/*」から「*/」までコメントになります
+<dt>
+行コメント
+<dd>
+「//」から先行の終わりまでコメントになります</dl>
+
+
+<h2 id="doc3_660">2.3  プログラムの作成手順</h2>
+
+
+<h3 id="doc3_662">2.3.1  ファイルの作成</h3>
+
+<p class="first_ja">論プロエディタの「File」メニューから「NewFile(Class）」を選び、
+					テンプレートは「Turtle」を選んでください。</p>
+
+<h3 id="doc3_668">2.3.2  プログラムの書き方</h3>
+
+<p class="first_ja">「タートルを動かす処理」の「 { 」と「 } 」の間に、タートル命令（rt(90)やfd(100)など）を書いてください。</p>
+
+<h2 id="doc3_sec:programmiss">2.4  プログラムミスと対処</h2>
+
+
+<h3 id="doc3_sec:compileerror">2.4.1  コンパイルエラー</h3>
+
+<p class="first_ja">プログラムの書きかたを間違えると、コンパイルしたときにエラーになります。</p>
+<p>例えば、コマンドの区切りでセミコロンを忘れると、次のようなエラーがでます。</p>
+
+<div id="doc3_685" class="caption">図 2.4.1.1 コンパイルエラー</div>
+<pre class="console" style="margin-top:0">
+&gt;<kbd class="kbd">javac House.java House.java:13: ';' がありません。 rt(120)</kbd>
+^ エラー 1 個 &gt;
+				
+</pre>
+
+<p>コンパイルエラーがでたら、実行することはできないので、ソースを直して、再コンパイルするしかありません。
+					どうしても原因が分からない時は、ＴＡなどに相談してください。</p>
+
+<h3 id="doc3_692">2.4.2  バグ</h3>
+
+<p class="first_ja">コンパイルが正常に通っても、プログラムが間違っていて、意図した通りに動作しないことをバグといいます。
+					コンピュータは、必ず
+					<em>命令した通りに動作します。</em></p>
+<p>バグがあったら、修正しましょう。バグを修正することをデバッグといいます。</p>
+<p>プロでも、最初から意図したプログラムを書くのは難しいものです。
+					プログラム上達の早道は、一発で動かそうとせずに、
+					早くバグを見つけて、修正できるようになるようになるように心がけることです。</p>
+
+<h2 id="doc3_708">2.5  タートルを使って好きな図形を書くためのテクニック</h2>
+
+
+<h3 id="doc3_710">2.5.1  曲線が書きたい</h3>
+
+<p class="first_ja">コンピュータで本当の曲線は書けませんが、それらしく見せることはできます。
+					次のプログラムを見てみましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter01/image/Curve_Block.png" alt="図 2.5.1.1 Curve">
+</div>
+
+
+<div id="doc3_src:Curve" class="caption">リスト 2.5.1.1 Curve.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 曲線を書くプログラム
+  3:  * 2003/05/08
+  4:  * Yoshiaki Matsuzawa
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> Curve <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> Curve());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 
+ 16: 		{<span class="comment">// 右円弧</span>
+ 17: 			rt(5);
+ 18: 			fd(5);
+ 19: 			rt(5);
+ 20: 			fd(5);
+ 21: 			rt(5);
+ 22: 			fd(5);
+ 23: 			rt(5);
+ 24: 			fd(5);
+ 25: 			rt(5);
+ 26: 			fd(5);
+ 27: 			rt(5);
+ 28: 			fd(5);
+ 29: 			rt(5);
+ 30: 			fd(5);
+ 31: 			rt(5);
+ 32: 			fd(5);
+ 33: 			rt(5);
+ 34: 			fd(5);
+ 35: 			rt(5);
+ 36: 			fd(5);
+ 37: 		}
+ 38: 
+ 39: 		{<span class="comment">// 左円弧</span>
+ 40: 			lt(5);
+ 41: 			fd(5);
+ 42: 			lt(5);
+ 43: 			fd(5);
+ 44: 			lt(5);
+ 45: 			fd(5);
+ 46: 			lt(5);
+ 47: 			fd(5);
+ 48: 			lt(5);
+ 49: 			fd(5);
+ 50: 			lt(5);
+ 51: 			fd(5);
+ 52: 			lt(5);
+ 53: 			fd(5);
+ 54: 			lt(5);
+ 55: 			fd(5);
+ 56: 			lt(5);
+ 57: 			fd(5);
+ 58: 		}
+ 59: 
+ 60: 	}
+ 61: 
+ 62: }
+</pre>
+
+<p><a href="chapter01/src/Curve.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Curveプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter01_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Curve"/>
+</applet></p>
+<p>5度曲がり、5歩進むことを繰り返しています。</p>
+<div class="fyi">
+<div class=title>やってみよう</div>
+
+<p class="first_ja">長さと角度を調整して、もっと精密な曲線に近づけてみよう。</p>
+</div>
+
+<p>実はコンピュータで、&quot;本物&quot;の曲線を書くことはできません。
+					しかし、上記のように&quot;擬似的&quot;に表現することで、人間の目をごまかすことはできます。
+					このように擬似的に表現することを「ディジタル」表現といいます。これに対して、紙に書くような本物の曲線を「アナログ」表現といいます。</p>
+
+<h3 id="doc3_744">2.5.2  タートルの最初の位置を変えたい</h3>
+
+<p class="first_ja">教育上の理由から、初期位置を変える機能は搭載していません。
+					最初の位置を変えたいときは、ペンをあげて、好みの位置まで移動するプログラムを書く必要があります。
+					ちなみに、タートルは最初(100, 100)の座標で、上向きになっています。</p>
+
+<h2 id="doc3_751">2.6  練習問題</h2>
+
+
+<h3 id="doc3_753">2.6.1  正五角形描こう</h3>
+
+<p class="first_ja">進める（fd）命令や、回す（rt）命令を使って、正五角形を描くプログラムを作りましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter01/image/pentagon.png" alt="図 2.6.1.1 正五角形">
+</div>
+
+<p>ファイル名は「Pentagon.java」とすること．</p>
+
+<h3 id="doc3_764">2.6.2  星を描こう</h3>
+
+<p class="first_ja">進める（fd）命令や、回す（rt）命令を使って、星を描くプログラムを作りましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter01/image/star.png" alt="図 2.6.2.1 星">
+</div>
+
+<p>ファイル名は「Star.java」とすること．</p>
+
+<h3 id="doc3_775">2.6.3  こんぺいとうを描こう</h3>
+
+<p class="first_ja">進める（fd）命令や、回す（rt）命令を使って、こんぺいとうを描くプログラムを作りましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter01/image/Confetti.png" alt="図 2.6.3.1 こんぺいとう">
+</div>
+
+<p>ファイル名は「Confetti.java」とすること．</p>
+
+<h3 id="doc3_786">2.6.4  トライフォースを描こう</h3>
+
+<p class="first_ja">進める（fd）命令や、回す（rt）命令を使って、トライフォースを描くプログラムを作りましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter01/image/TriForce.png" alt="図 2.6.4.1 トライフォース">
+</div>
+
+<p>ファイル名は「TriForce.java」とすること．</p>
+
+<h3 id="doc3_797">2.6.5  好きな図形を描こう</h3>
+
+<p class="first_ja">タートルを使って、好きな絵を描くプログラムを作りましょう。</p>
+<p>ファイル名は「MyFavorite.java」とすること．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c1.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/はじめてのJavaタートルプログラミング</td>
+<td><a href="index_p1_c3.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

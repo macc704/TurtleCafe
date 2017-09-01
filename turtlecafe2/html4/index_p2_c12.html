@@ -1,0 +1,1584 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2011/11/09" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p2.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p2.html#doc1_part:two" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">プログラムの部品化</a>/命令をつくる（１）：メソッド・引数付メソッド</td>
+<td><a href="index_p2_c13.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_46">12  命令をつくる（１）：メソッド・引数付メソッド</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc13_4468" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.1  学習目標</a>
+<li> <a href="#doc13_4480" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.2  メソッド</a>
+<ul>
+<li> <a href="#doc13_4482" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.2.1  メソッドとその目的</a>
+<li> <a href="#doc13_4500" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.2.2  メソッド定義とメソッド呼び出し</a>
+<li> <a href="#doc13_4558" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.2.3  メソッドの処理の順序</a>
+<li> <a href="#doc13_4586" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.2.4  メソッドの定義位置の注意点</a>
+</ul>
+<li> <a href="#doc13_4614" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.3  引数付メソッド</a>
+<ul>
+<li> <a href="#doc13_4616" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.3.1  引数とその目的</a>
+<li> <a href="#doc13_4622" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.3.2  引数を用いた、四角形を描くメソッドの抽象化</a>
+<li> <a href="#doc13_4675" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.3.3  引数を用いた、多角形を描くメソッドの抽象化</a>
+</ul>
+<li> <a href="#doc13_4717" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.4  変数の有効範囲と引数</a>
+<ul>
+<li> <a href="#doc13_4719" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.4.1  変数の有効範囲</a>
+<li> <a href="#doc13_4741" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.4.2  引数付メソッド定義とメソッド呼び出し</a>
+</ul>
+<li> <a href="#doc13_4773" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.5  メソッドの設計・あるいはプログラムの構造化</a>
+<ul>
+<li> <a href="#doc13_4786" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.5.1  窓付きの家を描くプログラム（引数を用いた、多角形を描くメソッドの抽象化）</a>
+</ul>
+<li> <a href="#doc13_4822" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.6  練習問題</a>
+<ul>
+<li> <a href="#doc13_4825" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.6.1  円を描くメソッドを作ろう</a>
+<li> <a href="#doc13_4828" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.6.2  大きさが変わる家を描くメソッドを作ろう</a>
+<li> <a href="#doc13_4831" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.6.3  中心角を指定して円弧を描くメソッドを作ろう</a>
+<li> <a href="#doc13_4844" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.6.4  メソッドの多段呼び出しの練習をしよう</a>
+<li> <a href="#doc13_4852" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.6.5  メソッドの再利用をしよう</a>
+<li> <a href="#doc13_4860" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.6.6  ます</a>
+<li> <a href="#doc13_4882" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">12.6.7  問題7：構造化プログラミングによる自由作品</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc13_4468">12.1  学習目標</h2>
+
+
+<ul>
+<li> メソッドを使ったプログラムを作れるようになる
+<li> 引数付メソッドを使ったプログラムを作れるようになる</ul>
+
+
+<h2 id="doc13_4480">12.2  メソッド</h2>
+
+
+<h3 id="doc13_4482">12.2.1  メソッドとその目的</h3>
+
+<p class="first_ja">メソッドは、複数の命令のまとまりに名前をつけて、一つの命令として扱うことが出来る仕組みです。</p>
+<p>メソッドを作ることで、
+					
+<ul>
+<li> プログラムを構造化して、全体の複雑度を下げる（人間にとって理解しやすいプログラムにする）
+<li> プログラムを再利用しやすくする</ul>
+
+
+					というメリットがあります。</p>
+
+<h3 id="doc13_4500">12.2.2  メソッド定義とメソッド呼び出し</h3>
+
+<p class="first_ja">以下のプログラムは、メソッドを使って四角形を描くプログラムです。</p>
+
+<div id="doc13_src:DrawRectangleMethod" class="caption">リスト 12.2.2.1 DrawRectangleMethod.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 例題１：四角形を描くプログラム
+  3:  * （メソッドの作り方の練習）
+  4:  * 作成者：MegumiAraki
+  5:  * 作成日：2007/06/09
+  6:  * メールアドレス：garnet@sfc.keio.ac.jp
+  7:  */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> DrawRectangleMethod <span class="keyword">extends</span> Turtle {
+  9: 
+ 10: 	<span class="comment">// 起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		Turtle.startTurtle(<span class="keyword">new</span> DrawRectangleMethod());
+ 13: 	}
+ 14: 
+ 15: 	<span class="comment">// タートルを動かす処理</span>
+ 16: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 17: 		drawRectangle();
+ 18: 	}
+ 19: 
+ 20: 	<span class="comment">// 四角形を描く</span>
+ 21: 	<span class="keyword">void</span> drawRectangle() {
+ 22: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 23: 			fd(50);
+ 24: 			rt(90);
+ 25: 		}
+ 26: 	}
+ 27: }
+</pre>
+
+<p><a href="chapter11/src/DrawRectangleMethod.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、DrawRectangleMethodプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter11_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DrawRectangleMethod"/>
+</applet></p>
+<p>メソッドを使うためには、メソッドを定義し、そのメソッドを呼び出す必要があります。</p>
+<p>メソッドは一度定義すれば、同じメソッドを何度も呼び出して使うことができます。</p>
+<p>このプログラムでは24行目でメソッドを定義し、19行目で呼び出しています。</p>
+
+<pre id="doc13_4528" class="program">
+					
+24: void drawRectangle(){
+25: 	for (int i = 0; i &lt; 4;i++) {
+26: 		fd(50);
+27: 		rt(90);
+28: 	}
+29: }
+
+				
+</pre>
+
+
+<pre id="doc13_4531" class="program">
+19: drawRectangle();// 四角形を描く処理を呼び出す
+				
+</pre>
+
+<p>引数・戻り値なしのメソッド定義、メソッド呼び出しの一般形は以下の通りです</p>
+
+<pre id="doc13_4537" class="program">
+void [メソッド名](){
+
+}
+
+				
+</pre>
+
+
+<pre id="doc13_4540" class="program">
+[メソッド名]();
+</pre>
+
+<div class="fyi">
+<div class=title>while文とfor文</div>
+
+<p class="first_ja">このプログラムでは、繰り返しをfor文を使って書いています。for文を使うと、while文よりも短く書くことができます。</p>
+<p>for文の()の中の命令は、それぞれwhile文と以下のように対応しています。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/WhileAndFor.png" alt="図 65 while文とfor文">
+</div>
+
+<p>i = i + 1 と i++ は、いずれも i に 1 を足す、という意味です。while文で i++ と書くことも、for文で i = i + 1 と書くこともできます。</p>
+</div>
+
+
+<h3 id="doc13_4558">12.2.3  メソッドの処理の順序</h3>
+
+<p class="first_ja">以下のプログラムは、四角形を描くメソッドを使って、四角形を３つ描くプログラムです。</p>
+
+<div id="doc13_src:DrawThreeRectanglesMethod" class="caption">リスト 12.2.3.1 DrawThreeRectanglesMethod.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 例題２：四角形を３つ描くプログラム
+  3:  * （メソッド処理の順序）
+  4:  * 作成者：MegumiAraki
+  5:  * 作成日：2007/06/09
+  6:  * メールアドレス：garnet@sfc.keio.ac.jp
+  7:  */</span>
+  8: 
+  9: <span class="keyword">public</span> <span class="keyword">class</span> DrawThreeRectanglesMethod <span class="keyword">extends</span> Turtle {
+ 10: 
+ 11: 	<span class="comment">// 起動処理</span>
+ 12: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 13: 		Turtle.startTurtle(<span class="keyword">new</span> DrawThreeRectanglesMethod());
+ 14: 	}
+ 15: 
+ 16: 	<span class="comment">// タートルを動かす処理</span>
+ 17: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 18: 		<span class="comment">// 四角形を３つ描く</span>
+ 19: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 3; i++) {
+ 20: 			drawRectangle();<span class="comment">// 四角形を描く</span>
+ 21: 			move();<span class="comment">// 次の描く位置まで移動する</span>
+ 22: 		}
+ 23: 	}
+ 24: 
+ 25: 	<span class="comment">// 四角形を描く</span>
+ 26: 	<span class="keyword">void</span> drawRectangle() {
+ 27: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 28: 			fd(50);
+ 29: 			rt(90);
+ 30: 		}
+ 31: 	}
+ 32: 
+ 33: 	<span class="comment">// 次の描く位置まで移動する</span>
+ 34: 	<span class="keyword">void</span> move() {
+ 35: 		up();
+ 36: 		rt(90);
+ 37: 		fd(60);
+ 38: 		lt(90);
+ 39: 		down();
+ 40: 	}
+ 41: }
+</pre>
+
+<p><a href="chapter11/src/DrawThreeRectanglesMethod.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、DrawThreeRectanglesMethodプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter11_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DrawThreeRectanglesMethod"/>
+</applet></p>
+<p>メソッドが呼び出されると、プログラムの処理はそのメソッドの処理に飛びます。
+					そして、メソッドが終了すると、メソッド呼び出し位置に返ってきます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/MethodFlow.png" alt="図 12.2.3.1 メソッドの処理の順序">
+</div>
+
+<p>四角形を３つ描くプログラムでは、まず、四角形を描くメソッドを呼び、
+					四角形を描き終わったら、次の描く位置まで移動するメソッドを呼び、
+					移動し終わったら、再び四角形を描くメソッドを呼び…という処理を３回繰り返しています。</p>
+
+<h3 id="doc13_4586">12.2.4  メソッドの定義位置の注意点</h3>
+
+<p class="first_ja">次のプログラムは、四角形を描くプログラムを書こうとして、失敗した例です。</p>
+
+<div id="doc13_src:DrawRectangleMethodError" class="caption">リスト 12.2.4.1 DrawRectangleMethodError.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2: * 四角形を描くプログラム（コンパイルエラー）
+  3: * （メソッド定義の間違い）
+  4: * 作成者：MegumiAraki
+  5: * 作成日：2007/06/09
+  6: * メールアドレス：garnet@sfc.keio.ac.jp
+  7: */</span>
+  8: 
+  9: <span class="keyword">public</span> <span class="keyword">class</span> DrawRectangleMethodError <span class="keyword">extends</span> Turtle {
+ 10: 	
+ 11: 	<span class="comment">//起動処理</span>
+ 12: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 13: 		Turtle.startTurtle(<span class="keyword">new</span> DrawRectangleMethodError());
+ 14: 	}
+ 15: 	
+ 16: 	<span class="comment">//タートルを動かす処理</span>
+ 17: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 18: 		
+ 19: 		drawRectangle();<span class="comment">// 四角形を描く処理を呼び出す</span>
+ 20: 
+ 21: 		<span class="comment">//四角形を描く</span>
+ 22: 		<span class="keyword">void</span> drawRectangle(){
+ 23: 			<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 24: 				fd(50);
+ 25: 				rt(90);
+ 26: 			}
+ 27: 		}
+ 28: 
+ 29: 	}
+ 30: }
+</pre>
+
+<p>このプログラムを実行しようとすると、以下のようなエラーが出ます。</p>
+
+<pre id="doc13_4596" class="program">
+DrawRectangleMethodError.java:22: 式の開始が不正です。
+		void drawRectangle(){
+		^
+DrawRectangleMethodError.java:22: ';' がありません。
+		void drawRectangle(){
+		                  ^
+エラー 2 個
+
+					
+</pre>
+
+<p>これは、メソッドの中にメソッドを定義しているためです。
+						このプログラムでは、startメソッドの中に、drawRectangleメソッドを定義しています。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/MethodMakingError.png" alt="図 12.2.4.1 メソッド定義のミス">
+</div>
+
+<p>Javaでは、メソッドの中にメソッドを定義することはできません。（
+						<a href="index_p1_c2.html#doc3_sec:elements" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">2章「プログラムの要素」参照</a>
+						） メソッドは、クラスブロックの中に書く必要があります。 正しいメソッド定義は以下のとおりです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/MethodMaking.png" alt="図 12.2.4.2 正しいメソッド定義">
+</div>
+
+
+<h2 id="doc13_4614">12.3  引数付メソッド</h2>
+
+
+<h3 id="doc13_4616">12.3.1  引数とその目的</h3>
+
+<p class="first_ja">メソッドブロック内で宣言された変数は、メソッドブロック内でしか有効ではありません。
+					しかし、あるメソッドから他のメソッドを呼ぶときに、データを受け渡したいことがあります。
+					引数とは、メソッドブロック外と、メソッドブロック内でデータをやり取りする仕組みです。
+					引数を使うことで、メソッドブロック外から、メソッドブロック内にデータを受け取ることができます。</p>
+
+<h3 id="doc13_4622">12.3.2  引数を用いた、四角形を描くメソッドの抽象化</h3>
+
+<p class="first_ja">引数が使えない場合、次のように大きさが違う四角形を書きたい場合も、
+					2つのメソッドを作る必要があります。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/design/1-1.png" alt="図 12.3.2.1 メソッドの設計">
+</div>
+
+
+<div id="doc13_src:DrawTwoRectangles1" class="caption">リスト 12.3.2.1 DrawTwoRectangles1.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 四角を二つ描くプログラム（引数がないメソッドを使ったもの）
+  3:  * 作成者：Yoshiaki Matsuzawa
+  4:  * 作成日：2011/12/06
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> DrawTwoRectangles1 <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> DrawTwoRectangles1());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		drawBigRectangle();
+ 16: 		drawSmallRectangle();
+ 17: 	}
+ 18: 
+ 19: 	<span class="comment">// 一辺100の大きな四角形を書く</span>
+ 20: 	<span class="keyword">void</span> drawBigRectangle() {
+ 21: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 22: 			fd(100);
+ 23: 			rt(90);
+ 24: 		}
+ 25: 	}
+ 26: 
+ 27: 	<span class="comment">// 一辺20の小さな四角形を書く</span>
+ 28: 	<span class="keyword">void</span> drawSmallRectangle() {
+ 29: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 30: 			fd(20);
+ 31: 			rt(90);
+ 32: 		}
+ 33: 	}
+ 34: }
+</pre>
+
+<p><a href="chapter11/src/DrawTwoRectangles1.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、DrawTwoRectangles1プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter11_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DrawTwoRectangles1"/>
+</applet></p>
+<p>次のプログラムでは、引数を使って大きさを指定し、大きい四角形と小さな四角形を「四角形を描く」という
+					ひとつのメソッドで描けるようにしています。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/design/1-2.png" alt="図 12.3.2.2 メソッドの設計">
+</div>
+
+
+<div id="doc13_src:DrawTwoRectangles2" class="caption">リスト 12.3.2.2 DrawTwoRectangles2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 四角を二つ描くプログラム（大きさを引数としたもの）
+  3:  * 作成者：Yoshiaki Matsuzawa
+  4:  * 作成日：2011/12/06
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> DrawTwoRectangles2 <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> DrawTwoRectangles2());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		drawRectangle(100);
+ 16: 		drawRectangle(20);
+ 17: 	}
+ 18: 
+ 19: 	<span class="comment">// 一辺がsizeの四角形を書く</span>
+ 20: 	<span class="keyword">void</span> drawRectangle(<span class="keyword">int</span> size) {
+ 21: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 22: 			fd(size);
+ 23: 			rt(90);
+ 24: 		}
+ 25: 	}
+ 26: 
+ 27: }
+</pre>
+
+<p><a href="chapter11/src/DrawTwoRectangles2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、DrawTwoRectangles2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter11_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DrawTwoRectangles2"/>
+</applet></p>
+<p>引数付メソッドを使うためには、引数付メソッドを定義し、そのメソッドを引数付で呼び出します。
+				一般形は以下の通りです。</p>
+
+<pre id="doc13_4665" class="program">
+					
+void [メソッド名]([引数の型] [仮引数名]){
+
+}
+
+				
+</pre>
+
+
+<pre id="doc13_4668" class="program">
+[メソッド名]([実引数]);
+</pre>
+
+<p>呼び出し部分の引数を実引数、宣言部分の引数を仮引数と呼びます。実引数（メソッドブロック外にあるデータ）が、
+					仮引数（メソッドブロック内で使える変数）に代入され、メソッドブロック内でその変数の値が使えるようになります。</p>
+
+<h3 id="doc13_4675">12.3.3  引数を用いた、多角形を描くメソッドの抽象化</h3>
+
+<p class="first_ja">家を書くプログラムでは，三角形と四角形を書くために、
+					2つのメソッドを作る必要があります。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/design/2-1.png" alt="図 12.3.3.1 メソッドの設計">
+</div>
+
+
+<div id="doc13_src:NewHouse1" class="caption">リスト 12.3.3.1 NewHouse1.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を描くプログラム（四角形と三角形を書くもの）
+  3:  * 作成者：Yoshiaki Matsuzawa
+  4:  * 作成日：2011/12/06
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> NewHouse1 <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> NewHouse1());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		drawTriangle(100);
+ 16: 		rt(90);
+ 17: 		drawRectangle(100);
+ 18: 	}
+ 19: 
+ 20: 	<span class="comment">// 三角形を書く</span>
+ 21: 	<span class="keyword">void</span> drawTriangle(<span class="keyword">int</span> size) {
+ 22: 		rt(30);
+ 23: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 3; i++) {
+ 24: 			fd(size);
+ 25: 			rt(120);
+ 26: 		}
+ 27: 		lt(30);
+ 28: 	}
+ 29: 
+ 30: 	<span class="comment">// 四角形を書く</span>
+ 31: 	<span class="keyword">void</span> drawRectangle(<span class="keyword">int</span> size) {
+ 32: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 33: 			fd(size);
+ 34: 			rt(90);
+ 35: 		}
+ 36: 	}
+ 37: 
+ 38: }
+</pre>
+
+<p><a href="chapter11/src/NewHouse1.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、NewHouse1プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter11_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="NewHouse1"/>
+</applet></p>
+<p>次のプログラムでは「屋根を描く」処理で使っていた三角形と、「壁を描く」処理で使っていた四角形を
+					「多角形を描く」というひとつのメソッドで描けるようにしています。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/design/2-2.png" alt="図 12.3.3.2 メソッドの設計">
+</div>
+
+
+<div id="doc13_src:NewHouse2" class="caption">リスト 12.3.3.2 NewHouse2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を描くプログラム（四角形と三角形を書くもの）
+  3:  * 作成者：Yoshiaki Matsuzawa
+  4:  * 作成日：2011/12/06
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> NewHouse2 <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> NewHouse2());
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		drawRegularPolygon(3, 100);
+ 16: 		rt(90);
+ 17: 		drawRegularPolygon(4, 100);
+ 18: 	}
+ 19: 
+ 20: 	<span class="comment">// 指定された角数の正多角形を描く</span>
+ 21: 	<span class="keyword">void</span> drawRegularPolygon(<span class="keyword">int</span> n, <span class="keyword">int</span> size) {
+ 22: 		<span class="comment">// 向きを調節する</span>
+ 23: 		<span class="keyword">double</span> angle = 360d / (<span class="keyword">double</span>) n;
+ 24: 		rt(angle - 90);
+ 25: 
+ 26: 		<span class="comment">// 多角形を描く</span>
+ 27: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; n; i++) {
+ 28: 			fd(size);
+ 29: 			rt(angle);
+ 30: 		}
+ 31: 
+ 32: 		<span class="comment">// 向きを上向きに戻す</span>
+ 33: 		lt(angle - 90);
+ 34: 	}
+ 35: 
+ 36: }
+</pre>
+
+<p><a href="chapter11/src/NewHouse2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、NewHouse2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter11_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="NewHouse2"/>
+</applet></p>
+
+<h2 id="doc13_4717">12.4  変数の有効範囲と引数</h2>
+
+
+<h3 id="doc13_4719">12.4.1  変数の有効範囲</h3>
+
+<p class="first_ja">次のプログラムは、一辺の長さを指定して四角形を描くプログラムを書こうとして、失敗した例です。</p>
+
+<div id="doc13_src:drawvariablerectangleerrormethod" class="caption">リスト 12.4.1.1 DrawVariableRectangleMethodError.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 四角形を描くプログラム（コンパイルエラー）
+  3:  * （引数ありメソッドの練習）
+  4:  * 作成者：MegumiAraki
+  5:  * 作成日：2007/06/09
+  6:  * メールアドレス：garnet@sfc.keio.ac.jp
+  7:  */</span>
+  8: 
+  9: <span class="keyword">public</span> <span class="keyword">class</span> DrawVariableRectangleMethodError <span class="keyword">extends</span> Turtle {
+ 10: 
+ 11: 	<span class="comment">//起動処理</span>
+ 12: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 13: 		Turtle.startTurtle(<span class="keyword">new</span> DrawVariableRectangleMethodError());
+ 14: 	}
+ 15: 	
+ 16: 	<span class="comment">//タートルを動かす処理</span>
+ 17: 	<span class="keyword">void</span> start() {
+ 18: 
+ 19: 		<span class="comment">// 一辺の長さの入力を受け取る</span>
+ 20: 		<span class="keyword">int</span> length = 0;
+ 21: 		print(<span class="quote">&quot;一辺の長さを入力してください&quot;</span>);
+ 22: 		length = input();
+ 23: 		
+ 24: 		drawRectangle();<span class="comment">// 一辺の長さを指定して四角形を描く</span>
+ 25: 
+ 26: 	}
+ 27: 
+ 28: 	<span class="comment">//四角形を描く</span>
+ 29: 	<span class="keyword">void</span> drawRectangle(){
+ 30: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 31: 			fd(length);
+ 32: 			rt(90);
+ 33: 		}
+ 34: 	}
+ 35: }
+</pre>
+
+<p>大きさを変えて四角形を描くプログラム（コンパイルエラー）を実行しようとすると、以下のようなエラーが出ます</p>
+
+<pre id="doc13_4729" class="program">
+					
+DrawRectangleMethodError.java:31: シンボルを見つけられません。
+シンボル: 変数 length
+場所 : DrawRectangleMethodError の クラス
+					fd(length);
+
+				
+</pre>
+
+<p>fd(length)のlengthという変数が見つけられないということを意味しています。</p>
+<p>これは、drawRectangle()メソッドの内部（{と}で囲われた部分）が、lengthという変数の有効範囲外であるためです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/VariableAccessable.png" alt="図 12.4.1.1 変数の有効範囲">
+</div>
+
+
+<h3 id="doc13_4741">12.4.2  引数付メソッド定義とメソッド呼び出し</h3>
+
+<p class="first_ja">以下のプログラムは、引数を使って、メソッドの有効範囲外から四角形の長さを渡せるようにしたプログラムです。</p>
+<p>入力された長さのlength（実引数）を、メソッドにlength（仮引数）として渡し、四角形を描いています。</p>
+
+<div id="doc13_src:DrawVariableRectangleMethod" class="caption">リスト 12.4.2.1 DrawVariableRectangleMethod.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 四角形を描くプログラム
+  3:  * （引数ありメソッドの練習）
+  4:  * 作成者：MegumiAraki
+  5:  * 作成日：2007/06/09
+  6:  * メールアドレス：garnet@sfc.keio.ac.jp
+  7:  */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> DrawVariableRectangleMethod <span class="keyword">extends</span> Turtle {
+  9: 
+ 10: 	<span class="comment">// 起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		Turtle.startTurtle(<span class="keyword">new</span> DrawVariableRectangleMethod());
+ 13: 	}
+ 14: 
+ 15: 	<span class="comment">// タートルを動かす処理</span>
+ 16: 	<span class="keyword">void</span> start() {
+ 17: 		<span class="comment">// 一辺の長さの入力を受け取る</span>
+ 18: 		<span class="keyword">int</span> inputLength = 0;
+ 19: 		print(<span class="quote">&quot;一辺の長さを入力してください&quot;</span>);
+ 20: 		inputLength = input();
+ 21: 
+ 22: 		drawRectangle(inputLength);<span class="comment">// 入力された長さを一辺の長さとして四角形を描く</span>
+ 23: 	}
+ 24: 
+ 25: 	<span class="comment">// 四角形を描く</span>
+ 26: 	<span class="keyword">void</span> drawRectangle(<span class="keyword">int</span> length) {
+ 27: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 28: 			fd(length);
+ 29: 			rt(90);
+ 30: 		}
+ 31: 	}
+ 32: }
+</pre>
+
+<p><a href="chapter11/src/DrawVariableRectangleMethod.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、DrawVariableRectangleMethodプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter11_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DrawVariableRectangleMethod"/>
+</applet></p>
+
+<pre id="doc13_4763" class="program">
+					
+29: void drawRectangle(int length){
+30: 	for (int i =0; i &lt; 4; i++) {
+31: 		fd(length);
+32: 		rt(90);
+33: 	}
+34: }
+
+				
+</pre>
+
+
+<pre id="doc13_4766" class="program">
+24: drawRectangle(inputLength);//入力された長さを一辺の長さとして四角形を描く
+
+				
+</pre>
+
+
+<h2 id="doc13_4773">12.5  メソッドの設計・あるいはプログラムの構造化</h2>
+
+<p class="first_ja">メソッドからメソッドを呼ぶことが出来るため、メソッドの連鎖を用いてプログラムを作ることができます。
+				これは「構造化プログラミング」という、複雑さを制御するための基本的設計技法です。</p>
+<p>複雑になると、メソッドの呼び出し関係が混乱してくるので、まず以下のようなメソッド構成図を書き、
+			プログラムを書いていくと良いでしょう。</p>
+
+<div class="figure">
+<img class="figure" style="width:800px" src="chapter11/image/design/design1.png" alt="図 12.5.1 メソッドの設計">
+</div>
+
+<p>この設計を実装したものを下に載せます．</p>
+
+<h3 id="doc13_4786">12.5.1  窓付きの家を描くプログラム（引数を用いた、多角形を描くメソッドの抽象化）</h3>
+
+
+<div id="doc13_src:House05" class="caption">リスト 12.5.1.1 House05.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 窓付きの家を描くプログラム（引数による多角形を描くメソッドの抽象化）
+  3:  * 作成者：MegumiAraki
+  4:  * 作成日：2007/06/09
+  5:  * メールアドレス：garnet@sfc.keio.ac.jp
+  6:  */</span>
+  7: 
+  8: <span class="keyword">public</span> <span class="keyword">class</span> House05 <span class="keyword">extends</span> Turtle {
+  9: 
+ 10: 	<span class="comment">//起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		Turtle.startTurtle(<span class="keyword">new</span> House05());
+ 13: 	}
+ 14: 
+ 15: 	<span class="comment">// 家を描く</span>
+ 16: 	 <span class="comment">//タートルを動かす処理</span>
+ 17: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 18: 		drawRoof(); <span class="comment">// 屋根を描く</span>
+ 19: 		drawWall(); <span class="comment">// 壁を描く</span>
+ 20: 		drawWindow(); <span class="comment">// 窓を描く</span>
+ 21: 	}
+ 22: 
+ 23: 	<span class="comment">// 屋根を描く</span>
+ 24: 	<span class="keyword">void</span> drawRoof() {
+ 25: 		drawRegularPolygon(3, 80); <span class="comment">// 三角形を描く</span>
+ 26: 	}
+ 27: 
+ 28: 	<span class="comment">// 壁を描く</span>
+ 29: 	<span class="keyword">void</span> drawWall() {
+ 30: 		rt(90); <span class="comment">// 向きを調節する</span>
+ 31: 		drawRegularPolygon(4, 80);<span class="comment">// 四角形を描く</span>
+ 32: 		lt(90);<span class="comment">// 向きを上向きに戻す</span>
+ 33: 	}
+ 34: 
+ 35: 	<span class="comment">// 窓を描く</span>
+ 36: 	<span class="keyword">void</span> drawWindow() {
+ 37: 		<span class="comment">// 窓を描く位置まで移動する</span>
+ 38: 		moveToWindowLocation(22);
+ 39: 
+ 40: 		<span class="comment">// 窓を描く</span>
+ 41: 		rt(90);
+ 42: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 43: 			drawRegularPolygon(4, 16);
+ 44: 			fd(16 * 2 + 4);
+ 45: 			rt(90);
+ 46: 		}
+ 47: 		lt(90);
+ 48: 	}
+ 49: 
+ 50: 	<span class="comment">// 指定された角数の正多角形を描く</span>
+ 51: 	<span class="keyword">void</span> drawRegularPolygon(<span class="keyword">int</span> n, <span class="keyword">int</span> size) {
+ 52: 		<span class="comment">// 向きを調節する</span>
+ 53: 		<span class="keyword">double</span> angle = 360d / (<span class="keyword">double</span>) n;
+ 54: 		rt(angle - 90);
+ 55: 
+ 56: 		<span class="comment">// 多角形を描く</span>
+ 57: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; n; i++) {
+ 58: 			fd(size);
+ 59: 			rt(angle);
+ 60: 		}
+ 61: 
+ 62: 		<span class="comment">// 向きを上向きに戻す</span>
+ 63: 		lt(angle - 90);
+ 64: 	}
+ 65: 
+ 66: 	<span class="comment">// 窓を描く位置まで移動する</span>
+ 67: 	<span class="keyword">void</span> moveToWindowLocation(<span class="keyword">int</span> length) {
+ 68: 		moveTurtle(90, 22);<span class="comment">// 右へ</span>
+ 69: 		moveTurtle(180, 22);<span class="comment">// 下へ</span>
+ 70: 	}
+ 71: 
+ 72: 	<span class="comment">// 指定された方向に（ペンを上げて）移動する</span>
+ 73: 	<span class="keyword">void</span> moveTurtle(<span class="keyword">double</span> direction, <span class="keyword">int</span> distance) {
+ 74: 		up();
+ 75: 		rt(direction);
+ 76: 		fd(distance);
+ 77: 		lt(direction);
+ 78: 		down();
+ 79: 	}
+ 80: 
+ 81: }
+</pre>
+
+<p class="first_ja"><a href="chapter11/src/House05.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、House05プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter11_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="House05"/>
+</applet></p>
+<div class="fyi">
+<div class=title>ライブラリ</div>
+
+<p class="first_ja">実は今まで使っていたfd，rtという命令は，以下のようなメソッドとして定義されていたのでした。</p>
+
+<ul>
+<li> void fd(int length){...省略...}
+<li> void rt(int angle){...省略...}</ul>
+
+<p>ある目的のために使うメソッドの集まりを作り、メソッド群を再利用します。
+				このメソッドの集まりのことを「ライブラリ」といいます。
+				fd, rtなどのタートルに使う命令は「タートルライブラリ」としてどこかに定義されているのです。</p>
+</div>
+
+
+<h2 id="doc13_4822">12.6  練習問題</h2>
+
+
+<h3 id="doc13_4825">12.6.1  円を描くメソッドを作ろう</h3>
+
+<p class="first_ja">円を描くメソッド「void drawCircle()」を作ってください。できたら、startメソッドから2回以上呼び出して、うまく動作するか確かめてみよう。</p>
+
+<h3 id="doc13_4828">12.6.2  大きさが変わる家を描くメソッドを作ろう</h3>
+
+<p class="first_ja">大きさを指定して家を描くメソッド（窓はなくて良い）「void drawHouse(int size)」を作ってください。できたら、startメソッドから2回以上呼び出して、うまく動作するか確かめてみよう。</p>
+
+<h3 id="doc13_4831">12.6.3  中心角を指定して円弧を描くメソッドを作ろう</h3>
+
+<p class="first_ja">中心角を指定して円弧を描くメソッド「void drawArc(int angle)」を作ってください。</p>
+<p>(ヒント：中心角が３６０ならば円に、１８０ならば半円に、１ならば点のようになります。以下に、120度の場合と、300度の場合の例を示します）</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/drawArc.png" alt="図 12.6.3.1 円弧を描くメソッド">
+</div>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/drawArc2.png" alt="図 12.6.3.2 円弧を描くメソッド2">
+</div>
+
+
+<h3 id="doc13_4844">12.6.4  メソッドの多段呼び出しの練習をしよう</h3>
+
+<p class="first_ja">蝶を描くメソッドdrawButterfly()を作ってください。
+					メソッド構造図による設計もすること。
+					（ヒント：円弧を描くメソッドのほかにも、レモン型を描くメソッドなどを部品として使う）</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/drawButterfly.png" alt="図 12.6.4.1 蝶を描くメソッド">
+</div>
+
+
+<h3 id="doc13_4852">12.6.5  メソッドの再利用をしよう</h3>
+
+<p class="first_ja">前，前々の問題で作ったメソッドを再利用して、drawFlower()のように花を描くメソッドを作ろう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/drawFlower.png" alt="図 12.6.5.1 花を描くメソッド">
+</div>
+
+
+<h3 id="doc13_4860">12.6.6  ます</h3>
+
+<p class="first_ja">x行y列のますを書くメソッドを作ろう。以下のような定義を持つ</p>
+
+<pre id="doc13_4865" class="program">
+					
+void drawMasu(int row, int col, int size) {．．．なかみ．．．}
+
+				
+</pre>
+
+<p>出力例を以下に示す．</p>
+
+<pre id="doc13_4871" class="program">
+					
+drawMasu(2, 3, 50);					
+
+				
+</pre>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/23.jpg" alt="図 12.6.6.1 23">
+</div>
+
+
+<pre id="doc13_4876" class="program">
+					
+drawMasu(5, 7, 20);					
+
+				
+</pre>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter11/image/57.jpg" alt="図 12.6.6.2 57">
+</div>
+
+
+<h3 id="doc13_4882">12.6.7  問題7：構造化プログラミングによる自由作品</h3>
+
+<p class="first_ja">「１メソッド１０行以内！」というルールで，図形を書くプログラムを作ろう．</p>
+<p>ここに，TA，または皆さんの作品例が載る予定です．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p2.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p2.html#doc1_part:two" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">プログラムの部品化</a>/命令をつくる（１）：メソッド・引数付メソッド</td>
+<td><a href="index_p2_c13.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

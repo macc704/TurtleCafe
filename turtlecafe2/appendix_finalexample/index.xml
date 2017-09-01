@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='Shift_JIS' ?>
+
+<!DOCTYPE doc SYSTEM "../smartdoc.dtd"[
+<!ENTITY CHAPTER "appendix_finalexample">
+]>
+
+<doc xml:lang='ja'>
+
+	<head>
+		<title>最終作品例</title>
+	</head>
+
+	<body>
+
+		<section title="Java最終作品例（2007年度秋学期履修者の作品）">
+			<section title="やすしゲーム">
+				<p>
+						横スクロールアクションゲーム。車を避けながら事務所までやすしをたどり着かせることが目的。
+						キーボードの上下キーで操作できる。（半角英数モードにしておくこと）
+				</p>
+				<text.turtle.applet.nodownload class="YasushiGame" chapter="&CHAPTER;"/>
+			</section>
+
+			<section title="神経衰弱">
+				<p>
+						タイトル画面で左クリックすると、説明を見ることができる。右クリックするとゲーム開始。
+						カードに触れると、カードを裏返すことができる。
+				</p>
+				<text.turtle.applet.nodownload class="ShinkeiSuijyaku" chapter="&CHAPTER;"/>
+			</section>
+
+			<section title="しりとりゲーム">
+				<p>
+						３文字しりとりゲーム。左上の入力ボックスに１文字ずつひらがなを入れることでコンピュータとしりとりができる。
+						入力ボックスの移動は、スペースキーで行える（半角英数モードにしておくこと）。
+				</p>
+				<text.turtle.applet.nodownload class="Shiritori2" chapter="&CHAPTER;"/>
+			</section>
+
+			<section title="ドイツ語ワークブック">
+				<p>
+						ドイツ語自習ワークブックのCUIプログラム。
+				</p>
+				<text.turtle.applet.nodownload class="DeutschprogramApplet" chapter="&CHAPTER;"/>
+			</section>
+
+			<section title="タロット占い">
+				<p>
+						ちらばったカードから１枚を選ぶタロット占いゲーム
+				</p>
+				<text.turtle.applet.nodownload class="Tarot" chapter="&CHAPTER;"/>
+			</section>
+
+			<section title="ゴジラと対決ゲーム">
+				<p>
+						シューティングゲーム。画面上のボタン操作で、ゴジラと撃ち合う。
+				</p>
+				<text.turtle.applet.nodownload class="Finalmisson" chapter="&CHAPTER;"/>
+			</section>
+
+			<section title="インベーダーゲーム">
+				<p>
+						シューティングゲーム。上キーで弾を発射、左右キーで移動ができる。
+				</p>
+				<text.turtle.applet.nodownload class="ShootingGame" chapter="&CHAPTER;"/>
+			</section>
+		</section>
+
+
+	</body>
+</doc>
+
+

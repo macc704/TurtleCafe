@@ -1,0 +1,1549 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c7.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/アニメーション入門（いままで作ったものを動かそう）</td>
+<td><a href="index_p1_c9.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_36">8  アニメーション入門（いままで作ったものを動かそう）</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc9_2438" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.1  学習目標</a>
+<li> <a href="#doc9_2450" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.2  アニメーションの基本</a>
+<ul>
+<li> <a href="#doc9_2455" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.2.1  回る家</a>
+<li> <a href="#doc9_2497" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.2.2  アニメーションの基本構造</a>
+<li> <a href="#doc9_2530" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.2.3  アニメーションをするための新しい命令</a>
+<li> <a href="#doc9_2557" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.2.4  円を描く家</a>
+</ul>
+<li> <a href="#doc9_2597" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.3  座標の制御</a>
+<ul>
+<li> <a href="#doc9_2599" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.3.1  上向きのまま右に動かす</a>
+<li> <a href="#doc9_2643" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.3.2  ワープを使う</a>
+</ul>
+<li> <a href="#doc9_2741" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.4  大きさの変更(拡大/縮小)</a>
+<ul>
+<li> <a href="#doc9_2743" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.4.1  大きさを変更するプログラム</a>
+<li> <a href="#doc9_2789" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.4.2  徐々に大きくする</a>
+</ul>
+<li> <a href="#doc9_2879" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.5  練習問題</a>
+<ul>
+<li> <a href="#doc9_2881" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.5.1  オブジェクトの回転</a>
+<li> <a href="#doc9_2891" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.5.2  流れ星アニメーションを作ろう</a>
+<li> <a href="#doc9_2957" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">8.5.3  ハードル走アニメーションを作ろう</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc9_2438">8.1  学習目標</h2>
+
+
+<ul>
+<li> アニメーションの基本構造を理解して、今までつくったオブジェクトを動かすことができるようになる
+<li> タートルの座標系や拡大縮小命令を理解して、自在にオブジェクトを移動させることができる</ul>
+
+
+<h2 id="doc9_2450">8.2  アニメーションの基本</h2>
+
+<p class="first_ja">ここからはオブジェクト指向プログラミングを使って、アニメーションを作っていきたいと思います。</p>
+
+<h3 id="doc9_2455">8.2.1  回る家</h3>
+
+<p class="first_ja">まず、下のプログラムを実行してみましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/block/RotateHouse.jpg" alt="図 8.2.1.1 RotateHouse">
+</div>
+
+
+<div id="doc9_src:RotateHouse" class="caption">リスト 8.2.1.1 RotateHouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * タートルで書いた絵をまわすプログラム
+  3:  * 
+  4:  * 2003/06/16 Yoshiaki Matsuzawa
+  5:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> RotateHouse <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> RotateHouse());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		House house = <span class="keyword">new</span> House();
+ 17: 		{ <span class="comment">// アニメーションループ</span>
+ 18: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 19: 				sleep(0.1);
+ 20: 				{ <span class="comment">// 処理を行う</span>
+ 21: 					house.rt(5);
+ 22: 				}
+ 23: 				update();
+ 24: 			}
+ 25: 		}
+ 26: 	}
+ 27: 
+ 28: }
+</pre>
+
+<p><a href="chapter08/src/RotateHouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、RotateHouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="RotateHouse"/>
+</applet></p>
+<p>ここでは、Houseのプログラムオブジェクトとして生成しています。
+					つまり、<em>いままでタートルで作った絵を使うことができる</em>のです。</p>
+<p>タートルを使って自分の作ったオブジェクトを生成するには、次のような命令文を書きます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/newobject.gif" alt="図 8.2.1.2 オブジェクトの生成">
+</div>
+
+<div class="fyi">
+<div class=title>使うオブジェクトを書くプログラムは同じフォルダに置く</div>
+
+<p class="first_ja">例えば、RotateHouse.javaアニメーションで、House.javaを使う場合は、
+						その2つを同じフォルダに置く必要があります。</p>
+<p>同じフォルダに置いていないとコンパイルエラーが出るので注意してください。</p>
+</div>
+
+
+<h3 id="doc9_2497">8.2.2  アニメーションの基本構造</h3>
+
+<p class="first_ja">RotateHouse.javaをもう一度よく見てみましょう。
+					特に、</p>
+
+<pre id="doc9_2502" class="program">
+while(true){
+	//待つ
+
+	//処理
+
+	//再描画
+}
+				
+</pre>
+
+<p>ここの部分が、今までと異なる所で、アニメーションをするプログラムの特徴です。
+					どのようなアニメーションをするプログラムでも基本構造は同じです。
+					図解すると下のようになります。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/animationmodel.gif" alt="図 8.2.2.1 アニメーションプログラムの構造">
+</div>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/animationmodelconcrete.gif" alt="図 8.2.2.2 アニメーションプログラムの構造(具体的)">
+</div>
+
+<p>ちなみに、House.javaは次のようなプログラムでした。</p>
+
+<div id="doc9_src:House" class="caption">リスト 8.2.2.1 House.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を書くプログラム
+  3:  * 
+  4:  * 2003/05/08 Yoshiaki Matsuzawa
+  5:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> House <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> House());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		{<span class="comment">// 屋根を書く</span>
+ 18: 			rt(30); <span class="comment">// 30度右を向く</span>
+ 19: 			fd(50); <span class="comment">// 50歩前に進む</span>
+ 20: 			rt(120);
+ 21: 			fd(50);
+ 22: 			rt(120);
+ 23: 			fd(50);
+ 24: 		}
+ 25: 
+ 26: 		{<span class="comment">// 本体を書く</span>
+ 27: 			lt(90);
+ 28: 			fd(50);
+ 29: 			lt(90);
+ 30: 			fd(50);
+ 31: 			lt(90);
+ 32: 			fd(50);
+ 33: 			lt(90);
+ 34: 			fd(50);
+ 35: 		}
+ 36: 
+ 37: 	}
+ 38: 
+ 39: }
+</pre>
+
+<p><a href="chapter08/src/House.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Houseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="House"/>
+</applet></p>
+
+<h3 id="doc9_2530">8.2.3  アニメーションをするための新しい命令</h3>
+
+
+<dl>
+<dt>
+sleep([秒の指定])
+<dd>
+指定された秒数だけ、眠り（止まり）ます。1を入れれば1秒止まり、0.1入れれば0.1秒止まります。
+<dt>
+update()
+<dd>
+画面を書き換えます。画面を書き換えないと、fd(5)などで移動しても、画面は書き換わらない（動かない）ので注意してください。</dl>
+
+<div class="fyi">
+<div class=title>何秒眠るか</div>
+
+<p class="first_ja">sleep()命令の中の数字を小さくすることによって、アニメーションを早くすることができます。
+						しかし、コンピュータの能力にも限界があります。
+						軽いアニメーションならば0.01秒（秒間100コマ）ぐらいまでならなんとか動きますが、
+						画像などを使うといくら小さい値を入れても、コンピュータの計算が追いつかなくなります。</p>
+<p>人間が目に分かるのは、秒間30コマまでといわれています（テレビがそれぐらいです）ので、
+						それぐらいを目安に数値を決めると良いでしょう。</p>
+</div>
+
+
+<h3 id="doc9_2557">8.2.4  円を描く家</h3>
+
+<p class="first_ja">オブジェクトになっても、基本的なタートルの命令はどれでも使うことができます。
+					次のプログラムは、円を描く家のプログラムです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/block/CircleHouse.jpg" alt="図 8.2.4.1 CircleHouse">
+</div>
+
+
+<div id="doc9_src:CircleHouse" class="caption">リスト 8.2.4.1 CircleHouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家で円を描くプログラム
+  3:  * 
+  4:  * 2003/06/16 Yoshiaki Matsuzawa
+  5:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> CircleHouse <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> CircleHouse());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		House house = <span class="keyword">new</span> House();
+ 17: 		{ <span class="comment">// 赤い軌跡を描く準備</span>
+ 18: 			house.color(java.awt.Color.red);
+ 19: 			house.down();
+ 20: 		}
+ 21: 		{ <span class="comment">// アニメーションループ</span>
+ 22: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 23: 				sleep(0.1);
+ 24: 				{ <span class="comment">// c//1コマの処理を行う</span>
+ 25: 					house.rt(5);
+ 26: 					house.fd(5);
+ 27: 				}
+ 28: 				update();
+ 29: 			}
+ 30: 		}
+ 31: 	}
+ 32: 
+ 33: }
+</pre>
+
+<p><a href="chapter08/src/CircleHouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、CircleHouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="CircleHouse"/>
+</applet></p>
+<p>down() 命令で、ペンを下ろして軌跡が描かれるようになっています。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/circlehouse.gif" alt="図 8.2.4.2 円を描く家">
+</div>
+
+<div class="fyi">
+<div class=title>初期値</div>
+
+<p class="first_ja">いままでのタートルでは、down()命令をしなくても、
+						最初はペンを下ろした状態から始まっていました。</p>
+<p>しかし、アニメーションでは、軌跡は要らないことが多いので、
+						初期値がペンを上げた状態になっています。</p>
+<p>プログラムを書くときには、&quot;最初の状態&quot;を意識する必要があります。
+						これを「初期値」や「デフォルト値」といいます。</p>
+</div>
+
+
+<h2 id="doc9_2597">8.3  座標の制御</h2>
+
+
+<h3 id="doc9_2599">8.3.1  上向きのまま右に動かす</h3>
+
+<p class="first_ja">次に示すのは、家が右に動いていくプログラムです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/block/MoveRightHouse1.jpg" alt="図 8.3.1.1 MoveRightHouse1">
+</div>
+
+
+<div id="doc9_src:MoveRightHouse1" class="caption">リスト 8.3.1.1 MoveRightHouse1.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を右に動かすプログラム(其の1: 右に向けて動かす方法)
+  3:  * 
+  4:  * 2003/06/16 Yoshiaki Matsuzawa
+  5:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> MoveRightHouse1 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> MoveRightHouse1());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		House house = <span class="keyword">new</span> House();
+ 17: 		house.rt(90);
+ 18: 		{ <span class="comment">// アニメーションループ</span>
+ 19: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 20: 				sleep(0.1);
+ 21: 				{ <span class="comment">// 1コマの処理を行う</span>
+ 22: 					house.fd(5);
+ 23: 				}
+ 24: 				update();
+ 25: 			}
+ 26: 		}
+ 27: 	}
+ 28: 
+ 29: }
+</pre>
+
+<p><a href="chapter08/src/MoveRightHouse1.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、MoveRightHouse1プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="MoveRightHouse1"/>
+</applet></p>
+<p>今までの方法では、前か後ろにしか進めませんが、
+					家は上向きのまま、右に動かしたい場合があります。</p>
+<p>いままでの方法でも、下のように工夫することによって目的は達成できますが、
+					ここでは、warp命令を使ったエレガントな解決方法を考えます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/block/MoveRightHouse2.jpg" alt="図 8.3.1.2 MoveRightHouse2">
+</div>
+
+
+<div id="doc9_src:MoveRightHouse2" class="caption">リスト 8.3.1.2 MoveRightHouse2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を右に動かすプログラム(其の2: 上に向いたまま右に動かす)
+  3:  * 
+  4:  * 2003/06/16 Yoshiaki Matsuzawa
+  5:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> MoveRightHouse2 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> MoveRightHouse2());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		House house = <span class="keyword">new</span> House();
+ 17: 		{ <span class="comment">// アニメーションループ</span>
+ 18: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 19: 				sleep(0.1);
+ 20: 				{ <span class="comment">// 1コマの処理を行う</span>
+ 21: 					house.rt(90);
+ 22: 					house.fd(5);
+ 23: 					house.lt(90);
+ 24: 				}
+ 25: 				update();
+ 26: 			}
+ 27: 		}
+ 28: 	}
+ 29: 
+ 30: }
+</pre>
+
+<p><a href="chapter08/src/MoveRightHouse2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、MoveRightHouse2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="MoveRightHouse2"/>
+</applet></p>
+
+<h3 id="doc9_2643">8.3.2  ワープを使う</h3>
+
+<p class="first_ja">warp命令を使うと、回転せずに、好きな所にオブジェクトを移動することができます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="" alt="図 8.3.2.1 WarpHouse">
+</div>
+
+
+<div id="doc9_src:WarpHouse" class="caption">リスト 8.3.2.1 WarpHouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 4つの家をワープを使って配置するプログラム
+  3:  * 
+  4:  * 2003/06/16 Yoshiaki Matsuzawa
+  5:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> WarpHouse <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> WarpHouse());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		House house1 = <span class="keyword">new</span> House();
+ 17: 		House house2 = <span class="keyword">new</span> House();
+ 18: 		House house3 = <span class="keyword">new</span> House();
+ 19: 		House house4 = <span class="keyword">new</span> House();
+ 20: 		{ <span class="comment">// アニメーションループ</span>
+ 21: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 22: 				sleep(0.1);
+ 23: 				{ <span class="comment">// 処理を行う</span>
+ 24: 					house1.warp(100, 100);
+ 25: 					house2.warp(100, 200);
+ 26: 					house3.warp(200, 100);
+ 27: 					house4.warp(200, 200);
+ 28: 				}
+ 29: 				update();
+ 30: 			}
+ 31: 		}
+ 32: 	}
+ 33: 
+ 34: }
+</pre>
+
+<p><a href="chapter08/src/WarpHouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、WarpHouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="WarpHouse"/>
+</applet></p>
+<p>このプログラムの実行結果は以下のようになります。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/warphouse.gif" alt="図 8.3.2.2 WarpHouse.javaの実行結果">
+</div>
+
+<div class="fyi">
+<div class=title>座標に関する新しい命令</div>
+
+
+<dl>
+<dt>
+warp([x座標, y座標])
+<dd>
+指定されたx座標, y座標の位置に、そのオブジェクトをワープ（瞬間的に移動）させます。命令に数字2つ必要なので、カンマで区切るのを忘れずに。
+<dt>
+getX()
+<dd>
+現在のx座標を取得します。
+<dt>
+getY()
+<dd>
+現在のy座標を取得します。</dl>
+
+</div>
+
+<p>ちなみに、一般にコンピュータ環境では、数学とはちょっと違った座標体系が使われます。
+					タートルの場合もそうです。以下のようになっているので気をつけてください。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/coordinates.gif" alt="図 8.3.2.3 タートルの座標体系">
+</div>
+
+<p>さあ、ワープを使って、家を右に移動しましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/block/MoveRightHouse3.jpg" alt="図 8.3.2.4 MoveRightHouse3">
+</div>
+
+
+<div id="doc9_src:MoveRightHouse3" class="caption">リスト 8.3.2.2 MoveRightHouse3.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を右に動かすプログラム(其の3: 上に向いたまま右に動かす(ワープを使う))
+  3:  * 
+  4:  * 2003/06/16 Yoshiaki Matsuzawa
+  5:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> MoveRightHouse3 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> MoveRightHouse3());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		House house = <span class="keyword">new</span> House();
+ 17: 		{ <span class="comment">// アニメーションループ</span>
+ 18: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 19: 				sleep(0.1);
+ 20: 				{ <span class="comment">// 1コマの処理を行う</span>
+ 21: 					<span class="keyword">int</span> x = house.getX();
+ 22: 					<span class="keyword">int</span> y = house.getY();
+ 23: 					house.warp(x + 5, y);
+ 24: 				}
+ 25: 				update();
+ 26: 			}
+ 27: 		}
+ 28: 	}
+ 29: 
+ 30: }
+</pre>
+
+<p><a href="chapter08/src/MoveRightHouse3.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、MoveRightHouse3プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="MoveRightHouse3"/>
+</applet></p>
+<p>さらに、右端までいったら左端にワープするように改造します。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/block/MoveRightHouse4.jpg" alt="図 8.3.2.5 MoveRightHouse4">
+</div>
+
+
+<div id="doc9_src:MoveRightHouse4" class="caption">リスト 8.3.2.3 MoveRightHouse4.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を右に動かすプログラム(其の4: 右端に行ったら左端に戻す(ワープを使う))
+  3:  * 
+  4:  * 2003/06/16 Yoshiaki Matsuzawa
+  5:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> MoveRightHouse4 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> MoveRightHouse4());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		House house = <span class="keyword">new</span> House();
+ 17: 		{ <span class="comment">// アニメーションループ</span>
+ 18: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 19: 				sleep(0.1);
+ 20: 				{ <span class="comment">// 1コマの処理を行う</span>
+ 21: 					<span class="keyword">int</span> x = house.getX();
+ 22: 					<span class="keyword">int</span> y = house.getY();
+ 23: 					{ <span class="comment">// 右に移動</span>
+ 24: 						house.warp(x + 5, y);
+ 25: 					}
+ 26: 					{ <span class="comment">// 右端だったら左端にワープ</span>
+ 27: 						<span class="keyword">if</span> (x &gt;= 300) {
+ 28: 							house.warp(0, y);
+ 29: 						}
+ 30: 					}
+ 31: 				}
+ 32: 				update();
+ 33: 			}
+ 34: 		}
+ 35: 	}
+ 36: 
+ 37: }
+</pre>
+
+<p><a href="chapter08/src/MoveRightHouse4.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、MoveRightHouse4プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="MoveRightHouse4"/>
+</applet></p>
+<p>だんだんアニメーションらしくなってきました。</p>
+
+<h2 id="doc9_2741">8.4  大きさの変更(拡大/縮小)</h2>
+
+
+<h3 id="doc9_2743">8.4.1  大きさを変更するプログラム</h3>
+
+<p class="first_ja">オブジェクトは、大きさを変更することもできます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/block/LargeHouse.jpg" alt="図 8.4.1.1 LargeHouse">
+</div>
+
+
+<div id="doc9_src:LargeHouse" class="caption">リスト 8.4.1.1 LargeHouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を大きくするプログラム(大きさを測る)
+  3:  * 
+  4:  * 2003/06/16 Yoshiaki Matsuzawa
+  5:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> LargeHouse <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> LargeHouse());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		House house = <span class="keyword">new</span> House();
+ 17: 		{ <span class="comment">// アニメーションループ</span>
+ 18: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 19: 				sleep(0.1);
+ 20: 				{ <span class="comment">// 1コマの処理を行う</span>
+ 21: 					house.size(200, 200);
+ 22: 				}
+ 23: 				update();
+ 24: 			}
+ 25: 		}
+ 26: 	}
+ 27: 
+ 28: }
+</pre>
+
+<p><a href="chapter08/src/LargeHouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、LargeHouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="LargeHouse"/>
+</applet></p>
+<div class="fyi">
+<div class=title>大きさに関する新しい命令</div>
+
+
+<dl>
+<dt>
+size([横の長さ], [縦の長さ])
+<dd>
+そのオブジェクトを横の長さと縦の長さを、指定された大きさにします。命令に数字2つ必要なので、カンマで区切るのを忘れずに。
+<dt>
+getWidth()
+<dd>
+現在の横幅を取得します。
+<dt>
+getHeight()
+<dd>
+現在の縦幅を取得します。</dl>
+
+</div>
+
+
+<h3 id="doc9_2789">8.4.2  徐々に大きくする</h3>
+
+<p class="first_ja">アニメーションループをうまく利用すれば、徐々に大きくなっていくプログラムが書けます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/block/LargerHouse.jpg" alt="図 8.4.2.1 LargerHouse">
+</div>
+
+
+<div id="doc9_src:LargerHouse" class="caption">リスト 8.4.2.1 LargerHouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を大きくするプログラム(其の1: 大きくしていく)
+  3:  * 
+  4:  * 2003/06/16 Yoshiaki Matsuzawa
+  5:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> LargerHouse <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> LargerHouse());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		House house = <span class="keyword">new</span> House();
+ 17: 		{ <span class="comment">// アニメーションループ</span>
+ 18: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 19: 				sleep(0.1);
+ 20: 				{ <span class="comment">// 1コマの処理を行う</span>
+ 21: 					<span class="keyword">int</span> width = house.getWidth();
+ 22: 					<span class="keyword">int</span> height = house.getHeight();
+ 23: 					house.size(width + 2, height + 2);
+ 24: 				}
+ 25: 				update();
+ 26: 			}
+ 27: 		}
+ 28: 	}
+ 29: 
+ 30: }
+</pre>
+
+<p><a href="chapter08/src/LargerHouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、LargerHouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="LargerHouse"/>
+</applet></p>
+<p>大きくなりすぎたら、小さく戻してあげましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter08/image/block/LargerHouse2.jpg" alt="図 8.4.2.2 LargerHouse2">
+</div>
+
+
+<div id="doc9_src:LargerHouse2" class="caption">リスト 8.4.2.2 LargerHouse2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 家を大きくするプログラム (其の2: 大きくなりすぎたら小さくする)
+  3:  * 
+  4:  * 2003/06/16 Yoshiaki Matsuzawa
+  5:  * 2012/10/31 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> LargerHouse2 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> LargerHouse2());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		House house = <span class="keyword">new</span> House();
+ 17: 		{ <span class="comment">// アニメーションループ</span>
+ 18: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 19: 				sleep(0.1);
+ 20: 				{ <span class="comment">// 1コマの処理を行う</span>
+ 21: 					<span class="keyword">int</span> width = house.getWidth();
+ 22: 					<span class="keyword">int</span> height = house.getHeight();
+ 23: 					house.size(width + 2, height + 2);
+ 24: 					{ <span class="comment">// 横幅が大きくなりすぎたら小さくする</span>
+ 25: 						<span class="keyword">if</span> (width &gt;= 300) {
+ 26: 							house.scale(0.25);
+ 27: 						}
+ 28: 					}
+ 29: 					{ <span class="comment">// 縦幅が大きくなりすぎたら小さくする</span>
+ 30: 						<span class="keyword">if</span> (height &gt;= 300) {
+ 31: 							house.scale(0.25);
+ 32: 						}
+ 33: 					}
+ 34: 				}
+ 35: 				update();
+ 36: 			}
+ 37: 		}
+ 38: 	}
+ 39: 
+ 40: }
+</pre>
+
+<p><a href="chapter08/src/LargerHouse2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、LargerHouse2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="LargerHouse2"/>
+</applet></p>
+<div class="fyi">
+<div class=title>大きさ変更に便利な命令</div>
+
+
+<dl>
+<dt>
+scale([倍率])
+<dd>
+そのオブジェクトを指定された倍率の大きさにします。
+<dt>
+large([長さ])
+<dd>
+指定した長さだけ縦横を幅を大きくします。
+<dt>
+small([長さ])
+<dd>
+指定した長さだけ縦横の幅を小さくします。
+<dt>
+wide([長さ])
+<dd>
+指定した長さだけ横幅を大きくします。
+<dt>
+narrow([長さ])
+<dd>
+指定した長さだけ横幅を小さくします。
+<dt>
+tall([長さ])
+<dd>
+指定した長さだけ縦幅を大きくします。
+<dt>
+little([長さ])
+<dd>
+指定した長さだけ縦幅を小さくします。</dl>
+
+</div>
+
+
+<h2 id="doc9_2879">8.5  練習問題</h2>
+
+
+<h3 id="doc9_2881">8.5.1  オブジェクトの回転</h3>
+
+<p class="first_ja">これまでの課題で作ったもの（四角形，星など）を回転させるアニメーションを作ってみましょう。</p>
+<p>ファイル名は「Rotation.java」とすること．</p>
+
+<h3 id="doc9_2891">8.5.2  流れ星アニメーションを作ろう</h3>
+
+<p class="first_ja">星を書くプログラム(Star.java)を使って、流れ星のプログラムを書いてみよう。</p>
+<p>ダウンロードはこちらから</p>
+
+<ul>
+<li> <a href="../html4/chapter08/src/Star.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Star.java</a></ul>
+
+<p>仕上がり例</p>
+<p>下のボタンを押すと、ShootingStar2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ShootingStar2"/>
+</applet></p>
+<p>流れ星は、次の手順で進めていくとうまくできます。</p>
+
+<ol>
+<li> Star.javaをダウンロードして動かしてみる
+<li> ShootingStar.javaを新しく作る(Star.javaは変更しないこと)
+<li> ShootingStar.javaに、Starオブジェクトを生成して表示するプログラムを書く
+<li> 星を回してみる
+<li> 座標を使って、星を右に動かしてみる
+<li> 一番右端にいったら、左端に戻るようにする
+<li> 星を下にも動かす
+<li> 一番下にいったら、上に戻るようにする
+<li> 星の大きさを変える
+<li> 星を増やす</ol>
+
+<p>ファイル名は「ShootingStar.java」とすること．</p>
+
+<h3 id="doc9_2957">8.5.3  ハードル走アニメーションを作ろう</h3>
+
+<p class="first_ja">以下の実行例のように、人間を描くプログラム(Person.java)とハードルを描くプログラム(Hurdle.java)を使って、ハードル走のプログラムを書いてみよう。</p>
+<p>ダウンロードはこちらから</p>
+
+<ul>
+<li> <a href="../html4/chapter08/src/Person.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Person.java</a>
+<li> <a href="../html4/chapter08/src/Hurdle.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Hurdle.java</a></ul>
+
+<p>仕上がり例</p>
+<p>下のボタンを押すと、Hurdlingプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter08_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Hurdling"/>
+</applet></p>
+<p>ファイル名は「Hurdling.java」とすること．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c7.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/アニメーション入門（いままで作ったものを動かそう）</td>
+<td><a href="index_p1_c9.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

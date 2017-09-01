@@ -1,0 +1,1321 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2011/11/09" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p2_c12.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p2.html#doc1_part:two" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">プログラムの部品化</a>/命令をつくる（２）：戻り値付メソッド</td>
+<td><a href="index_p2_c14.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_48">13  命令をつくる（２）：戻り値付メソッド</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc14_4912" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.1  学習目標</a>
+<li> <a href="#doc14_4924" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.2  戻り値付メソッド</a>
+<ul>
+<li> <a href="#doc14_4926" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.2.1  戻り値とは</a>
+<li> <a href="#doc14_4932" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.2.2  相性占い1(int型の戻り値)</a>
+<li> <a href="#doc14_4975" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.2.3  相性占い2(String型の戻り値)</a>
+<li> <a href="#doc14_4994" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.2.4  相性占い2d(return文)</a>
+<li> <a href="#doc14_5014" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.2.5  相性占い3(真偽値型)</a>
+<li> <a href="#doc14_5036" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.2.6  相性占い3d(多段呼び出し　＋　if文の中に命令)</a>
+</ul>
+<li> <a href="#doc14_5068" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.3  メソッドの設計・あるいはプログラムの構造化(2)</a>
+<ul>
+<li> <a href="#doc14_5070" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.3.1  入力・処理・出力</a>
+<li> <a href="#doc14_5106" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.3.2  構造化された西暦変換プログラム</a>
+</ul>
+<li> <a href="#doc14_5129" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.4  練習問題</a>
+<ul>
+<li> <a href="#doc14_5131" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.4.1  BMI</a>
+<li> <a href="#doc14_5143" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.4.2  総和</a>
+<li> <a href="#doc14_5155" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.4.3  ランダム</a>
+<li> <a href="#doc14_5167" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.4.4  じゃんけん</a>
+<li> <a href="#doc14_5179" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">13.4.5  コイン投げのシミュレーション</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc14_4912">13.1  学習目標</h2>
+
+
+<ul>
+<li> 戻り値を持つメソッドを使ったプログラムを作れるようになる
+<li> 入出力を持つメソッドを使ったプログラムを作れるようになる</ul>
+
+
+<h2 id="doc14_4924">13.2  戻り値付メソッド</h2>
+
+
+<h3 id="doc14_4926">13.2.1  戻り値とは</h3>
+
+<p class="first_ja">引数は、呼び出し元のメソッドから呼び出したメソッドに、データを受け渡したいという要求をかなえる仕組みでした。
+					逆に、呼び出されたメソッドが処理した結果を呼び出し元に受け渡したい、という場合もあります。
+					これをかなえる仕組みが、戻り値です。</p>
+
+<h3 id="doc14_4932">13.2.2  相性占い1(int型の戻り値)</h3>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter12/image/design/aishow01.png" alt="図 13.2.2.1 aishow01">
+</div>
+
+
+<div id="doc14_src:AiShow01" class="caption">リスト 13.2.2.1 AiShow01.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * AiShow01.java
+  3:  * Created on 2011/12/14
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: 
+  7: <span class="comment">/*
+  8:  * 相性占いプログラム
+  9:  */</span>
+ 10: <span class="keyword">public</span> <span class="keyword">class</span> AiShow01 {
+ 11: 
+ 12: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 13: 		AiShow01 main = <span class="keyword">new</span> AiShow01();
+ 14: 		main.run();
+ 15: 	}
+ 16: 
+ 17: 	<span class="keyword">void</span> run() {
+ 18: 		<span class="keyword">int</span> aishow = judge(<span class="quote">&quot;木村拓哉&quot;</span>, <span class="quote">&quot;工藤静香&quot;</span>);
+ 19: 		System.out.println(<span class="quote">&quot;相性は&quot;</span> + aishow + <span class="quote">&quot;です&quot;</span>);
+ 20: 	}
+ 21: 
+ 22: 	<span class="keyword">int</span> judge(String name1, String name2) {
+ 23: 		<span class="keyword">int</span> x = name1.hashCode() + name2.hashCode();
+ 24: 		x = x % 100;
+ 25: 		<span class="keyword">return</span> x;
+ 26: 	}
+ 27: }
+</pre>
+
+<p class="first_ja"><a href="chapter12/src/AiShow01.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、AiShow01プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter12_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="AiShow01"/>
+</applet></p>
+<p>戻り値ありメソッドの定義の仕方は、次の通りです。</p>
+
+<pre id="doc14_4953" class="program">
+						
+[戻り値の型] [メソッド名]([引数の型] [仮引数名]){
+	return [戻り値];
+}
+				
+</pre>
+
+<p>戻り値ありメソッドの呼び出し方は、次の通りです（引数ありメソッドと同じです）。</p>
+
+<pre id="doc14_4959" class="program">
+						
+[メソッド名]([実引数]);
+
+				
+</pre>
+
+<div class="fyi">
+<div class=title>戻り値？返り値？</div>
+
+<p class="first_ja">戻り値は他の教科書では返り値と呼ばれていたりします。元々の英語「return value」の訳は定まっていないように思われます。
+				昔，僕がたくさんの教科書を調べたかぎりでは，「戻り値」，「返り値」，「リターン値」が各1/3くらいずつ分布していました。</p>
+</div>
+
+<div class="fyi">
+<div class=title>void</div>
+
+<p class="first_ja">先週使った「void」は「戻り値がない」という意味なのでした。</p>
+</div>
+
+
+<h3 id="doc14_4975">13.2.3  相性占い2(String型の戻り値)</h3>
+
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter12/image/design/aishow02.png" alt="図 13.2.3.1 aishow02">
+</div>
+
+
+<div id="doc14_src:AiShow02" class="caption">リスト 13.2.3.1 AiShow02.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * AiShow01.java
+  3:  * Created on 2011/12/14
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: 
+  7: <span class="comment">/*
+  8:  * 相性占いプログラム
+  9:  * String版
+ 10:  */</span>
+ 11: <span class="keyword">public</span> <span class="keyword">class</span> AiShow02 {
+ 12: 
+ 13: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 14: 		AiShow02 main = <span class="keyword">new</span> AiShow02();
+ 15: 		main.run();
+ 16: 	}
+ 17: 
+ 18: 	<span class="keyword">void</span> run() {
+ 19: 		String aishow = judge(<span class="quote">&quot;木村拓哉&quot;</span>, <span class="quote">&quot;工藤静香&quot;</span>);
+ 20: 		System.out.println(<span class="quote">&quot;相性は&quot;</span> + aishow + <span class="quote">&quot;です&quot;</span>);
+ 21: 	}
+ 22: 
+ 23: 	String judge(String name1, String name2) {
+ 24: 		<span class="keyword">int</span> x = name1.hashCode() + name2.hashCode();
+ 25: 		x = x % 100;
+ 26: 		String text = <span class="quote">&quot;&quot;</span>;
+ 27: 		<span class="keyword">if</span> (x &gt; 80) {
+ 28: 			text = <span class="quote">&quot;ばっちり&quot;</span>;
+ 29: 		} <span class="keyword">else</span> {
+ 30: 			text = <span class="quote">&quot;そこそこ&quot;</span>;
+ 31: 		}
+ 32: 		<span class="keyword">return</span> text;
+ 33: 	}
+ 34: }
+</pre>
+
+<p class="first_ja"><a href="chapter12/src/AiShow02.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、AiShow02プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter12_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="AiShow02"/>
+</applet></p>
+
+<h3 id="doc14_4994">13.2.4  相性占い2d(return文)</h3>
+
+
+<div id="doc14_src:AiShow02d" class="caption">リスト 13.2.4.1 AiShow02d.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * AiShow01.java
+  3:  * Created on 2011/12/14
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: 
+  7: <span class="comment">/*
+  8:  * 相性占いプログラム
+  9:  * String版，途中でreturnを書いて脱出
+ 10:  */</span>
+ 11: <span class="keyword">public</span> <span class="keyword">class</span> AiShow02d {
+ 12: 
+ 13: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 14: 		AiShow02d main = <span class="keyword">new</span> AiShow02d();
+ 15: 		main.run();
+ 16: 	}
+ 17: 
+ 18: 	<span class="keyword">void</span> run() {
+ 19: 		String aishow = judge(<span class="quote">&quot;木村拓哉&quot;</span>, <span class="quote">&quot;工藤静香&quot;</span>);
+ 20: 		System.out.println(<span class="quote">&quot;相性は&quot;</span> + aishow + <span class="quote">&quot;です&quot;</span>);
+ 21: 	}
+ 22: 
+ 23: 	String judge(String name1, String name2) {
+ 24: 		<span class="keyword">int</span> x = name1.hashCode() + name2.hashCode();
+ 25: 		x = x % 100;
+ 26: 		<span class="keyword">if</span> (x &gt; 80) {
+ 27: 			<span class="keyword">return</span> <span class="quote">&quot;ばっちり&quot;</span>;
+ 28: 		} <span class="keyword">else</span> {
+ 29: 			<span class="keyword">return</span> <span class="quote">&quot;そこそこ&quot;</span>;
+ 30: 		}
+ 31: 	}
+ 32: }
+</pre>
+
+<p class="first_ja"><a href="chapter12/src/AiShow02d.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、AiShow02dプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter12_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="AiShow02d"/>
+</applet></p>
+<p>戻り値ありメソッドでは、return文を書いたところでメソッドの出力は決まり、メソッドの処理を抜けます。
+					したがって、return文の後に命令を書いても、実行されることはありません（「この文に制御が移ることはありません」というエラーが出ます）。</p>
+
+<h3 id="doc14_5014">13.2.5  相性占い3(真偽値型)</h3>
+
+<p class="first_ja">次のプログラムは、boolean(真偽値型)を使ったプログラムです。真偽値型はtrueまたはfalseの二値のどちらかが入る型です。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter12/image/design/aishow03.png" alt="図 13.2.5.1 aishow03">
+</div>
+
+
+<div id="doc14_src:AiShow03" class="caption">リスト 13.2.5.1 AiShow03.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * AiShow01.java
+  3:  * Created on 2011/12/14
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: 
+  7: <span class="comment">/*
+  8:  * 相性占いプログラム
+  9:  * boolean版，途中でreturnを書いて脱出
+ 10:  */</span>
+ 11: <span class="keyword">public</span> <span class="keyword">class</span> AiShow03 {
+ 12: 
+ 13: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 14: 		AiShow03 main = <span class="keyword">new</span> AiShow03();
+ 15: 		main.run();
+ 16: 	}
+ 17: 
+ 18: 	<span class="keyword">void</span> run() {
+ 19: 		<span class="keyword">boolean</span> aishow = judge(<span class="quote">&quot;木村拓哉&quot;</span>, <span class="quote">&quot;工藤静香&quot;</span>);
+ 20: 		<span class="keyword">if</span> (aishow == <span class="keyword">true</span>) {
+ 21: 			System.out.println(<span class="quote">&quot;相性ばっちり！&quot;</span>);
+ 22: 		} <span class="keyword">else</span> {
+ 23: 			System.out.println(<span class="quote">&quot;努力次第．．．&quot;</span>);
+ 24: 		}
+ 25: 	}
+ 26: 
+ 27: 	<span class="keyword">boolean</span> judge(String name1, String name2) {
+ 28: 		<span class="keyword">int</span> x = name1.hashCode() + name2.hashCode();
+ 29: 		x = x % 100;
+ 30: 		<span class="keyword">if</span> (x &gt; 80) {
+ 31: 			<span class="keyword">return</span> <span class="keyword">true</span>;
+ 32: 		} <span class="keyword">else</span> {
+ 33: 			<span class="keyword">return</span> <span class="keyword">false</span>;
+ 34: 		}
+ 35: 	}
+ 36: 
+ 37: }
+</pre>
+
+<p><a href="chapter12/src/AiShow03.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、AiShow03プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter12_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="AiShow03"/>
+</applet></p>
+
+<h3 id="doc14_5036">13.2.6  相性占い3d(多段呼び出し　＋　if文の中に命令)</h3>
+
+<p class="first_ja">戻り値のあるプログラムの多段呼び出しももちろん可能です。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter12/image/design/aishow03d.png" alt="図 13.2.6.1 aishow03d">
+</div>
+
+
+<div id="doc14_src:AiShow03d" class="caption">リスト 13.2.6.1 AiShow03d.java</div>
+<pre class="program" style="margin-top:0">
+  1: 
+  2: <span class="comment">/*
+  3:  * AiShow01.java
+  4:  * Created on 2011/12/14
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: 
+  8: <span class="comment">/*
+  9:  * 相性占いプログラム
+ 10:  * 多段呼び出し　＋　if文の中に命令
+ 11:  */</span>
+ 12: <span class="keyword">public</span> <span class="keyword">class</span> AiShow03d {
+ 13: 
+ 14: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 15: 		AiShow03d main = <span class="keyword">new</span> AiShow03d();
+ 16: 		main.run();
+ 17: 	}
+ 18: 
+ 19: 	<span class="keyword">void</span> run() {
+ 20: 		<span class="keyword">if</span> (judge(<span class="quote">&quot;木村拓哉&quot;</span>, <span class="quote">&quot;工藤静香&quot;</span>)) {
+ 21: 			System.out.println(<span class="quote">&quot;相性ばっちり！&quot;</span>);
+ 22: 		} <span class="keyword">else</span> {
+ 23: 			System.out.println(<span class="quote">&quot;努力次第．．．&quot;</span>);
+ 24: 		}
+ 25: 	}
+ 26: 
+ 27: 	<span class="keyword">boolean</span> judge(String name1, String name2) {
+ 28: 		<span class="keyword">if</span> (countAishow(name1, name2) &gt; 80) {
+ 29: 			<span class="keyword">return</span> <span class="keyword">true</span>;
+ 30: 		} <span class="keyword">else</span> {
+ 31: 			<span class="keyword">return</span> <span class="keyword">false</span>;
+ 32: 		}
+ 33: 	}
+ 34: 
+ 35: 	<span class="keyword">int</span> countAishow(String name1, String name2) {
+ 36: 		<span class="keyword">int</span> x = name1.hashCode() + name2.hashCode();
+ 37: 		x = x % 100;
+ 38: 		<span class="keyword">return</span> x;
+ 39: 	}
+ 40: }
+</pre>
+
+<p><a href="chapter12/src/AiShow03d.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、AiShow03dプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter12_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="AiShow03d"/>
+</applet></p>
+<p>if文やwhile文の条件節には最終的に真偽値型の値が入ればよいという約束になっているので、真偽値型を戻り値に持つメソッドを直接書くことも出来ます。</p>
+<div class="fyi">
+<div class=title>引数と戻り値の数</div>
+
+<p class="first_ja">引数は、複数指定することができますが、戻り値は必ずひとつです。
+				複数の戻り値を戻したい場合，配列，リストやクラス等を使ってデータを合成し，一つのデータの形にする必要があります。</p>
+</div>
+
+
+<h2 id="doc14_5068">13.3  メソッドの設計・あるいはプログラムの構造化(2)</h2>
+
+
+<h3 id="doc14_5070">13.3.1  入力・処理・出力</h3>
+
+<p class="first_ja">次のプログラムは、ユーザから底と指数の入力を受け取り、累乗を計算するプログラムです。</p>
+
+<div id="doc14_src:Power" class="caption">リスト 13.3.1.1 Power.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="keyword">import</span> java.util.Scanner;
+  2: 
+  3: <span class="comment">/*
+  4:  * プログラム名：累乗計算プログラム 
+  5:  * 作成者： MegumiAraki 
+  6:  * 作成日： Tue Dec 04 12:28:06 JST 2007
+  7:  */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> Power {
+  9: 
+ 10: 	<span class="comment">// 起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		Power main = <span class="keyword">new</span> Power();
+ 13: 		main.run();
+ 14: 	}
+ 15: 
+ 16: 	<span class="comment">// メイン処理</span>
+ 17: 	<span class="keyword">public</span> <span class="keyword">void</span> run() {
+ 18: 		System.out.println(<span class="quote">&quot;累乗計算プログラムを開始します&quot;</span>);<span class="comment">// アプリケーションの開始を知らせる</span>
+ 19: 
+ 20: 		Scanner scanner = <span class="keyword">new</span> Scanner(System.in);<span class="comment">// 入力を受け付けるスキャナーを作る</span>
+ 21: 
+ 22: 		<span class="comment">// 底の入力を受け付ける</span>
+ 23: 		System.out.println(<span class="quote">&quot;底を入力してください&gt;&gt;&quot;</span>);
+ 24: 		<span class="keyword">int</span> base = scanner.nextInt();
+ 25: 
+ 26: 		<span class="comment">// 指数の入力を受け付ける</span>
+ 27: 		System.out.println(<span class="quote">&quot;指数を入力してください&gt;&gt;&quot;</span>);
+ 28: 		<span class="keyword">int</span> exponent = scanner.nextInt();
+ 29: 
+ 30: 		<span class="comment">// 累乗数を計算し、計算結果をcalculatedPowerという変数に書き込む</span>
+ 31: 		<span class="keyword">int</span> calculatedPower = calculatePower(base, exponent);
+ 32: 
+ 33: 		<span class="comment">// 累乗数を出力する</span>
+ 34: 		System.out.println(base + <span class="quote">&quot;の&quot;</span> + exponent + <span class="quote">&quot;乗は&quot;</span> + calculatedPower
+ 35: 				+ <span class="quote">&quot;です。&quot;</span>);
+ 36: 
+ 37: 		System.out.println(<span class="quote">&quot;累乗計算プログラムを終了します&quot;</span>);<span class="comment">// アプリケーションの終了を知らせる</span>
+ 38: 	}
+ 39: 
+ 40: 	<span class="comment">// 累乗を計算する</span>
+ 41: 	<span class="keyword">int</span> calculatePower(<span class="keyword">int</span> base, <span class="keyword">int</span> exponent) {
+ 42: 		<span class="keyword">int</span> power = 1;<span class="comment">// 累乗数の初期値を、数の0乗（1）に設定する</span>
+ 43: 
+ 44: 		<span class="comment">// 累乗を計算する</span>
+ 45: 		<span class="keyword">int</span> i = 0;
+ 46: 		<span class="keyword">while</span> (i &lt; exponent) {
+ 47: 			power = power * base;
+ 48: 			i++;
+ 49: 		}
+ 50: 
+ 51: 		<span class="keyword">return</span> power;
+ 52: 	}
+ 53: 
+ 54: }
+</pre>
+
+<p><a href="chapter12/src/Power.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、Powerプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter12_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="PowerApplet"/>
+</applet></p>
+<p>このプログラムの入力・処理・出力を図に表すと以下のようになります。</p>
+<p>矢印はデータの流れを、四角は処理を示します。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter12/image/PowerProgramInputOutput.png" alt="図 13.3.1.1 累乗計算メソッドの入出力">
+</div>
+
+<p>プログラムは一般的に、入力・処理・出力の構造を持っています。</p>
+<p>メソッドも、プログラムと同様に入力・処理・出力の構造を持っています。メソッドの入力・処理・出力を図に表すと、以下のようになります。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter12/image/InputOutput.png" alt="図 13.3.1.2 メソッドの入出力">
+</div>
+
+
+<h3 id="doc14_5106">13.3.2  構造化された西暦変換プログラム</h3>
+
+<p class="first_ja">メソッドを使って構造化された，西暦変換プログラムの完全版を読んでみましょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter12/image/design/convyear.png" alt="図 13.3.2.1 convyear">
+</div>
+
+
+<div id="doc14_src:ConvertYearApplication3" class="caption">リスト 13.3.2.1 ConvertYearApplication3.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="keyword">import</span> java.util.Scanner;
+  2: 
+  3: <span class="comment">/**
+  4:  * 西暦和暦変換プログラム（2レベルをメソッド化）
+  5:  * 
+  6:  * @author オブプロ例題
+  7:  * @version 3.0
+  8:  */</span>
+  9: <span class="keyword">public</span> <span class="keyword">class</span> ConvertYearApplication3 {
+ 10: 
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		ConvertYearApplication3 main = <span class="keyword">new</span> ConvertYearApplication3();
+ 13: 		main.run();
+ 14: 	}
+ 15: 
+ 16: 	Scanner scanner = <span class="keyword">new</span> Scanner(System.in);
+ 17: 
+ 18: 	<span class="comment">// 西暦を和暦に変換する</span>
+ 19: 	<span class="keyword">public</span> <span class="keyword">void</span> run() {
+ 20: 		showTitle();
+ 21: 		convertYear();
+ 22: 		showEndTitle();
+ 23: 	}
+ 24: 
+ 25: 	<span class="comment">// 西暦を和暦に変換する</span>
+ 26: 	<span class="keyword">void</span> convertYear() {
+ 27: 		<span class="keyword">int</span> year;
+ 28: 		String japaneseYear;
+ 29: 
+ 30: 		year = inputYear();
+ 31: 		japaneseYear = convertToJapaneseYear(year);
+ 32: 		showResult(year, japaneseYear);
+ 33: 	}
+ 34: 
+ 35: 	<span class="comment">// 西暦を入力する</span>
+ 36: 	<span class="keyword">int</span> inputYear() {
+ 37: 		<span class="keyword">int</span> year;
+ 38: 		System.out.println(<span class="quote">&quot;西暦を入力してください&quot;</span>);
+ 39: 		year = scanner.nextInt();
+ 40: 		<span class="keyword">return</span> year;
+ 41: 	}
+ 42: 
+ 43: 	<span class="comment">// 西暦を和暦に変換する</span>
+ 44: 	String convertToJapaneseYear(<span class="keyword">int</span> year) {
+ 45: 		String japaneseYear;
+ 46: 		<span class="keyword">if</span> (year &gt;= 1989) {
+ 47: 			japaneseYear = <span class="quote">&quot;平成&quot;</span> + (year - 1988);
+ 48: 		} <span class="keyword">else</span> <span class="keyword">if</span> (year &gt;= 1926) {
+ 49: 			japaneseYear = <span class="quote">&quot;昭和&quot;</span> + (year - 1925);
+ 50: 		} <span class="keyword">else</span> {
+ 51: 			japaneseYear = <span class="quote">&quot;不明&quot;</span>;
+ 52: 		}
+ 53: 		<span class="keyword">return</span> japaneseYear;
+ 54: 	}
+ 55: 
+ 56: 	<span class="comment">// 変換結果を出力する</span>
+ 57: 	<span class="keyword">void</span> showResult(<span class="keyword">int</span> year, String japaneseYear) {
+ 58: 		System.out.println(year + <span class="quote">&quot;年は&quot;</span> + japaneseYear + <span class="quote">&quot;年です.&quot;</span>);
+ 59: 	}
+ 60: 
+ 61: 	<span class="comment">// アプリケーションの開始を知らせる</span>
+ 62: 	<span class="keyword">void</span> showTitle() {
+ 63: 		System.out.println(<span class="quote">&quot;西暦和暦変換プログラムを開始します&quot;</span>);
+ 64: 	}
+ 65: 
+ 66: 	<span class="comment">// アプリケーションの終了を知らせる</span>
+ 67: 	<span class="keyword">void</span> showEndTitle() {
+ 68: 		System.out.println(<span class="quote">&quot;西暦和暦変換プログラムを終了します&quot;</span>);
+ 69: 	}
+ 70: 
+ 71: }
+</pre>
+
+<p><a href="chapter12/src/ConvertYearApplication3.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、ConvertYearApplication3プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter12_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ConvertYearApplication3Applet"/>
+</applet></p>
+
+<h2 id="doc14_5129">13.4  練習問題</h2>
+
+
+<h3 id="doc14_5131">13.4.1  BMI</h3>
+
+<p class="first_ja">BMIを計算する次のメソッドを作り，テストしてください．
+				（以下，「テストする」とは，メインのプログラム（run()メソッド）から一回以上そのメソッドを呼ぶプログラムを書くことを意味する）</p>
+
+<pre id="doc14_5136" class="program">
+			
+					
+double bmi(double height, double weight){．．．}
+
+				
+</pre>
+
+<p>heightは身長，weightは体重を入力する引数で，BMI値を戻り値として出力する．</p>
+
+<h3 id="doc14_5143">13.4.2  総和</h3>
+
+<p class="first_ja">１からnまでの総和（1からnまでの数を全部足した数）を計算する次のメソッドを作り，テストしてください．</p>
+
+<pre id="doc14_5148" class="program">
+	
+							
+int sum(int n){．．．}
+
+				
+</pre>
+
+<p>nはいくつまでの総和を求めるか入力する引数で，計算された総和を戻り値として出力する．</p>
+
+<h3 id="doc14_5155">13.4.3  ランダム</h3>
+
+<p class="first_ja">最小値と最大値を考慮してランダムな数値を作りだす以下のメソッドを作り，テストしてください．</p>
+
+<pre id="doc14_5160" class="program">
+	
+							
+int makeRandom(int min, int max){．．．}
+
+				
+</pre>
+
+<p>minは最小値，maxは最大値を入力する引数で，生成されたランダムな数（最小値から最大値の間に入ること！）を戻り値として出力する．</p>
+
+<h3 id="doc14_5167">13.4.4  じゃんけん</h3>
+
+<p class="first_ja">じゃんけんの判定をする次のメソッドを作り，テストしてください．</p>
+
+<pre id="doc14_5172" class="program">
+	
+							
+int jankenJudge(int hand1, int hand2){．．．}
+
+				
+</pre>
+
+<p>hand1はplayer１の手（0-グー, 1-チョキ, 2-パー），hand2はplayer2の手（数字の割り当てはplayer1と同じ）を表現する引数で，
+				player1からみた結果(1-勝ち，0-あいこ, (-1)-負け)を戻り値として出力する．</p>
+
+<h3 id="doc14_5179">13.4.5  コイン投げのシミュレーション</h3>
+
+<p class="first_ja">まず次のメソッドを作ってください。このメソッドは，コイン投げをシミュレートし，二分の一の確率でtrueを戻します。</p>
+
+<pre id="doc14_5184" class="program">
+			
+					
+boolean flip(){．．．}
+
+				
+</pre>
+
+<p>次に，次のメソッドを作ってください。このメソッドは引数で与えられたn回flipメソッドを呼び，表が出た回数を数えて戻り値とします。</p>
+
+<pre id="doc14_5190" class="program">
+			
+					
+int simulate(int n){．．．}
+
+				
+</pre>
+
+<p>最後に，このメソッドをテストし，実際の確率を計算してみてください。（できる人は，試行回数が増えるにつれて
+				1/2に近くなることを表現する出力を考えてみよう。）</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p2_c12.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p2.html#doc1_part:two" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">プログラムの部品化</a>/命令をつくる（２）：戻り値付メソッド</td>
+<td><a href="index_p2_c14.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

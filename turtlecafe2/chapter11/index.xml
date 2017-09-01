@@ -1,0 +1,396 @@
+<?xml version='1.0' encoding='Shift_JIS' ?>
+
+<!DOCTYPE doc SYSTEM "../smartdoc.dtd"[
+<!ENTITY CHAPTER "chapter11">
+]>
+
+<doc xml:lang='ja'>
+
+	<head>
+		<title>プログラムの構造化（１）（メソッド・引数）</title>
+	</head>
+
+	<body>
+
+		<section title="学習目標">
+			<ul>
+				<li>メソッドを使ったプログラムが書けるようになる</li>
+				<li>引数ありメソッドを使ったプログラムが書けるようになる</li>
+			</ul>
+		</section>
+
+		<section title="メソッド">
+
+			<section title="メソッドとは">
+				<p>
+					メソッドとは、処理のまとまりのことです。 処理をまとめ、メソッド化することで、
+				</p>
+
+				<ul>
+					<li>人間にとって理解しやすいプログラムにする</li>
+					<li>プログラムを構造化して、再利用できるようにする</li>
+				</ul>
+
+				<p>
+					というメリットがあります。
+				</p>
+			</section>
+
+			<section title="四角形を描くプログラム">
+				<p>以下のプログラムは、メソッドを使って四角形を描くプログラムです。</p>
+				<text.turtle.applet class="DrawRectangleMethod"
+					chapter="&CHAPTER;" />
+				<fyi title="while文とfor文">
+					<p>
+						このプログラムでは、繰り返しをfor文を使って書いています。for文を使うと、while文よりも短く書くことができます。
+					</p>
+					<p>for文の()の中の命令は、それぞれwhile文と以下のように対応しています。</p>
+					<figure id="fig:WhileAndFor" title="while文とfor文"
+						src="image/WhileAndFor" style="scale:1.0" />
+					<p>
+						i = i + 1 と i++ は、いずれも i に 1 を足す、という意味です。while文で i++ と書くことも、for文で i = i + 1 と書くこともできます。
+					</p>
+				</fyi>
+			</section>
+
+			<section title="メソッドの作り方">
+				<section title="メソッド定義とメソッド呼び出し">
+					<p>メソッドを使うためには、メソッドを定義し、そのメソッドを呼び出す必要があります。</p>
+					<p>メソッドは一度定義すれば、同じメソッドを何度も呼び出して使うことができます。</p>
+					<p>このプログラムでは24行目でメソッドを定義し、19行目で呼び出しています。</p>
+					<program>
+						<![CDATA[
+24: void drawRectangle(){
+25: 	for (int i = 0; i < 4;i++) {
+26: 		fd(50);
+27: 		rt(90);
+28: 	}
+29: }
+]]>
+					</program>
+					<program>
+<![CDATA[19: drawRectangle();// 四角形を描く処理を呼び出す]]>
+					</program>
+
+					<p>引数・戻り値なしのメソッド定義、メソッド呼び出しの一般形は以下の通りです</p>
+					<program>
+<![CDATA[
+void [メソッド名](){
+
+}
+]]>
+					</program>
+<program>[メソッド名]();</program>
+				</section>
+
+				<section title="メソッド定義の注意点">
+					<p>次のプログラムは、四角形を描くプログラムを書こうとして、失敗した例です。</p>
+					<program title="DrawRectangleMethodError.java"
+						id="src:DrawRectangleMethodError"
+						src="invalidsrc/DrawRectangleMethodError.java"
+						normalizer="line, javasrc" javasrcSyntaxHilight="true"
+						encoding="Shift_JIS" />
+					<p>このプログラムを実行しようとすると、以下のようなエラーが出ます。</p>
+					<program>
+<![CDATA[
+DrawRectangleMethodError.java:22: 式の開始が不正です。
+		void drawRectangle(){
+		^
+DrawRectangleMethodError.java:22: ';' がありません。
+		void drawRectangle(){
+		                  ^
+エラー 2 個
+]]>
+					</program>
+					<p>
+						これは、メソッドの中にメソッドを定義しているためです。
+						このプログラムでは、startメソッドの中に、drawRectangleメソッドを定義しています。
+					</p>
+					<figure id="fig:MethodMakingError" title="メソッド定義のミス"
+						src="image/MethodMakingError" style="scale:1.0" />
+					<p>
+						Javaでは、メソッドの中にメソッドを定義することはできません。（
+						<a href="#sec:elements">2章「プログラムの要素」参照</a>
+						） メソッドは、クラスブロックの中に書く必要があります。 正しいメソッド定義は以下のとおりです。
+					</p>
+					<figure id="fig:MethodMaking" title="正しいメソッド定義"
+						src="image/MethodMaking" style="scale:1.0" />
+				</section>
+			</section>
+
+			<section title="四角形を３つ描くプログラム">
+				<p>以下のプログラムは、四角形を描くメソッドを使って、四角形を３つ描くプログラムです。</p>
+				<text.turtle.applet class="DrawThreeRectanglesMethod"
+					chapter="&CHAPTER;" />
+			</section>
+
+			<section title="メソッドの処理の順序">
+				<p>
+					メソッドが呼び出されると、プログラムの処理はそのメソッドの処理に飛びます。
+					そして、メソッドが終了すると、メソッド呼び出し位置に返ってきます。
+				</p>
+				<figure id="fig:MethodFlow" title="メソッドの処理の順序"
+					src="image/MethodFlow" style="scale:1.0" />
+				<p>
+					四角形を３つ描くプログラムでは、まず、四角形を描くメソッドを呼び、
+					四角形を描き終わったら、次の描く位置まで移動するメソッドを呼び、
+					移動し終わったら、再び四角形を描くメソッドを呼び…という処理を３回繰り返しています。
+				</p>
+				<fyi title="やってみよう！">
+					<p>上向きの三角形を描くメソッド【drawTriangle()】を作りましょう。</p>
+					<p>（はじめ、亀は上を向いていて、三角形を描き終わった後も、上向きに戻るものとします）</p>
+				</fyi>
+
+				<fyi title="やってみよう！">
+					<p>
+						三角形を描くメソッドと四角形を描くメソッドを使い、家を描くメソッド【DrawHouse()】を作りましょう。
+					</p>
+				</fyi>
+			</section>
+		</section>
+
+		<section title="引数ありメソッド">
+			<section title="引数とは">
+				<p>
+					メソッドブロック内で宣言された変数は、メソッドブロック内でしか有効ではありません。
+					しかし、あるメソッドから他のメソッドを呼ぶときに、データを受け渡したいことがあります。
+					引数とは、メソッドブロック外と、メソッドブロック内でデータをやり取りする仕組みです。
+					引数を使うことで、メソッドブロック外から、メソッドブロック内にデータを受け取ることができます。
+				</p>
+			</section>
+
+			<section title="大きさを変えて四角形を描くプログラム（コンパイルエラー）">
+				<p>次のプログラムは、一辺の長さを指定して四角形を描くプログラムを書こうとして、失敗した例です。</p>
+				<program title="DrawVariableRectangleMethodError.java"
+					id="src:drawvariablerectangleerrormethod"
+					src="invalidsrc/DrawVariableRectangleMethodError.java"
+					normalizer="line, javasrc" javasrcSyntaxHilight="true"
+					encoding="Shift_JIS" />
+			</section>
+
+			<section title="変数の有効範囲（復習）">
+				<p>
+					大きさを変えて四角形を描くプログラム（コンパイルエラー）を実行しようとすると、以下のようなエラーが出ます
+				</p>
+				<program>
+					<![CDATA[
+DrawRectangleMethodError.java:31: シンボルを見つけられません。
+シンボル: 変数 length
+場所 : DrawRectangleMethodError の クラス
+					fd(length);
+]]>
+				</program>
+				<p>fd(length)のlengthという変数が見つけられないということを意味しています。</p>
+				<p>
+					これは、drawRectangle()メソッドの内部（{と}で囲われた部分）が、lengthという変数の有効範囲外であるためです。
+				</p>
+				<figure id="fig:VariableAccessable" title="変数の有効範囲"
+					src="image/VariableAccessable" style="scale:1.0" />
+			</section>
+
+			<section title="大きさを変えて四角形を描くプログラム">
+				<p>
+					以下のプログラムは、引数を使って、メソッドの有効範囲外から四角形の長さを渡せるようにしたプログラムです。
+				</p>
+				<p>入力された長さ（実引数）を、メソッドにlength（仮引数）として渡し、四角形を描いています。</p>
+				<text.turtle.applet class="DrawVariableRectangleMethod"
+					chapter="&CHAPTER;" />
+			</section>
+
+			<section title="引数ありメソッドの宣言と呼び出し">
+				<p>
+					引数ありメソッドを使うためには、引数ありメソッドを宣言し、そのメソッドを引数つきで呼び出す必要があります。
+				</p>
+				<p>このプログラムでは29行目でメソッドを定義し、24行目で呼び出しています。</p>
+
+				<program>
+					<![CDATA[
+29: void drawRectangle(int length){
+30: 	for (int i =0; i < 4; i++) {
+31: 		fd(length);
+32: 		rt(90);
+33: 	}
+34: }
+]]>
+				</program>
+				<program>
+<![CDATA[
+24: drawRectangle(inputLength);//入力された長さを一辺の長さとして四角形を描く
+]]>
+				</program>
+				<p>このプログラムメソッドを呼び出す際にinputLengthという変数を実引数として渡していますが、
+				drawRectangle(50)やdrawRectangle(100)などのように、実際の値を実引数として渡すこともできます。</p>
+				<p>引数・戻り値なしのメソッド定義、メソッド呼び出しの一般形は以下の通りです</p>
+				<p>
+					呼び出し部分の引数を実引数、宣言部分の引数を仮引数と呼びます。実引数（メソッドブロック外にあるデータ）が、
+					仮引数（メソッドブロック内で使える変数）に代入され、メソッドブロック内で使えるようになります。
+				</p>
+				<program>
+					<![CDATA[
+void [メソッド名]([引数の型] [仮引数名]){
+
+}
+]]>
+				</program>
+<program>[メソッド名]([実引数]);</program>
+				<fyi title="やってみよう！">
+					<p>
+						家を描くメソッド【DrawHouse()】を改良し、大きさを変えられる家を描くメソッド【DrawHouse(int
+						size)】を作りましょう。
+					</p>
+				</fyi>
+			</section>
+		</section>
+
+
+		<section title="メソッドを用いたプログラムの構造化">
+			<p>
+				ここでは、以下のような構造を持った「窓付きの家を描くプログラム」を例に、プログラムの構造化について説明します。
+			</p>
+			<p>
+				「窓付きの家を描く」処理は、１レベル下の、「屋根を描く」「壁を描く」「窓を描く」処理の３つの処理で成り立っています。
+			</p>
+			<p>
+				「屋根を描く」処理はさらに１レベル下の、「三角形を描く」という処理で、「壁を描く」処理は「四角形を描く」処理で、
+					「窓を描く」処理は「窓を描く位置に移動する」という処理と「小さな四角形を描く」処理で成り立っています。
+			</p>
+			<figure id="fig:HouseStructure" title="窓付きの家を描くプログラムの構造"
+					src="image/HouseStructure" style="scale:1.0" />
+
+			<section title="窓付きの家を描くプログラム（メソッドなし）">
+				<p>次のプログラムは窓付きの家を描くプログラムです。このプログラムではメソッドを使っていません。</p>
+				<text.turtle.applet class="House01" chapter="&CHAPTER;" />
+			</section>
+
+			<section title="窓付きの家を描くプログラム（１レベルをメソッド化）">
+				<p>
+					次のプログラムでは、「窓付きの家を描く」処理は「屋根を描く」「壁を描く」「窓を描く」処理の３つの処理で成り立っていると考え、
+					「屋根を描く」「壁を描く」「窓を描く」メソッドを作成しました。
+				</p>
+				<text.turtle.applet class="House02" chapter="&CHAPTER;" />
+			</section>
+
+			<section title="窓付きの家を描くプログラム（２レベルをメソッド化）">
+
+				<p>
+					次のプログラムでは、「屋根を描く」処理は「三角形を描く」という処理で、「壁を描く」処理は「四角形を描く」処理で、
+					「窓を描く」処理は「窓を描く位置に移動する」という処理と「小さな四角形を描く」処理で成り立っていると考え、
+					このレベルの処理をメソッド化しました。
+				</p>
+
+				<text.turtle.applet class="House03" chapter="&CHAPTER;" />
+			</section>
+		</section>
+
+
+		<section title="引数を用いたメソッドの抽象化">
+
+			<section title="窓付きの家を描くプログラム（引数なしメソッド）">
+				<p>
+					次のプログラムでは、メソッドを使い、「家を描く」処理を「屋根を描く」処理と、
+					「壁を描く」処理と、「窓を描く」処理に分けています。
+				</p>
+				<p>
+					「屋根を描く」処理では、「三角形を描く」処理を使い、「壁を描く」処理では、「四角形を描く」処理を、
+					「窓を描く」処理では「小さな四角形を描く」処理を使っています。
+				</p>
+				<text.turtle.applet class="House03" chapter="&CHAPTER;" />
+			</section>
+
+			<section title="窓付きの家を描くプログラム（引数を用いた、四角形を描くメソッドの抽象化）">
+				<p>
+					次のプログラムでは、引数ありメソッドを使い、「壁を描く」処理で使っていた大きい四角形と
+					「窓を描く」処理の中で使っていた小さな四角形を「四角形を描く」というひとつのメソッドで描けるようにしています。
+				</p>
+				<text.turtle.applet class="House04" chapter="&CHAPTER;" />
+			</section>
+
+			<section title="窓付きの家を描くプログラム（引数を用いた、多角形を描くメソッドの抽象化）">
+
+				<p>
+					次のプログラムでは「屋根を描く」処理で使っていた三角形と、「壁を描く」「窓を描く」処理で使っていた四角形を
+					「多角形を描く」というひとつのメソッドで描けるようにしています。
+				</p>
+
+				<text.turtle.applet class="House05" chapter="&CHAPTER;" />
+			</section>
+		</section>
+
+		<section title="課題">
+			<section title="問題1-1：中心角を指定して円弧を描くメソッドを作ろう">
+				<p>drawArc(int angle)のように、中心角を指定して円弧を描くメソッドを作ろう。</p>
+				<p>
+					(ヒント：中心角が３６０ならば円に、１８０ならば半円に、１ならば点のようになります。以下に、120度の場合と、300度の場合の例を示します）
+				</p>
+				<figure id="fig:drawArc" title="円弧を描くメソッド"
+					src="image/drawArc" style="scale:1.0" />
+				<figure id="fig:drawArc2" title="円弧を描くメソッド2"
+					src="image/drawArc2" style="scale:1.0" />
+			</section>
+
+			<section title="問題1-2：円弧を描くメソッドを使って猫の目を描こう">
+				<p>
+					円弧を描くメソッドを使って、drawCatEyes()のように猫の目を描くメソッドを作ろう。（start()メソッドの中に、drawCatEyes();とだけ書けば猫の目が描けるようにする）
+				</p>
+				<p>
+					（ヒント：猫の目を描くには、レモン型を描くメソッドdrawLemon()を作って、それを２つ並べるとよい。）
+				</p>
+				<figure id="fig:drawLemon" title="レモン型を描くメソッド"
+					src="image/drawLemon" style="scale:1.0" />
+				<figure id="fig:drawCatEyes" title="猫の目を描くメソッド"
+					src="image/drawCatEyes" style="scale:1.0" />
+			</section>
+
+			<section title="問題1-3：円弧を描くメソッドを使って蝶を描こう">
+				<p>
+					円弧を描くメソッドを使って、drawButterfly()のように蝶を描くメソッドを作ろう。（start()メソッドの中に、drawButterfly();とだけ書けば蝶が描けるようにする）
+				</p>
+				<p>（ヒント：円弧を描くメソッドのほかにも、レモン型を描くメソッドなどを部品として使うと楽に描ける）</p>
+				<figure id="fig:drawButterfly" title="蝶を描くメソッド"
+					src="image/drawButterfly" style="scale:1.0" />
+			</section>
+
+			<section title="問題1-4：円弧を描くメソッドを使って花を描こう">
+				<p>
+					円弧を描くメソッドを使って、drawFlower()のように花を描くメソッドを作ろう。（start()メソッドの中に、drawFlower();とだけ書けば花が描けるようにする）
+				</p>
+				<p>（ヒント：レモン型を描くメソッドなどを部品として使うと楽に描ける）</p>
+				<figure id="fig:drawFlower" title="花を描くメソッド"
+					src="image/drawFlower" style="scale:1.0" />
+			</section>
+
+			<section title="問題2：入力によって猫の目、蝶、花を描き分けるプログラムを作ろう">
+				<p>１を入力したら猫の目を、２を入力したら蝶を、３を入力したら花を描くプログラムを作ろう。</p>
+			</section>
+
+		</section>
+
+		<section title="おまけ問題">
+			<p>メソッドが自分自身を呼び出す処理を、再帰メソッド呼び出しと言う。</p>
+			<p>これは、発展的で面白いプログラミングテクニックである。</p>
+			<section title="再帰を使って木を描くサンプルプログラム">
+				<text.turtle.applet class="DrawTree"
+					chapter="&CHAPTER;" />
+			</section>
+			<section title="おまけ問題1：再帰を使って自然な木を描くプログラム">
+				<p>木を描くサンプルプログラムを乱数を使うように改造して、自然な木を描くプログラムにしよう。</p>
+				<p>枝の生える角度と、長さを乱数にします。</p>
+				<p>【自然な木に見せるためのヒント】</p>
+				<ul>
+					<li>生える枝の数を、２本から３本にする</li>
+					<li>角度は４５度以内とする</li>
+					<li>長さは、元の枝の長さ×０．６から０．９くらいにする</li>
+				</ul>
+				<figure id="fig:NaturalTree" title="自然な木"
+					src="image/NaturalTree" style="scale:1.0" />
+			</section>
+			<section title="おまけ問題2：再帰を使ってコッホ曲線を描くプログラム">
+				<figure id="fig:Koch" title="コッホ曲線" src="image/Koch"
+					style="scale:1.0" />
+				<p>ノーヒント</p>
+			</section>
+		</section>
+	</body>
+</doc>
+
+

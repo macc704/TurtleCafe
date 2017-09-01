@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>ぱらぱら漫画アニメーション</title>
+</head>
+<body>
+<section title="学習目標">
+<ul>
+<li>画像を表示させることができる</li>
+<li>画像をぱらぱら漫画の要領でアニメーションさせるプログラムを作れるようになる</li>
+<li>文字列を表示させ、変更させるプログラムを作れるようになる</li>
+</ul>
+</section>
+<section title="画像を使ったプログラム" id="sec:imageturtle">
+<p>
+				今回は、画像や文字を使ったアニメーションをやってみたいと思います。
+				プログラムは、前回までに習ったこととほとんど同じです。
+			</p>
+<program title="RotateCar.java" id="src:RotateCar" src="src/RotateCar.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter09/src/RotateCar.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、RotateCarプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="RotateCar"/>
+</applet>]]></native>
+<p>
+				ImageTurtleクラスを使うと、画像をオブジェクトとして、
+				タートルのように扱うことができます。
+			</p>
+<fyi title="画像を使うときの注意">
+<p>
+						例えば、上記のRotateCar.javaアニメーションで、car.gifを使う場合は、
+						その2つ（RotateCar.javaとcar.gif）を同じフォルダに置く必要があります。
+					</p>
+<p>
+						同じフォルダに置いていないと画像が表示されません。
+					</p>
+<p>
+						使える画像の種類は「.gif」「.jpg」「.jpeg」のどれかです。
+						「.bmp」の画像は使えないので注意してください。
+					</p>
+</fyi>
+</section>
+<section title="オブジェクトを隠す/出現させる">
+<p>
+				show(), hide() 命令を使うと、オブジェクトを隠したり、
+				出現させたりすることができます。
+			</p>
+<p>下のプログラムは、車が点滅するプログラムです。</p>
+<program title="OnAndOffCar.java" id="src:OnAndOffCar" src="src/OnAndOffCar.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter09/src/OnAndOffCar.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、OnAndOffCarプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="OnAndOffCar"/>
+</applet>]]></native>
+<fyi title="出現/隠すに関する新しい命令">
+<dl>
+<dt>show()</dt>
+<dd>
+							オブジェクトを出現させます。
+						</dd>
+<dt>hide()</dt>
+<dd>
+							オブジェクトを隠します。
+						</dd>
+<dt>isShow()</dt>
+<dd>
+							現在、隠されているか、出現しているかをしらべます。
+						</dd>
+<dt>show([真偽])</dt>
+<dd>
+							真偽にtrueと書けば、出現させ、falseと書けば、隠します。
+						</dd>
+<dt>show(!isShow())</dt>
+<dd>
+							上記の命令の組み合わせ命令で、隠れていれば、出現させ、
+							出現していれば、隠します。
+						</dd>
+</dl>
+</fyi>
+<fyi title="やってみよう！">
+<p>
+						画像タートルを使って、青信号は点滅させ、車は前に進め、かざぐるまは回転させるプログラムを作ってください。
+						画像は以下のものをダウンロードして使ってください。
+					</p>
+<p>
+<img src="src/sign.gif" width="80" height="80"/>
+<img src="src/kazaguruma.gif" width="80" height="80"/>
+<img src="src/bluecar.gif" width="80" height="80"/>
+</p>
+<p>
+						ブラウザからデスクトップに画像をドラッグドロップすると、デスクトップに画像をダウンロードすることができます。
+					</p>
+<p>
+						（プログラムと同じフォルダに置いていないと画像が表示されません。）
+					</p>
+<p>
+						（使える画像の種類は「.gif」「.jpg」「.jpeg」のどれかです。
+						「.bmp」の画像は使えないので注意してください。）
+					</p>
+</fyi>
+</section>
+<section title="ぱらぱら漫画アニメーション">
+<subsection title="見た目を別のオブジェクトのものに">
+<p>
+					looks命令を使うと、
+					オブジェクトの見た目を別のオブジェクトのものにすることができます。
+				</p>
+<p>
+					例えば、次のプログラムは、
+					ただじゃんけんのグーチョキパーを表示するだけですが、、、
+				</p>
+<program title="JankenCharacters.java" id="src:JankenCharacters" src="src/JankenCharacters.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter09/src/JankenCharacters.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、JankenCharactersプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="JankenCharacters"/>
+</applet>]]></native>
+<p>
+					次のように、looks命令を使うと、
+					グーの見た目をチョキやパーに変えることができます。
+				</p>
+<program title="JankenAnimation.java" id="src:JankenAnimation" src="src/JankenAnimation.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter09/src/JankenAnimation.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、JankenAnimationプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="JankenAnimation"/>
+</applet>]]></native>
+<fyi title="見た目に関する新しい命令">
+<dl>
+<dt>looks(オブジェクト)</dt>
+<dd>
+							現在のオブジェクトを、指定されたオブジェクトとおなじ見た目に変身（!?）させます。
+						</dd>
+</dl>
+</fyi>
+</subsection>
+<subsection title="人を動作させる">
+<p>
+					じゃんけんを応用すると、ぱらぱら漫画の要領で、
+					人が動作しているようなアニメーションを作ることができます。
+				</p>
+<program title="WalkingMan.java" id="src:WalkingMan" src="src/WalkingMan.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter09/src/WalkingMan.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、WalkingManプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="WalkingMan"/>
+</applet>]]></native>
+<p>
+				このアニメーションでは、次の8枚の画像が使われています。
+			</p>
+<p>
+<img src="src/man1.gif" width="50" height="75"/>
+<img src="src/man2.gif" width="50" height="75"/>
+<img src="src/man3.gif" width="50" height="75"/>
+<img src="src/man4.gif" width="50" height="75"/>
+<img src="src/man5.gif" width="50" height="75"/>
+<img src="src/man6.gif" width="50" height="75"/>
+<img src="src/man7.gif" width="50" height="75"/>
+<img src="src/man8.gif" width="50" height="75"/>
+</p>
+</subsection>
+<subsection title="背景を動かす（画面のスクロール）">
+<p>
+					さらに、背景を付け加えると、動いているように見えます。
+				</p>
+<program title="WalkingManWithBg.java" id="src:WalkingManWithBg" src="src/WalkingManWithBg.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter09/src/WalkingManWithBg.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、WalkingManWithBgプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="WalkingManWithBg"/>
+</applet>]]></native>
+<fyi title="オブジェクトの重なりの順番">
+<p>
+						オブジェクトは、new命令で作られた順番に、
+						後ろから重なっていきます。
+					</p>
+<p>
+						背景を使うときは、人などの画像よりも先にnewして生成してください。
+					</p>
+</fyi>
+</subsection>
+</section>
+<section title="文字をオブジェクトして扱う" id="sec:textturtle">
+<subsection title="文字を回す">
+<p>文字をつくるには、TextTurtleを使います。</p>
+<program title="RotateText.java" id="src:RotateText" src="src/RotateText.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter09/src/RotateText.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、RotateTextプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="RotateText"/>
+</applet>]]></native>
+<p>
+					文字も、「オブジェクト」ですから、タートルや、
+					画像と同じように扱うことができます。
+				</p>
+</subsection>
+<subsection title="文字を変化させる">
+<p>
+					文字オブジェクトは、
+					その文字を変化させるための特別な命令、text()を持っています。
+				</p>
+<program title="Counter.java" id="src:Counter" src="src/Counter.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter09/src/Counter.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Counterプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Counter"/>
+</applet>]]></native>
+<p>
+					ちなみに、下のプログラムのように、
+					文字と数字をつなげて、一つの文字にするには、+ 記号でつなげます。
+				</p>
+<p>
+					文字列は、「"」で囲みますが、数字（変数）にはつけません。
+				</p>
+<program title="Counter2.java" id="src:Counter2" src="src/Counter2.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter09/src/Counter2.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Counter2プログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Counter2"/>
+</applet>]]></native>
+</subsection>
+<fyi title="テキスト専用の新しい命令">
+<dl>
+<dt>text([文字列])</dt>
+<dd>
+						テキストオブジェクトの文字を、指定された文字列に変更します。
+						文字列は、文字、数字、それらの組み合わせを指定することができます。
+					</dd>
+</dl>
+</fyi>
+</section>
+<section title="練習問題">
+<subsection title="問題1：アニメーションを作ろう">
+<p>
+					今回習ったことを用いて、楽しいアニメーションを作成してください。
+				</p>
+</subsection>
+<subsection title="作品例">
+<program title="AnimationSample.java" id="src:AnimationSample" src="src/AnimationSample.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter09/src/AnimationSample.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、AnimationSampleプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter09_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="AnimationSample"/>
+</applet>]]></native>
+</subsection>
+</section>
+</body>
+</doc>

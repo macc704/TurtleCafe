@@ -1,0 +1,324 @@
+<?xml version='1.0' encoding='Shift_JIS' ?>
+
+<!DOCTYPE doc SYSTEM "../smartdoc.dtd"[
+<!ENTITY CHAPTER "chapter08">
+]>
+
+<doc xml:lang='ja'>
+
+	<head>
+		<title>アニメーション入門（いままで作ったものを動かそう）</title>
+	</head>
+
+	<body>
+
+		<section title="学習目標">
+			<ul>
+				<li>アニメーションの基本構造を理解して、今までつくったオブジェクトを動かすことができるようになる</li>
+				<li>タートルの座標系や拡大縮小命令を理解して、自在にオブジェクトを移動させることができる</li>
+			</ul>
+		</section>
+
+		<section title="アニメーションの基本">
+
+			<p>
+				ここからはオブジェクト指向プログラミングを使って、アニメーションを作っていきたいと思います。
+			</p>
+
+			<section title="回る家">
+				<p>
+					まず、下のプログラムを実行してみましょう。
+				</p>
+
+				<text.turtle.applet class="RotateHouse" chapter="&CHAPTER;"/>
+
+				<p>
+					ここでは、Houseのプログラムオブジェクトとして生成しています。
+					つまり、<em>いままでタートルで作った絵を使うことができる</em>のです。
+				</p>
+				<p>
+					タートルを使って自分の作ったオブジェクトを生成するには、次のような命令文を書きます。
+				</p>
+				<figure
+						title="オブジェクトの生成"
+						src="image/newobject" style="scale:1.0"  />
+
+				<fyi title="使うオブジェクトを書くプログラムは同じフォルダに置く">
+					<p>
+						例えば、RotateHouse.javaアニメーションで、House.javaを使う場合は、
+						その2つを同じフォルダに置く必要があります。
+					</p>
+					<p>
+						同じフォルダに置いていないとコンパイルエラーが出るので注意してください。
+					</p>
+				</fyi>
+			</section>
+
+			<section title="アニメーションの基本構造">
+				<p>
+					RotateHouse.javaをもう一度よく見てみましょう。
+					特に、
+				</p>
+				<program>
+while(true){
+	//待つ
+
+	//処理
+
+	//再描画
+}
+				</program>
+				<p>
+					ここの部分が、今までと異なる所で、アニメーションをするプログラムの特徴です。
+					どのようなアニメーションをするプログラムでも基本構造は同じです。
+					図解すると下のようになります。
+				</p>
+				<figure
+						title="アニメーションプログラムの構造"
+						src="image/animationmodel" style="scale:1.0"  />
+				<figure
+						title="アニメーションプログラムの構造(具体的)"
+						src="image/animationmodelconcrete" style="scale:1.0"  />
+
+				<p>
+					ちなみに、House.javaは次のようなプログラムでした。
+				</p>
+				<text.turtle.applet class="House" chapter="&CHAPTER;"/>
+
+			</section>
+
+			<section title="アニメーションをするための新しい命令">
+				<dl>
+					<dt>sleep([秒の指定])</dt>
+					<dd>指定された秒数だけ、眠り（止まり）ます。 1を入れれば1秒止まり、0.1入れれば0.1秒止まります。</dd>
+					<dt>update()</dt>
+					<dd>
+						画面を書き換えます。画面を書き換えないと、fd(5)などで移動しても、
+						画面は書き換わらない（動かない）ので注意してください。
+					</dd>
+				</dl>
+
+				<fyi title="何秒眠るか">
+					<p>
+						sleep()命令の中の数字を小さくすることによって、アニメーションを早くすることができます。
+						しかし、コンピュータの能力にも限界があります。
+						軽いアニメーションならば0.01秒（秒間100コマ）ぐらいまでならなんとか動きますが、
+						画像などを使うといくら小さい値を入れても、コンピュータの計算が追いつかなくなります。
+					</p>
+
+					<p>
+						人間が目に分かるのは、秒間30コマまでといわれています（テレビがそれぐらいです）ので、
+						それぐらいを目安に数値を決めると良いでしょう。
+					</p>
+				</fyi>
+			</section>
+
+			<section title="円を描く家">
+
+				<p>
+					オブジェクトになっても、基本的なタートルの命令はどれでも使うことができます。
+					次のプログラムは、円を描く家のプログラムです。
+				</p>
+
+				<text.turtle.applet class="CircleHouse" chapter="&CHAPTER;"/>
+
+				<p>
+					down() 命令で、ペンを下ろして軌跡が描かれるようになっています。
+				</p>
+
+				<figure
+					title="円を描く家"
+					src="image/circlehouse" style="scale:1.0"  />
+
+				<fyi title="初期値">
+					<p>
+						いままでのタートルでは、down()命令をしなくても、
+						最初はペンを下ろした状態から始まっていました。
+					</p>
+
+					<p>
+						しかし、アニメーションでは、軌跡は要らないことが多いので、
+						初期値がペンを上げた状態になっています。
+					</p>
+
+					<p>
+						プログラムを書くときには、"最初の状態"を意識する必要があります。
+						これを「初期値」や「デフォルト値」といいます。
+					</p>
+				</fyi>
+
+			</section>
+		</section>
+
+		<section title="座標の制御">
+			<section title="上向きのまま右に動かす">
+				<p>
+					次に示すのは、家が右に動いていくプログラムです。
+				</p>
+				<text.turtle.applet class="MoveRightHouse1" chapter="&CHAPTER;"/>
+				<p>
+					今までの方法では、前か後ろにしか進めませんが、
+					家は上向きのまま、右に動かしたい場合があります。
+				</p>
+				<p>
+					いままでの方法でも、下のように工夫することによって目的は達成できますが、
+					ここでは、warp命令を使ったエレガントな解決方法を考えます。
+				</p>
+				<text.turtle.applet class="MoveRightHouse2" chapter="&CHAPTER;"/>
+			</section>
+
+			<section title="ワープを使う">
+				<p>
+					warp命令を使うと、回転せずに、好きな所にオブジェクトを移動することができます。
+				</p>
+
+				<text.turtle.applet class="WarpHouse" chapter="&CHAPTER;"/>
+
+				<p>
+					このプログラムの実行結果は以下のようになります。
+				</p>
+				<figure
+					title="WarpHouse.javaの実行結果"
+					src="image/warphouse" style="scale:1.0"  />
+
+				<fyi title="座標に関する新しい命令">
+					<dl>
+						<dt>warp([x座標, y座標])</dt>
+						<dd>
+							指定されたx座標, y座標の位置に、そのオブジェクトをワープ（瞬間的に移動）させます。
+							命令に数字2つ必要なので、カンマで区切るのを忘れずに。
+						</dd>
+						<dt>getX()</dt>
+						<dd>
+							現在のx座標を取得します。
+						</dd>
+						<dt>getY()</dt>
+						<dd>
+							現在のy座標を取得します。
+						</dd>
+					</dl>
+				</fyi>
+
+				<p>
+					ちなみに、一般にコンピュータ環境では、数学とはちょっと違った座標体系が使われます。
+					タートルの場合もそうです。以下のようになっているので気をつけてください。
+				</p>
+
+				<figure
+					title="タートルの座標体系"
+					src="image/coordinates" style="scale:1.0"  />
+
+				<p>
+					さあ、ワープを使って、家を右に移動しましょう。
+				</p>
+				<text.turtle.applet class="MoveRightHouse3" chapter="&CHAPTER;"/>
+				<p>
+					さらに、右端までいったら左端にワープするように改造します。
+				</p>
+				<text.turtle.applet class="MoveRightHouse4" chapter="&CHAPTER;"/>
+
+				<p>だんだんアニメーションらしくなってきました。</p>
+
+			</section>
+		</section>
+
+		<section title="大きさの変更(拡大/縮小)">
+			<section title="大きさを変更するプログラム">
+				<p>
+					オブジェクトは、大きさを変更することもできます。
+				</p>
+				<text.turtle.applet class="LargeHouse" chapter="&CHAPTER;"/>
+				<fyi title="大きさに関する新しい命令">
+					<dl>
+						<dt>size([横の長さ], [縦の長さ])</dt>
+						<dd>
+							そのオブジェクトを横の長さと縦の長さを、指定された大きさにします。
+							命令に数字2つ必要なので、カンマで区切るのを忘れずに。
+						</dd>
+						<dt>getWidth()</dt>
+						<dd>
+							現在の横幅を取得します。
+						</dd>
+						<dt>getHeight()</dt>
+						<dd>
+							現在の縦幅を取得します。
+						</dd>
+					</dl>
+				</fyi>
+			</section>
+
+			<section title="徐々に大きくする">
+				<p>
+					アニメーションループをうまく利用すれば、徐々に大きくなっていくプログラムが書けます。
+				</p>
+				<text.turtle.applet class="LargerHouse" chapter="&CHAPTER;"/>
+				<p>
+					大きくなりすぎたら、小さく戻してあげましょう。
+				</p>
+				<text.turtle.applet class="LargerHouse2" chapter="&CHAPTER;"/>
+
+				<fyi title="大きさ変更に便利な命令">
+					<dl>
+						<dt>scale([倍率])</dt>
+						<dd>
+							そのオブジェクトを指定された倍率の大きさにします。
+						</dd>
+						<dt>large([長さ])</dt>
+						<dd>
+							指定した長さだけ縦横を幅を大きくします。
+						</dd>
+						<dt>small([長さ])</dt>
+						<dd>
+							指定した長さだけ縦横の幅を小さくします。
+						</dd>
+						<dt>wide([長さ])</dt>
+						<dd>
+							指定した長さだけ横幅を大きくします。
+						</dd>
+						<dt>narrow([長さ])</dt>
+						<dd>
+							指定した長さだけ横幅を小さくします。
+						</dd>
+						<dt>tall([長さ])</dt>
+						<dd>
+							指定した長さだけ縦幅を大きくします。
+						</dd>
+						<dt>little([長さ])</dt>
+						<dd>
+							指定した長さだけ縦幅を小さくします。
+						</dd>
+					</dl>
+				</fyi>
+			</section>
+		</section>
+
+		<section title="練習問題">
+			<section title="流れ星アニメーションを作ろう">
+			<p>
+				星を書くプログラム(Star.java)を使って、流れ星のプログラムを書いてみて下さい。
+			</p>
+
+			<p>ダウンロードはこちらから</p>
+			<ul>
+				<li><a href="../html4/&CHAPTER;/src/Star.java">Star.java</a></li>
+			</ul>
+
+			<p>流れ星は、次の手順で進めていくとうまくできます。</p>
+			<ol>
+				<li>Star.javaをダウンロードして動かしてみる</li>
+				<li>ShootingStar.javaを新しく作る(Star.javaは変更しないこと)</li>
+				<li>ShootingStar.javaに、Starオブジェクトを生成して表示するプログラムを書く</li>
+				<li>星を回してみる</li>
+				<li>座標を使って、星を右に動かしてみる</li>
+				<li>一番右端にいったら、左端に戻るようにする</li>
+				<li>星を下にも動かす</li>
+				<li>一番下にいったら、上に戻るようにする</li>
+				<li>星の大きさを変える</li>
+				<li>星を増やす</li>
+			</ol>
+			</section>
+		</section>
+	</body>
+</doc>
+
+

@@ -1,0 +1,1659 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c9.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/ゲームを作ろう！</td>
+<td><a href="index_p2.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_40">10  ゲームを作ろう！</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc11_3457" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.1  学習目標</a>
+<li> <a href="#doc11_3469" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.2  キーボード入力の判定</a>
+<ul>
+<li> <a href="#doc11_3471" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.2.1  キーコードの取得</a>
+<li> <a href="#doc11_3514" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.2.2  キーコードを調べる</a>
+<li> <a href="#doc11_3536" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.2.3  個別にキーが押されているかどうかを調べて，同時押しに対応する</a>
+</ul>
+<li> <a href="#doc11_3574" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.3  マウス入力の判定</a>
+<ul>
+<li> <a href="#doc11_3576" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.3.1  マウスの位置を調べる</a>
+<li> <a href="#doc11_3644" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.3.2  マウスが押されているかどうか調べる</a>
+<li> <a href="#doc11_3684" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.3.3  マウス入力を詳しく調べる</a>
+<li> <a href="#doc11_3739" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.3.4  ドラッグを調べる</a>
+</ul>
+<li> <a href="#doc11_3795" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.4  あたり判定</a>
+<ul>
+<li> <a href="#doc11_3797" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.4.1  ２つのオブジェクトのあたり判定</a>
+<li> <a href="#doc11_3834" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.4.2  座標とオブジェクトのあたり判定</a>
+</ul>
+<li> <a href="#doc11_3872" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.5  練習問題</a>
+<ul>
+<li> <a href="#doc11_3874" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.5.1  プレイヤーを操作出来るようにしよう</a>
+<li> <a href="#doc11_3892" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.5.2  画像をドラッグ出来るようにしよう</a>
+<li> <a href="#doc11_3907" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.5.3  得点板を作ろう</a>
+<li> <a href="#doc11_3922" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">10.5.4  ゲームを作ろう</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc11_3457">10.1  学習目標</h2>
+
+
+<ul>
+<li> キーボード、マウスを使ってユーザと対話するプログラムを作れるようになる
+<li> オブジェクト同士の当たり判定を取得し、オブジェクトが連携して動作するプログラムを作れるようになる</ul>
+
+
+<h2 id="doc11_3469">10.2  キーボード入力の判定</h2>
+
+
+<h3 id="doc11_3471">10.2.1  キーコードの取得</h3>
+
+<p class="first_ja">key()命令を使うと、いま押されているキーボードの番号（キーコード）を
+					調べることができます。</p>
+<p>次のプログラムは、左キーを押すと，車が左に動くプログラムです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter10/image/block/HandleKey.jpg" alt="図 10.2.1.1 HandleKey">
+</div>
+
+
+<div id="doc11_src:HandleKey" class="caption">リスト 10.2.1.1 HandleKey.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * キーに対応して車が動くプログラム
+  3:  * 
+  4:  * 2003/06/23 Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa 
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> HandleKey <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> HandleKey());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		hide();<span class="comment">// タートルを消す</span>
+ 18: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>);<span class="comment">// 車を生成</span>
+ 19: 
+ 20: 		{<span class="comment">// アニメーションループ</span>
+ 21: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 22: 				<span class="comment">// --- 待つ ---</span>
+ 23: 				sleep(0.025);
+ 24: 
+ 25: 				{<span class="comment">// 一コマの処理をする</span>
+ 26: 					<span class="comment">// 左キーが押されていたら，車を動かす</span>
+ 27: 					<span class="keyword">int</span> x = car.getX();
+ 28: 					<span class="keyword">int</span> y = car.getY();
+ 29: 					<span class="keyword">if</span> (key() == 37) { <span class="comment">// 左</span>
+ 30: 						car.warp(x - 5, y);
+ 31: 					}
+ 32: 				}
+ 33: 
+ 34: 				<span class="comment">// --- 再描画 ---</span>
+ 35: 				update();
+ 36: 			}
+ 37: 		}
+ 38: 	}
+ 39: 
+ 40: }
+</pre>
+
+<p><a href="chapter10/src/HandleKey.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、HandleKeyプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleKey"/>
+</applet></p>
+<div class="fyi">
+<div class=title>キー入力を受け取る新しい命令</div>
+
+
+<dl>
+<dt>
+key()
+<dd>
+<p>いま押されているキーボードの番号（キーコード）を調べることができます。</p>
+<p>何も押されていない時は、キーコードが -1 になります。</p></dl>
+
+</div>
+
+
+<h3 id="doc11_3514">10.2.2  キーコードを調べる</h3>
+
+<p class="first_ja">キーボードのキーに対応するキーコードを調べるには、
+					次のプログラムを使うと良いでしょう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter10/image/block/CheckKeycode.jpg" alt="図 10.2.2.1 CheckKeycode">
+</div>
+
+
+<div id="doc11_src:CheckKeycode" class="caption">リスト 10.2.2.1 CheckKeycode.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * キー番号を調べるプログラム
+  3:  * 
+  4:  * 2003/06/23 Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> CheckKeycode <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> CheckKeycode());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		hide();<span class="comment">// タートルを消す</span>
+ 18: 		TextTurtle taro = <span class="keyword">new</span> TextTurtle(<span class="quote">&quot;&quot;</span>);<span class="comment">// 文字(太郎)を生成</span>
+ 19: 
+ 20: 		{<span class="comment">// アニメーションループ</span>
+ 21: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 22: 				<span class="comment">// --- 待つ ---</span>
+ 23: 				sleep(0.1);
+ 24: 
+ 25: 				{ <span class="comment">// 一コマの処理をする</span>
+ 26: 					<span class="keyword">int</span> keycode = key(); <span class="comment">// 今押されているキーを取得する</span>
+ 27: 					taro.text(keycode); <span class="comment">// 押されているキー番号を文字にして表示する</span>
+ 28: 				}
+ 29: 
+ 30: 				<span class="comment">// --- 再描画 ---</span>
+ 31: 				update();
+ 32: 			}
+ 33: 		}
+ 34: 	}
+ 35: 
+ 36: }
+</pre>
+
+<p><a href="chapter10/src/CheckKeycode.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、CheckKeycodeプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="CheckKeycode"/>
+</applet></p>
+
+<h3 id="doc11_3536">10.2.3  個別にキーが押されているかどうかを調べて，同時押しに対応する</h3>
+
+<p class="first_ja">key()命令は、最後に押されたキーを調べるだけで、同時押しに対応できません。
+					同時押しに対応するに、今何が押されているかを個別に調べる必要があります。
+					そのようなときは，keyDown命令を使います。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter10/image/block/HandleKeyDown.jpg" alt="図 10.2.3.1 HandleKeyDown">
+</div>
+
+
+<div id="doc11_src:HandleKeyDown" class="caption">リスト 10.2.3.1 HandleKeyDown.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * キーに対応して車が動くプログラム2 
+  3:  * (押してるかどうか調べて，同時押しに対応できるバージョン)
+  4:  * 
+  5:  * 2011/11/22 Yoshiaki Matsuzawa 
+  6:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  7:  */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> HandleKeyDown <span class="keyword">extends</span> Turtle {
+  9: 
+ 10: 	<span class="comment">// 起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		Turtle.startTurtle(<span class="keyword">new</span> HandleKeyDown());
+ 13: 	}
+ 14: 
+ 15: 	<span class="comment">// タートルを動かす処理</span>
+ 16: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 17: 
+ 18: 		hide();<span class="comment">// タートルを消す</span>
+ 19: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>); <span class="comment">// 車を生成</span>
+ 20: 
+ 21: 		{<span class="comment">// アニメーションループ</span>
+ 22: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 23: 				<span class="comment">// --- 待つ ---</span>
+ 24: 				sleep(0.025);
+ 25: 
+ 26: 				{ <span class="comment">// 一コマの処理をする</span>
+ 27: 					{<span class="comment">// 左キーの処理</span>
+ 28: 						<span class="keyword">if</span> (keyDown(37)) { <span class="comment">// 左</span>
+ 29: 							<span class="keyword">int</span> x = car.getX();
+ 30: 							<span class="keyword">int</span> y = car.getY();
+ 31: 							car.warp(x - 5, y);
+ 32: 						}
+ 33: 					}
+ 34: 					{<span class="comment">// 上キーの処理</span>
+ 35: 						<span class="keyword">if</span> (keyDown(38)) { <span class="comment">// 上</span>
+ 36: 							<span class="keyword">int</span> x = car.getX();
+ 37: 							<span class="keyword">int</span> y = car.getY();
+ 38: 							car.warp(x, y - 5);
+ 39: 						}
+ 40: 					}
+ 41: 				}
+ 42: 				<span class="comment">// --- 再描画 ---</span>
+ 43: 				update();
+ 44: 			}
+ 45: 		}
+ 46: 	}
+ 47: 
+ 48: }
+</pre>
+
+<p><a href="chapter10/src/HandleKeyDown.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、HandleKeyDownプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleKeyDown"/>
+</applet></p>
+<div class="fyi">
+<div class=title>キー入力を受け取る新しい命令</div>
+
+
+<dl>
+<dt>
+keyDown([キーコード])
+<dd>
+キーコードで指定されてキーボードが押されているかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。</dl>
+
+</div>
+
+
+<h2 id="doc11_3574">10.3  マウス入力の判定</h2>
+
+
+<h3 id="doc11_3576">10.3.1  マウスの位置を調べる</h3>
+
+<p class="first_ja">mouseX()、mouseY() 命令を使うと，
+				マウスが今どこにいるのかを調べることができます。</p>
+<p>下のプログラムは、マウスの位置に車が移動するプログラムです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter10/image/block/HandleMouse.jpg" alt="図 10.3.1.1 HandleMouse">
+</div>
+
+
+<div id="doc11_src:HandleMouse" class="caption">リスト 10.3.1.1 HandleMouse.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * マウスの位置に車が動くプログラム
+  3:  * 
+  4:  * 2003/06/23 Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa 
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> HandleMouse <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> HandleMouse());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		hide();<span class="comment">// タートルを消す</span>
+ 18: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>);<span class="comment">// 車を生成</span>
+ 19: 
+ 20: 		{<span class="comment">// アニメーションループ</span>
+ 21: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 22: 				<span class="comment">// --- 待つ ---</span>
+ 23: 				sleep(0.1);
+ 24: 
+ 25: 				{<span class="comment">// 一コマの処理をする</span>
+ 26: 					<span class="comment">// 車をマウスの位置に移動する</span>
+ 27: 					<span class="keyword">int</span> mx = mouseX();<span class="comment">// マウスのx座標を取得する</span>
+ 28: 					<span class="keyword">int</span> my = mouseY();<span class="comment">// マウスのy座標を取得する</span>
+ 29: 					car.warp(mx, my);
+ 30: 				}
+ 31: 
+ 32: 				<span class="comment">// --- 再描画 ---</span>
+ 33: 				update();
+ 34: 			}
+ 35: 		}
+ 36: 
+ 37: 	}
+ 38: 
+ 39: }
+</pre>
+
+<p><a href="chapter10/src/HandleMouse.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、HandleMouseプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleMouse"/>
+</applet></p>
+<div class="fyi">
+<div class=title>マウスの位置を調べる新しい命令</div>
+
+
+<dl>
+<dt>
+mouseX()
+<dd>
+マウスのx座標を取得します。
+<dt>
+mouseY()
+<dd>
+マウスのy座標を取得します。</dl>
+
+</div>
+
+<p>x()、y()、mouseX()、mouseY()命令で取得した座標は，
+				わざわざ変数に入れなくても、そのまま他の命令で使う値として使うこともできます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter10/image/block/HandleMouse2.jpg" alt="図 10.3.1.2 HandleMouse2">
+</div>
+
+
+<div id="doc11_src:HandleMouse2" class="caption">リスト 10.3.1.2 HandleMouse2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * マウスの位置に車が動くプログラム (変数省略版)
+  3:  * 
+  4:  * 2003/06/23 Yoshiaki Matsuzawa 
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> HandleMouse2 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> HandleMouse2());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		hide();<span class="comment">// タートルを消す</span>
+ 18: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>);<span class="comment">// 車を生成</span>
+ 19: 
+ 20: 		{<span class="comment">// アニメーションループ</span>
+ 21: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 22: 				<span class="comment">// --- 待つ ---</span>
+ 23: 				sleep(0.1);
+ 24: 
+ 25: 				{<span class="comment">// 一コマの処理をする</span>
+ 26: 					<span class="comment">// 車をマウスの位置に移動する</span>
+ 27: 					car.warp(mouseX(), mouseY());
+ 28: 				}
+ 29: 
+ 30: 				<span class="comment">// --- 再描画 ---</span>
+ 31: 				update();
+ 32: 			}
+ 33: 		}
+ 34: 
+ 35: 	}
+ 36: 
+ 37: }
+</pre>
+
+<p><a href="chapter10/src/HandleMouse2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、HandleMouse2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleMouse2"/>
+</applet></p>
+
+<h3 id="doc11_3644">10.3.2  マウスが押されているかどうか調べる</h3>
+
+<p class="first_ja">mouseDown()命令を使うと、マウスが押されているか調べることができます。
+				mouseX()、mouseY() 命令と組み合わせて使うと、どこで押されているかも調べられます。</p>
+<p>下のプログラムは、マウスをクリックした所に車が移動するプログラムです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter10/image/block/HandleMouse3.jpg" alt="図 10.3.2.1 HandleMouse3">
+</div>
+
+
+<div id="doc11_src:HandleMouse3" class="caption">リスト 10.3.2.1 HandleMouse3.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * マウスの押した位置に車が動くプログラム
+  3:  * 
+  4:  * 2003/06/23 Yoshiaki Matsuzawa 
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> HandleMouse3 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> HandleMouse3());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		hide();<span class="comment">// タートルを消す</span>
+ 17: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>);<span class="comment">// 車を生成</span>
+ 18: 
+ 19: 		{<span class="comment">// アニメーションループ</span>
+ 20: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 21: 				<span class="comment">// -- 待つ　---</span>
+ 22: 				sleep(0.1);
+ 23: 
+ 24: 				{ <span class="comment">// 一コマの処理をする</span>
+ 25: 					<span class="comment">// マウスがクリックされた時の処理</span>
+ 26: 					<span class="keyword">if</span> (mouseClicked()) {
+ 27: 						car.warp(mouseX(), mouseY());<span class="comment">// 車をマウスの位置に移動</span>
+ 28: 					}
+ 29: 				}
+ 30: 
+ 31: 				<span class="comment">// --- 再描画 ---</span>
+ 32: 				update();
+ 33: 			}
+ 34: 		}
+ 35: 
+ 36: 	}
+ 37: 
+ 38: }
+</pre>
+
+<p><a href="chapter10/src/HandleMouse3.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、HandleMouse3プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleMouse3"/>
+</applet></p>
+<div class="fyi">
+<div class=title>マウスクリックを調べる新しい命令</div>
+
+
+<dl>
+<dt>
+mouseClicked()
+<dd>
+いまマウスがクリックされたかどうか調べます。
+								必ず、if文の条件文の中に書いて下さい。</dl>
+
+</div>
+
+
+<h3 id="doc11_3684">10.3.3  マウス入力を詳しく調べる</h3>
+
+<p class="first_ja">マウスボタンの左右クリックや、ダブルクリックを調べる場合は，
+					次のようなプログラムを書きます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter10/image/block/HandleMouse4.jpg" alt="図 10.3.3.1 HandleMouse4">
+</div>
+
+
+<div id="doc11_src:HandleMouse4" class="caption">リスト 10.3.3.1 HandleMouse4.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * マウスの押した位置に車が動くプログラム (右クリック，左クリック判定版)
+  3:  * 
+  4:  * 2003/06/23 Yoshiaki Matsuzawa 
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> HandleMouse4 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> HandleMouse4());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		hide();<span class="comment">// タートルを消す</span>
+ 18: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>);<span class="comment">// 車を生成</span>
+ 19: 
+ 20: 		{<span class="comment">// アニメーションループ</span>
+ 21: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 22: 
+ 23: 				<span class="comment">// --- 待つ ---</span>
+ 24: 				sleep(0.1);
+ 25: 
+ 26: 				{<span class="comment">// 一コマの処理をする</span>
+ 27: 					{<span class="comment">// 左マウスボタンがクリックされた時の処理</span>
+ 28: 						<span class="keyword">if</span> (leftMouseClicked()) {
+ 29: 							car.warp(mouseX(), mouseY());<span class="comment">// 車をマウスの位置に移動</span>
+ 30: 						}
+ 31: 					}
+ 32: 					{ <span class="comment">// 右マウスボタンがダブルクリックされた時の処理</span>
+ 33: 						<span class="keyword">if</span> (rightMouseClicked() &amp;&amp; doubleClick()) {
+ 34: 							car.show(!car.isShow());<span class="comment">// 車を(現す/隠す)</span>
+ 35: 						}
+ 36: 					}
+ 37: 				}
+ 38: 
+ 39: 				<span class="comment">// --- 再描画 ---</span>
+ 40: 				update();
+ 41: 			}
+ 42: 		}
+ 43: 
+ 44: 	}
+ 45: 
+ 46: }
+</pre>
+
+<p><a href="chapter10/src/HandleMouse4.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、HandleMouse4プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleMouse4"/>
+</applet></p>
+<div class="fyi">
+<div class=title>マウス入力を詳しく調べる新しい命令</div>
+
+
+<dl>
+<dt>
+leftMouseClicked()
+<dd>
+マウスの左ボタンがクリックされたかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+<dt>
+rightMouseClicked()
+<dd>
+マウスの右ボタンがクリックされたかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+<dt>
+doubleClick()
+<dd>
+マウスがダブルクリックされたかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。</dl>
+
+</div>
+
+
+<h3 id="doc11_3739">10.3.4  ドラッグを調べる</h3>
+
+<p class="first_ja">マウスボタンが今押されているかどうかを調べる場合は、	次のようなプログラムを書きます。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter10/image/block/HandleMouseDown.jpg" alt="図 10.3.4.1 HandleMouseDown">
+</div>
+
+
+<div id="doc11_src:HandleMouseDown" class="caption">リスト 10.3.4.1 HandleMouseDown.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * マウスのドラッグした位置に車が動くプログラム
+  3:  * 
+  4:  * 2011/11/22 Yoshiaki Matsuzawa 
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> HandleMouseDown <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> HandleMouseDown());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		hide();<span class="comment">// タートルを消す</span>
+ 18: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>);<span class="comment">// 車を生成</span>
+ 19: 
+ 20: 		{<span class="comment">// アニメーションループ</span>
+ 21: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 22: 				<span class="comment">// --- 待つ ---</span>
+ 23: 				sleep(0.1);
+ 24: 
+ 25: 				{ <span class="comment">// 一コマの処理をする</span>
+ 26: 					<span class="comment">// 左マウスボタンが押されている時の処理</span>
+ 27: 					<span class="keyword">if</span> (leftMouseDown()) {
+ 28: 						car.warp(mouseX(), mouseY());<span class="comment">// 車をマウスの位置に移動</span>
+ 29: 					}
+ 30: 				}
+ 31: 
+ 32: 				<span class="comment">// --- 再描画 ---</span>
+ 33: 				update();
+ 34: 			}
+ 35: 		}
+ 36: 
+ 37: 	}
+ 38: 
+ 39: }
+</pre>
+
+<p><a href="chapter10/src/HandleMouseDown.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、HandleMouseDownプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleMouseDown"/>
+</applet></p>
+<div class="fyi">
+<div class=title>マウス入力を調べる新しい命令</div>
+
+
+<dl>
+<dt>
+mouseDown()
+<dd>
+いまマウスが押されているかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+<dt>
+leftMouseDown()
+<dd>
+いまマウスの左ボタンが押されているかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+<dt>
+rightMouseDown()
+<dd>
+いまマウスの右ボタンが押されているかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。</dl>
+
+</div>
+
+
+<h2 id="doc11_3795">10.4  あたり判定</h2>
+
+
+<h3 id="doc11_3797">10.4.1  ２つのオブジェクトのあたり判定</h3>
+
+<p class="first_ja">intersects()命令を使うと、2つのオブジェクトが当たっているかどうか、
+				調べることができます。</p>
+<p>下のプログラムは、車がドラえもんに当たると、ドラえもんが小さくなるプログラムです（マウスで車を動かせます）。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter10/image/block/IntersectsJudge.jpg" alt="図 10.4.1.1 IntersectsJudge">
+</div>
+
+
+<div id="doc11_src:IntersectsJudge" class="caption">リスト 10.4.1.1 IntersectsJudge.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * あたり判定をするプログラム
+  3:  * (車がドラえもんにあたると，ドラえもんが小さくなる)
+  4:  * 
+  5:  * 2003/06/23 Yoshiaki Matsuzawa
+  6:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  7:  */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> IntersectsJudge <span class="keyword">extends</span> Turtle {
+  9: 
+ 10: 	<span class="comment">// 起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		Turtle.startTurtle(<span class="keyword">new</span> IntersectsJudge());
+ 13: 	}
+ 14: 
+ 15: 	<span class="comment">// タートルを動かす処理</span>
+ 16: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 17: 
+ 18: 		hide();<span class="comment">// タートルを消す</span>
+ 19: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>);<span class="comment">// 車を生成</span>
+ 20: 		Doraemon dora = <span class="keyword">new</span> Doraemon();<span class="comment">// doraという名前のドラえもんを生成</span>
+ 21: 		car.warp(200, 200);<span class="comment">// 車を移動</span>
+ 22: 
+ 23: 		{<span class="comment">// アニメーションループ</span>
+ 24: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 25: 
+ 26: 				<span class="comment">// --- 待つ ---</span>
+ 27: 				sleep(0.1);
+ 28: 
+ 29: 				{ <span class="comment">// 一コマの処理をする</span>
+ 30: 					{<span class="comment">// マウスが押されていた時の処理</span>
+ 31: 						<span class="keyword">if</span> (mouseDown()) {
+ 32: 							car.warp(mouseX(), mouseY());<span class="comment">// 車をマウスの位置に移動</span>
+ 33: 						}
+ 34: 					}
+ 35: 					{ <span class="comment">// どらえもんが車に当たっていた時の処理</span>
+ 36: 						<span class="keyword">if</span> (dora.intersects(car)) {
+ 37: 							dora.small(5);<span class="comment">// ドラえもんを小さくする</span>
+ 38: 						}
+ 39: 					}
+ 40: 				}
+ 41: 
+ 42: 				<span class="comment">// --- 再描画 ---</span>
+ 43: 				update();
+ 44: 			}
+ 45: 		}
+ 46: 
+ 47: 	}
+ 48: 
+ 49: }
+</pre>
+
+<p><a href="chapter10/src/IntersectsJudge.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、IntersectsJudgeプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="IntersectsJudge"/>
+</applet></p>
+<div class="fyi">
+<div class=title>あたり判定に関する新しい命令</div>
+
+
+<dl>
+<dt>
+intersects([判定相手のオブジェクト])
+<dd>
+オブジェクトが、指定された判定相手のオブジェクトと当たっているかどうか調べます。必ず、if文の条件文の中に書いて下さい。</dl>
+
+</div>
+
+
+<h3 id="doc11_3834">10.4.2  座標とオブジェクトのあたり判定</h3>
+
+<p class="first_ja">2つのオブジェクトのあたり判定でなく、マウスの位置が、オブジェクトと当たっているか判定したい時があります。</p>
+<p>下のプログラムは、マウスが車の上に来る（マウスの座標が車の領域に含まれる）と、車が小さくなるプログラムです。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter10/image/block/ContainsJudge.jpg" alt="図 10.4.2.1 ContainsJudge">
+</div>
+
+
+<div id="doc11_src:ContainsJudge" class="caption">リスト 10.4.2.1 ContainsJudge.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * マウスのあたり判定をするプログラム
+  3:  * (マウスが車にあたると，車が小さくなる)
+  4:  * 
+  5:  * 2003/06/23 Yoshiaki Matsuzawa
+  6:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  7:  */</span>
+  8: <span class="keyword">public</span> <span class="keyword">class</span> ContainsJudge <span class="keyword">extends</span> Turtle {
+  9: 
+ 10: 	<span class="comment">// 起動処理</span>
+ 11: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 12: 		Turtle.startTurtle(<span class="keyword">new</span> ContainsJudge());
+ 13: 	}
+ 14: 
+ 15: 	<span class="comment">// タートルを動かす処理</span>
+ 16: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 17: 
+ 18: 		hide();<span class="comment">// タートルを消す</span>
+ 19: 		ImageTurtle car = <span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;car.gif&quot;</span>);<span class="comment">// 車を生成</span>
+ 20: 
+ 21: 		{<span class="comment">// アニメーションループ</span>
+ 22: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 23: 				<span class="comment">// --- 待つ ---</span>
+ 24: 				sleep(0.1);
+ 25: 
+ 26: 				{<span class="comment">// 一コマの処理をする</span>
+ 27: 					<span class="comment">// 車がマウスの位置に含まれている場合の処理</span>
+ 28: 					<span class="keyword">if</span> (car.contains(mouseX(), mouseY())) {
+ 29: 						car.small(5);<span class="comment">// 車を小さくする</span>
+ 30: 					}
+ 31: 				}
+ 32: 
+ 33: 				<span class="comment">// --- 再描画 ---</span>
+ 34: 				update();
+ 35: 			}
+ 36: 		}
+ 37: 
+ 38: 	}
+ 39: 
+ 40: }
+</pre>
+
+<p><a href="chapter10/src/ContainsJudge.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、ContainsJudgeプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ContainsJudge"/>
+</applet></p>
+<div class="fyi">
+<div class=title>座標とオブジェクトのあたり判定に関する新しい命令</div>
+
+
+<dl>
+<dt>
+contains([x座標], [y座標])
+<dd>
+オブジェクトが指定された座標内に含まれているかどうか調べます。必ず、if文の条件文の中に書いて下さい。</dl>
+
+</div>
+
+
+<h2 id="doc11_3872">10.5  練習問題</h2>
+
+
+<h3 id="doc11_3874">10.5.1  プレイヤーを操作出来るようにしよう</h3>
+
+<p class="first_ja">プレイヤーの画像を用意し、キーボードの矢印（↑→←↓）キーを使って、プレイヤーを上下左右に操作するプログラムを作りましょう。</p>
+<p>下のボタンを押すと、Kadai01プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Kadai01"/>
+</applet></p>
+<p>プレイヤーの画像は、ネットのフリー素材集などから好みのものを探し、ダウンロードして使ってみよう。</p>
+<p>ファイル名は「KeyHandler.java」とすること．</p>
+
+<h3 id="doc11_3892">10.5.2  画像をドラッグ出来るようにしよう</h3>
+
+<p class="first_ja">画像を用意し、マウスを使って、ドラッグできるプログラムを作ってみましょう。</p>
+<p>下のボタンを押すと、Kadai02プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Kadai02"/>
+</applet></p>
+<p>ファイル名は「DrugHandler.java」とすること．</p>
+
+<h3 id="doc11_3907">10.5.3  得点板を作ろう</h3>
+
+<p class="first_ja">アイテム（<a href="index_p1_c9.html#doc10_sec:imageturtle" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">画像タートル</a>）と得点板（<a href="index_p1_c9.html#doc10_sec:textturtle" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">テキストタートル</a>）をつくり、
+					プレイヤーを操作してアイテムを取る（アイテムに触れる）と得点が増えるプログラムを作りましょう。</p>
+<p>ファイル名は「ScoreBoard.java」とすること．</p>
+
+<h3 id="doc11_3922">10.5.4  ゲームを作ろう</h3>
+
+<p class="first_ja">自由な発想で、簡単なオリジナルゲームを作りましょう。</p>
+<p>下記はシューティングゲームのサンプルがあります。使い方は、ソースを読んで理解しよう。</p>
+
+<div class="figure">
+<img class="figure" style="scale:1.0" src="chapter10/image/block/ShootingGame.jpg" alt="図 10.5.4.1 ShootingGame">
+</div>
+
+
+<div id="doc11_src:ShootingGame" class="caption">リスト 10.5.4.1 ShootingGame.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * シューティングゲーム
+  3:  * 
+  4:  * 2003/06/23 Yoshiaki Matsuzawa
+  5:  * 2012/11/07 改訂 Yoshiaki Matsuzawa
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> ShootingGame <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> ShootingGame());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		hide();<span class="comment">// タートルを消す</span>
+ 18: 
+ 19: 		<span class="comment">// 画面の調整</span>
+ 20: 		window.size(640, 480);
+ 21: 		window.warp(100, 100);
+ 22: 
+ 23: 		<span class="comment">// キャラクターの生成</span>
+ 24: 		Star enemy = <span class="keyword">new</span> Star(); <span class="comment">// enemyという名前の星を生成</span>
+ 25: 		Doraemon player = <span class="keyword">new</span> Doraemon(); <span class="comment">// playerという名前のドラえもんを生成</span>
+ 26: 		Circle bullet = <span class="keyword">new</span> Circle(); <span class="comment">// bullet(弾)という名前の円を作成</span>
+ 27: 
+ 28: 		<span class="comment">// 得点板の生成</span>
+ 29: 		TextTurtle scoreBoard = <span class="keyword">new</span> TextTurtle(<span class="quote">&quot;&quot;</span>); <span class="comment">// scoreBoardという名前のTextTurtleを生成</span>
+ 30: 
+ 31: 		{<span class="comment">// 初期化</span>
+ 32: 			<span class="comment">// 弾を適切な大きさに調整</span>
+ 33: 			bullet.size(20, 20);
+ 34: 
+ 35: 			<span class="comment">// キャラクターの位置を調整</span>
+ 36: 			enemy.warp(200, 100);
+ 37: 			player.warp(320, 350);
+ 38: 			bullet.warp(-100, -100);<span class="comment">// 弾は最初見えない位置に置いておく</span>
+ 39: 
+ 40: 			<span class="comment">// 得点板の位置を調整</span>
+ 41: 			scoreBoard.warp(600, 50);
+ 42: 		}
+ 43: 
+ 44: 		{<span class="comment">// アニメーションループ</span>
+ 45: 			<span class="comment">// 得点を初期化</span>
+ 46: 			<span class="keyword">int</span> score = 0;
+ 47: 
+ 48: 			<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 49: 
+ 50: 				<span class="comment">// --- 待つ ---</span>
+ 51: 				sleep(0.025);
+ 52: 
+ 53: 				{ <span class="comment">// 一コマの処理をする</span>
+ 54: 
+ 55: 					{<span class="comment">// 敵を動かす</span>
+ 56: 						enemy.warp(enemy.getX() + 5, enemy.getY());
+ 57: 						enemy.rt(10);
+ 58: 
+ 59: 						{ <span class="comment">// 敵が右端だった場合の処理</span>
+ 60: 							<span class="keyword">if</span> (enemy.getX() &gt; 640) {
+ 61: 								enemy.warp(0, enemy.getY());<span class="comment">// 左端にワープ</span>
+ 62: 							}
+ 63: 						}
+ 64: 					}
+ 65: 
+ 66: 					{ <span class="comment">// ドラえもんを左右に動かす</span>
+ 67: 						<span class="keyword">if</span> (key() == 37) { <span class="comment">// 左</span>
+ 68: 							player.warp(player.getX() - 5, player.getY());
+ 69: 						} <span class="keyword">else</span> <span class="keyword">if</span> (key() == 39) { <span class="comment">// 右</span>
+ 70: 							player.warp(player.getX() + 5, player.getY());
+ 71: 						}
+ 72: 					}
+ 73: 
+ 74: 					{<span class="comment">// 上が押されたら，弾を出す(弾をドラえもんと同じ位置にする)</span>
+ 75: 						<span class="keyword">if</span> (key() == 38) {
+ 76: 							<span class="comment">//</span>
+ 77: 							bullet.warp(player.getX(), player.getY());
+ 78: 						}
+ 79: 					}
+ 80: 
+ 81: 					{ <span class="comment">// 弾の処理</span>
+ 82: 						<span class="comment">// 上に動かす(見えなくても，上に動かしつづける)</span>
+ 83: 						bullet.warp(bullet.getX(), bullet.getY() - 5);
+ 84: 
+ 85: 						{ <span class="comment">// 弾が敵に当たっていた場合の処理</span>
+ 86: 							<span class="keyword">if</span> (bullet.intersects(enemy)) {
+ 87: 								score++;<span class="comment">// 得点を増やす</span>
+ 88: 							}
+ 89: 						}
+ 90: 					}
+ 91: 					<span class="comment">// 得点板の数字を更新</span>
+ 92: 					scoreBoard.text(score);
+ 93: 
+ 94: 				}
+ 95: 
+ 96: 				<span class="comment">// --- 再描画 ---</span>
+ 97: 				update();
+ 98: 			}
+ 99: 		}
+100: 
+101: 	}
+102: 
+103: }
+</pre>
+
+<p><a href="chapter10/src/ShootingGame.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、ShootingGameプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ShootingGame"/>
+</applet></p>
+<p>付録にも作品例があります。</p>
+<p>ファイル名は「MyGame.java」とすること．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p1_c9.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p1.html#doc1_part:one" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Javaプログラミング入門</a>/ゲームを作ろう！</td>
+<td><a href="index_p2.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

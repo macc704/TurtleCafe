@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>タートルの仕様</title>
+</head>
+<body>
+<section title="タートルの命令リスト">
+<subsection title="基本的な命令">
+<dl>
+<dt>rt([角度の指定])</dt>
+<dd>タートルを指定した角度だけ右に回す</dd>
+<dt>lt([角度の指定])</dt>
+<dd>タートルを指定した角度だけ左に回す</dd>
+<dt>fd([長さの指定])</dt>
+<dd>タートルを指定した長さだけ進める</dd>
+<dt>bk([長さの指定])</dt>
+<dd>タートルを指定した長さだけ後ろに進める</dd>
+<dt>up()</dt>
+<dd>タートルのペンを上げる</dd>
+<dt>down()</dt>
+<dd>タートルのペンを下げる</dd>
+<dt>color([色の指定])</dt>
+<dd>タートルのペンの色を変える
+						色は赤なら、color(java.awt.Color.red)。red以外に、次の色を指定できる。
+						<ul>
+<li>black（黒）</li>
+<li>blue（青）</li>
+<li>cyan（水色）</li>
+<li>darkGray（濃い灰色）</li>
+<li>gray（灰色）</li>
+<li>green（緑）</li>
+<li>lightGray（明るい灰色）</li>
+<li>magenta（赤紫）</li>
+<li>orange（オレンジ）</li>
+<li>pink（ピンク）</li>
+<li>red（赤）</li>
+<li>white（白）</li>
+<li>yellow（黄色）</li>
+</ul>
+</dd>
+<dt>input()</dt>
+<dd>ユーザからの入力を受け付ける</dd>
+<dt>print([出力する文字列])</dt>
+<dd>文字列をコンソールに出力する</dd>
+<dt>random([数])</dt>
+<dd>指定した数を最大とする乱数を発生させる</dd>
+</dl>
+</subsection>
+<subsection title="オブジェクトの生成に関する命令">
+<dl>
+<dt>Turtle [タートルの名前] = new Turtle()</dt>
+<dd>タートルを生成し、名付ける</dd>
+<dt>
+						[オブジェクトのクラス名] [オブジェクトの名前] = new [オブジェクトのクラス名]()
+					</dt>
+<dd>オブジェクトを生成し、名付ける</dd>
+<dt>
+						ImageTurtle [画像タートルの名前] = new
+						ImageTurtle("[画像のファイル名]")
+					</dt>
+<dd>指定された画像を初期値とする画像タートルを生成し、名付ける</dd>
+<dt>
+						TextTurtle [テキストタートルの名前] = new
+						ImageTurtle("[文字列]")
+					</dt>
+<dd>指定された文字列を初期値とするテキストタートルを生成し、名付ける</dd>
+</dl>
+</subsection>
+<subsection title="画面の描画処理に関する命令">
+<dl>
+<dt>sleep([秒の指定])</dt>
+<dd>指定された秒数だけ画面を止める（画面が眠る）</dd>
+<dt>update()</dt>
+<dd>画面を再描画する</dd>
+</dl>
+</subsection>
+<subsection title="座標に関する命令">
+<dl>
+<dt>warp([x座標] , [y座標])</dt>
+<dd>指定した座標にオブジェクトをワープさせる</dd>
+<dt>getX()</dt>
+<dd>オブジェクトの現在のx座標を取得する</dd>
+<dt>getY()</dt>
+<dd>オブジェクトの現在のy座標を取得する</dd>
+</dl>
+</subsection>
+<subsection title="大きさに関する命令">
+<dl>
+<dd/>
+<dt>size([横の長さ] , [縦の長さ])</dt>
+<dd>オブジェクトを指定した横、縦の大きさにする</dd>
+<dt>getWidth()</dt>
+<dd>オブジェクトの幅を取得する</dd>
+<dt>getHeight()</dt>
+<dd>オブジェクトの高さを取得する</dd>
+<dt>scale([倍率])</dt>
+<dd>オブジェクトを指定した倍率の大きさにする</dd>
+<dt>large([長さ])</dt>
+<dd>指定した長さだけ、縦横を大きくする</dd>
+<dt>small([長さ])</dt>
+<dd>指定した長さだけ、縦横を小さくする</dd>
+<dt>wide([長さ])</dt>
+<dd>指定した長さだけ幅を大きくする</dd>
+<dt>narrow([長さ])</dt>
+<dd>指定した長さだけ幅を小さくする</dd>
+<dt>tall([長さ])</dt>
+<dd>指定した長さだけ高さを高くする</dd>
+<dt>little([長さ])</dt>
+<dd>指定した長さだけ高さを低くする</dd>
+</dl>
+</subsection>
+<subsection title="オブジェクトを出現/隠す命令">
+<dl>
+<dt>show()</dt>
+<dd>オブジェクトを出現させる</dd>
+<dt>hide()</dt>
+<dd>オブジェクトを隠す</dd>
+<dt>isShow()</dt>
+<dd>オブジェクトが出現しているかどうか調べる</dd>
+<dt>show([真偽])</dt>
+<dd>オブジェクトを出現させる/隠す。trueを指定すれば出現させ、falseを指定すれば隠す</dd>
+<dt>show(!isShow())</dt>
+<dd>上記の命令の組み合わせで、隠れていれば出現させ、出現していれば隠す。</dd>
+</dl>
+</subsection>
+<subsection title="オブジェクトの見た目を変える命令">
+<dl>
+<dt>looks([オブジェクト]）</dt>
+<dd>オブジェクトの見た目を、指定したオブジェクトの見た目に変える</dd>
+</dl>
+</subsection>
+<subsection title="テキストの中身を変える命令">
+<dl>
+<dt>text([文字列])</dt>
+<dd>テキストの中身を指定したテキストに変える</dd>
+</dl>
+</subsection>
+<subsection title="キー・マウス入力に関する命令">
+<dl>
+<dt>key()</dt>
+<dd>今押されているキーコードを取得する。何も押されていないときには-1が返ってくる。</dd>
+<dt>mouseX()</dt>
+<dd>現在のマウスのx座標を取得する</dd>
+<dt>mouseY()</dt>
+<dd>現在のマウスのy座標を取得する</dd>
+<dt>mouseDown()</dt>
+<dd>今マウスが押されているかどうか調べる</dd>
+<dt>leftMouseDown()</dt>
+<dd>今マウスが左クリックされているかどうか調べる</dd>
+<dt>rightMouseDown()</dt>
+<dd>今マウスが右クリックされているかどうか調べる</dd>
+<dt>doubleClick()</dt>
+<dd>マウスがダブルクリックしたかどうか調べる</dd>
+</dl>
+</subsection>
+<subsection title="オブジェクトの接触に関する命令">
+<dl>
+<dt>intersects([判定相手のオブジェクト]）</dt>
+<dd>オブジェクトが、判定相手のオブジェクトと接触しているかどうか調べる</dd>
+<dt>contains([x座標] , [y座標]）</dt>
+<dd>オブジェクトに、指定された座標が含まれるかどうか調べる</dd>
+</dl>
+</subsection>
+</section>
+<section title="タートルで作ってはいけないメソッド名">
+<p>
+				タートル・グラフィックスではTutleクラスで既に定義されているメソッド名を使ってしまうと、そのメソッドの定義を上書きしてしまいます（Turtleクラスを継承しているため、メソッドのオーバーライドが行われます）。
+			</p>
+<p>
+				たとえば、fd()という名前のメソッドを自分で作ってしまうと、本来Turtleに定義されているfd()メソッドが上書きされてしまい、前進することができなくなってしまいます。
+			</p>
+<p>そのため、以下のリストにあるメソッド名は使わないようにして下さい。</p>
+<ul>
+<li>angle</li>
+<li>balance</li>
+<li>balanceX</li>
+<li>balanceY</li>
+<li>bk</li>
+<li>bounds</li>
+<li>color</li>
+<li>contains</li>
+<li>delegator</li>
+<li>die</li>
+<li>direction</li>
+<li>directionLt</li>
+<li>directionRt</li>
+<li>doubleClick</li>
+<li>down</li>
+<li>draw</li>
+<li>fd</li>
+<li>getBalanceX</li>
+<li>getBalanceY</li>
+<li>getHeight</li>
+<li>getWidth</li>
+<li>getX</li>
+<li>getY</li>
+<li>height</li>
+<li>hide</li>
+<li>initializeLooks</li>
+<li>input</li>
+<li>inputString</li>
+<li>intersects</li>
+<li>isShow</li>
+<li>key</li>
+<li>keyDown</li>
+<li>keyPressed</li>
+<li>keyReleased</li>
+<li>keyTyped</li>
+<li>large</li>
+<li>left</li>
+<li>leftMouseDown</li>
+<li>little</li>
+<li>location</li>
+<li>looks</li>
+<li>looksSize</li>
+<li>lt</li>
+<li>maxX</li>
+<li>maxY</li>
+<li>minX</li>
+<li>minY</li>
+<li>mouseClicked</li>
+<li>mouseDown</li>
+<li>mouseDragged</li>
+<li>mouseEntered</li>
+<li>mouseExited</li>
+<li>mouseMoved</li>
+<li>mousePressed</li>
+<li>mouseReleased</li>
+<li>mouseX</li>
+<li>mouseY</li>
+<li>move</li>
+<li>narrow</li>
+<li>paint</li>
+<li>print</li>
+<li>random</li>
+<li>resetLooks</li>
+<li>resetScale</li>
+<li>right</li>
+<li>rightMouseDown</li>
+<li>rotate</li>
+<li>rotatedBounds</li>
+<li>rotatedHeight</li>
+<li>rotateDirection</li>
+<li>rotatedLocation</li>
+<li>rotatedMaxX</li>
+<li>rotatedMaxY</li>
+<li>rotatedMinX</li>
+<li>rotatedMinY</li>
+<li>rotatedWidth</li>
+<li>rotatedX</li>
+<li>rotatedY</li>
+<li>rt</li>
+<li>scale</li>
+<li>scaleX</li>
+<li>scaleY</li>
+<li>setRandomSeed</li>
+<li>show</li>
+<li>size</li>
+<li>sleep</li>
+<li>small</li>
+<li>start</li>
+<li>tall</li>
+<li>up</li>
+<li>update</li>
+<li>warp</li>
+<li>wide</li>
+<li>width</li>
+<li>x</li>
+<li>y</li>
+</ul>
+</section>
+</body>
+</doc>

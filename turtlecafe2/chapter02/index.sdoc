@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>コンピュータに情報を記憶させてみよう（変数）</title>
+</head>
+<body>
+<section title="学習目標">
+<ul>
+<li>整数型の変数の作成（宣言），書き込み（代入），読み込み（評価と値）が使えるようになる</li>
+<li>複数の変数（変数名による区別をしつつ）が使えるようになる</li>
+<li>計算式（四則演算＋剰余計算）が使えるようになる</li>
+<li>ＣＵＩを使ってユーザ対話をするプログラムが作れるようになる</li>
+</ul>
+</section>
+<section title="変数">
+<p>今回新しく"変数"が登場します。家の大きさを変更できる次のプログラムをみてみましょう。</p>
+<subsection title="変数と値">
+<p>次のプログラムを見てみましょう。</p>
+<program title="VariableHouse.java" id="src:VariableHouse" src="src/VariableHouse.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter02/src/VariableHouse.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、VariableHouseプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="VariableHouse"/>
+</applet>]]></native>
+<p/>
+<p>変数はデータを格納しておく場所のことです。
+					プログラムでは、「メモリ」の許す限り、データを格納しておくことが出来ます。
+				</p>
+<p>格納する場所を一つにつき、一つの名前をつけることが出来ます。</p>
+<p>実際に格納されるデータのことを「値」といいます。</p>
+<figure title="変数と値" src="image/table_model_value" style="scale:1.0"/>
+</subsection>
+<subsection title="変数を使ったプログラムの実行">
+<p>プログラムの実行過程と変数を見ていきましょう。</p>
+<subsubsection title="変数の宣言">
+<figure title="変数の宣言" src="image/table_model_x_01" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="変数へ値を代入する">
+<figure title="変数へ値を代入する" src="image/table_model_x_02" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="変数を評価して値にする">
+<figure title="変数を評価して値にする" src="image/table_model_x_03" style="scale:1.0"/>
+</subsubsection>
+</subsection>
+<subsection title="複数の変数と変数名">
+<p>変数はいくつでも使うことが出来ます。</p>
+<p>
+					区別するために、変数には異なる名前をつけなければなりません。
+					異なる名前ならば好きな名前をつけることが出来ます。
+					空白や特殊記号が使えないのはクラス名と同じです。
+				</p>
+<subsubsection title="複数の変数と変数名">
+<program title="MultiVariableHouse.java" id="src:MultiVariableHouse" src="src/MultiVariableHouse.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter02/src/MultiVariableHouse.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、MultiVariableHouseプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="MultiVariableHouse"/>
+</applet>]]></native>
+</subsubsection>
+<subsubsection title="プログラムの実行過程">
+<p>プログラムの実行過程を追ってみましょう。</p>
+<figure title="変数の宣言" src="image/table_model_name_01" style="scale:1.0"/>
+<figure title="変数の宣言" src="image/table_model_name_02" style="scale:1.0"/>
+<figure title="変数への値の代入" src="image/table_model_name_03" style="scale:1.0"/>
+<figure title="変数への値の代入" src="image/table_model_name_04" style="scale:1.0"/>
+<figure title="変数を評価して値にする" src="image/table_model_name_05" style="scale:1.0"/>
+</subsubsection>
+</subsection>
+</section>
+<section title="コンピュータに計算をさせる">
+<subsection title="計算式を使ったプログラム">
+<program title="DoubleHouse.java" id="src:DoubleHouse" src="src/DoubleHouse.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter02/src/DoubleHouse.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、DoubleHouseプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="DoubleHouse"/>
+</applet>]]></native>
+<p>
+					コンピュータは計算機ですから、計算をさせることが出来ます。例えば、次のように書くと</p>
+<program>
+rightAngle * 2
+				</program>
+<p>掛け算を行うことが出来ます。</p>
+<p>このような、計算を行う書法のことを「式」といいます。</p>
+<p>Javaで使うことが出来る基本的な計算命令を以下に示します。</p>
+<dl>
+<dt>+</dt>
+<dd>足し算をします</dd>
+<dt>-</dt>
+<dd>引き算をします</dd>
+<dt>*</dt>
+<dd>掛け算をします</dd>
+<dt>/</dt>
+<dd>割り算をします</dd>
+<dt>%</dt>
+<dd>割り算の余りを求めます</dd>
+</dl>
+</subsection>
+<subsection title="計算式を使ったプログラムの実行">
+<p>次のように評価（計算）されて、具体的な値になり、プログラムが動きます。</p>
+<figure title="変数の宣言" src="image/table_model_expression_01" style="scale:1.0"/>
+</subsection>
+<subsection title="計算式と代入文を使ったプログラムの実行">
+<p>計算式があっても、右辺から評価されるのは一緒です。</p>
+<figure title="変数の宣言" src="image/table_model_expression_02" style="scale:1.0"/>
+<fyi title="考えてみよう">
+					次のようなプログラムが動かない（コンパイルエラーとなる）のは何故ですか？
+					考えてみましょう。
+				<program>
+length / 2  = smallHouseLength;
+				</program>
+</fyi>
+</subsection>
+</section>
+<section title="ユーザと対話する（インタラクティブ）なプログラム">
+<subsection title="入力を受け付ける">
+<program title="InputHouse.java" id="src:InputHouse" src="src/InputHouse.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter02/src/InputHouse.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、InputHouseプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="InputHouse"/>
+</applet>]]></native>
+<p>入力を受け付けるには、</p>
+<program>
+input()
+			</program>
+<p>命令を使います。</p>
+<p>評価すると、ユーザが入力した値になります。そして、その値が変数に代入されます。</p>
+</subsection>
+<subsection title="ユーザにメッセージを出す">
+<program title="PromptHouse.java" id="src:PromptHouse" src="src/PromptHouse.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter02/src/PromptHouse.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、PromptHouseプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="PromptHouse"/>
+</applet>]]></native>
+<p>ユーザにメッセージを出すには</p>
+<program>
+print("ここに出したいメッセージを書く")
+			</program>
+<p>命令を使います。</p>
+<p>出したいメッセージを「"」（ダブルクォーテーション）で囲んでください。</p>
+</subsection>
+</section>
+<section title="おみくじ">
+<subsection title="乱数">
+<program title="RandomHouse.java" id="src:RandomHouse" src="src/RandomHouse.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter02/src/RandomHouse.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、RandomHouseプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter02_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="RandomHouse"/>
+</applet>]]></native>
+<p>乱数値を（命令毎に毎回変わる値）に取得するには</p>
+<program>
+random(数)
+			</program>
+<p>命令を使います。</p>
+<p>実行されるごとに異なる値が自動的に選択されます。</p>
+<p>「０」から「数の所に書いた数」未満のどれかの数字が選択されます。</p>
+<p>（例：random(10)のとき、0から9までの１０種類のどれかの数が選択されます）</p>
+</subsection>
+</section>
+<section title="練習問題">
+<subsection title="問題1：与えられた大きさの正五角形を描くプログラム">
+<p>
+				ユーザの入力を受け取り、その長さを一辺の長さとして正五角形を描くプログラムを作ってください。
+			</p>
+</subsection>
+<subsection title="問題2：乱数を使って星を描くプログラム">
+<p>
+				長さに乱数を使い、実行するたびに大きさが変わる星を描くプログラムを作ってください。
+				乱数は50以上100未満の間になるようにすること。
+			</p>
+</subsection>
+</section>
+</body>
+</doc>

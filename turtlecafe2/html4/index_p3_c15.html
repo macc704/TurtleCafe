@@ -1,0 +1,1358 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2011/11/09" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p3.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p3.html#doc1_part:three" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">データ構造とアルゴリズム</a>/集合データ構造入門</td>
+<td><a href="index_p3_c16.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_55">15  集合データ構造入門</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc16_5589" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.1  学習目標</a>
+<li> <a href="#doc16_5601" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.2  集合データ構造</a>
+<ul>
+<li> <a href="#doc16_5603" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.2.1  ListTurtle入門</a>
+<li> <a href="#doc16_5724" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.2.2  アニメーションへの応用</a>
+</ul>
+<li> <a href="#doc16_5754" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.3  Java標準ライブラリでの集合データ構造</a>
+<ul>
+<li> <a href="#doc16_5759" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.3.1  カーソルを使わない方法</a>
+<li> <a href="#doc16_5779" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.3.2  LinkedList</a>
+<li> <a href="#doc16_5814" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.3.3  配列</a>
+</ul>
+<li> <a href="#doc16_5838" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.4  ListTurtleの命令リスト</a>
+<ul>
+<li> <a href="#doc16_5840" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.4.1  リストを作る命令</a>
+<li> <a href="#doc16_5867" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.4.2  追加と削除</a>
+<li> <a href="#doc16_5939" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.4.3  取得関係</a>
+<li> <a href="#doc16_5957" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.4.4  カーソル関係</a>
+<li> <a href="#doc16_6029" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.4.5  その他の命令</a>
+</ul>
+<li> <a href="#doc16_6048" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.5  練習問題</a>
+<ul>
+<li> <a href="#doc16_6050" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.5.1  問題1：アニメーションをListTurtleを使って作り直そう</a>
+<li> <a href="#doc16_6056" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.5.2  問題2：Java標準ライブラリを使って作り直そう</a>
+<li> <a href="#doc16_6062" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">15.5.3  問題3：大量流れ星アニメーションを作ろう</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc16_5589">15.1  学習目標</h2>
+
+
+<ul>
+<li> リストタートル(ListTurtle)の概念を理解し，応用したプログラムが書けるようになる
+<li> Javaの標準ライブラリでの集合データ構造（LinkedList,配列）を使ったプログラムが読めるようになる</ul>
+
+
+<h2 id="doc16_5601">15.2  集合データ構造</h2>
+
+
+<h3 id="doc16_5603">15.2.1  ListTurtle入門</h3>
+
+<p class="first_ja">これまでのプログラムでも，同種の要素を複数扱う必要があるプログラムがありました．
+				例えば，次の４匹の亀を扱うプログラムを考えてみましょう．</p>
+
+<div id="doc16_src:FourTurtles0" class="caption">リスト 15.2.1.1 FourTurtles0.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * FourTurtles0.java
+  3:  * ４匹の亀を動かすプログラム
+  4:  * Created on 2012/01/07
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> FourTurtles0 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> FourTurtles0());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		<span class="comment">// ウインドウの準備</span>
+ 17: 		hide();
+ 18: 		window.setSize(1100, 500);
+ 19: 
+ 20: 		<span class="comment">// 4匹のカメを生成</span>
+ 21: 		Turtle turtle0 = <span class="keyword">new</span> Turtle();
+ 22: 		Turtle turtle1 = <span class="keyword">new</span> Turtle();
+ 23: 		Turtle turtle2 = <span class="keyword">new</span> Turtle();
+ 24: 		Turtle turtle3 = <span class="keyword">new</span> Turtle();
+ 25: 
+ 26: 		<span class="comment">// 初期位置へ移動</span>
+ 27: 		turtle0.warp(100, 100);
+ 28: 		turtle1.warp(100, 200);
+ 29: 		turtle2.warp(200, 100);
+ 30: 		turtle3.warp(200, 200);
+ 31: 
+ 32: 		<span class="comment">// カメを動かす</span>
+ 33: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 360; i++) {
+ 34: 			turtle0.fd(1);
+ 35: 			turtle0.rt(1);
+ 36: 			turtle1.fd(1);
+ 37: 			turtle1.rt(1);
+ 38: 			turtle2.fd(1);
+ 39: 			turtle2.rt(1);
+ 40: 			turtle3.fd(1);
+ 41: 			turtle3.rt(1);
+ 42: 		}
+ 43: 	}
+ 44: }
+</pre>
+
+<p><a href="chapter14/src/FourTurtles0.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、FourTurtles0プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter14_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="FourTurtles0"/>
+</applet></p>
+<p>上記プログラムの問題は，カメを増やすたびに変数を追加したり，それに対応する動きのプログラムを書かなければならないことです．
+				その結果，プログラム中に似たようなプログラムが繰り返しでてきてしまっています．</p>
+<p>この章では，人間がプログラムを繰り返し書くのではなく，コンピュータに繰り返しをさせることで同様の目的を達成する方法を考えます．</p>
+<p>必要なのは「集合データ構造」です．「集合データ構造」とは，同種のデータを一括してプログラムで扱うことの出来る仕組みで，
+				繰り返し（これはもう習得済みですね）と組み合わせることで，大量のデータを少量のプログラムで指示することが出来ます．</p>
+<p>次のプログラムでは，タートルで使える集合データ構造の，ListTurtleクラスを使って４匹の亀を扱うプログラムを書いてみたものです．</p>
+
+<div id="doc16_src:FourTurtles1" class="caption">リスト 15.2.1.2 FourTurtles1.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * FourTurtles.java
+  3:  * ４匹の亀を動かすプログラム１（ListTurtle＋カーソルで管理する）
+  4:  * Created on 2012/01/07
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> FourTurtles1 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> FourTurtles1());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		<span class="comment">// ウインドウの準備</span>
+ 17: 		hide();
+ 18: 		window.setSize(1100, 500);
+ 19: 
+ 20: 		<span class="comment">// リスト（入れ物）を作る</span>
+ 21: 		ListTurtle&lt;Turtle&gt; turtles = <span class="keyword">new</span> ListTurtle&lt;Turtle&gt;();
+ 22: 		turtles.warpByTopLeft(100, 300);
+ 23: 
+ 24: 		<span class="comment">// 4匹のカメを生成</span>
+ 25: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 26: 			turtles.add(<span class="keyword">new</span> Turtle());
+ 27: 		}
+ 28: 
+ 29: 		<span class="comment">// 初期位置へ移動</span>
+ 30: 		turtles.get(0).warp(100, 100);
+ 31: 		turtles.get(1).warp(100, 200);
+ 32: 		turtles.get(2).warp(200, 100);
+ 33: 		turtles.get(3).warp(200, 200);
+ 34: 
+ 35: 		<span class="comment">// カメを動かす</span>
+ 36: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 360; i++) {
+ 37: 			<span class="keyword">for</span> (<span class="keyword">int</span> j = 0; j &lt; 4; j++) {
+ 38: 				turtles.moveCursorToNext();
+ 39: 				turtles.getObjectAtCursor().fd(1);
+ 40: 				turtles.getObjectAtCursor().rt(1);
+ 41: 			}
+ 42: 		}
+ 43: 	}
+ 44: }
+</pre>
+
+<p><a href="chapter14/src/FourTurtles1.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、FourTurtles1プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter14_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="FourTurtles1"/>
+</applet></p>
+<p>21行目でListTurtleを作っています．他のオブジェクトの生成と基本的には同じですが，ListTurtleに入れることの出来るオブジェクトの型を＜＞の中に書きます（２カ所）．</p>
+
+<pre id="doc16_5651" class="program">
+				
+	ListTurtle&lt;Turtle&gt; turtles = new ListTurtle&lt;Turtle&gt;();
+				
+</pre>
+
+<div class="fyi">
+<div class=title>リストの変数名</div>
+
+<p class="first_ja">変数名は任意ですが，リストに入るものの名前の複数形にすると良いでしょう．</p>
+</div>
+
+<p>ListTurtleで使える基本的なメソッドとして，追加と削除，閲覧があります．</p>
+
+<ul>
+<li> 追加する：　void add(「追加するオブジェクト」)
+<li> i番目を削除する：Object remove(int i)
+<li> i番目の中身を見る：　Object get(int i)</ul>
+
+<p>これらのメソッドを繰り返しを使って呼ぶことで，リストに入っている複数のオブジェクトすべてに対して，１行で命令をすることが出来ます．</p>
+<div class="fyi">
+<div class=title>集合データ構造と番地</div>
+
+<p class="first_ja">ListTurtleでも，Java標準ライブラリでも，要素の番地は0番地から始まり，[要素数-1]番地まで存在します．</p>
+<p>メモリアドレスの扱いやすさの関係から伝統的にC言語では0番地から始まる言語仕様で，C言語に影響を受けたJava言語も0番地から始まる仕様になっています．</p>
+<p>しかしながら，人間にとっては1番地から始まり，[要素数]番地まで存在する方がわかりやすいので，
+					教育用言語を中心に１番地から始まるプログラミング言語も多く存在します．（例えばSmalltalk，Pascalなど）．</p>
+</div>
+
+<div class="fyi">
+<div class=title>連続メソッド呼び出し</div>
+
+<p class="first_ja">戻り値を変数に格納するのではなく，メソッドを次々と呼び出すことが出来ます．例えば，３０行目では次のようなプログラムがあります．</p>
+
+<pre id="doc16_5695" class="program">
+				
+	turtles.get(0).warp(100, 100);
+					
+</pre>
+
+<p>これは，turtlesリストの0番目の要素を取り出して，その戻り値（１つめのタートル）に対して，warpメソッドを呼び出すという意味になります．</p>
+<p>（戻り値が返ってくる限りは，１行で無制限にメソッドを呼び出すことが出来ます．）</p>
+</div>
+
+<p>ListTurtleで使える便利な機能として，カーソル機能があります．主な機能を以下に示します．</p>
+
+<ul>
+<li> カーソルを進める：int moveCursorToNext()
+<li> カーソル位置のオブジェクトを取得する：Object getObjectAtCursor()</ul>
+
+<p>カーソルを進めて，カーソル位置のオブジェクトを取得して何か命令を行うことを繰り返すことによって，複数のオブジェクトすべてに対して，１行で命令をすることが出来ます．</p>
+<p>（カーソルがリストの最後にあるときにカーソルを進めると，最初に戻るところが便利なところです．）</p>
+
+<h3 id="doc16_5724">15.2.2  アニメーションへの応用</h3>
+
+<p class="first_ja">ListTurtleをアニメーションに応用した例を示します．</p>
+
+<div id="doc16_src:WalkingMan2" class="caption">リスト 15.2.2.1 WalkingMan2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * WalkingMan2.java
+  3:  * 人が歩くアニメーションプログラム (List使用版)
+  4:  * Created on 2012/01/07
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> WalkingMan2 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> WalkingMan2());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 
+ 17: 		hide();
+ 18: 		window.setSize(1100, 500);
+ 19: 
+ 20: 		<span class="comment">// アニメーション用画像を用意する</span>
+ 21: 		ListTurtle&lt;ImageTurtle&gt; holder = <span class="keyword">new</span> ListTurtle&lt;ImageTurtle&gt;(<span class="keyword">true</span>);
+ 22: 		holder.warpByTopLeft(50, 200);
+ 23: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 1; i &lt;= 8; i++) {
+ 24: 			holder.addLast(<span class="keyword">new</span> ImageTurtle(<span class="quote">&quot;man&quot;</span> + i + <span class="quote">&quot;.gif&quot;</span>));
+ 25: 		}
+ 26: 
+ 27: 		Turtle man = <span class="keyword">new</span> Turtle();
+ 28: 
+ 29: 		<span class="comment">// アニメーションループ</span>
+ 30: 		<span class="keyword">while</span> (<span class="keyword">true</span>) {
+ 31: 			<span class="comment">// --- 待つ ---</span>
+ 32: 			sleep(0.1); <span class="comment">// 0.1秒</span>
+ 33: 
+ 34: 			<span class="comment">// --- 処理を行う ---</span>
+ 35: 			holder.moveCursorToNext();
+ 36: 			man.looks(holder.getObjectAtCursor());
+ 37: 
+ 38: 			<span class="comment">// --- 再描画する ---</span>
+ 39: 			update();
+ 40: 		}
+ 41: 
+ 42: 	}
+ 43: }
+</pre>
+
+<p><a href="chapter14/src/WalkingMan2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、WalkingMan2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter14_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="WalkingMan2"/>
+</applet></p>
+<div class="fyi">
+<div class=title>autohideモード</div>
+
+<p class="first_ja">アニメーションをするときには，リストに入れたオブジェクトは，元の位置（キャンバス）からは消去して欲しいことがあります．
+					そんなときに便利なのがListTurtleのautohideモードの指定です．autohideモードでは，リストは自動的にリストに入ってきたものをhide()してくれます．</p>
+<p>autohideモードの指定には，new ListTurtleの所で，(true)の引数を与えます．</p>
+</div>
+
+
+<h2 id="doc16_5754">15.3  Java標準ライブラリでの集合データ構造</h2>
+
+<p class="first_ja">ListTurtleは中身が見えて便利なのですが，Java標準ライブラリでは使えないのが難点です．
+			将来はJava標準ライブラリで書かれたプログラムを読む必要もあるので，標準ライブラリ方式も勉強しておきましょう．</p>
+
+<h3 id="doc16_5759">15.3.1  カーソルを使わない方法</h3>
+
+<p class="first_ja">Java標準ライブラリには「カーソル」がありません．
+					従って，先に説明した４匹の亀のアニメーションについて，カーソルを使わない方法で書き直しておきましょう．</p>
+
+<div id="doc16_src:FourTurtles2" class="caption">リスト 15.3.1.1 FourTurtles2.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * FourTurtles2.java
+  3:  * ４匹の亀を動かすプログラム２（ListTurtle＋getterで管理する）
+  4:  * Created on 2012/01/07
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> FourTurtles2 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> FourTurtles2());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		<span class="comment">// ウインドウの準備</span>
+ 17: 		hide();
+ 18: 		window.setSize(1100, 500);
+ 19: 
+ 20: 		<span class="comment">// リスト（入れ物）を作る</span>
+ 21: 		ListTurtle&lt;Turtle&gt; turtles = <span class="keyword">new</span> ListTurtle&lt;Turtle&gt;();
+ 22: 		turtles.warpByTopLeft(100, 300);
+ 23: 
+ 24: 		<span class="comment">// 4匹のカメを生成</span>
+ 25: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 26: 			turtles.add(<span class="keyword">new</span> Turtle());
+ 27: 		}
+ 28: 
+ 29: 		<span class="comment">// 初期位置へ移動</span>
+ 30: 		turtles.get(0).warp(100, 100);
+ 31: 		turtles.get(1).warp(100, 200);
+ 32: 		turtles.get(2).warp(200, 100);
+ 33: 		turtles.get(3).warp(200, 200);
+ 34: 
+ 35: 		<span class="comment">// カメを動かす</span>
+ 36: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 360; i++) {
+ 37: 			<span class="keyword">for</span> (<span class="keyword">int</span> j = 0; j &lt; 4; j++) {
+ 38: 				turtles.get(j).fd(1);
+ 39: 				turtles.get(j).rt(1);
+ 40: 			}
+ 41: 		}
+ 42: 	}
+ 43: }
+</pre>
+
+<p><a href="chapter14/src/FourTurtles2.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、FourTurtles2プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter14_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="FourTurtles2"/>
+</applet></p>
+
+<h3 id="doc16_5779">15.3.2  LinkedList</h3>
+
+<p class="first_ja">Java標準ライブラリの書き方になります．表示されないことと，import文以外はほとんど書き方は変わりません．</p>
+
+<div id="doc16_src:FourTurtles3" class="caption">リスト 15.3.2.1 FourTurtles3.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="keyword">import</span> java.util.LinkedList;
+  2: 
+  3: <span class="comment">/*
+  4:  * FourTurtles3.java
+  5:  * ４匹の亀を動かすプログラム３（LinkedListで管理する）
+  6:  * Created on 2012/01/07
+  7:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  8:  */</span>
+  9: <span class="keyword">public</span> <span class="keyword">class</span> FourTurtles3 <span class="keyword">extends</span> Turtle {
+ 10: 
+ 11: 	<span class="comment">// 起動処理</span>
+ 12: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 13: 		Turtle.startTurtle(<span class="keyword">new</span> FourTurtles3());
+ 14: 	}
+ 15: 
+ 16: 	<span class="comment">// タートルを動かす処理</span>
+ 17: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 18: 		<span class="comment">// ウインドウの準備</span>
+ 19: 		hide();
+ 20: 		window.setSize(1100, 500);
+ 21: 
+ 22: 		<span class="comment">// リスト（入れ物）を作る　- JavaライブラリのLinkedList</span>
+ 23: 		LinkedList&lt;Turtle&gt; turtles = <span class="keyword">new</span> LinkedList&lt;Turtle&gt;();
+ 24: 
+ 25: 		<span class="comment">// 4匹のカメを生成</span>
+ 26: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 27: 			turtles.add(<span class="keyword">new</span> Turtle());
+ 28: 		}
+ 29: 
+ 30: 		<span class="comment">// 初期位置へ移動</span>
+ 31: 		turtles.get(0).warp(100, 100);
+ 32: 		turtles.get(1).warp(100, 200);
+ 33: 		turtles.get(2).warp(200, 100);
+ 34: 		turtles.get(3).warp(200, 200);
+ 35: 
+ 36: 		<span class="comment">// カメを動かす</span>
+ 37: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 360; i++) {
+ 38: 			<span class="keyword">for</span> (<span class="keyword">int</span> j = 0; j &lt; 4; j++) {
+ 39: 				turtles.get(j).fd(1);
+ 40: 				turtles.get(j).rt(1);
+ 41: 			}
+ 42: 		}
+ 43: 	}
+ 44: }
+</pre>
+
+<p><a href="chapter14/src/FourTurtles3.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、FourTurtles3プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter14_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="FourTurtles3"/>
+</applet></p>
+<div class="fyi">
+<div class=title>Java標準ライブラリのimport</div>
+
+<p class="first_ja">Java標準ライブラリを使うには，import文を使う必要があるときがあります．前のプログラムでは，１行目に書いてありました．</p>
+
+<pre id="doc16_5803" class="program">
+				
+	import java.util.LinkedList;
+						
+</pre>
+
+<p>import宣言は，クラスブロックが始まる前の所（上の方）に書きます．</p>
+<p>import宣言をすると，正式名称がjava.util.LinkedListであるクラスが，LinkedListと省略してプログラムで扱うことが出来るようになります．</p>
+</div>
+
+
+<h3 id="doc16_5814">15.3.3  配列</h3>
+
+<p class="first_ja">最近のオブジェクト指向言語ではListを使うのが主流ですが，まだライブラリで一部使われているのが配列です．</p>
+
+<div id="doc16_src:FourTurtles4" class="caption">リスト 15.3.3.1 FourTurtles4.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * FourTurtles4.java
+  3:  * ４匹の亀を動かすプログラム４（配列で管理する）
+  4:  * Created on 2012/01/07
+  5:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  6:  */</span>
+  7: <span class="keyword">public</span> <span class="keyword">class</span> FourTurtles4 <span class="keyword">extends</span> Turtle {
+  8: 
+  9: 	<span class="comment">// 起動処理</span>
+ 10: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 11: 		Turtle.startTurtle(<span class="keyword">new</span> FourTurtles4());
+ 12: 	}
+ 13: 
+ 14: 	<span class="comment">// タートルを動かす処理</span>
+ 15: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 16: 		<span class="comment">// ウインドウの準備</span>
+ 17: 		hide();
+ 18: 		window.setSize(1100, 500);
+ 19: 
+ 20: 		<span class="comment">// リスト（入れ物）を作る　- Javaの配列機能を使って作る</span>
+ 21: 		Turtle[] turtles = <span class="keyword">new</span> Turtle[4];
+ 22: 
+ 23: 		<span class="comment">// 4匹のカメを生成</span>
+ 24: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 4; i++) {
+ 25: 			turtles[i] = <span class="keyword">new</span> Turtle();
+ 26: 		}
+ 27: 
+ 28: 		<span class="comment">// 初期位置へ移動</span>
+ 29: 		turtles[0].warp(100, 100);
+ 30: 		turtles[1].warp(100, 200);
+ 31: 		turtles[2].warp(200, 100);
+ 32: 		turtles[3].warp(200, 200);
+ 33: 
+ 34: 		<span class="comment">// カメを動かす</span>
+ 35: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 360; i++) {
+ 36: 			<span class="keyword">for</span> (<span class="keyword">int</span> j = 0; j &lt; 4; j++) {
+ 37: 				turtles[j].fd(1);
+ 38: 				turtles[j].rt(1);
+ 39: 			}
+ 40: 		}
+ 41: 	}
+ 42: }
+</pre>
+
+<p><a href="chapter14/src/FourTurtles4.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、FourTurtles4プログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter14_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="FourTurtles4"/>
+</applet></p>
+<p>配列は，要素の上限を決めないと使えないところが（LinkedListはメモリの許す限り無限）欠点で，最近ではあまり使われません．
+					しかしながら，2次元配列など配列が活躍する場面もまだあるようです．</p>
+
+<h2 id="doc16_5838">15.4  ListTurtleの命令リスト</h2>
+
+
+<h3 id="doc16_5840">15.4.1  リストを作る命令</h3>
+
+
+<dl>
+<dt>
+ListTurtle＜[要素のクラス名]＞[変数名] = new ListTurtle＜[要素のクラス名]＞()
+<dd>
+リストタートルを作成します．
+<dt>
+ListTurtle＜[要素のクラス名]＞[変数名] = new ListTurtle＜[要素のクラス名]＞(true)
+<dd>
+autohideモードで，リストタートルを作成します．
+<dt>
+ListTurtle＜[要素のクラス名]＞[変数名] = new ListTurtle＜[要素のクラス名]＞(true, &quot;[名前]&quot;)
+<dd>
+autohideモードで，名前付きで，リストタートルを作成します．</dl>
+
+<p class="first_ja">以下，「T」とは，リスト作成時に＜[要素のクラス名]＞ で指定したクラスに置き換わることを示しています．</p>
+
+<h3 id="doc16_5867">15.4.2  追加と削除</h3>
+
+
+<dl>
+<dt>
+void add(T object)
+<dd>
+objectをリストの最後に追加します．addLast(object)メソッドと同様です．
+<dt>
+void addLast(T object)
+<dd>
+objectをリストの最後に追加します．
+<dt>
+void addFirst(T object)
+<dd>
+objectをリストの最初に追加します．
+<dt>
+void add(int index, T object)
+<dd>
+indexの位置に要素を追加します．
+<dt>
+void addAll(ListTurtle from)
+<dd>
+fromリストの要素すべてをこのリストに追加します．
+<dt>
+void moveAllTo(ListTurtle to)
+<dd>
+このリストの要素をすべてtoリストへ移動します．
+<dt>
+T remove(T object)
+<dd>
+要素を削除します．
+<dt>
+T remove(int i)
+<dd>
+i番目の要素を削除します．
+<dt>
+T removeFirst()
+<dd>
+最初の要素を削除します．
+<dt>
+T removeLast()
+<dd>
+最後の要素を削除します．
+<dt>
+void removeAll()
+<dd>
+すべての要素を削除します．</dl>
+
+
+<h3 id="doc16_5939">15.4.3  取得関係</h3>
+
+
+<dl>
+<dt>
+T get(int i)
+<dd>
+i番地の要素を取得します．（要素は0番地から始まり，[要素数-1]番地まで存在します．）
+<dt>
+int getSize()
+<dd>
+要素の数を返します</dl>
+
+
+<h3 id="doc16_5957">15.4.4  カーソル関係</h3>
+
+
+<dl>
+<dt>
+int getCursor()
+<dd>
+カーソル位置を取得します．
+<dt>
+void setCursor(int newCursor)
+<dd>
+カーソル位置を設定します．
+<dt>
+void moveCursorToNext()
+<dd>
+カーソルを前に進めます．（最後の要素の場合は先頭に戻ります．）
+<dt>
+void moveCursorToPrevious()
+<dd>
+カーソルを後ろに進めます．（先頭の要素の場合は最後に飛びます．）
+<dt>
+T getObjectAtCursor()
+<dd>
+カーソル位置にある要素を取得します．
+<dt>
+void addToCursor(T object)
+<dd>
+カーソル位置(の前)に要素を追加します．（addToBeforeCursor()と同じです）
+<dt>
+void addToBeforeCursor(T object)
+<dd>
+カーソル位置（の前）に要素を追加します．
+<dt>
+void addToAfterCursor(T object)
+<dd>
+カーソル位置（の後）に要素を追加します．
+<dt>
+T removeAtCursor()
+<dd>
+カーソル位置にある要素を削除します．
+<dt>
+int getNumberAtCursor()
+<dd>
+カーソル位置にある要素の数値表現を返します．(1.5以上では推奨されません．CardTurtleのgetNumber()を使ってください)
+<dt>
+String getStringAtCursor()
+<dd>
+カーソル位置にある要素の文字列表現を返します．(1.5以上では推奨されません．CardTurtleのgetText()を使ってください)</dl>
+
+
+<h3 id="doc16_6029">15.4.5  その他の命令</h3>
+
+
+<dl>
+<dt>
+void shuffle()
+<dd>
+中身をかきまぜます。
+<dt>
+void setBgColor(Color bgColor)
+<dd>
+背景の色を変更します．</dl>
+
+
+<h2 id="doc16_6048">15.5  練習問題</h2>
+
+
+<h3 id="doc16_6050">15.5.1  問題1：アニメーションをListTurtleを使って作り直そう</h3>
+
+<p class="first_ja">「10.6.2 問題2：0655アニメーションを作ろう」で作ったプログラムについて，ListTurtleを使って作り直してみてください．</p>
+
+<h3 id="doc16_6056">15.5.2  問題2：Java標準ライブラリを使って作り直そう</h3>
+
+<p class="first_ja">問題1について，LinkedListを使って作り直してみてください．</p>
+
+<h3 id="doc16_6062">15.5.3  問題3：大量流れ星アニメーションを作ろう</h3>
+
+<p class="first_ja">「9.5.2 問題2: 流れ星アニメーションを作ろう」で作ったプログラムについてListTurtleを使って作り直し，たくさんの星が流れるアニメーションを作ってみてください．</p>
+<p>下のボタンを押すと、Snowsプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter14_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Snows"/>
+</applet></p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p3.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p3.html#doc1_part:three" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">データ構造とアルゴリズム</a>/集合データ構造入門</td>
+<td><a href="index_p3_c16.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

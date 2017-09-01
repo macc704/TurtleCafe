@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated from index.xml by XMLBuddy -->
+<!ELEMENT a (#PCDATA)>
+<!ATTLIST a href CDATA #REQUIRED>
+<!ELEMENT body (section+)>
+<!ELEMENT console (#PCDATA)>
+<!ATTLIST console title NMTOKEN #REQUIRED>
+<!ELEMENT dd (#PCDATA|p)*>
+<!ELEMENT dl (dd|dt)*>
+<!ELEMENT doc (head,body)>
+<!ATTLIST doc xml:lang NMTOKEN #REQUIRED>
+<!ELEMENT dt (#PCDATA)>
+<!ELEMENT em (#PCDATA)>
+<!ELEMENT head (title)>
+<!ELEMENT li (#PCDATA)>
+<!ELEMENT native (#PCDATA)>
+<!ATTLIST native format NMTOKEN #REQUIRED>
+<!ELEMENT note (#PCDATA)>
+<!ELEMENT p (#PCDATA|a|em|note|program)*>
+<!ELEMENT program (#PCDATA)>
+<!ATTLIST program
+	encoding NMTOKEN #IMPLIED
+	id NMTOKEN #IMPLIED
+	javasrcSyntaxHilight NMTOKEN #IMPLIED
+	normalizer CDATA #IMPLIED
+	src CDATA #IMPLIED
+	title NMTOKEN #IMPLIED
+>
+<!ELEMENT section (p|subsection|ul)*>
+<!ATTLIST section title NMTOKEN #REQUIRED>
+<!ATTLIST section id NMTOKEN #IMPLIED>
+<!ELEMENT subsection (console|native|p|program|subsubsection|text.turtle.applet)*>
+<!ATTLIST subsection title NMTOKEN #REQUIRED>
+<!ELEMENT subsubsection (dl|p|program)*>
+<!ATTLIST subsubsection title NMTOKEN #REQUIRED>
+<!ELEMENT text.turtle.applet EMPTY>
+<!ATTLIST text.turtle.applet
+	chapter CDATA #REQUIRED
+	class NMTOKEN #REQUIRED
+>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT ul (li)>

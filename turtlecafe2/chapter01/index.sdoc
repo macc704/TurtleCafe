@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>はじめてのJavaタートルプログラミング</title>
+</head>
+<body>
+<section title="学習目標">
+<p>
+<ul>
+<li>タートルの基本的な命令を使いこなし、タートルで図形が描けるようになる</li>
+</ul>
+</p>
+</section>
+<section title="最初のプログラムの解説">
+<p>導入編の「サンプルプログラムの使い方」で動かした家を描くサンプルプログラムを解説します。</p>
+<subsection title="家を書くサンプルプログラム">
+<p>下に、導入編で動かした家を描くサンプルプログラムを示します。</p>
+<program title="House.java" id="src:House" src="src/House.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter01/src/House.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Houseプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter01_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="House"/>
+</applet>]]></native>
+</subsection>
+<subsection title="プログラムの要素" id="sec:elements">
+<subsubsection title="ブロック">
+<p>
+						中括弧で囲まれた部分をブロックと呼びます。 Javaプログラムは複数のブロックから構成されます。
+						ブロックの中にブロックを入れることも出来ます。
+					</p>
+</subsubsection>
+<subsubsection title="クラス" id="sec:class">
+<p>
+						Javaプログラムの一つの単位をクラスと呼びます。
+						本格的なプログラムでは、クラスが複数になりますが、しばらくは一つだけです。
+					</p>
+<p>
+						クラスを作るための先頭行は、
+						<program>
+6: public class [クラス名] extends Turtle{
+						</program>
+						となる。この行の最後の括弧から、対応する括弧（ファイルの一番最後にある括弧）までがクラスブロックです。
+						Javaのプログラムは全てクラスブロックの中に書かれます。
+					</p>
+<p>
+						クラス名は自由に決められますが、気をつけてほしいのは、
+						ファイル名はクラス名に「.java」をつけたものにすることです。
+						（例えば、クラス名がHouseならファイル名はHouse.javaにする必要がある)
+						論プロエディタでは自動でクラス名とファイル名をそろえてくれるので、考えなくてOKです。
+					</p>
+</subsubsection>
+<subsubsection title="メソッド">
+<program>
+  14: 	void [メソッド名](){
+					</program>
+<p>
+						から始まるブロックをメソッドブロックといいます。
+						Javaのプログラムの命令は、全てメソッドブロックの中に書かれます。
+						メソッドは、命令をまとめて一つに束ねたもの、ということもできます。
+					</p>
+<p>
+						メソッドブロックはクラスブロックの中に書く必要があります。
+						タートルプログラムは、startという名前のメソッドを最初に実行しようとします。だから、タートルで作る一つ目のメソッド名はstartでなければなりません。
+					</p>
+<p>
+						しばらくすると、複数のメソッドを扱いますが、現時点では、
+						プログラムはstart()の中括弧の中に書く、と覚えておけばよいでしょう。
+					</p>
+</subsubsection>
+<subsubsection title="命令">
+<p>
+						startメソッドブロックの中にある、rt(30)やfd(60)がタートルに指示する命令です。
+					</p>
+<p>
+						メソッド内に書かれた命令は、
+						<em>必ず上から順番に実行されます。</em>
+</p>
+<p>以下にタートルに指示できる命令の一覧を示します。</p>
+<dl>
+<dt>rt([角度の指定])</dt>
+<dd>タートルを指定した角度だけ右に回す</dd>
+<dt>lt([角度の指定])</dt>
+<dd>タートルを指定した角度だけ左に回す</dd>
+<dt>fd([長さの指定])</dt>
+<dd>タートルを指定した長さだけ進める</dd>
+<dt>bk([長さの指定)</dt>
+<dd>タートルを指定した長さだけ後ろに進める</dd>
+<dt>up()</dt>
+<dd>タートルがペンを上げる(軌跡がかかれなくなる)。</dd>
+<dt>down()</dt>
+<dd>タートルがペンを下げる(軌跡がかかれるようになる)。</dd>
+<dt>color([色の指定])</dt>
+<dd>
+<p>
+								ペンの色を変える
+								<note>
+									赤なら、color(java.awt.Color.red)。青なら、color(java.awt.Color.blue)のように指定する。
+								</note>
+</p>
+</dd>
+</dl>
+</subsubsection>
+<subsubsection title="命令の区切り">
+<p>
+						Javaのプログラムでは命令と命令の区切りに必ず「;」（セミコロン）を入れる必要があります。
+						これを入れないと、コンピュータがどこで命令が区切られているのか、理解することができません。
+					</p>
+<p>ちなみに、セミコロンが入っていれば、複数の命令を次のように同じ行に書いてもＯＫです。</p>
+<program>lt(30); fd(50);</program>
+</subsubsection>
+<subsubsection title="コメント">
+<p>
+						コメントはプログラム（命令）としては考慮されず、読み飛ばされます。
+						しかし、人間が読めないとメンテナンスにこまるためにコメントをつけておきます。ファイルの先頭には、プログラムのタイトル、名前や日付を忘れずに。
+					</p>
+<dl>
+<dt>範囲指定コメント</dt>
+<dd>「/*」から「*/」までコメントになります</dd>
+<dt>行コメント</dt>
+<dd>「//」から先行の終わりまでコメントになります</dd>
+</dl>
+</subsubsection>
+</subsection>
+</section>
+<section title="プログラムの作成手順">
+<subsection title="ファイルの作成">
+<p>
+					論プロエディタの「File」メニューから「NewFile(Class）」を選び、
+					テンプレートは「Turtle」を選んでください。
+				</p>
+</subsection>
+<subsection title="プログラムの書き方">
+<p>
+					「タートルを動かす処理」の「 { 」と「 } 」の間に、タートル命令（rt(90)やfd(100)など）を書いてください。
+				</p>
+</subsection>
+</section>
+<section title="プログラムミスと対処" id="sec:programmiss">
+<subsection title="コンパイルエラー" id="sec:compileerror">
+<p>プログラムの書きかたを間違えると、コンパイルしたときにエラーになります。</p>
+<p>例えば、コマンドの区切りでセミコロンを忘れると、次のようなエラーがでます。</p>
+<console title="コンパイルエラー">
+&gt;javac House.java House.java:13: ';' がありません。 rt(120)
+^ エラー 1 個 &gt;
+				</console>
+<p>
+					コンパイルエラーがでたら、実行することはできないので、ソースを直して、再コンパイルするしかありません。
+					どうしても原因が分からない時は、ＴＡなどに相談してください。
+				</p>
+</subsection>
+<subsection title="バグ">
+<p>
+					コンパイルが正常に通っても、プログラムが間違っていて、意図した通りに動作しないことをバグといいます。
+					コンピュータは、必ず
+					<em>命令した通りに動作します。</em>
+</p>
+<p>バグがあったら、修正しましょう。バグを修正することをデバッグといいます。</p>
+<p>
+					プロでも、最初から意図したプログラムを書くのは難しいものです。
+					プログラム上達の早道は、一発で動かそうとせずに、
+					早くバグを見つけて、修正できるようになるようになるように心がけることです。
+				</p>
+</subsection>
+</section>
+<section title="タートルを使って好きな図形を書くためのテクニック">
+<subsection title="曲線が書きたい">
+<p>
+					コンピュータで本当の曲線は書けませんが、それらしく見せることはできます。
+					次のプログラムを見てみましょう。
+				</p>
+<program title="Curve.java" id="src:Curve" src="src/Curve.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter01/src/Curve.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Curveプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter01_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Curve"/>
+</applet>]]></native>
+<p>5度曲がり、5歩進むことを繰り返しています。</p>
+<fyi title="やってみよう">
+<p>長さと角度を調整して、もっと精密な曲線に近づけてみよう。</p>
+</fyi>
+<p>
+					実はコンピュータで、"本物"の曲線を書くことはできません。
+					しかし、上記のように"擬似的"に表現することで、人間の目をごまかすことはできます。
+					このように擬似的に表現することを「ディジタル」表現といいます。これに対して、紙に書くような本物の曲線を「アナログ」表現といいます。
+				</p>
+</subsection>
+<subsection title="タートルの最初の位置を変えたい">
+<p>
+					教育上の理由から、初期位置を変える機能は搭載していません。
+					最初の位置を変えたいときは、ペンをあげて、好みの位置まで移動するプログラムを書く必要があります。
+					ちなみに、タートルは最初(100, 100)の座標で、上向きになっています。
+				</p>
+</subsection>
+</section>
+<section title="練習問題">
+<subsection title="問題1：正五角形描こう">
+<p>
+					進める（fd）命令や、回す（rt）命令を使って、正五角形を描くプログラムを作りましょう。
+				</p>
+<figure title="正五角形" src="image/pentagon" style="scale:1.0"/>
+</subsection>
+<subsection title="問題2：星を描こう">
+<p>
+					進める（fd）命令や、回す（rt）命令を使って、星を描くプログラムを作りましょう。
+				</p>
+<figure title="星" src="image/star" style="scale:1.0"/>
+</subsection>
+<subsection title="問題3：好きな図形を描こう">
+<p>タートルを使って、好きな絵を描くプログラムを作りましょう。</p>
+<p>Squeakテキストに載っている図形などを描いてみましょう。（Squeakテキストに載っている図形は<a href="http://www.crew.sfc.keio.ac.jp/squeak/text/htmlver_text/index_p2_c3.html#doc5_3208">こちら</a>）</p>
+</subsection>
+</section>
+</body>
+</doc>

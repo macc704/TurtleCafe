@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>プログラムの部品化（２）（戻り値）</title>
+</head>
+<body>
+<section title="学習目標">
+<ul>
+<li>入出力を持つメソッドを使ったプログラムが書けるようになる</li>
+</ul>
+</section>
+<section title="入力・処理・出力">
+<p>累乗計算プログラムを例に、プログラムとメソッドの入力・処理・出力について学びます。</p>
+<subsection title="プログラムの入出力">
+<subsubsection title="累乗計算プログラムの入出力">
+<p>次のプログラムは、ユーザから底と指数の入力を受け取り、累乗を計算するプログラムです。</p>
+<program title="Power.java" id="src:Power" src="src/Power.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter12/src/Power.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Powerプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter12_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="PowerApplet"/>
+</applet>]]></native>
+<p>このプログラムの入力・処理・出力を図に表すと以下のようになります。</p>
+<p>矢印はデータの流れを、四角は処理を示します。</p>
+<figure id="fig:PowerProgramInputOutput" title="累乗計算メソッドの入出力" src="image/PowerProgramInputOutput" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="一般的なプログラムの入出力">
+<p>プログラムは一般的に、入力・処理・出力の構造を持っています。</p>
+<p>
+						たとえば、７章「はじめてのCUIプログラム」の、BMI値算出プログラムの入力・処理・出力を図に表すと以下のようになります。
+					</p>
+<figure id="fig:BMIProgramInputOutput" title="累乗計算メソッドの入出力" src="image/BMIProgramInputOutput" style="scale:1.0"/>
+<fyi title="やってみよう！">
+<p>７章の練習問題それぞれについて、入力・処理・出力を表す図を描いてみましょう。</p>
+</fyi>
+</subsubsection>
+</subsection>
+<subsection title="メソッドの入出力">
+<subsubsection title="累乗を計算するメソッドの入出力">
+<p>
+						累乗を計算するメソッドは、int（整数）型の値を返す、戻り値ありメソッドです。
+						引数として底・指数を受け取り、累乗数を返しています。
+					</p>
+<program>
+						
+ 29: 		//累乗数を計算し、計算結果をcalculatedPowerという変数に書き込む
+ 30: 		int calculatedPower=calculatePower(base,exponent);
+
+					</program>
+<program>
+						
+ 38: 	//累乗を計算する
+ 39: 	int calculatePower(int base, int exponent){
+ 40: 		int power=1;//累乗数の初期値を、数の0乗（1）に設定する
+ 41:
+ 42: 		//累乗を計算する
+ 43: 		int i=0;
+ 44: 		while(i&lt;exponent){
+ 45: 			power=power*base;
+ 46: 			i++;
+ 47: 		}
+ 48:
+ 49: 		return power;
+ 50: 	}
+
+					</program>
+<p>メソッドも、プログラムと同様に入力・処理・出力の構造を持っています。</p>
+<p>このメソッドの入力・処理・出力を図に表すと、以下のようになります。</p>
+<figure id="fig:InputOutputPower" title="累乗計算メソッドの入出力" src="image/InputOutputPower" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="一般的なメソッドの入出力">
+<subsubsection title="戻り値とは" sequencable="false">
+<p>
+							前の章「プログラムの部品化（１）」では、メソッドと、引数について学びました。
+							引数は、メソッドブロック外から渡される値＝
+							<b>入力</b>
+							でした。
+						</p>
+<p>
+							引数は、呼び出し元のメソッドから呼び出したメソッドに、データを受け渡したいという要求をかなえる仕組みでした。
+							逆に、呼び出されたメソッドが処理した結果を呼び出し元に受け渡したい、という場合もあります。
+							これをかなえる仕組みが、戻り値です。
+						</p>
+<p>
+							戻り値は、呼び出し元に戻す値＝
+							<b>出力</b>
+							です。
+							<figure id="fig:InputOutput" title="メソッドの入出力" src="image/InputOutput" style="scale:1.0"/>
+							このように、メソッドも、入力・処理・出力の構造を作ることができます。
+							引数は、複数指定することができますが、戻り値は必ずひとつです。
+						</p>
+</subsubsection>
+<subsubsection title="戻り値ありメソッドの定義と呼び出し" sequencable="false">
+<p>戻り値ありメソッドの定義の仕方は、次の通りです。</p>
+<p>
+							戻り値ありメソッドでは、return文を書いたところでメソッドの出力は決まり、メソッドの処理を抜けます。
+							したがって、return文の後に命令を書いても、実行されることはありません（「この文に制御が移ることはありません」というエラーが出ます）。
+						</p>
+<program>
+							
+[戻り値の型] [メソッド名]([引数の型] [仮引数名]){
+	return [戻り値];
+}
+						</program>
+<p>戻り値ありメソッドの呼び出し方は、次の通りです（引数ありメソッドと同じです）。</p>
+<program>
+							
+[メソッド名]([実引数]);
+
+						</program>
+</subsubsection>
+<fyi title="やってみよう！">
+<p>
+							税抜価格を引数とし、税込価格を戻り値とするメソッド【int
+							calculateTaxIn(int price)】を作り、
+							税抜価格を入力すると、「税抜価格○○円の品物の税込価格は○○円です」と出力するプログラムを作りましょう。
+						</p>
+<p>
+							整数に小数をかけると、浮動小数点数型になります。
+							戻り値はint型なので、int型に<a href="#sec:cast">キャスト</a>してください。
+							int型にキャストすると、小数点以下は切り捨てられます（例：int taxInPrice = (int)(price * 1.05) ）。
+						</p>
+<p>
+							（一般の事業者の場合、消費税の計算は切捨て、四捨五入、切り上げのいずれかを
+							事業者自身が選択してよいことになっています。切捨て、もしくは四捨五入をするところが多いようです。
+							この問題では、消費税の小数点以下は切り捨てるものとして扱ってください。）
+						</p>
+</fyi>
+</subsubsection>
+</subsection>
+</section>
+<section title="入出力を持つメソッドを用いたプログラムの構造化">
+<p>
+				西暦和暦変換プログラムを例に、プログラムの部品化と戻り値について学びます。
+				西暦和暦変換プログラムは、西暦を入力として受け取り、和暦を出力するプログラムです。
+				西暦和暦変換プログラムの入力・処理･出力を表す図は以下の通りです。
+				<figure id="fig:ConvertYearInputOutput" title="西暦和暦変換プログラムの入出力" src="image/ConvertYearInputOutput" style="scale:1.0"/>
+</p>
+<p>
+				西暦和暦変換プログラムの中には、さらに入力・処理・出力の構造が入っています。
+				以下の図は、西暦和暦変換プログラムの入力・処理・出力の階層構造を表す図です。
+				<figure id="fig:ConvertYearHieralchyInputOutput" title="西暦和暦変換プログラムの入出力" src="image/ConvertYearHieralchyInputOutput" style="scale:1.0"/>
+</p>
+<p>西暦和暦変換プログラムの全体構造は、以下のようになっています。</p>
+<p>
+				「西暦を和暦に変換する」という処理は、「アプリケーションの開始を知らせる」
+				「西暦を和暦に変換する」「アプリケーションの終了を知らせる」という１レベル下の処理から成り立っています。
+			</p>
+<p>
+				「西暦を和暦に変換する」という処理は、さらに１レベル下の、
+				「西暦を入力する」「西暦を和暦に変換する」「変換結果を出力する」という処理から成り立っています。
+			</p>
+<figure id="fig:ConvertYearStructure" title="西暦和暦変換プログラムの構造" src="image/ConvertYearStructure" style="scale:1.0"/>
+<subsection title="西暦和暦変換プログラム（メソッドなし）">
+<p>
+					次のプログラムは西暦を和暦に変換するプログラムです。 このプログラムでは、メソッドを使っていません。
+				</p>
+<program title="ConvertYearApplication1.java" id="src:ConvertYearApplication1" src="src/ConvertYearApplication1.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter12/src/ConvertYearApplication1.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、ConvertYearApplication1プログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter12_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ConvertYearApplication1Applet"/>
+</applet>]]></native>
+</subsection>
+<subsection title="西暦和暦変換プログラム（１レベルをメソッド化）">
+<p>次のプログラムでは、１レベルをメソッド化しています。</p>
+<program title="ConvertYearApplication2.java" id="src:ConvertYearApplication2" src="src/ConvertYearApplication2.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter12/src/ConvertYearApplication2.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、ConvertYearApplication2プログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter12_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ConvertYearApplication2Applet"/>
+</applet>]]></native>
+</subsection>
+<subsection title="西暦和暦変換プログラム（２レベルをメソッド化）">
+<p>次のプログラムでは、２レベルをメソッド化しています。</p>
+<program title="ConvertYearApplication3.java" id="src:ConvertYearApplication3" src="src/ConvertYearApplication3.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter12/src/ConvertYearApplication3.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、ConvertYearApplication3プログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter12_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ConvertYearApplication3Applet"/>
+</applet>]]></native>
+</subsection>
+</section>
+<section title="練習問題">
+<p>「はじめてのCUIプログラム」で作ったCUIプログラムを、メソッドを使って書き直しましょう。</p>
+<p>仕様は以下を参考にしてください（メソッドの作り方に関する指示が追加されています）。</p>
+<subsection title="問題1：体型評価プログラムを作ろう">
+<subsubsection title="概要">
+<p>
+						このプログラムは，身長と体重の入力を実数で受け付ける．
+						その入力をもとにBMI指数と，その値から評価されたコメントを出力する．
+					</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							身長と体重の入力を受け取り、BMI指数と、その値から評価されたコメントを出力する。
+							<ul>
+<li>入力：体重(g)と身長(cm）の実数値</li>
+<li>出力：BMI指数（小数点1桁で四捨五入することが望ましい，およびコメント）</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>BMI指数は体重(kg)を身長(m)の二乗で割った数値である．</li>
+<li>
+							BMI指数から体型を次のように評価し、コメントとする（18.5未満＝やせ、18.5-25未満＝標準、25-35未満＝肥満、35以上＝高度肥満）。
+						</li>
+</ul>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>文字など処理不可能な値が入力されたときの処理は、行わなくてよい．</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>身長と体重の入力はscanner.nextDouble()を利用すること。</li>
+<li>
+							必ず次の入出力（身長と体重を入力とし、小数型のBMI値を出力とする）を持つメソッドを作ること。
+							<ul>
+<li>【double calculateBMI(double height, double weight)】</li>
+</ul>
+</li>
+<li>上記以外の部分のメソッド化はプログラマに一任する。</li>
+</ol>
+</subsubsection>
+</subsection>
+<subsection title="問題2：恋愛占いプログラムを作ろう">
+<subsubsection title="概要">
+<p>
+						このプログラムは、男女の名前を入力すると、
+						その恋愛成就確率を百分率で判定し、コメント付で出力する。
+					</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							男女の名前の入力を受け取り、恋愛成就確率をコメント付で出力する。
+							<ul>
+<li>入力：男女の名前（姓名をつなげたもの）の入力</li>
+<li>出力：恋愛成就確率(0-100%実数でも整数でも可)、コメント</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+							成就確率算出アルゴリズムは自由でよいが、指定された範囲の値になるようにすること。コメントは自由でよい。楽しめるように工夫すること。
+						</li>
+</ul>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>男女の名前の入力にはscanner.nextLine()を使用すること。</li>
+<li>
+							必ず次の入出力（女性の名前を整数に変換したものと、男性の名前を整数に変換したものを入力とし、小数型の恋愛成就率を出力とする）を持つメソッドを作ること。
+							<ul>
+<li>【double calculateAishou(int girlsNameNumber,int boysNameNumber)】</li>
+</ul>
+</li>
+<li>上記以外の部分のメソッド化はプログラマに一任する。</li>
+</ol>
+</subsubsection>
+<fyi title="文字列からハッシュコード（整数）を求める命令">
+<p>
+						入力された文字列からハッシュコード
+						<note>
+							ハッシュコードとは、ハッシュ関数という、特定のデータを固定長のデータに変換する関数によって求められた値のことです。
+							同じデータからは同じハッシュコードが生成されます。
+							ハッシュコードは、情報セキュリティを高めるための技術として、パスワードの保管やデータの改ざんの検出などに使われています。
+							今回、このプログラムでは相性判断のために、文字列を数値に変換するための手段としてハッシュコードを使いましたが、これはハッシュコードの本来の使い方ではありません。
+						</note>
+						を求めるには、hashCode()命令を使います。
+					</p>
+<p>以下のプログラムを参考にしてください。</p>
+<program>
+						
+//文字の入力を受けとる
+System.out.print("文字を入力&gt;&gt;");
+String text = scanner.nextLine();
+
+//入力された文字をハッシュコード（整数）に変換し、その値をnumberという変数に保存する
+int number=text.hashCode();
+
+//ハッシュコードの出力を行う
+System.out.println("あなたの入力した文字のハッシュコードは" + number + "ですね");
+
+					</program>
+</fyi>
+<fyi title="実装のヒント">
+<p>
+						ハッシュコードは正負の非常に大きな値を取ります。これを100までの整数にして、
+						百分率表示に使うためには、「負の数だったら（-1）をかけて、正の数にする」
+						「数が100より大きい間、数を10で割り続ける」といった方法が使えます。
+					</p>
+</fyi>
+</subsection>
+<subsection title="問題3：単位取得状況評価プログラムを作ろう">
+<subsubsection title="概要">
+<p>
+						このプログラムは、SFC生の単位取得の状況の入力を受け取り、
+						それを評価し、卒業するためのコメントを出力する。
+					</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							経過した学期数と現在取得した単位数の入力を受け取り、その値から評価されたコメントを出力する。
+							<ul>
+<li>入力：経過した学期数(0-20)の整数値，取得済みの単位数</li>
+<li>出力：今後1学期あたりにとらねばならない単位数(CPS:Credit Per Semester)，およびコメント</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>最終的に取得すべき単位数などはSFCの学則に従うものとする。</li>
+<li>
+							コメントは自由に考えてよいが、間違ったコメントはしてはいけない。たとえば、20単位以上は留年確定であるのに、「がんばれば何とかなる」と表示する等。
+						</li>
+</ul>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>文字など処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>単位数の入力にはscanner.nextInt()を使用すること。</li>
+<li>
+							必ず次の入出力（経過した学期数と取得した単位数を入力とし、小数型の「今後1学期あたりに取らなければならない単位数」を出力とする）を持つメソッドを作ること。
+							<ul>
+<li>【double calculateCPS(int passedSemesterCount, int earnedCredits)】</li>
+</ul>
+</li>
+<li>上記以外の部分のメソッド化はプログラマに一任する。</li>
+</ol>
+</subsubsection>
+</subsection>
+</section>
+<section title="発展問題">
+<subsection title="問題1：脳トレ　論プロ風">
+<subsubsection title="概要">
+<p>
+						ユーザが計算問題を解くことで脳を鍛えるソフトウエアである。
+						このプログラムは、足し算の計算問題を自動生成して、何問か出題し、そのつど答えあわせをする。
+					</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時、および終了時にその旨をユーザに知らせるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました．」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました．」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							足し算の計算問題を生成する。
+							<ul>
+<li>出力：問題　（３　＋　４　＝　？）</li>
+</ul>
+							各数字の桁数は一桁の整数である（答えは任意の桁数の整数とする）
+						</li>
+<li>
+							出題し、答えあわせをする。
+							<ul>
+<li>入力：回答</li>
+<li>出力：答えあわせの結果（正解 or 不正解(正答を添える)）</li>
+</ul>
+</li>
+<li>2)、3)を連続で10回行い、最後に正答率を出力する。</li>
+</ol>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>入力はscanner.nextInt()を利用すること。</li>
+<li>メソッドを作る場所は自由であるが、引数、戻り値の双方を持つメソッドを一つ以上含むこと。</li>
+<li>上記以外の部分のメソッド化はプログラマに一任する。</li>
+</ol>
+</subsubsection>
+</subsection>
+<subsection title="問題2：マイホーム大作戦">
+<subsubsection title="概要">
+<p>
+						マイホームローンの返済計算を行うプログラムである。ユーザは家を買うときに利用することを想定する。
+						システムは、家の値段と利率、月々の返済金額を入力として受け取り、
+						返済が終わるまでにかかる期間を計算し、コメントとともに出力する。
+					</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時および終了時に、その旨をユーザに伝えるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							家の値段とローン年数、利率、月々の返済金額を入力として受け取り、月々の返済金額を計算して出力する。
+							<ul>
+<li>入力：家の値段（整数：万円単位だと使いやすい）、利率（百分率の実数）、月々の返済金額（整数）</li>
+<li>出力：かかる期間（○年）、総返済金額，コメント</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>
+							ただし、返済方法は、元利均等方式（借入元金と借入利息を合わせて月々、同じ金額を返済する方式）とし、
+							利息は年単位で複利計算を行うものとする。
+						</li>
+<li>
+							たとえば、10000円を利率5％で借り、月々の返済金額が100円の場合、1年目の返済が終了すると、10000円（借入元金）+ 500円（利子）- 1200円（100 * 12ヶ月）= 9300円の借入元金が残る。
+						</li>
+<li>
+							ヒント：返せない場合はプログラムがループする可能性があるので、事前にチェックするとよい。
+							1円未満は切捨てとする（利息はdouble型で計算して、一年ごとに切り捨てるように）。
+						</li>
+<li>
+							なお、コメントは各自工夫してよい（100万円：ちょっと安すぎる家では？ 50年：長すぎるのは？ などなど）。
+						</li>
+</ul>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>入力はscanner.nextInt()を利用すること。</li>
+<li>メソッドを作る場所は自由であるが、引数、戻り値の双方を持つメソッドを一つ以上含むこと。</li>
+<li>上記以外の部分のメソッド化はプログラマに一任する。</li>
+</ol>
+</subsubsection>
+</subsection>
+<subsection title="問題3：ザ･バイナリサーチ">
+<subsubsection title="概要">
+<p>
+							「数あてゲーム」である。システムはまず，１-１０００までの整数をランダムに選ぶ（表示しない）。
+							ユーザはこの数をなるべく少ない回答で当てるのが目的である．ユーザは推測した数を入力し、
+							システムは数が当っていたら、あたったことをユーザに知らせて終了、
+							外れていたら、大きすぎるのか、小さすぎるのかをユーザに知らせて再入力を求める。
+						</p>
+</subsubsection>
+<subsubsection title="機能">
+<ol>
+<li>
+							プログラムの起動時、および終了時にその旨をユーザに知らせるメッセージを出力する。
+							<ul>
+<li>起動時出力：「開始しました．」（適宜変えてよい）</li>
+<li>終了時出力：「終了しました．」（適宜変えてよい）</li>
+</ul>
+</li>
+<li>
+							整数をランダムに選ぶ。
+							<ul>
+<li>出力：問題の正解　（１-１０００までのランダムな整数）</li>
+</ul>
+</li>
+<li>
+							回答の入力を受けつけ、答えあわせをする。
+							<ul>
+<li>プロンプト：「私が選んだ数を当ててみてね．」</li>
+<li>入力：回答（整数）</li>
+<li>正解時出力：「正解です．おめでとう！」と出力して終了する。</li>
+<li>不正解時出力：「ちがいます．」の後、大きすぎるか、小さすぎるかを出力する。</li>
+</ul>
+</li>
+</ol>
+</subsubsection>
+<subsubsection title="エラー処理">
+<p>処理不可能な値が入力されたときの処理は、行わなくてよい。</p>
+</subsubsection>
+<subsubsection title="プログラム設計条件">
+<ol>
+<li>入出力は起動したコンソールから行う（CUIプログラムである）。</li>
+<li>入力はscanner.nextInt()を利用すること。</li>
+<li>メソッドを作る場所は自由であるが、引数、戻り値の双方を持つメソッドを一つ以上含むこと。</li>
+<li>上記以外の部分のメソッド化はプログラマに一任する．</li>
+</ol>
+</subsubsection>
+<fyi title="乱数を求める命令">
+<p>Java標準ライブラリを用いた、乱数を求める命令は以下のとおりです。</p>
+<p>（タートルライブラリのrandom([数]）命令とは、返ってくる値が違います。この命令では、0以上、1より小さい小数が返ってきます）</p>
+<program>
+//乱数を発生させ、numberという変数に保存する
+double number=Math.random();
+
+//乱数の出力を行う
+System.out.println( "今回の乱数は" + number + "ですね");
+					</program>
+</fyi>
+</subsection>
+</section>
+</body>
+</doc>

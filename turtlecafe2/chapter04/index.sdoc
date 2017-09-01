@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>コンピュータの得意な仕事(繰り返し)</title>
+</head>
+<body>
+<section title="学習目標">
+<ul>
+<li>繰り返しのあるプログラムの実行順序を理解し、応用してプログラムが書けるようになる</li>
+</ul>
+</section>
+<section title="繰り返し">
+<p>今回のテーマは同じ命令を何度も書かずに、コンピュータに繰り返しさせることです。</p>
+<p>繰り返しプログラムを見ていく前に、何を繰り返すか考えていきましょう。</p>
+<subsection title="何を繰り返すのか">
+<p>何回も出てきた、家のプログラムを見てみましょう。</p>
+<program title="House.java" id="src:House" src="src/House.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter04/src/House.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Houseプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter04_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="House"/>
+</applet>]]></native>
+<p>このプログラム、何度も同じことを書いている個所が2箇所ありますね。どこが同じか考えてみましょう。</p>
+</subsection>
+<subsection title="繰り返しを使ったプログラム">
+<p>繰り返しを使って、すっきりとしたプログラムにしてみましょう。</p>
+<program title="WhileHouse.java" id="src:WhileHouse" src="src/WhileHouse.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter04/src/WhileHouse.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、WhileHouseプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter04_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="WhileHouse"/>
+</applet>]]></native>
+<p>
+					今回登場した"繰り返し"を使うと、プログラムを繰り返すことができます。
+				</p>
+<p>
+					繰り返しの一般的な形は次のとおりです。
+				</p>
+<program>
+while( [条件式] ) {
+	処理
+}
+				</program>
+<p>条件式が成立(true)のした場合には、処理が実行されます。不成立(false)の場合は処理を飛ばします。</p>
+<p>処理が実行し終わると、もう一度条件式を評価します。</p>
+<p>これを、条件式が不成立(false)になるまで繰り返します。</p>
+<p>これをフローチャートと呼ばれる図を用いて書くと、次のようになります。</p>
+<subsubsection title="プログラムのフローチャート">
+<figure title="プログラムのフローチャート" src="image/while_flow_chart_concrete" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="繰り返しのフローチャート">
+<figure title="繰り返しのフローチャート" src="image/while_flow_chart" style="scale:1.0"/>
+</subsubsection>
+<p>
+					条件式は前回の条件分岐によるプログラムで学習した書式と同じ書式が使えます。
+					繰り返しを止めるために、変数を使います。この変数には、「今何回繰り返したか」といった情報を格納しておきます。
+				</p>
+</subsection>
+<subsection title="繰り返しを使ったプログラムの実行過程">
+<p>プログラムの実行過程と変数の値の変化を見ていきましょう。</p>
+<subsubsection title="変数の宣言">
+<figure title="変数の宣言" src="image/table_model_i_01" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="変数を初期化する(1を代入)">
+<figure title="変数を初期化する(1を代入)" src="image/table_model_i_02" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="変数を評価して条件を判定する">
+<figure title="変数を評価して条件を判定する" src="image/table_model_i_03" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="変数に1を加える">
+<figure title="変数に1を加える" src="image/table_model_i_04" style="scale:1.0"/>
+</subsubsection>
+<p>
+					変数が、5になったときに条件式が不成立(false)になるので、繰り返しが終ります。
+					これで4回繰り返されるのが分かるでしょうか？
+				</p>
+</subsection>
+</section>
+<section title="応用：円を書くプログラム">
+<p>
+				繰り返しを使うと、円を簡単に書くことができます。次のプログラムを実行してみましょう。
+			</p>
+<subsection title="円を書きつづけるプログラム">
+<program title="Circle.java" id="src:Circle" src="src/Circle.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter04/src/Circle.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、Circleプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter04_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="Circle"/>
+</applet>]]></native>
+</subsection>
+</section>
+<section title="練習問題">
+<subsection title="問題1：円を描くプログラムを改良しよう">
+<p>
+				最後に出てきた円を描くプログラムは、条件が無い(常に成立(true))ので止まりません。
+				変数をつけ、適切な条件式を考えて、一周したらプログラムを止めるように改良して下さい。
+			</p>
+</subsection>
+<subsection title="問題2：円の描かれ方について考察しよう">
+<p>
+				一回の繰り返しで動く大きさ(fd(1))と、角度(rt(1))の数字を変更すと、円の大きさを変えることができます。
+				いろいろ数字を変えて、どのようにすると自分の思った円がかけるか、考察してください。
+			</p>
+<p>
+				ヒント: 大きさと角度を入力できるようにすると、数字を変えるたびにコンパイルする必要がないので、いろいろ実験できますよ。
+				そのようなプログラムにしてから、実験することをお奨めします。
+			</p>
+</subsection>
+<subsection title="問題3：五角形や星を繰り返しを使って描こう">
+<p>
+				いままで作った五角形や星を描くプログラムを繰り返しを使って書き直してみましょう。
+			</p>
+</subsection>
+</section>
+</body>
+</doc>

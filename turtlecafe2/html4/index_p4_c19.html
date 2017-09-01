@@ -1,0 +1,1203 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/REC-html401/loose.dtd">
+<html lang="ja">
+<head>
+<META http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<META http-equiv="Content-Style-Type" content="text/css">
+<META http-equiv="Content-Script-Type" content="text/javascript">
+<META name="generator" content="SmartDoc 1.0">
+<META NAME="author" CONTENT="Yoshiaki Matsuzawa" lang="ja">
+<META NAME="date" CONTENT="2013/12/17" lang="ja">
+<title>Turtle Cafe 2</title>
+<style type="text/css">
+<!--
+/*
+    text.css
+
+    since   : Nov. 21, 1998
+    version : Jan. 29, 2002
+    author  : ASAMI, Tomoharu (asami@XMLSmartDoc.org)
+*/
+
+body {
+  background: white;
+
+	margin-right: 5%;
+	margin-left: 5%;
+}
+
+h1 {
+	font-size: 28px;
+	text-align: center;	
+
+	margin-top: 20px;
+	margin-left: 10%;	
+	margin-right: 10%;
+	margin-bottom: 20px;
+
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-color: #990000;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+h1.title {
+}
+
+h1.part {
+}
+
+h1.chapter {
+}
+
+h2 {
+	font-size: 25px;
+	color: black;
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #000099;
+
+	padding-left: 10px;
+
+}
+
+h3 {
+	color: black;
+
+	margin-left: 	1%;
+	margin-right: 1%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #009900;
+
+	padding-left: 10px;
+
+}
+
+h4 {
+	color: black;
+
+	margin-left: 2%;
+	margin-right: 2%;	
+
+	border-style: solid;
+	border-width: 0px 0px 2px 8px;
+	border-color: #990000;
+
+	padding-left: 10px;
+}
+
+p {
+	margin-left: 2%;
+	margin-right: 2%;
+
+  text-indent: 1em;
+}
+
+p ja {
+}
+
+p.first {
+}
+
+p.first_ja {
+}
+
+dl{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ul{
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+ol{
+	margin-right: 2%;
+	margin-left: 5%;
+}
+
+li p {
+  text-indent: 0pt;
+}
+
+dt {
+  font-weight: bold;
+}
+
+th p {
+  text-indent: 0pt;
+}
+
+td p {
+  text-indent: 0pt;
+}
+
+a:link {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover{
+  color: gold;
+};
+
+/* ********************************************** */
+
+dfn {
+  font-weight: bold;
+  font-style: normal;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* ********************************************** */
+
+div.table {
+  text-align: center;
+}
+
+table.data {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  background-color: green;
+}
+
+table.data caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.data th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.data td {
+  background-color: antiquewhite;
+}
+
+table.data td.key {
+  background-color: salmon;
+  font-weight: bold;
+}
+
+table.menu {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  text-align: center;
+}
+
+table.menu caption {
+  background-color: khaki;
+  font-weight: bold;
+}
+
+table.menu th {
+  color: yellow;
+  background-color: lightseagreen;
+}
+
+table.menu td {
+  color: Maroon;
+  background-color: antiquewhite;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key {
+  font-size: x-large;
+  color: RoyalBlue;
+  background-color: LightGreen;
+  font-weight: bold;
+  padding: 10pt;
+}
+
+table.menu td.key A:link {
+  color: RoyalBlue;
+}
+
+table.menu td.key A:visited {
+  color: RoyalBlue;
+}
+
+table.navigator {
+}
+
+table.navigator td {
+  text-align: center;
+  font-weight: bold;
+}
+
+table.languages {
+  margin-bottom: 0pt;
+  margin-top: 0pt;
+  font-size: x-small;
+}
+
+table.languages td.current {
+}
+
+table.languages td.other {
+  background-color: Orange;
+}
+
+div.title {
+  text-align: center;
+}
+
+div.toc {
+  background-color: white;/*cornsilk;*/
+  padding: 10pt;
+  border-style: double;
+  border-color: black;/*cornsilk;*/
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.titletoc {
+  background-color: cornsilk;
+  padding: 10pt;
+  border-style: inset;
+  border-color: cornsilk;
+  margin-top: 10pt;
+  margin-bottom: 30pt;
+}
+
+div.date {
+  text-align: center;
+}
+
+div.org {
+  text-align: center;
+}
+
+div.author {
+  text-align: center;
+  font-weight: bold;
+}
+
+div.email {
+  text-align: center;
+}
+
+div.hp {
+  text-align: center;
+}
+
+div.summary {
+  color: maroon;
+  background: darkkhaki;
+  border-style: inset;
+  border-color: khaki;
+  margin-top: 20pt;
+  margin-bottom: 20pt;
+  margin-left: 30pt;
+  margin-right: 30pt;
+  padding: 5pt;
+}
+
+div.comment {
+  color: red;
+  background: yellow;
+}
+
+span.comment {
+  color: red;
+  background: yellow;
+}
+
+div.navigator {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.navigatortop {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-bottom: 10pt;
+}
+
+div.navigatorbottom {
+  background: khaki;
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  text-align: center;
+  margin-top: 10pt;
+}
+
+div.languages {
+  text-align: right;
+}
+
+div.footnote {
+  background: antiquewhite;
+}
+
+div.fyi {
+  color: maroon;
+  background: peachpuff;
+  padding: 5pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+div.fyi div.title {
+  background: antiquewhite;
+  font-weight: bold;
+  padding: 5pt;
+  margin-top: 5pt;
+  margin-bottom: 5pt;
+}
+
+div.caption {
+  background: lavender;
+  font-weight: bold;
+  padding: 5pd;
+  width: 300pt;
+	margin-left: 2%;
+  margin-top: 10pt;
+}
+
+div.result {
+  background: ivory;
+  border-style: inset;
+  border-color: gold;
+  padding: 10pt;
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+span.caption {
+  background: lavender;
+  font-weight: bold;
+}
+
+pre.program {
+  background-color: gainsboro;
+  font-family: courier, monospace;
+  padding: 5pt;
+  margin-right: 30pt;
+}
+
+pre.program em {
+  color: red;
+  font-style: normal;
+}
+
+pre.program strong {
+  color: red;
+  background-color: yellow;
+  font-style: normal;
+}
+
+pre.program span.keyword {
+  color: Red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+pre.program span.primitive {
+  color: Yellow;
+  font-style: normal;
+}
+
+pre.program span.comment {
+  color: Green;
+  background-color: gainsboro;
+  font-style: normal;
+}
+
+pre.program span.quote {
+  color: Blue;
+  font-style: normal;
+}
+
+var {
+  color: green;
+  font-style: italic;
+}
+
+tt {
+  font-family: courier, monospace;
+}
+
+code {
+  font-family: helvetica, sans-serif;
+  font-weight: bold;
+}
+
+pre.console {
+  background-color: black;
+  color: white;
+  font-family: courier, monospace;
+  padding: 5pt;
+	margin-left: 2%;
+  margin-right: 2%;
+}
+
+pre.console kbd {
+  font-family: courier, monospace;
+  color: yellow;
+}
+
+span.toggle {
+  font-weight: bold;
+}
+
+div.figure {
+  text-align: center;
+}
+
+img.figure {
+  margin: 10pt;
+}
+
+div.equation {
+  margin-top: 1em;
+  margin-right: 30pt;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-left: 4em;
+  padding-bottom: 1em;
+  background: powderblue;
+}
+
+div.equation table {
+}
+
+div.equation table td.padding {
+  width:2em
+}
+
+td.equationNumber {
+  width: 4em;
+  text-align: right;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+/*
+ * HTML4JavaScript.js
+ *
+ * @since   Nov. 17, 1998
+ * @version Oct. 22, 2001
+ * @author  ASAMI, Tomoharu (asami@zeomtech.com)
+ */
+var backupColor=null;
+var backupBGColor=null;
+var backupFontStyle=null;
+var backupIDColor=null;
+var backupIDBGColor=null;
+var backupIDFontStyle=null;
+var backupIDBorderStyle=null;
+
+var backupOnKeyDown=null;
+
+function normal(element) {
+  if (document.all) {
+    if (backupColor != null) {
+      element.style.color=backupColor;
+      backupColor=null;
+    }
+    if (backupBGColor != null) {
+      element.style.background=backupBGColor;
+      backupBGColor=null;
+    }
+    if (backupFontStyle != null) {
+      element.style.fontStyle=backupFontStyle;
+      backupFontStyle=null;
+    }
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      if (backupIDColor != null) {
+        target.style.color=backupIDColor;
+        backupIDColor=null;
+      }
+      if (backupIDBGColor != null) {
+        target.style.background=backupIDBGColor;
+        backupIDBGColor=null;
+      }
+      if (backupIDFontStyle != null) {
+        target.style.fontStyle=backupIDFontStyle;
+        backupIDFontStyle=null;
+      }
+      if (backupIDBorderStyle != null) {
+        target.style.borderStyle=backupIDBorderStyle;
+        backupIDBorderStyle=null;
+      }
+    }
+  }
+}
+
+function hilight(element) {
+  if (document.all) {
+    backupBGColor=element.style.background;
+    element.style.background="gold";
+  }
+}
+
+function hilightString(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightSelflink(element, color) {
+  if (color == null) {
+    color="darkolivegreen";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+    var id = null;
+    if (element.href != null) {
+      id = element.href;
+      id = id.substring(id.indexOf("#") + 1);
+    }
+    if (id != null) {
+      var target = document.all.item(id, 0);
+      backupIDColor=target.style.color;
+//      backupIDBGColor=target.style.background;
+//      backupIDFontStyle=target.style.fontStyle;
+      backupIDBorderStyle=target.style.borderStyle;
+      target.style.color="red";
+      target.style.borderStyle="outset";
+    }
+  }
+}
+
+function hilightHyperlink(element, color) {
+  if (color == null) {
+    color="darkorange";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function hilightExternallink(element, color) {
+  if (color == null) {
+    color="purple";
+  }
+  if (document.all) {
+    backupColor=element.style.color;
+    backupBGColor=element.style.background;
+    backupFontStyle=element.style.fontStyle;
+    element.style.color=color;
+  }
+}
+
+function toggleChildren(node) {
+  if (document.all) {
+    for (i = 0;i < node.children.length;i++) {
+      var child = node.children[i];
+      if (child.className == "dynamic") {
+        if (child.style.display == "") {
+            child.style.display = "none";
+        } else {
+            child.style.display = "";
+        }
+      }
+    }
+  }
+}
+
+function toggleDynamic(node) {
+  if (document.all) {
+    if (node.tagName == "LI") {
+      toggleChildren(node);
+    }
+  }
+}
+
+function isMsie4orGreater() { 
+  var ua = window.navigator.userAgent; var msie = ua.indexOf ("MSIE");
+  if (msie > 0) {
+    return (parseInt (ua.substring (msie+5, ua.indexOf (".", msie))) >= 4)   
+      && (ua.indexOf ("MSIE 4.0b") <0);
+  } else {
+    return false;
+  }
+}
+
+function keyEventHandler() {
+  if (document.all) {
+    if (event.keyCode == 13) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode == 39) {
+      var child = document.all.item("_next_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else if (event.keyCode = 37) {
+      var child = document.all.item("_prev_page_", 0);
+      if (child != null) {
+        location.href = child.href;
+      }
+    } else {
+      backupOnKeyDown();
+    }
+  }
+}
+
+function setOHPHandler() {
+  backupOnKeyDown=document.onkeydown;
+  document.onkeydown=keyEventHandler;
+}
+// -->
+</script>
+</head>
+<body>
+<div class="navigatortop">
+<table class="navigator">
+<tr>
+<td><a href="index_p4_c18.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_prev_page_"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p4.html#doc1_part:three" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">データ構造とアルゴリズム</a>/文字列とアルゴリズム</td>
+<td><a href="index_p5.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)" id="_next_page_"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+
+<h1 class="chapter" id="doc1_67">19  文字列とアルゴリズム</h1>
+
+<div class="titletoc">
+<ul>
+<li> <a href="#doc20_7670" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.1  学習目標</a>
+<li> <a href="#doc20_7685" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.2  ファイル入出力</a>
+<ul>
+<li> <a href="#doc20_7704" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.2.1  ファイル入出力の仕様</a>
+</ul>
+<li> <a href="#doc20_7729" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.3  作文遊び</a>
+<ul>
+<li> <a href="#doc20_7734" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.3.1  作文さん</a>
+<li> <a href="#doc20_7769" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.3.2  反転さん</a>
+<li> <a href="#doc20_7789" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.3.3  判定さん</a>
+<li> <a href="#doc20_7809" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.3.4  回文さん</a>
+</ul>
+<li> <a href="#doc20_7830" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.4  Webスクレイピング</a>
+<ul>
+<li> <a href="#doc20_7832" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.4.1  WebからHTMLの読み込み</a>
+<li> <a href="#doc20_7857" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.4.2  読み込んだHTMLからのスクレイピング</a>
+</ul>
+<li> <a href="#doc20_7896" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.5  練習問題</a>
+<ul>
+<li> <a href="#doc20_7898" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.5.1  ケンブリッジ変換</a>
+<li> <a href="#doc20_7919" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.5.2  CSVファイルの読み込み</a>
+<li> <a href="#doc20_7948" onMouseOver="hilightSelflink(this)" onMouseOut="normal(this)">19.5.3  問題3：Webマッシュアップ</a>
+</ul>
+</ul>
+</div>
+
+<h2 id="doc20_7670">19.1  学習目標</h2>
+
+
+<ul>
+<li> ファイル読み書きAPIを使えるようになる．
+<li> 文字列操作のアルゴリズムについて理解する．
+<li> APIドキュメントの存在を知り，簡単なものは読み，使えるようになる．</ul>
+
+
+<h2 id="doc20_7685">19.2  ファイル入出力</h2>
+
+<p class="first_ja">タートルにはファイルの入出力のための便利なメソッドがついています．</p>
+
+<div id="doc20_src:FileIOSample" class="caption">リスト 19.2.1 FileIOSample.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * ファイル読み書きのテスト
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> FileIOSample <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> FileIOSample(), args);
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		saveToFile(<span class="quote">&quot;a.txt&quot;</span>, <span class="quote">&quot;ほげ&quot;</span>);
+ 16: 		print(loadFromFile(<span class="quote">&quot;a.txt&quot;</span>));
+ 17: 	}
+ 18: }
+</pre>
+
+<p><a href="chapter18/src/FileIOSample.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、FileIOSampleプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter18_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="FileIOSample"/>
+</applet></p>
+
+<h3 id="doc20_7704">19.2.1  ファイル入出力の仕様</h3>
+
+
+<dl>
+<dt>
+void saveToFile(String filename, String text)
+<dd>
+textの内容をファイルに保存します．
+<dt>
+String loadFromFile(String filename)
+<dd>
+ファイルから文字列を読み込み，戻り値として返します．
+<dt>
+String loadFromFile(String filename, String enc)
+<dd>
+文字コードを指定して，ファイルを読み込みます．encの実引数例=&quot;Shift_JIS&quot;, &quot;EUC-JP&quot;, &quot;UTF-8&quot;など．</dl>
+
+
+<h2 id="doc20_7729">19.3  作文遊び</h2>
+
+<p class="first_ja">ファイル読み込みとStringクラスライブラリを利用して，作文遊びのプログラムを書いてみましょう．</p>
+
+<h3 id="doc20_7734">19.3.1  作文さん</h3>
+
+<p class="first_ja">作文するプログラムです．</p>
+
+<div id="doc20_src:SakubunSan" class="caption">リスト 19.3.1.1 SakubunSan.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 作文さん
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> SakubunSan <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> SakubunSan(), args);
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		<span class="comment">// 名詞を読み込む</span>
+ 16: 		String nountxt = loadFromFile(<span class="quote">&quot;Noun.txt&quot;</span>);
+ 17: 		String[] nouns = nountxt.split(<span class="quote">&quot;\n&quot;</span>);
+ 18: 		<span class="keyword">int</span> nounSize = nouns.length;
+ 19: 
+ 20: 		<span class="comment">// 動詞を読み込む</span>
+ 21: 		String verbtxt = loadFromFile(<span class="quote">&quot;Verb.txt&quot;</span>);
+ 22: 		String[] verbs = verbtxt.split(<span class="quote">&quot;\n&quot;</span>);
+ 23: 		<span class="keyword">int</span> verbSize = verbs.length;
+ 24: 
+ 25: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 10; i++) {
+ 26: 			<span class="comment">// 作文する</span>
+ 27: 			String noun1 = nouns[random(nounSize)];<span class="comment">// 名詞1を選ぶ</span>
+ 28: 			String noun2 = nouns[random(nounSize)];<span class="comment">// 名詞2を選ぶ</span>
+ 29: 			String verb = verbs[random(verbSize)];<span class="comment">// 動詞を選ぶ</span>
+ 30: 			print(noun1 + <span class="quote">&quot;が&quot;</span> + noun2 + <span class="quote">&quot;に&quot;</span> + verb);
+ 31: 		}
+ 32: 	}
+ 33: }
+</pre>
+
+<p><a href="chapter18/src/SakubunSan.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、SakubunSanプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter18_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="SakubunSan"/>
+</applet></p>
+<p>入力するファイルは以下のような形式になっています．</p>
+<p>Noun.txt</p>
+
+<pre id="doc20_7759" class="program">
+			
+仕舞い
+綺
+洋裁
+組打ち
+畿内
+明き家			
+  .... (続く)
+
+			
+</pre>
+
+<p>Verb.txt</p>
+
+<pre id="doc20_7765" class="program">
+			
+引き込む
+すきかえす
+看取る
+睦む
+きこす			
+  .... (続く)
+
+			
+</pre>
+
+
+<h3 id="doc20_7769">19.3.2  反転さん</h3>
+
+<p class="first_ja">文字列を反転するプログラムです．</p>
+
+<div id="doc20_src:HantenSan" class="caption">リスト 19.3.2.1 HantenSan.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 反転さん　反転文を作る
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> HantenSan <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> HantenSan(), args);
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		print(makeHantenbun(<span class="quote">&quot;こんにちは&quot;</span>));
+ 16: 		print(makeHantenbun(<span class="quote">&quot;あいうえお&quot;</span>));
+ 17: 	}
+ 18: 
+ 19: 	String makeHantenbun(String bun) {
+ 20: 		<span class="keyword">int</span> len = bun.length();
+ 21: 		String hantenbun = <span class="quote">&quot;&quot;</span>;
+ 22: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = len - 1; i &gt;= 0; i--) {
+ 23: 			<span class="keyword">char</span> c = bun.charAt(i);
+ 24: 			hantenbun = hantenbun + c;
+ 25: 		}
+ 26: 		<span class="keyword">return</span> hantenbun;
+ 27: 	}
+ 28: }
+</pre>
+
+<p><a href="chapter18/src/HantenSan.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、HantenSanプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter18_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HantenSan"/>
+</applet></p>
+
+<h3 id="doc20_7789">19.3.3  判定さん</h3>
+
+<p class="first_ja">回文かどうかを判定するプログラムです．</p>
+
+<div id="doc20_src:HanteiSan" class="caption">リスト 19.3.3.1 HanteiSan.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 回文判定さん
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> HanteiSan <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> HanteiSan(), args);
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		print(check(<span class="quote">&quot;こんにちは&quot;</span>));
+ 16: 		print(check(<span class="quote">&quot;あいうえお&quot;</span>));
+ 17: 		print(check(<span class="quote">&quot;とまと&quot;</span>));
+ 18: 		print(check(<span class="quote">&quot;たけやぶやけた&quot;</span>));
+ 19: 	}
+ 20: 
+ 21: 	<span class="keyword">boolean</span> check(String bun) {
+ 22: 		String hantenbun = makeHantenbun(bun);
+ 23: 		<span class="keyword">boolean</span> result = bun.equals(hantenbun);
+ 24: 		<span class="keyword">return</span> result;
+ 25: 	}
+ 26: 
+ 27: 	String makeHantenbun(String bun) {
+ 28: 		<span class="keyword">int</span> len = bun.length();
+ 29: 		String hantenbun = <span class="quote">&quot;&quot;</span>;
+ 30: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = len - 1; i &gt;= 0; i--) {
+ 31: 			<span class="keyword">char</span> c = bun.charAt(i);
+ 32: 			hantenbun = hantenbun + c;
+ 33: 		}
+ 34: 		<span class="keyword">return</span> hantenbun;
+ 35: 	}
+ 36: }
+</pre>
+
+<p><a href="chapter18/src/HanteiSan.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、HanteiSanプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter18_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HanteiSan"/>
+</applet></p>
+
+<h3 id="doc20_7809">19.3.4  回文さん</h3>
+
+<p class="first_ja">回文を自動生成するプログラムです．</p>
+
+<div id="doc20_src:KaibunSan" class="caption">リスト 19.3.4.1 KaibunSan.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 回文さん
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> KaibunSan <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> KaibunSan(), args);
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		<span class="comment">// 名詞を読み込む</span>
+ 16: 		String nountxt = loadFromFile(<span class="quote">&quot;NounYomi.txt&quot;</span>);
+ 17: 		String[] nouns = nountxt.split(<span class="quote">&quot;\n&quot;</span>);
+ 18: 		<span class="keyword">int</span> nounSize = nouns.length;
+ 19: 
+ 20: 		<span class="comment">// 動詞を読み込む</span>
+ 21: 		String verbtxt = loadFromFile(<span class="quote">&quot;VerbYomi.txt&quot;</span>);
+ 22: 		String[] verbs = verbtxt.split(<span class="quote">&quot;\n&quot;</span>);
+ 23: 		<span class="keyword">int</span> verbSize = verbs.length;
+ 24: 
+ 25: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = 0; i &lt; 1000000; i++) {
+ 26: 			<span class="comment">// 作文し，回文ができたら表示する</span>
+ 27: 			String noun1 = nouns[random(nounSize)];
+ 28: 			String verb = verbs[random(verbSize)];
+ 29: 			String bun1 = noun1 + verb;
+ 30: 			<span class="keyword">if</span> (check(bun1)) {
+ 31: 				print(noun1 + <span class="quote">&quot;-&quot;</span> + verb);
+ 32: 			}
+ 33: 		}
+ 34: 
+ 35: 		print(<span class="quote">&quot;finished&quot;</span>);
+ 36: 	}
+ 37: 
+ 38: 	<span class="keyword">boolean</span> check(String bun) {
+ 39: 		String hantenbun = makeHantenbun(bun);
+ 40: 		<span class="keyword">boolean</span> result = bun.equals(hantenbun);
+ 41: 		<span class="keyword">return</span> result;
+ 42: 	}
+ 43: 
+ 44: 	String makeHantenbun(String bun) {
+ 45: 		<span class="keyword">int</span> len = bun.length();
+ 46: 		String hantenbun = <span class="quote">&quot;&quot;</span>;
+ 47: 		<span class="keyword">for</span> (<span class="keyword">int</span> i = len - 1; i &gt;= 0; i--) {
+ 48: 			<span class="keyword">char</span> c = bun.charAt(i);
+ 49: 			hantenbun = hantenbun + c;
+ 50: 		}
+ 51: 		<span class="keyword">return</span> hantenbun;
+ 52: 	}
+ 53: 
+ 54: }
+</pre>
+
+<p><a href="chapter18/src/KaibunSan.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>下のボタンを押すと、KaibunSanプログラムが実行できます。</p>
+<p><applet code="TurtleLaunchApplet" archive="chapter18_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="KaibunSan"/>
+</applet></p>
+
+<h2 id="doc20_7830">19.4  Webスクレイピング</h2>
+
+
+<h3 id="doc20_7832">19.4.1  WebからHTMLの読み込み</h3>
+
+<p class="first_ja">loadFromFile(String)の引数にURLを入れると，Webページを取ってくることが出来ます．</p>
+
+<div id="doc20_src:WebSample" class="caption">リスト 19.4.1.1 WebSample.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * Webファイル読みこみのテスト
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> WebSample <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> WebSample(), args);
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		print(loadFromFile(<span class="quote">&quot;http://www.inf.shizuoka.ac.jp/&quot;</span>, <span class="quote">&quot;UTF-8&quot;</span>));
+ 16: 	}
+ 17: }
+</pre>
+
+<p><a href="chapter18/src/WebSample.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>（このプログラムはアプレット上では実行できません．）</p>
+<p>実行結果は次のようになります．</p>
+
+<pre id="doc20_7853" class="console">
+			
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;ja&quot; lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+  &lt;title&gt;静岡大学 情報学部&lt;/title&gt;
+  .... (続く)
+
+			
+</pre>
+
+
+<h3 id="doc20_7857">19.4.2  読み込んだHTMLからのスクレイピング</h3>
+
+<p class="first_ja">Webページのソースが取得できたら，そこから好きな情報を抜き出しましょう</p>
+
+<div id="doc20_src:WeatherInfo" class="caption">リスト 19.4.2.1 WeatherInfo.java</div>
+<pre class="program" style="margin-top:0">
+  1: <span class="comment">/*
+  2:  * 今日の浜松の天気
+  3:  * Created on 2012/01/07
+  4:  * Copyright(c) 2011 Yoshiaki Matsuzawa, Shizuoka University. All rights reserved.
+  5:  */</span>
+  6: <span class="keyword">public</span> <span class="keyword">class</span> WeatherInfo <span class="keyword">extends</span> Turtle {
+  7: 
+  8: 	<span class="comment">// 起動処理</span>
+  9: 	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+ 10: 		Turtle.startTurtle(<span class="keyword">new</span> WeatherInfo(), args);
+ 11: 	}
+ 12: 
+ 13: 	<span class="comment">// タートルを動かす処理</span>
+ 14: 	<span class="keyword">public</span> <span class="keyword">void</span> start() {
+ 15: 		String file = loadFromFile(
+ 16: 				<span class="quote">&quot;http://weather.yahoo.co.jp/weather/jp/22/5040.html&quot;</span>, <span class="quote">&quot;UTF-8&quot;</span>);
+ 17: 		<span class="keyword">int</span> index1 = file.indexOf(<span class="quote">&quot;&gt;&lt;br&gt;&quot;</span>);
+ 18: 		String weather = file.substring(index1 + 5 + 13);
+ 19: 		<span class="keyword">int</span> index2 = weather.indexOf(<span class="quote">&quot;&lt;/td&gt;&lt;/tr&gt;&quot;</span>);
+ 20: 		weather = weather.substring(0, index2 - 13);
+ 21: 		System.out.println(<span class="quote">&quot;今日の浜松の天気は「&quot;</span> + weather + <span class="quote">&quot;」です&quot;</span>);
+ 22: 	}
+ 23: }
+</pre>
+
+<p><a href="chapter18/src/WeatherInfo.java" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>
+			をクリックすると、プログラムをダウンロードできます。</p>
+<p>（このプログラムはアプレット上では実行できません．）</p>
+<p>このプログラムでは，</p>
+<p>こんなHTMLが取ってこれるので
+			
+<pre id="doc20_7878" class="console">
+(以前省略)....
+
+        &lt;table border=0 cellpadding=2 cellspacing=1 width=100%&gt;
+            &lt;tr align=center&gt;&lt;td&gt;&lt;b&gt;1月25日(水)&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+            &lt;tr align=center&gt;&lt;td&gt;
+               &lt;img src=&quot;http://i.yimg.jp/images/weather/general/forecast/sun_clouds_st.gif&quot; border=&quot;0&quot; alt=&quot;晴時々曇&quot;&gt;&lt;br&gt;
+            晴時々曇
+            &lt;/td&gt;&lt;/tr&gt;
+        &lt;/table&gt;
+			
+....（以後省略）
+			
+</pre>
+
+
+
+			このHTMLから，「晴時々曇」を抜き出すために，Stringクラスの
+			<a href="http://docs.oracle.com/javase/jp/6/api/java/lang/String.html#indexOf%28java.lang.String%29" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">indexOf()</a>
+			と
+			<a href="http://docs.oracle.com/javase/jp/6/api/java/lang/String.html#substring%28int%29" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">substring(int beginIndex)</a>
+			メソッドを利用しています．</p>
+<p>実行結果は次のようになります．</p>
+
+<pre id="doc20_7891" class="console">
+今日の浜松の天気は「晴時々曇」です			
+			
+</pre>
+
+
+<h2 id="doc20_7896">19.5  練習問題</h2>
+
+
+<h3 id="doc20_7898">19.5.1  ケンブリッジ変換</h3>
+
+<p class="first_ja">ある文章を入力すると，「ケンブリッジ変換」を自動的に行うプログラムを作ってみましょう．</p>
+<p>「ケンブリッジ変換」参考URL
+				
+<ul>
+<li> http://steel-plate.jp/cambridge/
+<li> http://www.artsoftwareworks.net/modules/xpwiki/138.html</ul></p>
+<p>ファイル名は「Cambridge.java」とすること．</p>
+
+<h3 id="doc20_7919">19.5.2  CSVファイルの読み込み</h3>
+
+<p class="first_ja"><a href="chapter18/src/score.csv" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">ここ</a>にある，ある中学校の成績データが記述されたCSV形式 のファイルを読み込み，
+			平均点を求めるプログラムを作ってみましょう．</p>
+<p>CSVファイル：Comma Separated Valuesファイル，カンマ「,」でデータが区切られたファイル．</p>
+
+<pre id="doc20_7930" class="program">
+名前,数学,英語
+佐藤,41,36
+鈴木,46,73
+田中,17,55
+橋本,66,81
+高橋,9,42
+渡辺,52,68
+伊藤,37,43
+山本,99,48
+</pre>
+
+<div class="fyi">
+<div class=title>ヒント</div>
+
+<p class="first_ja">読み込んでからまず，split(&quot;\n&quot;)で各行に分割し，その後行毎にsplit(&quot;,&quot;)で各データを得ることが出来ます．</p>
+<p>文字列型をint型に変換するには，int Integer.parseInt(String text)メソッドを使います．
+				リファレンスは<a href="http://docs.oracle.com/javase/jp/6/api/java/lang/Integer.html#parseInt%28java.lang.String%29" target="_top" onMouseOver="hilightExternallink(this)" onMouseOut="normal(this)">こちら</a>．</p>
+</div>
+
+<p>ファイル名は「CSV.java」とすること．</p>
+
+<h3 id="doc20_7948">19.5.3  問題3：Webマッシュアップ</h3>
+
+<p class="first_ja">すきなサイトから，必要な情報のみを取ってくるプログラムを書いてみましょう．</p>
+<p>複数のサイトから情報を取ってきて，合成できるとなお良い！</p>
+<p>ファイル名は「Mashup.java」とすること．</p>
+<div class="navigatorbottom">
+<table class="navigator">
+<tr>
+<td><a href="index_p4_c18.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&lt;&lt;</span></a></td>
+<td><a href="index.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">Turtle Cafe 2</a>/<a href="index_p4.html#doc1_part:three" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)">データ構造とアルゴリズム</a>/文字列とアルゴリズム</td>
+<td><a href="index_p5.html" onMouseOver="hilightHyperlink(this)" onMouseOut="normal(this)"><span class="toggle">&gt;&gt;</span></a></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

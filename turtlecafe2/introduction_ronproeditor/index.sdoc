@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>論プロエディタでJavaプログラムを動かしてみよう</title>
+</head>
+<body>
+<p>
+			論プロエディタを使ったJavaタートルグラフィックスのプログラムの開発環境を整備しましょう。
+		</p>
+<p>
+			テキストエディタを使って実行環境を整備することもできますが、
+			ここでは、初心者向けのエディタ「論プロエディタ」を使う方法を解説します。
+		</p>
+<section title="学習目標">
+<p>
+<ul>
+<li>論プロエディタを使い、自分のコンピュータでサンプルプログラム（HelloWorld.java）が動かせるようになる</li>
+</ul>
+</p>
+</section>
+<section title="環境のインストール">
+<subsection title="JDKのインストール">
+<p>
+					JDK(Java SE Development Kit)とは、Java開発環境のことです。
+					自分のPCでJavaを開発するためには、JDKをインストールする必要があります。
+					（あらかじめインストールされているJREでは、Javaを動かすことは出来ますが、Javaのプログラムを作ることは出来ません）
+				</p>
+<subsubsection title="JDKがインストールされているか調べる">
+<p>コマンドプロンプト（「Windows」＞「プログラム」＞「アクセサリ」の中にあります）を開いて、次のコマンドを打ってください</p>
+<console title="JDKの確認">
+javac -version
+					</console>
+<p>version 6以上(7でもOK)が入っているかどうか確認してください。</p>
+</subsubsection>
+<subsubsection title="JDKのインストール">
+<p>JDK6以上をインストールします。</p>
+<p>	
+						JDKは現在、Oracle社が開発・配布しています。						
+						<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u27-download-440405.html">ここ</a>
+						からダウンロードし、インストールを行ってください。
+						(静大学内の場合、\\fs\share\class\2011プログラミング社会\　からコピーできるようにしました．)				
+					</p>
+<p>							
+						インストールが終わったら、環境変数の設定をします。
+						配布された資料に従って､設定を行ってください。
+						（又は<a href="http://mail2.nara-edu.ac.jp/~asait/java/java_install/java_install.htm">ここ</a>のサイトなどが
+						参考になります。）
+					</p>
+<p>							
+						環境変数の設定が終わったら、コマンドプロンプトを開き、「JDKがインストールされているか調べる」で説明した方法で、
+						コマンドが実行できるかどうか確認してください。
+					</p>
+</subsubsection>
+</subsection>
+<subsection title="論プロエディタのインストール">
+<p>Javaの初心者向けエディタ「論プロエディタ」をダウンロードしよう。</p>
+<p>インストールは、フォルダをデスクトップに解凍するだけです。</p>
+<p>
+<a href="https://ce.cs.inf.shizuoka.ac.jp/fs/smb/pub/ronproeditor/">
+						ここ
+					</a>
+					から、もっとも新しいバージョン（数字が一番大きいもの）をダウンロードすること。
+					(静大学内の場合、\\fs\share\class\2011プログラミング社会\　からコピーできるようにしました．)
+				</p>
+</subsection>
+</section>
+<section title="論プロエディタの基本的な使い方">
+<subsection title="論プロエディタの基本">
+<subsubsection title="起動の仕方">
+<p>
+						論プロエディタフォルダの中の「RonproEditor.jar」をダブルクリックすると起動できます。
+					</p>
+<p>起動画面は以下のようになります</p>
+<figure id="fig:RonproEditor" title="起動画面" src="image/RonproEditor" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="各部名称・機能">
+<p>各部の名称と機能は以下の通りです</p>
+<figure id="fig:RonproEditorName" title="起動画面" src="image/RonproEditorName" style="scale:1.0"/>
+<dl>
+<dt>リソースビューワ</dt>
+<dd>
+<a href="#sec:resource">リソース</a>のツリーを表示します。
+							プロジェクトをクリックすると展開し、所属しているクラスが表示されます。
+						</dd>
+<dt>エディタ</dt>
+<dd>
+<a href="#sec:programmingprocess">ソースコード</a>を編集するためのエディタ</dd>
+<dt>コンソール</dt>
+<dd>
+							コンパイル、実行したときに標準入出力につながれます。
+							Macのターミナル、Winのコマンドプロンプトに相当するものです。
+							<a href="#part:extra">論プロエディタを使わない場合</a>はこれらで代用できます。
+							コンパイル、実行したときに当該プログラムの文字情報の入出力が行われ、
+							コンパイル時には<a href="#sec:compileerror">エラーが出力</a>されます。
+							実行時には当該プログラムが必要とする文字情報の入出力が行われます。
+							表示されている文字情報は、コンパイルするたびにクリアされます。
+						</dd>
+</dl>
+</subsubsection>
+<subsubsection title="リソース" id="sec:resource">
+<p>
+						リソースとは、論プロエディタで使用するデータのことです。
+						基本的には、<a href="#sec:class">クラス</a>のことです。
+					</p>
+<p>
+						クラスをまとめられると使いやすい（回別に分けないとごちゃごちゃになる）ので、
+						プロジェクトを用意しています。プロジェクトは、クラスをまとめておくものです。
+					</p>
+<dl>
+<dt>プロジェクト</dt>
+<dd>
+							プロジェクトとは、プログラムを入れておくフォルダのようなものです。この授業では、
+							「Kougi07」など、授業ごとにプロジェクトを作るものとします。
+						</dd>
+<dt>クラス（ファイル）</dt>
+<dd>
+							クラスとは、Javaのプログラムの単位のことです。
+							Javaでは、原則的に１つのクラスは１つのファイルに書かれるため、
+							論プロエディタではクラスとファイルをまとめてクラス（ファイル）とし、ひとつの単位として扱っています。
+						</dd>
+</dl>
+<fyi title="プロジェクトとクラス（ファイル）を作ろう">
+<p>
+							まず、論プロエディタの「File」メニューから「NewProject」を選んで「kougi07」というプロジェクトを作ろう。
+						</p>
+<p>
+							次に、論プロエディタの「File」メニューから「NewClass(File)」を選び、「Turtle」テンプレートを選んで、「HelloWorld」というクラスを作ろう。
+						</p>
+</fyi>
+<p>
+						これで、「Kougi07」プロジェクトの中に、「HelloWorld.java」というファイルが作成された。
+					</p>
+<figure id="fig:HelloWorld" title="HelloWorld.java作成完了画面" src="image/HelloWorld" style="scale:1.0"/>
+</subsubsection>
+</subsection>
+<subsection title="プログラム作成の流れ" id="sec:programmingprocess">
+<p>Javaプログラムを作成して実行するには、次のようなプロセスをたどることになります。</p>
+<figure id="fig:process" title="Javaプログラム作成のプロセス" src="image/process" style="scale:1.0"/>
+<dl>
+<dt>ソースコード</dt>
+<dd>プログラムが書かれたテキストファイルのこと</dd>
+<dt>バイトコード</dt>
+<dd>プログラムをコンピュータが実行できる形式に変換したもの</dd>
+<dt>コンパイル</dt>
+<dd>ソースコードをバイトコードに変換すること</dd>
+</dl>
+<subsubsection title="プログラムの編集">
+<p>それでは、先ほど作った「HelloWorld.java」を編集してみよう。</p>
+<p>以下のプログラムと同じプログラムを打ち込んでみよう。</p>
+<figure id="fig:helloworldsource" title="HelloWorldソースコード" src="image/HelloWorldSource" style="scale:1.0"/>
+</subsubsection>
+<subsubsection title="コンパイル">
+<p>次に、ソースコード（HelloWorld.java）をコンパイルしてみよう。</p>
+<p>論プロエディタの「Java」メニューから「Compile」を選ぼう。</p>
+<p>コンパイルが成功すると、このような表示がコンソールに出ます。</p>
+<figure id="fig:consolecompile" title="コンパイル" src="image/ConsoleCompile" style="scale:1.0"/>
+<p>
+						プロジェクトの中で初めてタートルプログラムをコンパイルしたときに、
+						「注」という赤い警告のメッセージが出ますが、
+						プログラムは問題なくコンパイルされているので、心配しなくて大丈夫です。
+					</p>
+<p>
+						（Javaは5.0から新しい文法が用意され、その文法に従っていないものには
+						警告が出るようになりました。タートルライブラリは98年に作られたもので、
+						一部に古いJavaの文法を使っているため、このような警告メッセージが出ます。）
+					</p>
+<p>
+<b>プログラムにミスがあると、コンパイルは成功しません。</b>
+						詳しくは<a href="#sec:compileerror">２章の「コンパイルエラー」</a> を参考にしてください。
+					</p>
+</subsubsection>
+<subsubsection title="実行">
+<p>次に、プログラムを実行しよう。「Java」メニューから「Run」を選ぼう。</p>
+<p>コンソールに「HelloWorld!」が出ていれば成功です。</p>
+<figure id="fig:consolerun" title="コンパイル" src="image/ConsoleRun" style="scale:1.0"/>
+<p>
+						無限ループするプログラムを書いてしまった、など、プログラムが止まらなくなることがあります。
+						そのような場合は、Javaメニューにある「Kill（実行強制停止）」を使ってプログラムを止めること。
+					</p>
+</subsubsection>
+<fyi title="やってみよう！">
+<p>
+						「print("Hello World!");」の次の行に「fd(100);」と書いて、コンパイル、実行してみよう。
+					</p>
+<p>下のボタンと同じ結果が得られれば成功です。</p>
+<p>
+			下のボタンを押すと、HelloTurtleプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="introduction_ronproeditor_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HelloTurtle"/>
+</applet>]]></native>
+</fyi>
+</subsection>
+</section>
+<section title="発展的な使い方">
+<subsection title="サンプルプログラムの使い方">
+<subsubsection title="サンプルプログラムの使い方">
+<p>
+						サンプルプログラム「House.java」を
+						<a href="introduction_cns/src/House.java">
+							ここ
+						</a>
+						からダウンロードし、
+						論プロエディタフォルダの中にある「MyProjects」フォルダの中の「Kougi07」フォルダに保存しよう。
+					</p>
+<p>
+						論プロエディタの画面で「F5」を押すと、表示が更新されて「Kougi07」プロジェクトの中にHouse.javaが表示されます。
+						House.javaをダブルクリックすると、エディタにプログラムが表示されます。
+					</p>
+<p>
+						「F5」を押してリソースビューワを更新しないとクラス（ファイル）が表示されないので、
+						サンプルプログラムをダウンロードして「MyProjects」フォルダに追加したら、必ず「F5」を押すこと。
+					</p>
+<figure id="fig:HouseDownloaded" title="House.javaを論プロエディタで読み込んだ様子" src="image/HouseDownloaded" style="scale:1.0"/>
+<fyi title="やってみよう！">
+<p>
+							サンプルプログラムをコンパイルし、実行してみよう。
+							次のボタンと同じ結果が得られれば、成功です。
+						</p>
+<p>
+			下のボタンを押すと、Houseプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="introduction_ronproeditor_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="House"/>
+</applet>]]></native>
+</fyi>
+</subsubsection>
+<subsubsection title="リソースとファイルシステムの関係">
+<p>
+						論プロエディタの「プロジェクト」と「クラス（ファイル）」の２つのリソースは、
+						ファイルシステム（MacやWindowsの通常の画面）ではそれぞれ「フォルダ」と「ファイル」に対応します。
+					</p>
+<p>
+						プロジェクト「Kougi07」は、論プロエディタフォルダの中の「MyProjects」フォルダの中の「Kougi07」フォルダに対応します。
+					</p>
+<p>
+						クラス（ファイル）「HelloWorld.java」は、Kougi07」フォルダの中の「HelloWorld.java」に対応します。
+					</p>
+<p>
+						論プロエディタで作ったプロジェクトやクラス（ファイル）は、ファイルシステムで見ることができるし、
+						ファイルシステムで作ったフォルダやファイルを論プロエディタで読み込むこともできます。
+					</p>
+</subsubsection>
+</subsection>
+<!-- 
+			<section title="自分のPCでJavaと論プロエディタを使う方法">
+				<p>
+					大学のPCではなく、自分のPCでJavaを使うためには、JDKをインストールする必要があります（大学のPCには、あらかじめインストールされている）。
+				</p>
+				<p>
+					JDK(Java SE Development Kit)とは、Java開発環境のことです。JDKのインストールについては、
+					<a
+						href="introduction_cns/html/JDK_install.html">
+						ここ（Mac・Windows両方のやり方が書いてあります）
+					</a>
+					を参考にするとよい。
+				</p>
+				<p>
+					JDKをインストールした後に、論プロエディタをインストールしてください。
+					論プロエディタのインストール以降の操作は、MacでもWindowsでも、大学のPCでの操作と変わりません。
+				</p>
+			</section>
+			 -->
+<subsection title="その他の機能">
+<p>
+					論プロエディタのその他の機能を紹介します。
+					<dl>
+<dt>Rename</dt>
+<dd>リソースの名前を変更できる。</dd>
+<dt>Delete</dt>
+<dd>リソースを削除できる</dd>
+<dt>Refresh</dt>
+<dd>
+							リソースビューワを更新できる。 サンプルプログラムをダウンロードしたときなど、
+							ファイルシステムからファイルやフォルダを追加したときに使う。
+						</dd>
+<dt>Undo（やり直し）</dt>
+<dd>作業をひとつ前の状態に戻すことができる。</dd>
+<dt>Redo（やり直しのキャンセル）</dt>
+<dd>直前のUndoを取り消して、Undoする前の状態に戻すことができる。</dd>
+<dt>Format</dt>
+<dd>プログラムを整形し、見やすくする。 括弧の対応の確認などに役立つ。</dd>
+<dt>Kill</dt>
+<dd>
+							現在実行している（複数実行している場合、すべての）プログラムを
+							強制的に停止することが出来る。無限ループのプログラムを書いてしまったとき
+							など、プログラムが止まらなくなってしまったときに、役立つ。
+						</dd>
+</dl>
+</p>
+</subsection>
+<subsection title="ショートカットキー">
+<p>
+					論プロエディタは、ほとんどのコマンドをショートカットで実行できるように作られています。
+					ショートカットキーを使ってコマンドを実行したいときは、メニューの右に表示されているキーを同時押ししてください。
+					（例：コンパイル（Ctrl+E）→「Ctrl」キーと「E」キーを同時に押す）
+				</p>
+<p>
+					ショートカットキーは覚えやすいように、 編集にかかわるコマンドのショートカットは左下（ZXCV）に、
+					Javaにかかわるコマンドのショートカットは左上（WSER）に集中しています。
+				</p>
+<figure id="fig:shortcutkey" title="ショートカットキー" src="image/keyboard" style="scale:1.0"/>
+<p>（http://www2d.biglobe.ne.jp/~msyk/index.htmlの「キーボード配列案」のフリー画像をお借りしました。）</p>
+</subsection>
+</section>
+</body>
+</doc>

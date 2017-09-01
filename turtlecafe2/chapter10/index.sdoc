@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc xml:lang="ja">
+<head>
+<title>ゲームを作ろう！</title>
+</head>
+<body>
+<section title="学習目標">
+<ul>
+<li>キーボード、マウスを使ってユーザと対話するプログラムを作れるようになる</li>
+<li>オブジェクト同士の当たり判定を取得し、オブジェクトが連携して動作するプログラムを作れるようになる</li>
+</ul>
+</section>
+<section title="キーボード入力の判定">
+<subsection title="キーコードの取得">
+<p>
+				key()命令を使うと、いま押されているキーボードの番号（キーコード）を
+				調べることができます。
+			</p>
+<p>
+				次のプログラムは、車がキーにあわせて、上下左右に動くプログラムです。
+			</p>
+<program title="HandleKey.java" id="src:HandleKey" src="src/HandleKey.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter10/src/HandleKey.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、HandleKeyプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleKey"/>
+</applet>]]></native>
+<fyi title="キー入力を受け取る新しい命令">
+<dl>
+<dt>key()</dt>
+<dd>
+<p>
+								いま押されているキーボードの番号（キーコード）を調べることができます。
+							</p>
+<p>
+								何も押されていない時は、キーコードが -1 になります。
+							</p>
+</dd>
+</dl>
+</fyi>
+</subsection>
+<subsection title="キーコードを調べる">
+<p>
+				キーボードのキーに対応するキーコードを調べるには、
+				次のプログラムを使うと良いでしょう。
+			</p>
+<program title="CheckKeycode.java" id="src:CheckKeycode" src="src/CheckKeycode.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter10/src/CheckKeycode.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、CheckKeycodeプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="CheckKeycode"/>
+</applet>]]></native>
+</subsection>
+</section>
+<section title="マウス入力の判定">
+<subsection title="マウスの位置を調べる">
+<p>
+				mouseX()、mouseY() 命令を使うと，
+				マウスが今どこにいるのかを調べることができます。
+			</p>
+<p>下のプログラムは、マウスの位置に車が移動するプログラムです。</p>
+<program title="HandleMouse.java" id="src:HandleMouse" src="src/HandleMouse.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter10/src/HandleMouse.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、HandleMouseプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleMouse"/>
+</applet>]]></native>
+<fyi title="マウスの位置を調べる新しい命令">
+<dl>
+<dt>mouseX()</dt>
+<dd>
+<p>
+								マウスのx座標を取得します。
+							</p>
+</dd>
+<dt>mouseY()</dt>
+<dd>
+<p>
+								マウスのy座標を取得します。
+							</p>
+</dd>
+</dl>
+</fyi>
+<p>
+				x()、y()、mouseX()、mouseY()命令で取得した座標は，
+				わざわざ変数に入れなくても、そのまま他の命令で使う値として使うこともできます。
+			</p>
+<program title="HandleMouse2.java" id="src:HandleMouse2" src="src/HandleMouse2.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter10/src/HandleMouse2.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、HandleMouse2プログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleMouse2"/>
+</applet>]]></native>
+</subsection>
+<subsection title="マウスが押されているかどうか調べる">
+<p>
+				mouseDown()命令を使うと、マウスが押されているか調べることができます。
+				mouseX()、mouseY() 命令と組み合わせて使うと、どこで押されているかも調べられます。
+			</p>
+<p>下のプログラムは、マウスをクリックした所に車が移動するプログラムです。</p>
+<program title="HandleMouse3.java" id="src:HandleMouse3" src="src/HandleMouse3.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter10/src/HandleMouse3.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、HandleMouse3プログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleMouse3"/>
+</applet>]]></native>
+<fyi title="マウス入力を調べる新しい命令">
+<dl>
+<dt>mouseDown()</dt>
+<dd>
+<p>
+								いまマウスが押されているかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+							</p>
+</dd>
+</dl>
+</fyi>
+</subsection>
+<subsection title="マウス入力を詳しく調べる">
+<p>
+				マウスボタンの左右や、ダブルクリックを調べる場合は，
+				次のようなプログラムを書きます。
+			</p>
+<program title="HandleMouse4.java" id="src:HandleMouse4" src="src/HandleMouse4.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter10/src/HandleMouse4.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、HandleMouse4プログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="HandleMouse4"/>
+</applet>]]></native>
+<fyi title="マウス入力を詳しく調べる新しい命令">
+<dl>
+<dt>leftMouseDown()</dt>
+<dd>
+<p>
+								いまマウスの左ボタンが押されているかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+							</p>
+</dd>
+<dt>rightMouseDown()</dt>
+<dd>
+<p>
+								いまマウスの右ボタンが押されているかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+							</p>
+</dd>
+<dt>doubleClick()</dt>
+<dd>
+<p>
+								マウスがダブルクリックされたかどうかを調べます。
+								必ず、if文の条件文の中に書いて下さい。
+							</p>
+</dd>
+</dl>
+</fyi>
+</subsection>
+</section>
+<section title="あたり判定">
+<subsection title="２つのオブジェクトのあたり判定">
+<p>
+				intersects()命令を使うと、2つのオブジェクトが当たっているかどうか、
+				調べることができます。
+			</p>
+<p>
+				下のプログラムは、車がドラえもんに当たると、ドラえもんが小さくなるプログラムです（マウスで車を動かせます）。
+			</p>
+<program title="IntersectsJudge.java" id="src:IntersectsJudge" src="src/IntersectsJudge.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter10/src/IntersectsJudge.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、IntersectsJudgeプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="IntersectsJudge"/>
+</applet>]]></native>
+<fyi title="あたり判定に関する新しい命令">
+<dl>
+<dt>intersects([判定相手のオブジェクト])</dt>
+<dd>
+							オブジェクトが、指定された判定相手のオブジェクトと当たっているかどうか調べます。
+							必ず、if文の条件文の中に書いて下さい。
+						</dd>
+</dl>
+</fyi>
+</subsection>
+<subsection title="座標とオブジェクトのあたり判定">
+<p>
+				2つのオブジェクトのあたり判定でなく、マウスの位置が、オブジェクトと当たっているか判定したい時があります。
+			</p>
+<p>
+				下のプログラムは、マウスが車の上に来る（マウスの座標が車の領域に含まれる）と、車が小さくなるプログラムです。
+			</p>
+<program title="ContainsJudge.java" id="src:ContainsJudge" src="src/ContainsJudge.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter10/src/ContainsJudge.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、ContainsJudgeプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ContainsJudge"/>
+</applet>]]></native>
+<fyi title="座標とオブジェクトのあたり判定に関する新しい命令">
+<dl>
+<dt>contains([x座標], [y座標])</dt>
+<dd>
+							オブジェクトが指定された座標内に含まれているかどうか調べます。
+							必ず、if文の条件文の中に書いて下さい。
+						</dd>
+</dl>
+</fyi>
+</subsection>
+</section>
+<section title="課題">
+<subsection title="簡単なゲームを作ろう">
+<p>
+				これで，このテキストの内容はすべておしまいです。
+				ここまでの内容を駆使して、面白いソフトウエアを作ってくださることを期待します。
+			</p>
+<fyi title="やってみよう！">
+<p>
+				プレイヤーの画像を用意し、キーボードの矢印（↑→←↓）キーを使って、プレイヤーを上下左右に操作するプログラムを作りましょう。
+			</p>
+<p>
+				プレイヤーの画像は、ネットのフリー素材集などから好みのものを探し、ダウンロードして使ってください。
+			</p>
+</fyi>
+<fyi title="やってみよう！">
+<p>
+				アイテム（<a href="#sec:imageturtle">画像タートル</a>）と得点板（<a href="#sec:textturtle">テキストタートル</a>）をつくり、プレイヤーを操作してアイテムを取る（アイテムに触れる）と得点が増えるプログラムを作りましょう。
+			</p>
+<p>
+				アイテムの画像は、ネットのフリー素材集などから好みのものを探し、ダウンロードして使ってください。
+			</p>
+</fyi>
+<fyi title="やってみよう！">
+<p>
+				自由な発想で、簡単なオリジナルゲームを作りましょう。
+			</p>
+</fyi>
+<p>
+				最後に、シューティングゲームのサンプルプログラムを贈ります。操作方法はプログラムを読めばわかります。GOOD LUCK!
+			</p>
+<program title="ShootingGame.java" id="src:ShootingGame" src="src/ShootingGame.java" javasrcSyntaxHilight="true" normalizer="line, javasrc" encoding="Shift_JIS"/>
+<p>
+<a href="chapter10/src/ShootingGame.java">
+        		ここ
+			</a>
+			をクリックすると、プログラムをダウンロードできます。
+		</p>
+<p>
+			下のボタンを押すと、ShootingGameプログラムが実行できます。
+		</p>
+<native format="html4"><![CDATA[
+<applet code="TurtleLaunchApplet" archive="chapter10_binary.jar,blib.jar" width="200" height="38">
+<param name="Turtle" value="ShootingGame"/>
+</applet>]]></native>
+</subsection>
+</section>
+</body>
+</doc>
